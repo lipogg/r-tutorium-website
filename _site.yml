@@ -1,0 +1,23 @@
+navbar: 
+  title: R-Tutorium
+  left:
+  - text: Home
+    href: index.html
+  - text: Sitzungen
+    menu:
+    - text: Sitzung 1 - Basics
+      href: tutorium1_250422_basics.html
+    - text: Sitzung 2 - Daten und Dateien
+      href: tutorium2_020522_dateien.html
+    - text: Sitzung 3 - Reguläre Ausdrücke
+      href: tutorium3_09052022_regex.html
+    - text: Sitzung 4 - XML und TEI
+      href: tutorium4_16052022_xml.html 
+    - text: Sitzung 6 - Stilometrie
+      href: tutorium6_130622_stilometrie.html
+    - text: Sitzung 7 - Virtuelle Umgebungen 
+      href: tutorium7_200622_virtuelle_umgebungen.html
+output:
+  html_document:
+    theme: paper
+output_dir: "docs"

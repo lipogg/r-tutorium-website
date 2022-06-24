@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>4. Sitzung: XML</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">R-Tutorium</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Sitzungen
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="tutorium1_250422_basics.html">Sitzung 1 - Basics</a>
+    </li>
+    <li>
+      <a href="tutorium2_020522_dateien.html">Sitzung 2 - Daten und Dateien</a>
+    </li>
+    <li>
+      <a href="tutorium3_09052022_regex.html">Sitzung 3 - Reguläre Ausdrücke</a>
+    </li>
+    <li>
+      <a href="tutorium4_16052022_xml.html">Sitzung 4 - XML und TEI</a>
+    </li>
+    <li>
+      <a href="tutorium6_130622_stilometrie.html">Sitzung 6 - Stilometrie</a>
+    </li>
+    <li>
+      <a href="tutorium7_200622_virtuelle_umgebungen.html">Sitzung 7 - Virtuelle Umgebungen</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">4. Sitzung: XML</h1>
+
+</div>
+
+
+<div id="was-ist-xml-was-ist-tei" class="section level2">
+<h2>1. Was ist XML? Was ist TEI?</h2>
+<p>XML = Extensible Markup Language </br> Formale Definition (<a href="https://de.wikipedia.org/wiki/Extensible_Markup_Language">Wikipedia</a>): Auszeichnungssprache zur Darstellung hierarchisch strukturierter Daten im Format einer Textdatei, die sowohl von Menschen als auch von Maschinen lesbar ist.</p>
+<p>TEI = Text Encoding Initiative </br> Formale Definition (<a href="https://de.wikipedia.org/wiki/Text_Encoding_Initiative">Wikipedia</a>): eine 1987 gegründete Organisation (seit 2000 als TEI-Konsortium organisiert) und ein gleichnamiges Dokumentenformat zur Kodierung und zum Austausch von Texten, das diese entwickelt hat und weiterentwickelt. […] TEI hat sich zu einem De-facto-Standard innerhalb der Geisteswissenschaften entwickelt, wo es zum Beispiel zur Kodierung von gedruckten Werken (Editionswissenschaft) oder zur Auszeichnung von sprachlichen Informationen (Linguistik) in Texten verwendet wird.</p>
+</div>
+<div id="wie-sind-xml-tei-dokumente-aufgebaut" class="section level2">
+<h2>2. Wie sind XML-TEI Dokumente aufgebaut?</h2>
+<p>XML-Dokumente sind streng hierarchisch aufgebaut und bestehen aus verschiedenen, in einer Baumstruktur ineinander verschachtelten Elementen. Diese Baumstruktur bedeutet, dass jedes Element, das “geöffnet” wird, auch “geschlossen” werden muss, es besteht also aus einem Öffnungstag (oder “opening tag”) und einem Schließtag (oder “closing tag”). Elemente können Fließtext, Attribute oder auch weitere Elemente enthalten; sie können aber auch leer sein. Attribute werden direkt in den Öffnungstag hineingeschrieben und definieren Eigenschaften des entsprechenden Elements.</p>
+<p>Aufbau eines XML-Dokuments:</p>
+<pre class="xml"><code>&lt;!-- Prolog: optional; definiert die verwendete XML-Version --&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 
+&lt;!-- Wurzelelement --&gt;
+&lt;root&gt; 
+&lt;!-- irgendein Element --&gt;
+  &lt;child&gt; 
+  &lt;!-- noch ein Element, mit Attribut &quot;attribute&quot; und dem Attributwert &quot;some_property&quot; --&gt;
+    &lt;subchild attribute=&quot;some_property&quot;&gt;...some content...&lt;/subchild&gt;
+  &lt;/child&gt;
+&lt;/root&gt;</code></pre>
+<p>Mehr zur XML-Syntax <a href="https://www.w3schools.com/xml/xml_syntax.asp">hier</a>.</p>
+<p>Die konkrete Benennung der Elemente ist dabei nicht durch die XML-Syntax vorgegeben und ist grundsätzlich beliebig, muss jedoch einheitlich sein. Der Benennungsstil und Regeln für die Verwendung bestimmter Elemente und Attribute bei der Auszeichnung von Texten können auch durch ein Kodierungsschema und einen XML-Auszeichnungsstandard am Anfang des Dokuments festgelegt werden. In den Geisteswissenschaften hat sich mit TEI ein solcher einheitlicher Auszeichnungsstandard für Texte durchgesetzt.</p>
+<p>Nach den TEI-Guidelines besteht jedes TEI-Dokument aus einem Wurzelelement, welches das TEI-Dokument mit den Tags <code>&lt;TEI&gt;&lt;/TEI&gt;</code> öffnet und schließt, sowie aus zwei Kindelementen, dem Header (<code>&lt;teiHeader&gt;&lt;/teiHeader&gt;</code>) und einem Text-Element (<code>&lt;text&gt;&lt;/text&gt;</code>). Der Header beinhaltet Metadaten zu dem ausgezeichneten Text, beispielsweise eine “file description” (<code>&lt;fileDesc&gt;&lt;/fileDesc&gt;</code>), die bibliographische Informationen zur ausgezeichneten Datei enthält. Die file description ist als einziges Header-Element für alle TEI-Header zwingend erforderlich, damit das Dokument als valide gelten kann (zur Validierung siehe nächster Abschnitt). Der <code>&lt;TEI&gt;</code>-Öffnungstag enthält standardmäßig den <a href="https://de.wikipedia.org/wiki/Namensraum_(XML)">TEI-Namensraum</a> (oder “namespace”) <a href="http://www.tei-c.org/ns/1.0" class="uri">http://www.tei-c.org/ns/1.0</a>, manchmal auch die Sprache des ausgezeichneten Texts und die verwendete TEI-Version. Der Namensraum dient dazu, die verwendeten Elemente und Attribute eindeutig einer bestimmten XML-Sprache bzw. einem Auszeichnungsstandard zuzuordnen, in diesem Fall also TEI.</p>
+<p>In den TEI-Guidelines findet sich das folgende Beispiel für ein <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-TEI.html#index-egXML-d54e49512">minimales valides TEI-Dokument</a>:</p>
+<pre class="xml"><code>&lt;TEI version=&quot;3.3.0&quot; xmlns=&quot;http://www.tei-c.org/ns/1.0&quot;&gt;
+ &lt;teiHeader&gt;
+  &lt;fileDesc&gt;
+   &lt;titleStmt&gt;
+    &lt;title&gt;The shortest TEI Document Imaginable&lt;/title&gt;
+   &lt;/titleStmt&gt;
+   &lt;publicationStmt&gt;
+    &lt;p&gt;First published as part of TEI P2, this is the P5
+         version using a namespace.&lt;/p&gt;
+   &lt;/publicationStmt&gt;
+   &lt;sourceDesc&gt;
+    &lt;p&gt;No source: this is an original work.&lt;/p&gt;
+   &lt;/sourceDesc&gt;
+  &lt;/fileDesc&gt;
+ &lt;/teiHeader&gt;
+ &lt;text&gt;
+  &lt;body&gt;
+   &lt;p&gt;This is about the shortest TEI document imaginable.&lt;/p&gt;
+  &lt;/body&gt;
+ &lt;/text&gt;
+&lt;/TEI&gt;</code></pre>
+<p>Für ein <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#index-egXML-d54e16887">Minimalbeispiel für einen validen Header</a> siehe den Abschnitt “2 The TEI Header” in den TEI-Guidelines. Für Informationen zum Aufbau des Text-Elements siehe <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/DS.html">“4 Default Text Structure”</a>.</p>
+<p>Während dieser Minimalaufbau für alle TEI-Dokumente einheitlich vorgegeben ist, hängt die Wahl der konkreten Elemente und Attribute innerhalb des Headers und des Textkörpers davon ab, welche Textart ausgezeichnet wird. Für bestimmte Textarten finden sich in den <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/">TEI-Guidelines</a> verschiedene <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STMA">Module</a>, die flexibel zu einem <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STIN">TEI Schema</a> kombiniert werden können. Alle Elemente und Attribute, die in einem TEI-Header verwendet werden können, finden sich beispielsweise im Modul “header”. Elemente und Attribute, die zur Auszeichnung von “Performance Texts” wie Dramen verwendet werden können, finden sich im Modul “drama”.</p>
+<p>Der <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/VE.html#index-egXML-d54e59340">Text eines einzelnen Gedichts</a> würde unter Verwendung der Moduls “verse” wie folgt ausgezeichnet werden:</p>
+<pre class="xml"><code>&lt;text&gt;
+ &lt;front&gt;
+  &lt;head&gt;1755&lt;/head&gt;
+ &lt;/front&gt;
+ &lt;body&gt;
+  &lt;l&gt;To make a prairie it takes a clover and one bee,&lt;/l&gt;
+  &lt;l&gt;One clover, and a bee,&lt;/l&gt;
+  &lt;l&gt;And revery.&lt;/l&gt;
+  &lt;l&gt;The revery alone will do,&lt;/l&gt;
+  &lt;l&gt;If bees are few.&lt;/l&gt;
+ &lt;/body&gt;
+&lt;/text&gt;</code></pre>
+</div>
+<div id="wohlgeformtheit-und-validität" class="section level2">
+<h2>3. Wohlgeformtheit und Validität</h2>
+<p>Ein XML-Dokument gilt als <strong>wohlgeformt</strong>, wenn alle <a href="https://www.w3schools.com/xml/xml_syntax.asp">XML-Syntaxregeln</a> eingehalten werden, das heißt:</p>
+<ul>
+<li>Es gibt genau ein Wurzelelement</li>
+<li>die Baumstruktur ist eingehalten, das heißt alle Elemente sind richtig ineinander geschachtelt und haben je Öffnungs- und Schließtags</li>
+<li>Groß- und Kleinschreibung von Element- und Attributnamen wurde beachtet</li>
+<li>Attributwerte stehen in Anführungszeichen</li>
+<li>Sonderzeichen wurden ggf. durch Entitätenreferenzen ersetzt</li>
+</ul>
+<p>Ein XML-Dokument ist <strong>valide</strong> (auch: “gültig”), wenn alle Regeln eingehalten werden, die jeweils in einem dem Dokument zugewiesenen Schema definiert sind. Das heißt für TEI-Dokumente: Ein TEI-Dokument ist valide, wenn seine Struktur und die Benennung der verwendeten Attribute und Elemente den Regeln des zugewiesenen Schemas entsprechen.</p>
+<p>Es gilt: Ein valides XML-Dokument ist immer auch wohlgeformt, ein wohlgeformtes XML-Dokument muss jedoch nicht unbedingt valide sein.</p>
+<p>Um zu überprüfen, ob ein XML-Dokument valide ist (“Validierung”), kann das Dokument beispielsweise in den oXygen XML Editor importiert werden (siehe Abschnitt 5). Eine Anleitung zur Validierung findet sich <a href="https://guides.library.illinois.edu/xml/oxygen-validate">hier als Kurzversion</a> sowie ausführlich in den <a href="https://www.oxygenxml.com/xml_editor/validation.html">oXygen-Hilfeseiten</a>.</p>
+</div>
+<div id="wo-findet-man-korpora-die-in-xml-tei-ausgezeichnet-sind" class="section level2">
+<h2>4. Wo findet man Korpora, die in XML-TEI ausgezeichnet sind?</h2>
+<ul>
+<li>Literarische Textsammlungen, z.B.:
+<ul>
+<li>DraCor: <a href="https://dracor.org/" class="uri">https://dracor.org/</a></li>
+<li>ELTeC: <a href="https://github.com/COST-ELTeC" class="uri">https://github.com/COST-ELTeC</a></li>
+<li>TextGrid Repository: <a href="https://textgridrep.org/" class="uri">https://textgridrep.org/</a></li>
+</ul></li>
+<li>Wissenschaftliche Editionen, z.B.:
+<ul>
+<li>Theodor Fontanes Notizbücher: <a href="https://fontane-nb.dariah.eu/index.html" class="uri">https://fontane-nb.dariah.eu/index.html</a></li>
+<li>Hannah Arendt Gesamtausgabe: <a href="https://hannah-arendt-edition.net/index.html" class="uri">https://hannah-arendt-edition.net/index.html</a></li>
+<li>Alexander von Humboldt digitale Edition: <a href="https://edition-humboldt.de/" class="uri">https://edition-humboldt.de/</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="wie-kann-man-xml-dateien-bearbeiten-durchsuchen-und-einlesen" class="section level2">
+<h2>5. Wie kann man XML-Dateien bearbeiten, durchsuchen und einlesen?</h2>
+<p>Zur Auszeichnung von Texten in XML-TEI, sowie zur Erstellung und Bearbeitung von XML-Dateien können spezialisierte Editoren wie der <a href="https://www.zedat.fu-berlin.de/Benutzerservice/OXygenXMLEditor">oXygen XML Editor</a> verwendet werden. Daneben gibt es für die meisten Programmiersprachen Pakete wie beispielsweise das R <a href="https://cran.r-project.org/web/packages/xml2/xml2.pdf">xml2</a> Paket, die Funktionen speziell zum Einlesen, Erstellen, Bearbeiten und Schreiben von XML-Dateien enthalten.</p>
+<p>Zur Suche in Zeichenketten (character strings) haben wir bereits Reguläre Ausdrücke kennengelernt. Um bestimmte Elemente eines XML-Dokuments oder deren Attribute zu adressieren oder um Informationen zu finden, kann dagegen die Abfragesprache <a href="https://de.wikipedia.org/wiki/XPath">XPath</a> (=XML Path Language) verwendet werden. Sowohl oXygen als auch xml2 unterstützen solche XPath Abfragen.</p>
+<p>→ <strong>Übung: tutorium4_160522_uebung.R</strong></p>
+</div>
+<div id="weiterführende-links-und-literatur" class="section level2">
+<h2>6. Weiterführende Links und Literatur</h2>
+<ul>
+<li>“A Gentle Introduction to XML” der Text Encoding Initiative: <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/SG.html" class="uri">https://tei-c.org/release/doc/tei-p5-doc/en/html/SG.html</a></li>
+<li>Komplette TEI-Guidelines: <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html" class="uri">https://tei-c.org/release/doc/tei-p5-doc/en/html/index.html</a></li>
+<li>Einführung in XML und TEI von Henriette Mehn/SLUB Dresden: <a href="https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/17544740866/CourseNode/92610534105762" class="uri">https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/17544740866/CourseNode/92610534105762</a></li>
+<li>Linksammlung und Selbstlernressourcen auf der Seite der Text Encoding Initiative: <a href="https://tei-c.org/support/learn/teach-yourself-tei/" class="uri">https://tei-c.org/support/learn/teach-yourself-tei/</a></li>
+<li>Selbstlernkurse zum Thema TEI auf der Seite von DARIAH-CAMPUS: <a href="https://campus.dariah.eu/en/tag/tei/page/1" class="uri">https://campus.dariah.eu/en/tag/tei/page/1</a></li>
+<li>Tutorial “Digitale Textedition mit TEI” von Christof Schöch/DARIAH-DE: <a href="https://de.dariah.eu/tei-tutorial" class="uri">https://de.dariah.eu/tei-tutorial</a></li>
+<li>Tutorial des “TEI by Example Project”: <a href="https://teibyexample.org/tutorials/" class="uri">https://teibyexample.org/tutorials/</a></li>
+<li>“An Introduction to XML and TEI” der University of Illinois Library: <a href="https://guides.library.illinois.edu/c.php?g=347707&amp;p=2344750" class="uri">https://guides.library.illinois.edu/c.php?g=347707&amp;p=2344750</a></li>
+<li>Textdaten-Wiki des Instituts für Romanistik der FU Berlin, Abschnitt “Datenkodierung und XML”: <a href="https://wikis.fu-berlin.de/display/tdr/Datenkodierung+und+XML" class="uri">https://wikis.fu-berlin.de/display/tdr/Datenkodierung+und+XML</a></li>
+<li>Übersicht XPath Syntax: <a href="https://www.w3schools.com/xml/xpath_syntax.asp" class="uri">https://www.w3schools.com/xml/xpath_syntax.asp</a></li>
+<li>Vortrag: “Introduction to TEI” von Christopher Oghe: <a href="https://www.youtube.com/watch?v=HSxnNK3ail4" class="uri">https://www.youtube.com/watch?v=HSxnNK3ail4</a></li>
+<li>Folien zum Vortrag “Einführung in die Textauszeichnung mit TEI” von Agnes Brauer, Universitätsbibliothek Frankfurt: <a href="https://moodle.studiumdigitale.uni-frankfurt.de/moodle/pluginfile.php/77425/mod_resource/content/1/DH%40ubffmTEI_Brauer.pdf" class="uri">https://moodle.studiumdigitale.uni-frankfurt.de/moodle/pluginfile.php/77425/mod_resource/content/1/DH%40ubffmTEI_Brauer.pdf</a></li>
+</ul>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>1. Sitzung: Basics</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">R-Tutorium</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Sitzungen
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="tutorium1_250422_basics.html">Sitzung 1 - Basics</a>
+    </li>
+    <li>
+      <a href="tutorium2_020522_dateien.html">Sitzung 2 - Daten und Dateien</a>
+    </li>
+    <li>
+      <a href="tutorium3_09052022_regex.html">Sitzung 3 - Reguläre Ausdrücke</a>
+    </li>
+    <li>
+      <a href="tutorium4_16052022_xml.html">Sitzung 4 - XML und TEI</a>
+    </li>
+    <li>
+      <a href="tutorium6_130622_stilometrie.html">Sitzung 6 - Stilometrie</a>
+    </li>
+    <li>
+      <a href="tutorium7_200622_virtuelle_umgebungen.html">Sitzung 7 - Virtuelle Umgebungen</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">1. Sitzung: Basics</h1>
+
+</div>
+
+
+<div id="plan-für-heute" class="section level1" number="1">
+<h1 number="1"><span class="header-section-number">1</span> Plan für heute</h1>
+<ol style="list-style-type: decimal">
+<li>Vorstellungsrunde: Fach, Vorerfahrung, Interessen</li>
+<li>Themen und Semesterplan</li>
+<li>R Basics
+<ul>
+<li>Variablen und Datentypen</li>
+<li>Operatoren</li>
+<li>Datenstrukturen: Vektoren, Listen, Matrizen, Dataframes</li>
+<li>Funktionen</li>
+<li>Pakete</li>
+<li>Kommentare</li>
+<li>Hilfe</li>
+</ul></li>
+<li>Nächstes Treffen</li>
+</ol>
+</div>
+<div id="themen-und-semesterplan" class="section level1" number="2">
+<h1 number="2"><span class="header-section-number">2</span> Themen und Semesterplan</h1>
+<p>Der Semesterplan ist zum Teil abgestimmt mit dem Seminar <a href="https://www.fu-berlin.de/vv/de/lv/734022?query=digitale+dramenanalyse&amp;sm=682080">“Digitale Dramenanalyse”</a> von Frank Fischer. Es gibt aber genug Raum für eure eigenen Wünsche, Erwartungen und Interessen.</p>
+<ul>
+<li>Basics (heute)</li>
+<li>(XML-)Dateien und Korpora einlesen und parsen</li>
+<li>Reguläre Ausdrücke in R</li>
+<li>Netzwerkanalyse in R: Paket DramaAnalysis</li>
+<li>Stilometrie: Paket Stylo</li>
+<li>Kollaboratives Arbeiten und Versionierung mit Git und GitHub</li>
+<li>Web scraping und APIs</li>
+<li>Quantitative Textanalyse: Paket quanteda ?</li>
+<li>Visualisierung und deskriptive Statistik in R: Paket ggplot2 ?</li>
+<li>Virtuelle Umgebungen ?</li>
+<li>…</li>
+</ul>
+<p>Vorschläge, Ideen, Interessen?</p>
+</div>
+<div id="r-basics" class="section level1" number="3">
+<h1 number="3"><span class="header-section-number">3</span> R Basics</h1>
+<div id="r-und-r-studio-installieren" class="section level2" number="3.1">
+<h2 number="3.1"><span class="header-section-number">3.1</span> R und R Studio installieren</h2>
+<p>Bevor wir loslegen können, sollten alle R sowie die Entwicklungsumgebung RStudio installieren.</p>
+<p>R installieren: <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></p>
+<p>R Studio installieren: <a href="https://www.rstudio.com/products/rstudio/download/" class="uri">https://www.rstudio.com/products/rstudio/download/</a></p>
+</div>
+<div id="variablen" class="section level2" number="3.2">
+<h2 number="3.2"><span class="header-section-number">3.2</span> Variablen</h2>
+<p>Variablen werden verwendet, um Werte zu speichern, die wiederholt verwendet werden. Werte können mithilfe der Zuweisungsoperatoren -&gt; und = einer Variable “zugewiesen” werden, das heißt, dass ein Name festgelegt wird, der für diesen Wert und für einen Speicherplatz steht. So kann mithilfe des Variablennamens auf ihren Inhalt zugegriffen werden, selbst dann, wenn sich der Wert im Programmverlauf verändert hat. Das Zuweisen eines Werts zu einer Variable wird auch Initialisieren genannt. In anderen Programmiersprachen muss eine Variable zuerst deklariert werden; dieser Schritt muss in R aber nicht separat ausgeführt werden. Bei der Benennung von Variablen sollten bestimmte Regeln und Konventionen eingehalten werden:</p>
+<ul>
+<li>Variablen dürfen keine Sonderzeichen außer Punkte und Unterstriche enthalten.</li>
+<li>Zwei Wörter oder ein Wort und eine Zahl können mit Unterstrich, Punkt, oder camelCase getrennt werden. Meine persönliche Empfehlung ist hier die Verwendung des Unterstrichs.</li>
+<li>Variablen dürfen nicht mit einer Zahl oder einem Unterstrich anfangen.</li>
+<li>R ist “case sensitive”, das heißt: die Variable baum ist nicht dasselbe wie die Variable Baum!</li>
+</ul>
+<pre class="r"><code>satz = &quot;Eine Rose ist eine Pflanze&quot;
+satz_2 &lt;- &quot;Eine zweite Rose ist auch eine Pflanze&quot;
+noch_ein_satz = &quot;Noch eine Rose&quot;
+Satz &lt;- &quot;Eine Rose ist keine Pflanze&quot;
+
+print(Satz)</code></pre>
+<pre><code>## [1] &quot;Eine Rose ist keine Pflanze&quot;</code></pre>
+<pre class="r"><code>print(satz)</code></pre>
+<pre><code>## [1] &quot;Eine Rose ist eine Pflanze&quot;</code></pre>
+<pre class="r"><code>satz = &quot;Ein Apfel ist keine Pflanze&quot;
+print(satz)</code></pre>
+<pre><code>## [1] &quot;Ein Apfel ist keine Pflanze&quot;</code></pre>
+<p>Verständnisfrage: Warum wird für die Variable satz das zweite Mal ein anderer Wert ausgegeben?</p>
+</div>
+<div id="datentypen" class="section level2" number="3.3">
+<h2 number="3.3"><span class="header-section-number">3.3</span> Datentypen</h2>
+<p>Die Werte der Variablen im Beispiel oben haben denselben Datentyp: character. Character ist kurz für “character string”; in anderen Programmiersprachen heißt dieser Datentyp daher oft “string”. Neben characters gibt es in R weitere Datentypen, z.B.</p>
+<ul>
+<li>integer</li>
+<li>numeric (“double”)</li>
+<li>logical</li>
+</ul>
+<p>In R gibt es verschiedene Funktionen, die erlauben, den Datentyp beispielsweise einer Variable auszugeben. Beachtet, dass im Beispiel unten die Funktion typeof(zahl_1) als Datentyp double ausgibt, während class(zahl_1) als Datentyp numeric ausgibt. Double ist, ähnlich wie bei character und string, der allgemeine Name für den Datentyp numeric. Der Default-Datentyp für Zahlen ist in R numeric. Das heißt immer, wenn ihr einer Variable einen numerischen Wert zuweist, wird dieser zunächst als numeric gespeichert. Die Funktion is.integer() gibt die Werte TRUE oder FALSE aus. Der Datentyp dieser Werte ist logical. Sie werden auch als Boolesche Wahrheitswerte bezeichnet.</p>
+<pre class="r"><code>zahl_1 = 1.5
+
+zahl_2 = 1 
+
+is.integer(zahl_2)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>is.numeric(zahl_1)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>typeof(zahl_1)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<pre class="r"><code>class(zahl_1)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>x = 4.6
+y = &quot;4.6&quot;
+
+print(x)</code></pre>
+<pre><code>## [1] 4.6</code></pre>
+<pre class="r"><code>print(y)</code></pre>
+<pre><code>## [1] &quot;4.6&quot;</code></pre>
+<p>Verständnisfrage: Enthalten die Variablen x und y den gleichen Wert?</p>
+</div>
+<div id="operatoren" class="section level2" number="3.4">
+<h2 number="3.4"><span class="header-section-number">3.4</span> Operatoren</h2>
+<p>In den bisherigen Beispielen haben wir bereits einen Operator kennengelernt, den sogenannten Zuweisungsoperator &lt;- bzw. =. Daneben gibt es arithmetische Operatoren und logische Operatoren.</p>
+<ul>
+<li><p>Arithmetische Operatoren sind aus der Schulmathematik bekannt. Es handelt sich dabei um Operatoren wie -, +, *, / sowie %% und %/%. Beachtet, dass der Divisionsoperator / nur für numerics definiert ist. Für die Division zweier integers wird ein spezieller Divisionsoperator, %/%, verwendet. %% ist der modulo Operator, damit kann bei einer Division der Rest berechnet werden. ^ oder ** wird zum Exponieren verwendet.</p></li>
+<li><p>Logische Operatoren ermöglichen es, Werte zu vergleichen und die Richtigkeit einer logischen Aussage zu überpüfen. Die Vergleichsoperatoren &lt;, &gt;, &lt;=, &gt;= sind allgemein bekannt. Außerdem sind folgende Operatoren wichtig:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>==</td>
+<td>exactly equal to</td>
+</tr>
+<tr class="even">
+<td>!=</td>
+<td>unequal to</td>
+</tr>
+<tr class="odd">
+<td>!x</td>
+<td>not x</td>
+</tr>
+<tr class="even">
+<td>x ⎮ y</td>
+<td>x or y</td>
+</tr>
+<tr class="odd">
+<td>x &amp; y</td>
+<td>x and y</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+<pre class="r"><code>-5 &lt; -10</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>5 &gt;= 5</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>satz == Satz #hier sind werden die Variablen satz und Satz aus dem Beispiel oben verglichen</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>x == y #wir können jetzt auch unsere beiden Variablen x und y vergleichen</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>3 != 5 </code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>&quot;Hallo&quot; != &quot;Hello&quot;</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>3 == 3 &amp; &quot;c&quot; == &quot;c&quot;</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>3 == 3 | &quot;c&quot; == &quot;a&quot;</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>aussage_1 &lt;- &quot;c&quot; == &quot;c&quot;
+aussage_2 &lt;- 3 == 5
+aussage_1 == !aussage_2</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>Verständnisfragen:</p>
+<ul>
+<li>Warum wird der Ausdruck 3 == 3 &amp; “c” == “c” zu TRUE evaluiert?</li>
+<li>Warum wird auch der Ausdruck 3 == 3 | “c” == “a” zu TRUE evaluiert?</li>
+<li>Was passiert im letzten Beispiel?</li>
+</ul>
+</div>
+<div id="datenstrukturen" class="section level2" number="3.5">
+<h2 number="3.5"><span class="header-section-number">3.5</span> Datenstrukturen</h2>
+<p>Bisher haben wir Variablen genutzt, um einzelne Werte vom Typ character, integer, numeric oder logical darin zu speichern. Variablen können aber auch strukturierte Sammlungen von Werten enthalten. Solche Datenstrukturen können entweder nur Elemente vom selben Typ aufnehmen (wie z.B. sog. “atomare” Vektoren und Matrizen), oder Elemente unterschiedlichen Typs (wie z.B. Listen und Dataframes). Listen sind genauer gesagt eine spezielle Art Vektor mit der Eigenschaft, dass sie Elemente unterschiedlichen Typs enthalten können; genauso sind Dataframes spezielle Matrizen, die Elemente unterschiedlichen Typs beinhalten können. Im Unterschied zu Matrizen sind Vektoren eindimensional. Zwischen den beiden besteht aber ein Zusammenhang: Jede Zeile und jede Spalte in einer Matrix kann auch als Vektor aufgefasst werden.</p>
+<p>Jedes Element in einem Vektor hat eine Position (auch “Index” genannt). Über diesen Index kann auf jedes Element einzeln zugegriffen werden. In R erfolgt der Zugriff mithilfe von eckigen Klammern (s.u.).</p>
+<p>Datenstrukturen können mithilfe bestimmter Funktionen untersucht werden, beispielsweise gibt die length() Funktion die Anzahl der Elemente eines Vektors oder einer Liste aus.</p>
+<pre class="r"><code>#Vektoren erstellen
+character() #erstellt einen leeren character-Vektor</code></pre>
+<pre><code>## character(0)</code></pre>
+<pre class="r"><code>character(4) #erstellt einen character-Vektor mit vier Elementen</code></pre>
+<pre><code>## [1] &quot;&quot; &quot;&quot; &quot;&quot; &quot;&quot;</code></pre>
+<pre class="r"><code>numeric(3) #erstellt einen numeric-Vektor mit drei Elementen</code></pre>
+<pre><code>## [1] 0 0 0</code></pre>
+<pre class="r"><code>leckere_fruechte = c(&quot;Apfel&quot;,&quot;Banane&quot;,&quot;Erdbeere&quot;)
+coole_zahlen = c(45,90,7)
+
+#Vektoren kombinieren
+fruechte_und_zahlen = c(leckere_fruechte, coole_zahlen) #zwei Vektoren kombinieren
+print(fruechte_und_zahlen)</code></pre>
+<pre><code>## [1] &quot;Apfel&quot;    &quot;Banane&quot;   &quot;Erdbeere&quot; &quot;45&quot;       &quot;90&quot;       &quot;7&quot;</code></pre>
+<pre class="r"><code>#Auf Elemente zugreifen 
+erste_frucht = leckere_fruechte[1] #Zugriff auf das erste Element des Vektors leckere_fruechte
+leckere_fruechte[1:3] #Zugriff auf Elemente 1-3</code></pre>
+<pre><code>## [1] &quot;Apfel&quot;    &quot;Banane&quot;   &quot;Erdbeere&quot;</code></pre>
+<pre class="r"><code>leckere_fruechte[c(1,3)] #Zugriff auf Elemente 1 und 3</code></pre>
+<pre><code>## [1] &quot;Apfel&quot;    &quot;Erdbeere&quot;</code></pre>
+<pre class="r"><code>#Matrizen erstellen
+autos = matrix(c(&quot;Fiat&quot;, &quot;Mercedes&quot;, &quot;BMW&quot;, &quot;Ford&quot;, &quot;Volvo&quot;, &quot;Audi&quot;), ncol = 3)
+print(autos)</code></pre>
+<pre><code>##      [,1]       [,2]   [,3]   
+## [1,] &quot;Fiat&quot;     &quot;BMW&quot;  &quot;Volvo&quot;
+## [2,] &quot;Mercedes&quot; &quot;Ford&quot; &quot;Audi&quot;</code></pre>
+<pre class="r"><code>#Dataframe erstellen: Variante 1 
+Marke = c(&quot;Fiat&quot;, &quot;Mercedes&quot;, &quot;BMW&quot;, &quot;Ford&quot;, &quot;Volvo&quot;, &quot;Audi&quot;)
+Farbe = c(&quot;rot&quot;, &quot;rot&quot;, &quot;blau&quot;, &quot;silber&quot;, &quot;schwarz&quot;, &quot;silber&quot;)
+Jahr = c(1993, 2007, 1999, 2010, 2020, 2021)
+df = data.frame(Marke, Farbe, Jahr)
+print(df)</code></pre>
+<pre><code>##      Marke   Farbe Jahr
+## 1     Fiat     rot 1993
+## 2 Mercedes     rot 2007
+## 3      BMW    blau 1999
+## 4     Ford  silber 2010
+## 5    Volvo schwarz 2020
+## 6     Audi  silber 2021</code></pre>
+<pre class="r"><code>#Dataframe erstellen: Variante 2
+df = data.frame(Marke = c(&quot;Fiat&quot;, &quot;Mercedes&quot;, &quot;BMW&quot;, &quot;Ford&quot;, &quot;Volvo&quot;, &quot;Audi&quot;),
+                Farbe = c(&quot;rot&quot;, &quot;rot&quot;, &quot;blau&quot;, &quot;silber&quot;, &quot;schwarz&quot;, &quot;silber&quot;),
+                Jahr = c(1993, 2007, 1999, 2010, 2020, 2021)
+                 )
+
+#Zugriff auf eine Spalte 
+df$Farbe</code></pre>
+<pre><code>## [1] &quot;rot&quot;     &quot;rot&quot;     &quot;blau&quot;    &quot;silber&quot;  &quot;schwarz&quot; &quot;silber&quot;</code></pre>
+<pre class="r"><code>#Zugriff auf einzelne Elemente mithilfe des Indexes einer bestimmten Spalte
+df$Farbe[3]</code></pre>
+<pre><code>## [1] &quot;blau&quot;</code></pre>
+<pre class="r"><code>#Zugriff auf einzelne Elemente abhängig von einem bestimmtem Wert in einer anderen Spalte
+df$Marke[Farbe==&quot;rot&quot;]</code></pre>
+<pre><code>## [1] &quot;Fiat&quot;     &quot;Mercedes&quot;</code></pre>
+<pre class="r"><code>#Eigenschaften untersuchen
+length(leckere_fruechte)</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>nchar(erste_frucht) </code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code>length(df)</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>ncol(df)</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>nrow(df)</code></pre>
+<pre><code>## [1] 6</code></pre>
+<pre class="r"><code>dim(df)</code></pre>
+<pre><code>## [1] 6 3</code></pre>
+<pre class="r"><code>nrow(autos)</code></pre>
+<pre><code>## [1] 2</code></pre>
+<p>Verständnisfragen:</p>
+<ul>
+<li>Was ist der Datentyp des neuen Vektors fruechte_und_zahlen?</li>
+<li>Interpretiert die Ausgaben der Funktionen im letzten Abschnitt des Beispielcodes. Was für ein Wert wird ausgegeben, wenn length() auf einen Dataframe angewendet wird? Wie hängen ncol(), nrow() und dim() zusammen?</li>
+<li>Was passiert, wenn Werte beim Erstellen eines Dataframes fehlen? Löscht einen Wert und probiert es aus.</li>
+</ul>
+</div>
+<div id="funktionen" class="section level2" number="3.6">
+<h2 number="3.6"><span class="header-section-number">3.6</span> Funktionen</h2>
+<p>Einige Funktionen haben wir bereits kennengelernt, beispielsweise print(), length(), typeof(). Beachtet, dass Funktionen meist nur auf bestimmten Datenstrukturen oder für konkrete Datentypen definiert sind, das heißt, dass eine Funktion nur korrekt ausgeführt wird, wenn ihr Argument beispielsweise ein character-Vektor oder ein Boolescher Wahrheitswert ist. Funktionen nehmen meist mindestens ein Argument an. Durch das Hinzufügen verschiedener Parameter kann das Verhalten von vielen Funktionen verändert werden.</p>
+<p>Informationen zu einzelnen Funktionen und ihren Argumenten können direkt im R Studio über die Konsole mit dem Befehl ?funktionsname abgerufen werden.</p>
+<pre class="r"><code>?length
+?print</code></pre>
+</div>
+<div id="pakete" class="section level2" number="3.7">
+<h2 number="3.7"><span class="header-section-number">3.7</span> Pakete</h2>
+<p>Funktionen wie print(), length() und typeof() sind bereits in R “vorinstalliert”, es handelt sich dabei um sogenannte R base Funktionen. Viele Anwendungen sind allerdings mithilfe von R base Funktionen umständlich oder sogar unmöglich. Deswegen gibt es viele verschiedene Pakete (engl. packages), die installiert und bei Bedarf geladen werden können. Im Rahmen dieses Tutoriums und des Seminars zur Digitalen Dramenanalyse werdet ihr verschiedene Pakete kennenlernen, zum Beispiel <a href="https://github.com/quadrama/DramaAnalysis">DramaAnalysis</a> und <a href="https://cran.r-project.org/web/packages/stylo/index.html">stylo</a>.</p>
+<p>Für die meisten Pakete findet sich eine Dokumentation auf der Website <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></p>
+<pre class="r"><code>#Paket installieren
+install.packages(&quot;DramaAnalysis&quot;, repos = &quot;http://cran.us.r-project.org&quot;) </code></pre>
+<pre><code>## Installing package into &#39;/Users/gast/Library/R/4.0/library&#39;
+## (as &#39;lib&#39; is unspecified)</code></pre>
+<pre><code>## 
+## The downloaded binary packages are in
+##  /var/folders/p5/dcxp7px17hz9llmv8y2j73yc0000gq/T//Rtmp37wimh/downloaded_packages</code></pre>
+<pre class="r"><code>#Mehrere Pakete auf einmal installieren
+#install.packages(c(&quot;quanteda&quot;, &quot;DramaAnalysis&quot;)) 
+
+#Paket nur installieren, wenn es nicht vorhanden ist
+if (!require(&quot;quanteda&quot;)) install.packages(&quot;quanteda&quot;)</code></pre>
+<pre><code>## Loading required package: quanteda</code></pre>
+<pre><code>## Package version: 3.2.1
+## Unicode version: 13.0
+## ICU version: 69.1</code></pre>
+<pre><code>## Parallel computing: 8 of 8 threads used.</code></pre>
+<pre><code>## See https://quanteda.io for tutorials and examples.</code></pre>
+<pre class="r"><code>#Paket laden
+library(quanteda) 
+library(DramaAnalysis)</code></pre>
+<pre><code>## DramaAnalysis 3.0.2</code></pre>
+</div>
+<div id="kommentare" class="section level2" number="3.8">
+<h2 number="3.8"><span class="header-section-number">3.8</span> Kommentare</h2>
+<p>Um den eigenen Code für andere verständlicher zu gestalten und sich selbst an seinen Code zu erinnern, sollte man diesen immer gut kommentieren.</p>
+<pre class="r"><code>#Das ist ein Kommentar </code></pre>
+</div>
+<div id="hilfe" class="section level2" number="3.9">
+<h2 number="3.9"><span class="header-section-number">3.9</span> Hilfe!!</h2>
+<p>Oft kommt es beim Coden zu komischen Fehlermeldungen, die mehr verwirren als helfen. Häufig steckt aber ein ganz simpler Flüchtigkeitsfehler dahinter. In diesem Fall gilt:</p>
+<ol style="list-style-type: decimal">
+<li>Syntax und Rechtschreibung checken: Fehlt vielleicht nur eine Klammer? Ist die Variable wirklich richtig geschrieben? Sind wirklich alle notwendigen Pakete installiert und geladen?</li>
+<li>Fehlermeldung kopieren und googeln: Bestimmt hatte schonmal jemand anderes dasselbe Problem und bestenfalls findet sich eine Lösung auf <a href="https://stackoverflow.com/" class="uri">https://stackoverflow.com/</a> oder in einem anderen Forum.</li>
+</ol>
+<p>Manchmal macht das Skript aber auch einfach nicht das, was es soll, ohne, dass eine Fehlermeldung entsteht. In diesem Fall liegt wahrscheinlich ein logischer Fehler im Programmablauf vor. Für diesen Fall gibt es eine Strategie, die Rubber Ducking oder Quietscheentchen-Debugging genannt wird.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Rubber Ducking oder Quietscheentschen-Debugging. Wenn nichts mehr hilft, hilft nur eins: Den Code einer Person, die nichts davon versteht - oder eben einem Quietscheentchen, Zeile für Zeile erklären. Dabei fallen oft logische Fehler auf, die das Problem verursachen.<br />
+</li>
+<li>Hilfe holen. Falls ihr im Laufe des Tutoriums ein Problem habt, das ihr selbst nicht lösen könnt, könnt ihr einen Screenshot oder ein Codesnippet in das Diskussionsforum in unserer R-Tutoriumsgruppe hochstellen oder mir eine E-Mail an <a href="mailto:l.poggel@fu-berlin.de" class="email">l.poggel@fu-berlin.de</a> schreiben.</li>
+</ol>
+</div>
+</div>
+<div id="nächstes-treffen" class="section level1" number="4">
+<h1 number="4"><span class="header-section-number">4</span> Nächstes Treffen</h1>
+<ol start="2" style="list-style-type: decimal">
+<li>Mai, 14-16 Uhr hier im Raum.</li>
+</ol>
+<p>Falls ihr noch nicht im Blackboardkurs angemeldet seid, schreibt euch dort bitte ein - Ankündigungen für das nächste Treffen werde ich darüber versenden. Kurs-ID: PHILGEIST_T_16340_22S. Im Laufe des Kurses werden wir zu GitHub wechseln; bis dahin ist aber das Blackboard der Hauptkommunikationskanal.</p>
+<p>Natürlich könnt ihr mir auch immer eine Mail schreiben an: <a href="mailto:l.poggel@fu-berlin.de" class="email">l.poggel@fu-berlin.de</a> :)</p>
+</div>
+<div id="ressourcen" class="section level1" number="5">
+<h1 number="5"><span class="header-section-number">5</span> Ressourcen</h1>
+<ul>
+<li>Mehr zu Datentypen und Datenstrukturen: <a href="https://swcarpentry.github.io/r-novice-inflammation/13-supp-data-structures/" class="uri">https://swcarpentry.github.io/r-novice-inflammation/13-supp-data-structures/</a></li>
+<li>Datacamp Intro 2 R Kurs: <a href="https://campus.datacamp.com/courses/abc-intro-2-r/introduction-1?ex=1" class="uri">https://campus.datacamp.com/courses/abc-intro-2-r/introduction-1?ex=1</a></li>
+<li>Weiterführende Tutorials:
+<ul>
+<li><a href="https://alvinntnu.github.io/NTNU_ENC2036_LECTURES/corpus-analysis-a-start.html#frequency-lists" class="uri">https://alvinntnu.github.io/NTNU_ENC2036_LECTURES/corpus-analysis-a-start.html#frequency-lists</a><br />
+</li>
+<li><a href="https://quanteda.io/articles/pkgdown/replication/digital-humanities.html" class="uri">https://quanteda.io/articles/pkgdown/replication/digital-humanities.html</a></li>
+<li><a href="https://tutorials.quanteda.io/statistical-analysis/frequency/" class="uri">https://tutorials.quanteda.io/statistical-analysis/frequency/</a></li>
+<li><a href="https://quanteda.io/reference/docfreq.html" class="uri">https://quanteda.io/reference/docfreq.html</a><br />
+</li>
+<li><a href="https://tutorials.quanteda.io/basic-operations/tokens/tokens_ngrams/" class="uri">https://tutorials.quanteda.io/basic-operations/tokens/tokens_ngrams/</a></li>
+<li><a href="https://quanteda.io/articles/pkgdown/examples/plotting.html" class="uri">https://quanteda.io/articles/pkgdown/examples/plotting.html</a></li>
+<li><a href="https://r-graphics.org" class="uri">https://r-graphics.org</a><br />
+</li>
+<li><a href="https://r-graphics.org/chapter-ggplot2" class="uri">https://r-graphics.org/chapter-ggplot2</a></li>
+</ul></li>
+</ul>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

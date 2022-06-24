@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>3. Sitzung: Reguläre Ausdrücke</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">R-Tutorium</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Sitzungen
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="tutorium1_250422_basics.html">Sitzung 1 - Basics</a>
+    </li>
+    <li>
+      <a href="tutorium2_020522_dateien.html">Sitzung 2 - Daten und Dateien</a>
+    </li>
+    <li>
+      <a href="tutorium3_09052022_regex.html">Sitzung 3 - Reguläre Ausdrücke</a>
+    </li>
+    <li>
+      <a href="tutorium4_16052022_xml.html">Sitzung 4 - XML und TEI</a>
+    </li>
+    <li>
+      <a href="tutorium6_130622_stilometrie.html">Sitzung 6 - Stilometrie</a>
+    </li>
+    <li>
+      <a href="tutorium7_200622_virtuelle_umgebungen.html">Sitzung 7 - Virtuelle Umgebungen</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">3. Sitzung: Reguläre Ausdrücke</h1>
+
+</div>
+
+
+<div id="was-sind-reguläre-ausdrücke" class="section level2">
+<h2>1. Was sind reguläre Ausdrücke?</h2>
+<p>Reguläre Ausdrücke = Regular Expression, kurz: RegEx, RegExp <br /> Formale Definition: Eine Beschreibungsmöglichkeit von formalen Sprachen (Programmiersprachen), bei der reguläre Ausdrücke Platzhalter für Teile dieser Sprache sind. Einfach formuliert: Reguläre Ausdrücke sind ein verallgemeinertes Suchmuster (pattern) für Zeichenketten.</p>
+<ul>
+<li>Regex gibt es in fast jeder Sprache</li>
+<li>Sie werden für Operationen auf Strings eingesetzt, zum Suchen oder Bearbeiten einer Zeichenkette</li>
+<li>Sie kommen z.B. beim Preprocessing, aber auch zum Debuggen von Code oder in Webscrapern zur Anwendung.</li>
+</ul>
+</div>
+<div id="reguläre-ausdrücke-in-r" class="section level2">
+<h2>2. Reguläre Ausdrücke in R</h2>
+<p>Als Beispieltext nutzen wir die Datei “Rapunzel_(1850).txt”. <br /> Zur Vorbereitung installieren wir die folgenden Pakete:</p>
+<pre class="r"><code>install.packages(c(&quot;readtext&quot;, &quot;stringr&quot;, &quot;quanteda&quot;), repos=&quot;http://cran.us.r-project.org&quot;) 
+library(readtext)
+library(stringr)
+library(quanteda)</code></pre>
+<div id="r-base-funktionen" class="section level3">
+<h3>2.1 R Base Funktionen</h3>
+<table>
+<colgroup>
+<col width="31%" />
+<col width="68%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Funktion</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>grep(), grepl()</td>
+<td>Search for matches of a regular expression/pattern in a character vector; either return the indices into the character vector that match, the strings that happen to match, or a TRUE/FALSE vector indicating which elements match.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>regexpr(), gregexpr()</td>
+<td>Search a character vector for regular expression matches and return the indices of the string where the match begins and the length of the match.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>sub(), gsub()</td>
+<td>Search a character vector for regular expression matches and replace that match with another string.</td>
+</tr>
+</tbody>
+</table>
+<p>Quelle: <a href="https://www.youtube.com/watch?v=q8SzNKib5-4" class="uri">https://www.youtube.com/watch?v=q8SzNKib5-4</a> <br /> Offizielle Dokumentation: <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/grep" class="uri">https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/grep</a></p>
+<div id="wahl-der-einlesefunktion" class="section level4">
+<h4>Wahl der Einlesefunktion</h4>
+<p>Wie muss unser Eingabeobjekt aussehen? <br /> Wir verwenden zunächst die readtext() Funktion zum Einlesen unseres Märchens.</p>
+<pre class="r"><code>rapunzel_df &lt;- readtext(&quot;files/Rapunzel_(1850).txt&quot;) #df ist Standard-Abkürzung für dataframe
+str(rapunzel_df) #str() gibt einen die Struktur eines R Datenobjekts übersichtlich aus</code></pre>
+<pre><code>## Classes &#39;readtext&#39; and &#39;data.frame&#39;: 1 obs. of  2 variables:
+##  $ doc_id: chr &quot;Rapunzel_(1850).txt&quot;
+##  $ text  : chr &quot;\nEs war einmal ein Mann und eine Frau, die wünschten sich schon lange vergeblich ein Kind, endlich machte sich&quot;| __truncated__</code></pre>
+<p>Durch Einlesen des Märchens mithilfe der readtext() Funktion haben wir also einen Dataframe mit zwei Spalten und einer Zeile erhalten. Wir wollen nur den Märchentext nach Matches zu durchsuchen und wählen deswegen nur die Spalte “text” als Eingabe.</p>
+<pre class="r"><code>grep(&quot;Rapunzel&quot;, rapunzel_df$text, value=F) </code></pre>
+<pre><code>## [1] 1</code></pre>
+<pre class="r"><code>grepl(&quot;Rapunzel&quot;, rapunzel_df$text)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>regexpr(&quot;Rapunzel&quot;, rapunzel_df$text)</code></pre>
+<pre><code>## [1] 625
+## attr(,&quot;match.length&quot;)
+## [1] 8</code></pre>
+<pre class="r"><code>gregexpr(&quot;Rapunzel&quot;, rapunzel_df$text)</code></pre>
+<pre><code>## [[1]]
+##  [1]  625  751 1005 1176 1334 1903 2077 2334 2672 2709 3006 3016 3056 3527 3972
+## [16] 3982 4026 4287 4297 4415 4729 5380 5782 6006 6117 6264 6274 6406 6697 7162
+## [31] 7376
+## attr(,&quot;match.length&quot;)
+##  [1] 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8</code></pre>
+<p>Verständnisfragen:</p>
+<ul>
+<li>Interpretiert die Ausgabe der vier Funktionen.</li>
+<li>Wie wirkt sich die Struktur des Dataframes auf die Suchergebnisse aus?</li>
+</ul>
+<!-- Lösung: Diese Ausgabe bietet uns aber wenig Informationen, da der Dataframe nur eine Zeile hat: Es wird nur ein Index bzw. ein Boolescher Wahrheitswert für eigentlich sehr viele Fundstellen ausgegeben. -->
+<p>Die Ausgabe war nicht besonders aussagekräftig. Es gibt zwei Lösungen: Wir können entweder einen anderen Befehl zum Einlesen der Daten verwenden oder wir müssen das readtext-Objekt mit quanteda in ein Korpusobjekt umwandeln (dazu mehr später).</p>
+<p>Befehl readLines</p>
+<pre class="r"><code>rapunzel &lt;- readLines(&quot;files/Rapunzel_(1850).txt&quot;)
+str(rapunzel)</code></pre>
+<pre><code>##  chr [1:45] &quot;&quot; ...</code></pre>
+<p>Verständnisfrage:</p>
+<ul>
+<li>Welche Struktur hat unser Datenobjekt “rapunzel” nach Einlesen des Märchens mithilfe der readLines Funktion?</li>
+</ul>
+<pre class="r"><code>grep(&quot;Rapunzel&quot;, rapunzel, value=F)</code></pre>
+<pre style="max-height: 100px;"><code>##  [1]  2  3  5  8 11 13 15 18 21 26 27 29 31 34 35</code></pre>
+<pre class="r"><code>grepl(&quot;Rapunzel&quot;, rapunzel)</code></pre>
+<pre style="max-height: 100px;"><code>##  [1] FALSE  TRUE  TRUE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE  TRUE FALSE
+## [13]  TRUE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE FALSE
+## [25] FALSE  TRUE  TRUE FALSE  TRUE FALSE  TRUE FALSE FALSE  TRUE  TRUE FALSE
+## [37] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</code></pre>
+<pre class="r"><code>regexpr(&quot;Rapunzel&quot;, rapunzel)</code></pre>
+<pre style="max-height: 100px;"><code>##  [1]  -1 624 130  -1   1  -1  -1   2  -1  -1   1  -1 201  -1   2  -1  -1   9  -1
+## [20]  -1   2  -1  -1  -1  -1  18  39  -1  28  -1   2  -1  -1  97 108  -1  -1  -1
+## [39]  -1  -1  -1  -1  -1  -1  -1
+## attr(,&quot;match.length&quot;)
+##  [1] -1  8  8 -1  8 -1 -1  8 -1 -1  8 -1  8 -1  8 -1 -1  8 -1 -1  8 -1 -1 -1 -1
+## [26]  8  8 -1  8 -1  8 -1 -1  8  8 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1</code></pre>
+<pre class="r"><code>gregexpr(&quot;Rapunzel&quot;, rapunzel)</code></pre>
+<pre style="max-height: 100px;"><code>## [[1]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[2]]
+## [1]  624  750 1004 1175
+## attr(,&quot;match.length&quot;)
+## [1] 8 8 8 8
+## 
+## [[3]]
+## [1]  130  699  873 1130 1468
+## attr(,&quot;match.length&quot;)
+## [1] 8 8 8 8 8
+## 
+## [[4]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[5]]
+## [1] 1
+## attr(,&quot;match.length&quot;)
+## [1] 8
+## 
+## [[6]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[7]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[8]]
+## [1]  2 12
+## attr(,&quot;match.length&quot;)
+## [1] 8 8
+## 
+## [[9]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[10]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[11]]
+## [1] 1
+## attr(,&quot;match.length&quot;)
+## [1] 8
+## 
+## [[12]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[13]]
+## [1] 201
+## attr(,&quot;match.length&quot;)
+## [1] 8
+## 
+## [[14]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[15]]
+## [1]  2 12
+## attr(,&quot;match.length&quot;)
+## [1] 8 8
+## 
+## [[16]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[17]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[18]]
+## [1] 9
+## attr(,&quot;match.length&quot;)
+## [1] 8
+## 
+## [[19]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[20]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[21]]
+## [1]  2 12
+## attr(,&quot;match.length&quot;)
+## [1] 8 8
+## 
+## [[22]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[23]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[24]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[25]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[26]]
+## [1]  18 332 983
+## attr(,&quot;match.length&quot;)
+## [1] 8 8 8
+## 
+## [[27]]
+## [1]  39 263
+## attr(,&quot;match.length&quot;)
+## [1] 8 8
+## 
+## [[28]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[29]]
+## [1] 28
+## attr(,&quot;match.length&quot;)
+## [1] 8
+## 
+## [[30]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[31]]
+## [1]  2 12
+## attr(,&quot;match.length&quot;)
+## [1] 8 8
+## 
+## [[32]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[33]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[34]]
+## [1]  97 388 853
+## attr(,&quot;match.length&quot;)
+## [1] 8 8 8
+## 
+## [[35]]
+## [1] 108
+## attr(,&quot;match.length&quot;)
+## [1] 8
+## 
+## [[36]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[37]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[38]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[39]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[40]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[41]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[42]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[43]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[44]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1
+## 
+## [[45]]
+## [1] -1
+## attr(,&quot;match.length&quot;)
+## [1] -1</code></pre>
+<p>Die Funktionen <code>regexpr()</code> und <code>gregexpr()</code> können um die Funktion <code>regmatches</code> ergänzt werden, um statt Funstellen die tatsächlich gefundenen Zeichenketten anzuzeigen:</p>
+<pre class="r"><code>regmatches(rapunzel, regexpr(&quot;Rapunzel&quot;, rapunzel))</code></pre>
+<pre style="max-height: 100px;"><code>##  [1] &quot;Rapunzel&quot; &quot;Rapunzel&quot; &quot;Rapunzel&quot; &quot;Rapunzel&quot; &quot;Rapunzel&quot; &quot;Rapunzel&quot;
+##  [7] &quot;Rapunzel&quot; &quot;Rapunzel&quot; &quot;Rapunzel&quot; &quot;Rapunzel&quot; &quot;Rapunzel&quot; &quot;Rapunzel&quot;
+## [13] &quot;Rapunzel&quot; &quot;Rapunzel&quot; &quot;Rapunzel&quot;</code></pre>
+<pre class="r"><code>regmatches(rapunzel, gregexpr(&quot;Rapunzel&quot;, rapunzel))</code></pre>
+<pre style="max-height: 100px;"><code>## [[1]]
+## character(0)
+## 
+## [[2]]
+## [1] &quot;Rapunzel&quot; &quot;Rapunzel&quot; &quot;Rapunzel&quot; &quot;Rapunzel&quot;
+## 
+## [[3]]
+## [1] &quot;Rapunzel&quot; &quot;Rapunzel&quot; &quot;Rapunzel&quot; &quot;Rapunzel&quot; &quot;Rapunzel&quot;
+## 
+## [[4]]
+## character(0)
+## 
+## [[5]]
+## [1] &quot;Rapunzel&quot;
+## 
+## [[6]]
+## character(0)
+## 
+## [[7]]
+## character(0)
+## 
+## [[8]]
+## [1] &quot;Rapunzel&quot; &quot;Rapunzel&quot;
+## 
+## [[9]]
+## character(0)
+## 
+## [[10]]
+## character(0)
+## 
+## [[11]]
+## [1] &quot;Rapunzel&quot;
+## 
+## [[12]]
+## character(0)
+## 
+## [[13]]
+## [1] &quot;Rapunzel&quot;
+## 
+## [[14]]
+## character(0)
+## 
+## [[15]]
+## [1] &quot;Rapunzel&quot; &quot;Rapunzel&quot;
+## 
+## [[16]]
+## character(0)
+## 
+## [[17]]
+## character(0)
+## 
+## [[18]]
+## [1] &quot;Rapunzel&quot;
+## 
+## [[19]]
+## character(0)
+## 
+## [[20]]
+## character(0)
+## 
+## [[21]]
+## [1] &quot;Rapunzel&quot; &quot;Rapunzel&quot;
+## 
+## [[22]]
+## character(0)
+## 
+## [[23]]
+## character(0)
+## 
+## [[24]]
+## character(0)
+## 
+## [[25]]
+## character(0)
+## 
+## [[26]]
+## [1] &quot;Rapunzel&quot; &quot;Rapunzel&quot; &quot;Rapunzel&quot;
+## 
+## [[27]]
+## [1] &quot;Rapunzel&quot; &quot;Rapunzel&quot;
+## 
+## [[28]]
+## character(0)
+## 
+## [[29]]
+## [1] &quot;Rapunzel&quot;
+## 
+## [[30]]
+## character(0)
+## 
+## [[31]]
+## [1] &quot;Rapunzel&quot; &quot;Rapunzel&quot;
+## 
+## [[32]]
+## character(0)
+## 
+## [[33]]
+## character(0)
+## 
+## [[34]]
+## [1] &quot;Rapunzel&quot; &quot;Rapunzel&quot; &quot;Rapunzel&quot;
+## 
+## [[35]]
+## [1] &quot;Rapunzel&quot;
+## 
+## [[36]]
+## character(0)
+## 
+## [[37]]
+## character(0)
+## 
+## [[38]]
+## character(0)
+## 
+## [[39]]
+## character(0)
+## 
+## [[40]]
+## character(0)
+## 
+## [[41]]
+## character(0)
+## 
+## [[42]]
+## character(0)
+## 
+## [[43]]
+## character(0)
+## 
+## [[44]]
+## character(0)
+## 
+## [[45]]
+## character(0)</code></pre>
+<p>Wir können auch einzelne Absätze durchsuchen oder die Gesamtanzahl der Fundstellen ausgeben lassen:</p>
+<pre class="r"><code>length(grep(&quot;Rapunzel&quot;, rapunzel))</code></pre>
+<pre style="max-height: 100px;"><code>## [1] 15</code></pre>
+<pre class="r"><code>rapunzel[2]</code></pre>
+<pre style="max-height: 100px;"><code>## [1] &quot;Es war einmal ein Mann und eine Frau, die wünschten sich schon lange vergeblich ein Kind, endlich machte sich die Frau Hoffnung der liebe Gott werde ihren Wunsch erfüllen. Die Leute hatten in ihrem Hinterhaus ein kleines Fenster, daraus konnte man in einen prächtigen Garten sehen, der voll der schönsten Blumen und Kräuter stand; er war aber von einer hohen Mauer umgeben, und niemand wagte hinein zu gehen, weil er einer Zauberin gehörte, die große Macht hatte, und von aller Welt gefürchtet wurde. Eines Tags stand die Frau an diesem Fenster und sah in den Garten hinab, da erblickte sie ein Beet, das mit den schönsten Rapunzeln bepflanzt war: und sie sahen so frisch und grün aus, dass sie lüstern ward und das größte Verlangen empfand von den Rapunzeln zu essen. Das Verlangen nahm jeden Tag zu, und da sie wusste dass sie keine davon bekommen konnte, so fiel sie ganz ab, sah blaß und elend aus. Da erschrak der Mann und fragte „was fehlt dir, liebe Frau?“ „Ach,“ antwortete sie, „wenn ich keine Rapunzeln aus dem Garten hinter unserm Hause zu essen kriege, so sterbe ich.“ Der Mann, der sie lieb hatte, dachte „eh du deine Frau sterben lässest, holst du ihr von den Rapunzeln, es mag kosten was&quot;</code></pre>
+<p>Verwenden wir jetzt die Funktionen <code>sub()</code> und <code>gsub()</code>, um erkannte Zeichenketten zu ersetzen. Mit der bereits bekannten Funktion <code>grep()</code> können wir daraufhin überprüfen, ob die Zeichenketten erfolgreich ersetzt wurden.</p>
+<pre class="r"><code>peterpan_1 &lt;- gsub(&quot;Rapunzel&quot;, &quot;Peter Pan&quot;, rapunzel)
+grep(&quot;Rapunzel&quot;, peterpan_1)</code></pre>
+<pre style="max-height: 100px;"><code>## integer(0)</code></pre>
+<pre class="r"><code>peterpan_2 &lt;- sub(&quot;Rapunzel&quot;, &quot;Peter Pan&quot;, rapunzel)
+grep(&quot;Rapunzel&quot;, peterpan_2)</code></pre>
+<pre style="max-height: 100px;"><code>## [1]  2  3  8 15 21 26 27 31 34</code></pre>
+<pre class="r"><code>peterpan_1[2]</code></pre>
+<pre style="max-height: 100px;"><code>## [1] &quot;Es war einmal ein Mann und eine Frau, die wünschten sich schon lange vergeblich ein Kind, endlich machte sich die Frau Hoffnung der liebe Gott werde ihren Wunsch erfüllen. Die Leute hatten in ihrem Hinterhaus ein kleines Fenster, daraus konnte man in einen prächtigen Garten sehen, der voll der schönsten Blumen und Kräuter stand; er war aber von einer hohen Mauer umgeben, und niemand wagte hinein zu gehen, weil er einer Zauberin gehörte, die große Macht hatte, und von aller Welt gefürchtet wurde. Eines Tags stand die Frau an diesem Fenster und sah in den Garten hinab, da erblickte sie ein Beet, das mit den schönsten Peter Pann bepflanzt war: und sie sahen so frisch und grün aus, dass sie lüstern ward und das größte Verlangen empfand von den Peter Pann zu essen. Das Verlangen nahm jeden Tag zu, und da sie wusste dass sie keine davon bekommen konnte, so fiel sie ganz ab, sah blaß und elend aus. Da erschrak der Mann und fragte „was fehlt dir, liebe Frau?“ „Ach,“ antwortete sie, „wenn ich keine Peter Pann aus dem Garten hinter unserm Hause zu essen kriege, so sterbe ich.“ Der Mann, der sie lieb hatte, dachte „eh du deine Frau sterben lässest, holst du ihr von den Peter Pann, es mag kosten was&quot;</code></pre>
+<pre class="r"><code>peterpan_2[2]</code></pre>
+<pre style="max-height: 100px;"><code>## [1] &quot;Es war einmal ein Mann und eine Frau, die wünschten sich schon lange vergeblich ein Kind, endlich machte sich die Frau Hoffnung der liebe Gott werde ihren Wunsch erfüllen. Die Leute hatten in ihrem Hinterhaus ein kleines Fenster, daraus konnte man in einen prächtigen Garten sehen, der voll der schönsten Blumen und Kräuter stand; er war aber von einer hohen Mauer umgeben, und niemand wagte hinein zu gehen, weil er einer Zauberin gehörte, die große Macht hatte, und von aller Welt gefürchtet wurde. Eines Tags stand die Frau an diesem Fenster und sah in den Garten hinab, da erblickte sie ein Beet, das mit den schönsten Peter Pann bepflanzt war: und sie sahen so frisch und grün aus, dass sie lüstern ward und das größte Verlangen empfand von den Rapunzeln zu essen. Das Verlangen nahm jeden Tag zu, und da sie wusste dass sie keine davon bekommen konnte, so fiel sie ganz ab, sah blaß und elend aus. Da erschrak der Mann und fragte „was fehlt dir, liebe Frau?“ „Ach,“ antwortete sie, „wenn ich keine Rapunzeln aus dem Garten hinter unserm Hause zu essen kriege, so sterbe ich.“ Der Mann, der sie lieb hatte, dachte „eh du deine Frau sterben lässest, holst du ihr von den Rapunzeln, es mag kosten was&quot;</code></pre>
+<p>Verständnisfrage:</p>
+<ul>
+<li>Überprüfen wir die Ergebnisse, so fällt auf, dass bei Anwendung der Funktion <code>sub()</code> nicht alle Instanzen der Zeichenkette “Rapunzel” ersetzt wurden. Woran könnte das liegen?</li>
+<li>Vergleichen wir nun den zweiten Absatz der beiden Objekte “peterpan_1” und “peterpan_2”. Welche Unterschiede stellt ihr fest? Wie unterscheidet sich folglich das Verhalten der Funktionen <code>gsub()</code> und <code>sub()</code>?</li>
+</ul>
+<p>Durchsuchen mehrerer Dateien:</p>
+<p>→ <strong>Übung: tutorium3_09052022_uebung.R</strong></p>
+</div>
+</div>
+<div id="spezielle-pakete-stringr" class="section level3">
+<h3>2.2 Spezielle Pakete: stringr</h3>
+<p>Vergleich r base und stringr: <a href="https://stringr.tidyverse.org/articles/from-base.html" class="uri">https://stringr.tidyverse.org/articles/from-base.html</a> <br /></p>
+<p>Verständnisfragen:</p>
+<ul>
+<li>Welche stringr Funktionen können anstelle der bereits kennengelernten R base Funktionen verwendet werden?</li>
+<li>Googelt das Paket stringi. Was ist der Unterschied zu stringr?</li>
+</ul>
+<p>→ <strong>Übung: tutorium3_09052022_uebung.R</strong></p>
+</div>
+</div>
+<div id="regex-syntax" class="section level2">
+<h2>3. Regex Syntax</h2>
+<div id="basics-syntax" class="section level3">
+<h3>3.1 Basics Syntax</h3>
+<p>Bisher haben wir nur nach einzelnen Worten gesucht. Oft interessieren wir uns aber für komplexere Ausdrücke, Zeichen, oder verschiedene Varianten desselben Worts.</p>
+<p>Reguläre Ausdrücke stehen immer in doppelten Anführungszeichen! Soll innerhalb des Ausdrucks nach Anführungszeichen gesucht werden, müssen diese “escaped” werden. Dazu nutzt man den backslash. Das gilt auch für alle anderen Zeichen, die eine “Regex-interne” Bedeutung haben, wie Punkte, Bindestriche, Klammern,… Diese lernen wir im Folgenden kennen.</p>
+<p>Wichtige Zeichen:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Zeichen</th>
+<th>Bedeutung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>\</code></td>
+<td>Escaped character: s.o.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>⎮</code></td>
+<td>Veroderung (ohne Leerzeichen!)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Achtung: Auf Eindeutigkeit achten!</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Klammern nutzen!</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>()</code></td>
+<td>Gruppen: Einheiten können mit runden</td>
+<td>Baum(krone⎮stamm)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Klammern begrenzt werden</td>
+<td>199(4⎮5)</td>
+</tr>
+<tr class="odd">
+<td><code>[]</code></td>
+<td>Zeichenklasse</td>
+<td>[a-zA-ZäöüÄÖÜß]</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>- Bindestrich für Zahlen- oder</td>
+<td>[0-9]</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Buchstabenreihen</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>- Reihenfolge innerhalb von Klassen</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>nicht festgelegt</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>- Sucht nach allen Kombinationen der</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Zeichen, wenn kein “oder” spezifiz.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>[^]</code></td>
+<td>Verneinung</td>
+<td>[^aeo]</td>
+</tr>
+<tr class="odd">
+<td><code>{}</code></td>
+<td>Quantifizierer</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>- zwischen 1 und 4</td>
+<td>[a-z]{1,4}</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>- mindestens 1</td>
+<td>[a-z]{1,}</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>- genau 4</td>
+<td>[a-z]{4}</td>
+</tr>
+<tr class="odd">
+<td><code>+</code></td>
+<td>“mindestens einmal”, bis unendlich</td>
+<td>[1986]+</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>(Frage: Was ist der Unterschied?)</td>
+<td>(1986)+</td>
+</tr>
+<tr class="odd">
+<td><code>*</code></td>
+<td>“beliebig oft”, 0 bis unendlich</td>
+<td>[1986]*</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>(1986)*</td>
+</tr>
+<tr class="odd">
+<td><code>.*</code></td>
+<td>Wildcard: matcht Zeichen beliebig oft</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>(Aber: außer new line characters)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>?</code></td>
+<td>Mögliches, aber optionales Match</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>^</code></td>
+<td>Positionsmarker: ^ außerhalb einer</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Zeichenklasse markiert Zeilenanfang</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>$</code></td>
+<td>Positionsmarker: Markiert Zeilenende</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Verständnisfragen:</p>
+<ul>
+<li>Wie hätte sich die Ausgabe der “Rapunzel”-Beispiele oben verändert, wenn wir statt nach “Rapunzel” nach “Rapunzeln?” gesucht hätten?</li>
+<li>Wie hätten wir nach allen Varianten des Namens “Rapunzel” suchen können?</li>
+</ul>
+</div>
+<div id="zeichenklassen" class="section level3">
+<h3>3.2 Zeichenklassen</h3>
+<p>Nach manchen Zeichen wird so oft gesucht, dass sich bereits nützliche Abkürzungen dafür entwickelt haben. Diese Zeichenklassen können zum Beispiel mit Funktionen aus dem Paket stringr verwendet werden.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Klasse</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>\w</code></td>
+<td>Wortzeichen = [a-zA-Z]</td>
+</tr>
+<tr class="even">
+<td><code>\W</code></td>
+<td>kein Wortzeichen</td>
+</tr>
+<tr class="odd">
+<td><code>\d</code></td>
+<td>Zahlzeichen = [0-9]</td>
+</tr>
+<tr class="even">
+<td><code>\D</code></td>
+<td>kein Zahlzeichen</td>
+</tr>
+<tr class="odd">
+<td><code>\s</code></td>
+<td>Leerzeichen</td>
+</tr>
+<tr class="even">
+<td><code>\S</code></td>
+<td>kein Leerzeichen</td>
+</tr>
+<tr class="odd">
+<td><code>\r</code></td>
+<td>carriage return (andere Art von Leerzeichen)</td>
+</tr>
+<tr class="even">
+<td><code>\n</code></td>
+<td>new line character (neue Zeile)</td>
+</tr>
+<tr class="odd">
+<td><code>\t</code></td>
+<td>Tabulatorzeichen</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="lookarounds" class="section level3">
+<h3>3.3 Lookarounds</h3>
+<p>Sogenannte Lookarounds kommen zur Anwendung, wenn nach einem Muster gesucht wird, das den Anfang oder das Ende von einem gesuchten String markiert, aber selbst nicht gematcht werden soll.</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sequenz</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(?=foo) Lookahead</td>
+<td>Asserts that what immediately follows the current position in the string is foo</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>(?&lt;=foo) Lookbehind</td>
+<td>Asserts that what immediately precedes the current position in the string is foo</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>(?!foo) Negative Lookahead</td>
+<td>Asserts that what immediately follows the current position in the string is not foo</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>(?&lt;!foo) Negative Lookbehind</td>
+<td>Asserts that what immediately precedes the current position in the string is not foo</td>
+</tr>
+</tbody>
+</table>
+<p>Quelle: <a href="https://www.rexegg.com/regex-lookarounds.html" class="uri">https://www.rexegg.com/regex-lookarounds.html</a></p>
+<p>Achtung: viele Funktionen haben ein Argument “pcre”, welches per Default auf FALSE gesetzt ist. Hier müsst ihr stets “pcre=TRUE” eingeben, wenn ihr mit Lookarounds arbeiten wollt.</p>
+</div>
+</div>
+<div id="weiterführende-links" class="section level2">
+<h2>4. Weiterführende Links</h2>
+<ul>
+<li>Regex Debugging: <a href="https://regex101.com/" class="uri">https://regex101.com/</a></li>
+<li>Erläuterungen zum Regex-Syntax: <a href="https://danielfett.de/2006/03/20/regulaere-ausdruecke-tutorial/" class="uri">https://danielfett.de/2006/03/20/regulaere-ausdruecke-tutorial/</a></li>
+<li>Interaktives Tutorial zum Regex-Syntax: <a href="https://regexone.com/" class="uri">https://regexone.com/</a></li>
+<li>Video zu den R Base-Funktionen: <a href="https://www.youtube.com/watch?v=q8SzNKib5-4" class="uri">https://www.youtube.com/watch?v=q8SzNKib5-4</a></li>
+<li>Lookarounds erläutert: <a href="https://www.regular-expressions.info/lookaround.html" class="uri">https://www.regular-expressions.info/lookaround.html</a></li>
+<li>PCRE Cheatsheet: <a href="https://www.debuggex.com/cheatsheet/regex/pcre" class="uri">https://www.debuggex.com/cheatsheet/regex/pcre</a></li>
+</ul>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

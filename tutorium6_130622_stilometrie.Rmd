@@ -1,0 +1,78 @@
+---
+title: "6. Sitzung: Stilometrie"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    toc_depth: 3
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+ 
+# Plan für heute
+
+ 1. Nachtrag XML
+ 2. Was ist Stilometrie?
+ 3. Übung: Einstieg 
+ 4. Installation von Stylo
+ 5. Übung: Stilometrie mit Stylo 
+ 
+
+# Nachtrag zu XML  
+
+Eine Lösung zur Aufgabe 3 aus der letzten Stunde findet ihr jetzt [hier](https://github.com/lipogg/r-tutorium/tree/master/05_github-uebung/skripte/aufgabe3_loesung.R).  
+
+In den nächsten Tagen werde ich ein R-Markdown Dokument mit Ressourcen und Literatur zum Thema XML im GitHub Repository unter ``/04_xml`` hochladen. 
+
+# Was ist Stilometrie?
+
+Folien von Frank Fischer: [https://dh-minor.org/dd/2022-06-01](https://dh-minor.org/dd/2022-06-01) </br>
+
+Einführung forText: [https://fortext.net/routinen/methoden/stilometrie](https://fortext.net/routinen/methoden/stilometrie)
+
+Digitale Stilometrie mit Stylo: [https://fortext.net/routinen/lerneinheiten/stilometrie-mit-stylo](https://fortext.net/routinen/lerneinheiten/stilometrie-mit-stylo) 
+
+# Übung: Einstieg 
+
+Die Texte zur heutigen Stunde orientieren sich an einer [Forschungsarbeit von Fotis Jannidis und Gerhard Lauer](https://github.com/lipogg/r-tutorium/blob/master/06_stilometrie/Jannidis-Lauer_2014_Burrows_Delta.pdf), in der sie sogenannte "Burrow's Delta" als Maß für die stilistische Ähnlichkeit von Texten untersucht haben. Ihre Analyse konzentriert sich dabei auf Texte, die im deutschsprachigen Raum um 1800 publiziert wurden. Als Korpus nutzen sie plain text Dateien aus der Digitalen Bibliothek [https://textgridrep.org/](https://textgridrep.org/). Zunächst haben die Autoren untersucht, wie gut das Maß die Autorschaft, Gattungs- und Epochenzugehörigkeit der Texte klassifiziert. Danach haben sie sich einer speziellen literaturgeschichtlichen Fragestellung gewidmet, nämlich der Position Heinrich von Kleists im literarischen Kanon. Laut Jannidis und Lauer wird Kleist in der Forschung meist uneindeutig zwischen Klassik und Romantik eingeordnet. 
+
+Für die heutige Stunde werden wir beispielhaft die Analyse von Jannidis und Lauer anhand zweier reduzierter Textkorpora nachvollziehen, die ihr im Verzeichnis "daten" zur heutigen Stunde findet: 
+
+* ``/lauer-jannidis-genres`` enthält nach Gattungen unterteilte Stücke von Goethe.
+* ``/lauer-jannidis-autorschaft`` enthält Werke von Kleist, sowie ausgewählte Stücke aus Klassik und Romantik
+
+Die Analyse werden wir mithilfe des R Pakets ``stylo`` durchführen. 
+
+# Installation von Stylo
+
+Bevor Stylo über das R Studio installiert werden kann, müssen Mac-User:innen XQuartz installieren: [https://www.xquartz.org/](https://www.xquartz.org/)
+
+Video-Tutorial: [https://www.youtube.com/watch?v=hp3MTGA_W8o](https://www.youtube.com/watch?v=hp3MTGA_W8o)
+
+# Übung: Stilometrie mit Stylo
+
+Jetzt können wir unsere Beispielkorpora analysieren. Bei den Einstellungen orientieren wir uns wie folgt an Jannidis und Lauer.
+
+Für die Autorschaftsanalyse wählen wir das autorschaft-Korpus und die folgenden Parameter (Jannidis/Lauer, S. 44 f.):
+
+* INPUT & LANGUAGE: plain text, German
+* FEATURES: 200-2000 MFW (most frequent words), culling 0; zweiter Durchlauf: culling 50, delete pronouns
+* STATISTICS: consensus tree, classic delta
+
+Für die Genreklassifikation wählen wir das genre-Korpus, zunächst die txt-Dateien, und die folgenden Parameter (Jannidis/Lauer, S. 38): 
+
+* INPUT & LANGUAGE: plain text bzw. xml, German
+* FEATURES: 1490-1490 MFW, culling 50
+* STATISTICS: Cluster Analysis (=Dendrogramm), classic delta
+
+Die Epochenklassifikation behandeln wir nur theoretisch (Jannidis/Lauer, S. 40)
+
+Fragen: 
+
+* Wie interpretiert ihr den Consensus Tree/das Dendrogramm? 
+* Was passiert, wenn wir anstelle der txt-Dateien die xml-Dateien zur Genreklassifikation verwenden? 
