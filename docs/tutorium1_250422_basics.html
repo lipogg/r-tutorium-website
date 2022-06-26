@@ -35,6 +35,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -349,7 +351,12 @@ div.tocify {
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/lipogg/r-tutorial">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -364,8 +371,8 @@ div.tocify {
 </div>
 
 
-<div id="plan-für-heute" class="section level1" number="1">
-<h1 number="1"><span class="header-section-number">1</span> Plan für heute</h1>
+<div id="plan-für-heute" class="section level2">
+<h2>1. Plan für heute</h2>
 <ol style="list-style-type: decimal">
 <li>Vorstellungsrunde: Fach, Vorerfahrung, Interessen</li>
 <li>Themen und Semesterplan</li>
@@ -382,8 +389,8 @@ div.tocify {
 <li>Nächstes Treffen</li>
 </ol>
 </div>
-<div id="themen-und-semesterplan" class="section level1" number="2">
-<h1 number="2"><span class="header-section-number">2</span> Themen und Semesterplan</h1>
+<div id="themen-und-semesterplan" class="section level2">
+<h2>2. Themen und Semesterplan</h2>
 <p>Der Semesterplan ist zum Teil abgestimmt mit dem Seminar <a href="https://www.fu-berlin.de/vv/de/lv/734022?query=digitale+dramenanalyse&amp;sm=682080">“Digitale Dramenanalyse”</a> von Frank Fischer. Es gibt aber genug Raum für eure eigenen Wünsche, Erwartungen und Interessen.</p>
 <ul>
 <li>Basics (heute)</li>
@@ -400,16 +407,16 @@ div.tocify {
 </ul>
 <p>Vorschläge, Ideen, Interessen?</p>
 </div>
-<div id="r-basics" class="section level1" number="3">
-<h1 number="3"><span class="header-section-number">3</span> R Basics</h1>
-<div id="r-und-r-studio-installieren" class="section level2" number="3.1">
-<h2 number="3.1"><span class="header-section-number">3.1</span> R und R Studio installieren</h2>
+<div id="r-basics" class="section level2">
+<h2>3. R Basics</h2>
+<div id="r-und-r-studio-installieren" class="section level3">
+<h3>3.1 R und R Studio installieren</h3>
 <p>Bevor wir loslegen können, sollten alle R sowie die Entwicklungsumgebung RStudio installieren.</p>
 <p>R installieren: <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></p>
 <p>R Studio installieren: <a href="https://www.rstudio.com/products/rstudio/download/" class="uri">https://www.rstudio.com/products/rstudio/download/</a></p>
 </div>
-<div id="variablen" class="section level2" number="3.2">
-<h2 number="3.2"><span class="header-section-number">3.2</span> Variablen</h2>
+<div id="variablen" class="section level3">
+<h3>3.2 Variablen</h3>
 <p>Variablen werden verwendet, um Werte zu speichern, die wiederholt verwendet werden. Werte können mithilfe der Zuweisungsoperatoren -&gt; und = einer Variable “zugewiesen” werden, das heißt, dass ein Name festgelegt wird, der für diesen Wert und für einen Speicherplatz steht. So kann mithilfe des Variablennamens auf ihren Inhalt zugegriffen werden, selbst dann, wenn sich der Wert im Programmverlauf verändert hat. Das Zuweisen eines Werts zu einer Variable wird auch Initialisieren genannt. In anderen Programmiersprachen muss eine Variable zuerst deklariert werden; dieser Schritt muss in R aber nicht separat ausgeführt werden. Bei der Benennung von Variablen sollten bestimmte Regeln und Konventionen eingehalten werden:</p>
 <ul>
 <li>Variablen dürfen keine Sonderzeichen außer Punkte und Unterstriche enthalten.</li>
@@ -431,8 +438,8 @@ print(satz)</code></pre>
 <pre><code>## [1] &quot;Ein Apfel ist keine Pflanze&quot;</code></pre>
 <p>Verständnisfrage: Warum wird für die Variable satz das zweite Mal ein anderer Wert ausgegeben?</p>
 </div>
-<div id="datentypen" class="section level2" number="3.3">
-<h2 number="3.3"><span class="header-section-number">3.3</span> Datentypen</h2>
+<div id="datentypen" class="section level3">
+<h3>3.3 Datentypen</h3>
 <p>Die Werte der Variablen im Beispiel oben haben denselben Datentyp: character. Character ist kurz für “character string”; in anderen Programmiersprachen heißt dieser Datentyp daher oft “string”. Neben characters gibt es in R weitere Datentypen, z.B.</p>
 <ul>
 <li>integer</li>
@@ -461,8 +468,8 @@ print(x)</code></pre>
 <pre><code>## [1] &quot;4.6&quot;</code></pre>
 <p>Verständnisfrage: Enthalten die Variablen x und y den gleichen Wert?</p>
 </div>
-<div id="operatoren" class="section level2" number="3.4">
-<h2 number="3.4"><span class="header-section-number">3.4</span> Operatoren</h2>
+<div id="operatoren" class="section level3">
+<h3>3.4 Operatoren</h3>
 <p>In den bisherigen Beispielen haben wir bereits einen Operator kennengelernt, den sogenannten Zuweisungsoperator &lt;- bzw. =. Daneben gibt es arithmetische Operatoren und logische Operatoren.</p>
 <ul>
 <li><p>Arithmetische Operatoren sind aus der Schulmathematik bekannt. Es handelt sich dabei um Operatoren wie -, +, *, / sowie %% und %/%. Beachtet, dass der Divisionsoperator / nur für numerics definiert ist. Für die Division zweier integers wird ein spezieller Divisionsoperator, %/%, verwendet. %% ist der modulo Operator, damit kann bei einer Division der Rest berechnet werden. ^ oder ** wird zum Exponieren verwendet.</p></li>
@@ -525,8 +532,8 @@ aussage_1 == !aussage_2</code></pre>
 <li>Was passiert im letzten Beispiel?</li>
 </ul>
 </div>
-<div id="datenstrukturen" class="section level2" number="3.5">
-<h2 number="3.5"><span class="header-section-number">3.5</span> Datenstrukturen</h2>
+<div id="datenstrukturen" class="section level3">
+<h3>3.5 Datenstrukturen</h3>
 <p>Bisher haben wir Variablen genutzt, um einzelne Werte vom Typ character, integer, numeric oder logical darin zu speichern. Variablen können aber auch strukturierte Sammlungen von Werten enthalten. Solche Datenstrukturen können entweder nur Elemente vom selben Typ aufnehmen (wie z.B. sog. “atomare” Vektoren und Matrizen), oder Elemente unterschiedlichen Typs (wie z.B. Listen und Dataframes). Listen sind genauer gesagt eine spezielle Art Vektor mit der Eigenschaft, dass sie Elemente unterschiedlichen Typs enthalten können; genauso sind Dataframes spezielle Matrizen, die Elemente unterschiedlichen Typs beinhalten können. Im Unterschied zu Matrizen sind Vektoren eindimensional. Zwischen den beiden besteht aber ein Zusammenhang: Jede Zeile und jede Spalte in einer Matrix kann auch als Vektor aufgefasst werden.</p>
 <p>Jedes Element in einem Vektor hat eine Position (auch “Index” genannt). Über diesen Index kann auf jedes Element einzeln zugegriffen werden. In R erfolgt der Zugriff mithilfe von eckigen Klammern (s.u.).</p>
 <p>Datenstrukturen können mithilfe bestimmter Funktionen untersucht werden, beispielsweise gibt die length() Funktion die Anzahl der Elemente eines Vektors oder einer Liste aus.</p>
@@ -606,15 +613,15 @@ length(leckere_fruechte)</code></pre>
 <li>Was passiert, wenn Werte beim Erstellen eines Dataframes fehlen? Löscht einen Wert und probiert es aus.</li>
 </ul>
 </div>
-<div id="funktionen" class="section level2" number="3.6">
-<h2 number="3.6"><span class="header-section-number">3.6</span> Funktionen</h2>
+<div id="funktionen" class="section level3">
+<h3>3.6 Funktionen</h3>
 <p>Einige Funktionen haben wir bereits kennengelernt, beispielsweise print(), length(), typeof(). Beachtet, dass Funktionen meist nur auf bestimmten Datenstrukturen oder für konkrete Datentypen definiert sind, das heißt, dass eine Funktion nur korrekt ausgeführt wird, wenn ihr Argument beispielsweise ein character-Vektor oder ein Boolescher Wahrheitswert ist. Funktionen nehmen meist mindestens ein Argument an. Durch das Hinzufügen verschiedener Parameter kann das Verhalten von vielen Funktionen verändert werden.</p>
 <p>Informationen zu einzelnen Funktionen und ihren Argumenten können direkt im R Studio über die Konsole mit dem Befehl ?funktionsname abgerufen werden.</p>
 <pre class="r"><code>?length
 ?print</code></pre>
 </div>
-<div id="pakete" class="section level2" number="3.7">
-<h2 number="3.7"><span class="header-section-number">3.7</span> Pakete</h2>
+<div id="pakete" class="section level3">
+<h3>3.7 Pakete</h3>
 <p>Funktionen wie print(), length() und typeof() sind bereits in R “vorinstalliert”, es handelt sich dabei um sogenannte R base Funktionen. Viele Anwendungen sind allerdings mithilfe von R base Funktionen umständlich oder sogar unmöglich. Deswegen gibt es viele verschiedene Pakete (engl. packages), die installiert und bei Bedarf geladen werden können. Im Rahmen dieses Tutoriums und des Seminars zur Digitalen Dramenanalyse werdet ihr verschiedene Pakete kennenlernen, zum Beispiel <a href="https://github.com/quadrama/DramaAnalysis">DramaAnalysis</a> und <a href="https://cran.r-project.org/web/packages/stylo/index.html">stylo</a>.</p>
 <p>Für die meisten Pakete findet sich eine Dokumentation auf der Website <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></p>
 <pre class="r"><code>#Paket installieren
@@ -623,7 +630,7 @@ install.packages(&quot;DramaAnalysis&quot;, repos = &quot;http://cran.us.r-proje
 ## (as &#39;lib&#39; is unspecified)</code></pre>
 <pre><code>## 
 ## The downloaded binary packages are in
-##  /var/folders/p5/dcxp7px17hz9llmv8y2j73yc0000gq/T//Rtmp37wimh/downloaded_packages</code></pre>
+##  /var/folders/p5/dcxp7px17hz9llmv8y2j73yc0000gq/T//RtmppY3G0k/downloaded_packages</code></pre>
 <pre class="r"><code>#Mehrere Pakete auf einmal installieren
 #install.packages(c(&quot;quanteda&quot;, &quot;DramaAnalysis&quot;)) 
 
@@ -640,13 +647,13 @@ library(quanteda)
 library(DramaAnalysis)</code></pre>
 <pre><code>## DramaAnalysis 3.0.2</code></pre>
 </div>
-<div id="kommentare" class="section level2" number="3.8">
-<h2 number="3.8"><span class="header-section-number">3.8</span> Kommentare</h2>
+<div id="kommentare" class="section level3">
+<h3>3.8 Kommentare</h3>
 <p>Um den eigenen Code für andere verständlicher zu gestalten und sich selbst an seinen Code zu erinnern, sollte man diesen immer gut kommentieren.</p>
 <pre class="r"><code>#Das ist ein Kommentar </code></pre>
 </div>
-<div id="hilfe" class="section level2" number="3.9">
-<h2 number="3.9"><span class="header-section-number">3.9</span> Hilfe!!</h2>
+<div id="hilfe" class="section level3">
+<h3>3.9 Hilfe!!</h3>
 <p>Oft kommt es beim Coden zu komischen Fehlermeldungen, die mehr verwirren als helfen. Häufig steckt aber ein ganz simpler Flüchtigkeitsfehler dahinter. In diesem Fall gilt:</p>
 <ol style="list-style-type: decimal">
 <li>Syntax und Rechtschreibung checken: Fehlt vielleicht nur eine Klammer? Ist die Variable wirklich richtig geschrieben? Sind wirklich alle notwendigen Pakete installiert und geladen?</li>
@@ -660,16 +667,16 @@ library(DramaAnalysis)</code></pre>
 </ol>
 </div>
 </div>
-<div id="nächstes-treffen" class="section level1" number="4">
-<h1 number="4"><span class="header-section-number">4</span> Nächstes Treffen</h1>
+<div id="nächstes-treffen" class="section level2">
+<h2>4. Nächstes Treffen</h2>
 <ol start="2" style="list-style-type: decimal">
 <li>Mai, 14-16 Uhr hier im Raum.</li>
 </ol>
 <p>Falls ihr noch nicht im Blackboardkurs angemeldet seid, schreibt euch dort bitte ein - Ankündigungen für das nächste Treffen werde ich darüber versenden. Kurs-ID: PHILGEIST_T_16340_22S. Im Laufe des Kurses werden wir zu GitHub wechseln; bis dahin ist aber das Blackboard der Hauptkommunikationskanal.</p>
 <p>Natürlich könnt ihr mir auch immer eine Mail schreiben an: <a href="mailto:l.poggel@fu-berlin.de" class="email">l.poggel@fu-berlin.de</a> :)</p>
 </div>
-<div id="ressourcen" class="section level1" number="5">
-<h1 number="5"><span class="header-section-number">5</span> Ressourcen</h1>
+<div id="ressourcen" class="section level2">
+<h2>5. Ressourcen</h2>
 <ul>
 <li>Mehr zu Datentypen und Datenstrukturen: <a href="https://swcarpentry.github.io/r-novice-inflammation/13-supp-data-structures/" class="uri">https://swcarpentry.github.io/r-novice-inflammation/13-supp-data-structures/</a></li>
 <li>Datacamp Intro 2 R Kurs: <a href="https://campus.datacamp.com/courses/abc-intro-2-r/introduction-1?ex=1" class="uri">https://campus.datacamp.com/courses/abc-intro-2-r/introduction-1?ex=1</a></li>

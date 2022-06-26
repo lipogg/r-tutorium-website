@@ -6,7 +6,7 @@ output:
     toc_float: true
     toc_collapsed: true
     toc_depth: 3
-    number_sections: true
+    number_sections: false
 ---
 
 ```{r setup, include=FALSE}
@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
  
-# Plan für heute
+## 1. Plan für heute
 
  1. Nachtrag XML
  2. Was ist Stilometrie?
@@ -23,13 +23,13 @@ knitr::opts_chunk$set(echo = TRUE)
  5. Übung: Stilometrie mit Stylo 
  
 
-# Nachtrag zu XML  
+## 2. Nachtrag zu XML  
 
 Eine Lösung zur Aufgabe 3 aus der letzten Stunde findet ihr jetzt [hier](https://github.com/lipogg/r-tutorium/tree/master/05_github-uebung/skripte/aufgabe3_loesung.R).  
 
 In den nächsten Tagen werde ich ein R-Markdown Dokument mit Ressourcen und Literatur zum Thema XML im GitHub Repository unter ``/04_xml`` hochladen. 
 
-# Was ist Stilometrie?
+## 3. Was ist Stilometrie?
 
 Folien von Frank Fischer: [https://dh-minor.org/dd/2022-06-01](https://dh-minor.org/dd/2022-06-01) </br>
 
@@ -37,9 +37,9 @@ Einführung forText: [https://fortext.net/routinen/methoden/stilometrie](https:/
 
 Digitale Stilometrie mit Stylo: [https://fortext.net/routinen/lerneinheiten/stilometrie-mit-stylo](https://fortext.net/routinen/lerneinheiten/stilometrie-mit-stylo) 
 
-# Übung: Einstieg 
+## 4. Übung: Einstieg 
 
-Die Texte zur heutigen Stunde orientieren sich an einer [Forschungsarbeit von Fotis Jannidis und Gerhard Lauer](https://github.com/lipogg/r-tutorium/blob/master/06_stilometrie/Jannidis-Lauer_2014_Burrows_Delta.pdf), in der sie sogenannte "Burrow's Delta" als Maß für die stilistische Ähnlichkeit von Texten untersucht haben. Ihre Analyse konzentriert sich dabei auf Texte, die im deutschsprachigen Raum um 1800 publiziert wurden. Als Korpus nutzen sie plain text Dateien aus der Digitalen Bibliothek [https://textgridrep.org/](https://textgridrep.org/). Zunächst haben die Autoren untersucht, wie gut das Maß die Autorschaft, Gattungs- und Epochenzugehörigkeit der Texte klassifiziert. Danach haben sie sich einer speziellen literaturgeschichtlichen Fragestellung gewidmet, nämlich der Position Heinrich von Kleists im literarischen Kanon. Laut Jannidis und Lauer wird Kleist in der Forschung meist uneindeutig zwischen Klassik und Romantik eingeordnet. 
+Die Texte zur heutigen Stunde orientieren sich an einer [Forschungsarbeit von Fotis Jannidis und Gerhard Lauer](https://doi.org/10.5281/zenodo.6188868), in der sie sogenannte "Burrow's Delta" als Maß für die stilistische Ähnlichkeit von Texten untersucht haben. Ihre Analyse konzentriert sich dabei auf Texte, die im deutschsprachigen Raum um 1800 publiziert wurden. Als Korpus nutzen sie plain text Dateien aus der Digitalen Bibliothek [https://textgridrep.org/](https://textgridrep.org/). Zunächst haben die Autoren untersucht, wie gut das Maß die Autorschaft, Gattungs- und Epochenzugehörigkeit der Texte klassifiziert. Danach haben sie sich einer speziellen literaturgeschichtlichen Fragestellung gewidmet, nämlich der Position Heinrich von Kleists im literarischen Kanon. Laut Jannidis und Lauer wird Kleist in der Forschung meist uneindeutig zwischen Klassik und Romantik eingeordnet. 
 
 Für die heutige Stunde werden wir beispielhaft die Analyse von Jannidis und Lauer anhand zweier reduzierter Textkorpora nachvollziehen, die ihr im Verzeichnis "daten" zur heutigen Stunde findet: 
 
@@ -48,13 +48,13 @@ Für die heutige Stunde werden wir beispielhaft die Analyse von Jannidis und Lau
 
 Die Analyse werden wir mithilfe des R Pakets ``stylo`` durchführen. 
 
-# Installation von Stylo
+## 5. Installation von Stylo
 
 Bevor Stylo über das R Studio installiert werden kann, müssen Mac-User:innen XQuartz installieren: [https://www.xquartz.org/](https://www.xquartz.org/)
 
 Video-Tutorial: [https://www.youtube.com/watch?v=hp3MTGA_W8o](https://www.youtube.com/watch?v=hp3MTGA_W8o)
 
-# Übung: Stilometrie mit Stylo
+## 6. Übung: Stilometrie mit Stylo
 
 Jetzt können wir unsere Beispielkorpora analysieren. Bei den Einstellungen orientieren wir uns wie folgt an Jannidis und Lauer.
 
@@ -76,3 +76,5 @@ Fragen:
 
 * Wie interpretiert ihr den Consensus Tree/das Dendrogramm? 
 * Was passiert, wenn wir anstelle der txt-Dateien die xml-Dateien zur Genreklassifikation verwenden? 
+
+## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/06_stilometrie/skripte/tutorium6_130622_uebung.R)

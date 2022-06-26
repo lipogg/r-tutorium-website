@@ -6,7 +6,7 @@ output:
     toc_float: true
     toc_collapsed: true
     toc_depth: 3
-    number_sections: true
+    number_sections: false
 ---
 
 ```{r setup, include=FALSE}
@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
  
-# Plan für heute
+## 1. Plan für heute
 
  1. Vorstellungsrunde: Fach, Vorerfahrung, Interessen 
  2. Wiederholung der Basics
@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE)
  5. Nächstes Treffen 
 
 
-# Wiederholung der Basics  
+## 2. Wiederholung der Basics  
 
 Was sind nochmal... ?
 
@@ -36,7 +36,7 @@ Was sind nochmal... ?
 
 Nennt jeweils ein Beispiel. 
  
-# Orientierung im RStudio
+## 3. Orientierung im RStudio
 
 Durch Klicken auf das Icon oben links in der Menüleiste kann ein neues R Skript erstellt werden. Anders als bei den R-Markdown-Skripten, die wir vergangene Woche kennengelernt haben, werden R-Skripte
 durch Klick auf "Run" in der Werkzeugleiste oben rechts oder durch die Tastenkombination CMD+Enter (Mac) bzw. Ctrl+Enter (Windows) ausgeführt. Wichtig ist dabei zu beachten, dass immer nur die Zeile, in der sich der Cursor aktuell befindet, ausgeführt wird. Sollen mehrere Zeilen gleichzeitig ausgeführt werden, müssen alle Zeilen vorher markiert werden. Alternativ kann das gesamte Skript auch mit der Tastenkombination CMD+Shift+Enter (Mac) bzw. Ctrl+Shift+Enter (Windows) ausgeführt werden.
@@ -48,9 +48,9 @@ Beim Ausführen des "Hilfe"-Befehls `?Funktionsname` bzw. `??Funktionsname` werd
 Wichtig ist auch der Tab "Files" im Fenster unten rechts. Hier wird das aktuelle Arbeitsverzeichnis angezeigt. Das Arbeitsverzeichnis ist der Ordner auf eurem Computer, in dem beim Ausführen des Skripts beispielsweise Dateien gespeichert werden und aus dem Dateien eingelesen werden. Es macht oft Sinn, das Arbeitsverzeichnis zunächst auf den Ordner zu setzen, in dem sich das R Skript befindet. Die Dateien, mit denen gearbeitet wird, können dann in Unterordnern abgelegt werden. Beim Einlesen der Dateien muss dann der Unterordner mit angegeben werden. Aber dazu gleich mehr.  
 
 
-# Daten einlesen und schreiben
+## 4. Daten einlesen und schreiben
 
-## Was sind eigentlich Daten? 
+### 4.1 Was sind eigentlich Daten? 
 
 > Information scientist Luciano Floridi defines data at its most basic level as the absence of uniformity, whether in the real world or in some symbolic system.[4] Only once such data have some recognizable structure and are given some meaning, can they be considered information. [...] On a higher level, digital data are usually represented and processed in data structures that can be linear (for example arrays and matrices, like lists and tables in a data sheet), hierarchical (with a tree-like structure in which items have parent-child or sibling relations with each other, as in an XML file) or multi-relational (with each data item being a node in an interconnected network of nodes, as in graph-based databases).
 
@@ -58,14 +58,14 @@ Wichtig ist auch der Tab "Files" im Fenster unten rechts. Hier wird das aktuelle
 
 Christoph Schöch (2013). [Clean? Smart? Messy? Data in the Humanities, in: Journal of Digital Humanities 2, no. 3](http://journalofdigitalhumanities.org/2-3/big-smart-clean-messy-data-in-the-humanities/)
 
-## ... und Dateien? 
+### 4.2 ... und Dateien? 
 
 > Eine Datei (englisch file) ist ein Bestand meist inhaltlich zusammengehöriger Daten, der auf einem Datenträger oder Speichermedium gespeichert ist und hauptsächlich anhand eines Dateinamens identifiziert wird.
 
 Definition aus der deutschsprachigen [Wikipedia](https://de.wikipedia.org/wiki/Datei)
 
 
-## Daten einlesen 
+### 4.3 Daten einlesen 
 
 Zum Einlesen verschiedener Datenformate werden in R unterschiedliche Funktionen verwendet. 
 Funktionen für gängige Dateiformate wie CSV (comma separated values) und für Textdateien 
@@ -76,36 +76,37 @@ XML-Dateien, [rjson](https://cran.r-project.org/web/packages/rjson/rjson.pdf) f�
 Einlesen von Textdateien und ganzen Korpora entwickelt wurde. Zahlreiche Pakete sind darüber 
 hinaus für bestimmte Anwendungsfällt optimiert, beispielsweise [pdftools](https://cran.r-project.org/web/packages/pdftools/pdftools.pdf) zur Konvertierung und Extraktion von Text und Metadaten aus PDF-Dateien.
 
-&rarr; **Übung: tutorium2_02052022_uebung.R**
+Siehe [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/02_daten-dateien/skripte/tutorium2_02052022_uebung.R) 
 
 
-## Daten schreiben 
+### 4.4 Daten schreiben 
 
 Sollen die Daten nach der Bearbeitung wieder in R geöffnet werden, empfiehlt es sich, die Daten 
 in einem R-eigenen Datenformat zu speichern; die Dateien haben dann die Endung .rds, .rda oder .RData. 
 
 Der Export in ein externes Datenformat wie beispielsweise XML, JSON, CSV oder als Textdatei ist aber ebenso möglich. 
 
-&rarr; **Übung: tutorium2_02052022_uebung.R** 
+Siehe [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/02_daten-dateien/skripte/tutorium2_02052022_uebung.R) 
 
 
-## Daten aufbereiten und parsen 
+### 4.5 Daten aufbereiten und parsen 
 
 Bevor die Daten geschrieben werden sollen, sollen sie aber meist irgendwie aufbereitet werden: beispielsweise sollen Textdateien für eine spätere quantitative Textanalyse vorbereitet werden ("Preprocessing") oder es sollen Informationen extrahiert und in einem anderen Dateiformat, 
 beispielsweise als csv-Tabelle, gespeichert werden. Die Daten können anhand ihrer formellen Struktur
 untersucht bzw. "geparst" werden und mithilfe einer query-Sprache wie xquery oder regex (Reguläre Ausdrücke) nach bestimmten Mustern durchsucht werden. Beispielsweise können so aus einer XML-Datei bestimmte "tags" extrahiert werden, die eine bestimmte Information enthalten, die uns interessiert, 
 oder wir können in einer Textdatei nach allen Wortkombinationen, die den Namen einer bestimmten Figur enthalten, suchen. 
 
-&rarr; **Dazu bald mehr**. 
+Dazu bald mehr. 
 
-# Nächstes Treffen 
+## 5. Nächstes Treffen 
 
 9. Mai, 14-16 Uhr hier im Raum oder online in meinem Webexraum (nach Anmeldung).
 
 Falls ihr noch nicht im Blackboardkurs angemeldet seid, schreibt euch dort bitte ein - Ankündigungen für das nächste Treffen werde ich darüber versenden. Kurs-ID: PHILGEIST_T_16340_22S. Im Laufe des Kurses werden wir zu GitHub wechseln; bis dahin ist aber das Blackboard der Hauptkommunikationskanal.
 
-Natürlich könnt ihr mir auch immer eine Mail schreiben an: l.poggel@fu-berlin.de :) 
+Natürlich könnt ihr mir auch immer eine Mail schreiben an: l.poggel@fu-berlin.de :)
 
+## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/02_daten-dateien/skripte/tutorium2_02052022_uebung.R)
 
-
+## [Hausaufgabe](https://github.com/lipogg/r-tutorium/tree/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/02_uebung)
 

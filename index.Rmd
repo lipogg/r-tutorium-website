@@ -1,15 +1,26 @@
 ---
-title: "R-Tutorium"
+#title: "Einführung in R - Programmieren für Geisteswissenschaften"
 output: html_document
 ---
 
-Diese Seite dokumentiert die Inhalte des Tutoriums ["Einführung in R — Programmieren für die Geisteswissenschaften"](https://www.fu-berlin.de/vv/de/lv/734035). 
+## Einführung in R - Programmieren für Geisteswissenschaften
 
-Sitzungen: 
+Diese Seite dokumentiert die Inhalte des Tutoriums **["Einführung in R — Programmieren für die Geisteswissenschaften"](https://www.fu-berlin.de/vv/de/lv/734035)** an der FU Berlin im Sommersemester 2022. 
 
-+ [Sitzung 1 - Basics](docs/tutorium1_250422_basics.html)  
-+ [Sitzung 2 - Daten und Dateien](docs/tutorium2_020522_dateien.html)  
-+ [Sitzung 3 - Reguläre Ausdrücke](docs/tutorium3_09052022_regex.html)
-+ [Sitzung 4 - XML und TEI](docs/tutorium4_16052022_xml.html)
-+ [Sitzung 6 - Stilometrie](docs/tutorium6_130622_stilometrie.html)
-+ [Sitzung 7 - Virtuelle Umgebungen](docs/tutorium7_200622_virtuelle_umgebungen.html)
+#### Sitzungen:
+
+----------------
+**[Sitzung 1 - Basics](tutorium1_250422_basics.html)** 
+
+**[Sitzung 2 - Daten und Dateien](tutorium2_020522_dateien.html)**
+
+**[Sitzung 3 - Reguläre Ausdrücke](tutorium3_09052022_regex.html)**
+
+**[Sitzung 4 - XML und TEI](tutorium4_16052022_xml.html)**
+
+**[Sitzung 6 - Stilometrie](tutorium6_130622_stilometrie.html)**
+
+**[Sitzung 7 - Virtuelle Umgebungen](tutorium7_200622_virtuelle_umgebungen.html)**
+
+
+

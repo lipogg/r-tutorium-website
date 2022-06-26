@@ -134,7 +134,7 @@ Verständnisfrage:
 
 Durchsuchen mehrerer Dateien: 
 
-&rarr; **Übung: tutorium3_09052022_uebung.R** 
+Siehe [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/03_regex/skripte/tutorium3_09052022_uebung.R)
 
 
 ### 2.2 Spezielle Pakete: stringr 
@@ -146,7 +146,6 @@ Verständnisfragen:
 * Welche stringr Funktionen können anstelle der bereits kennengelernten R base Funktionen verwendet werden? 
 * Googelt das Paket stringi. Was ist der Unterschied zu stringr?
 
-&rarr; **Übung: tutorium3_09052022_uebung.R** 
 
 ## 3. Regex Syntax
 
@@ -243,3 +242,7 @@ Achtung: viele Funktionen haben ein Argument "pcre", welches per Default auf FAL
 * Video zu den R Base-Funktionen: https://www.youtube.com/watch?v=q8SzNKib5-4
 * Lookarounds erläutert: https://www.regular-expressions.info/lookaround.html
 * PCRE Cheatsheet: https://www.debuggex.com/cheatsheet/regex/pcre
+
+## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/03_regex/skripte/tutorium3_09052022_uebung.R)
+
+## [Hausaufgabe](https://github.com/lipogg/r-tutorium/tree/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/03_uebung)

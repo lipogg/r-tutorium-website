@@ -128,8 +128,6 @@ Zur Auszeichnung von Texten in XML-TEI, sowie zur Erstellung und Bearbeitung von
 
 Zur Suche in Zeichenketten (character strings) haben wir bereits Reguläre Ausdrücke kennengelernt. Um bestimmte Elemente eines XML-Dokuments oder deren Attribute zu adressieren oder um Informationen zu finden, kann dagegen die Abfragesprache [XPath](https://de.wikipedia.org/wiki/XPath) (=XML Path Language) verwendet werden. Sowohl oXygen als auch xml2 unterstützen solche XPath Abfragen. 
 
-&rarr; **Übung: tutorium4_160522_uebung.R** 
-
 
 ## 6. Weiterführende Links und Literatur
 * "A Gentle Introduction to XML" der Text Encoding Initiative: https://tei-c.org/release/doc/tei-p5-doc/en/html/SG.html
@@ -144,3 +142,5 @@ Zur Suche in Zeichenketten (character strings) haben wir bereits Reguläre Ausdr
 * Übersicht XPath Syntax: https://www.w3schools.com/xml/xpath_syntax.asp
 * Vortrag: "Introduction to TEI" von Christopher Oghe:  https://www.youtube.com/watch?v=HSxnNK3ail4
 * Folien zum Vortrag "Einführung in die Textauszeichnung mit TEI" von Agnes Brauer, Universitätsbibliothek Frankfurt: https://moodle.studiumdigitale.uni-frankfurt.de/moodle/pluginfile.php/77425/mod_resource/content/1/DH%40ubffmTEI_Brauer.pdf
+
+## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/04_xml/skripte/tutorium4_160522_uebung.R)

@@ -35,6 +35,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -349,7 +351,12 @@ div.tocify {
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/lipogg/r-tutorial">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -364,8 +371,8 @@ div.tocify {
 </div>
 
 
-<div id="plan-für-heute" class="section level1" number="1">
-<h1 number="1"><span class="header-section-number">1</span> Plan für heute</h1>
+<div id="plan-für-heute" class="section level2">
+<h2>1. Plan für heute</h2>
 <ol style="list-style-type: decimal">
 <li>Vorstellungsrunde: Fach, Vorerfahrung, Interessen</li>
 <li>Wiederholung der Basics</li>
@@ -374,8 +381,8 @@ div.tocify {
 <li>Nächstes Treffen</li>
 </ol>
 </div>
-<div id="wiederholung-der-basics" class="section level1" number="2">
-<h1 number="2"><span class="header-section-number">2</span> Wiederholung der Basics</h1>
+<div id="wiederholung-der-basics" class="section level2">
+<h2>2. Wiederholung der Basics</h2>
 <p>Was sind nochmal… ?</p>
 <ul>
 <li>Variablen</li>
@@ -387,17 +394,17 @@ div.tocify {
 </ul>
 <p>Nennt jeweils ein Beispiel.</p>
 </div>
-<div id="orientierung-im-rstudio" class="section level1" number="3">
-<h1 number="3"><span class="header-section-number">3</span> Orientierung im RStudio</h1>
+<div id="orientierung-im-rstudio" class="section level2">
+<h2>3. Orientierung im RStudio</h2>
 <p>Durch Klicken auf das Icon oben links in der Menüleiste kann ein neues R Skript erstellt werden. Anders als bei den R-Markdown-Skripten, die wir vergangene Woche kennengelernt haben, werden R-Skripte durch Klick auf “Run” in der Werkzeugleiste oben rechts oder durch die Tastenkombination CMD+Enter (Mac) bzw. Ctrl+Enter (Windows) ausgeführt. Wichtig ist dabei zu beachten, dass immer nur die Zeile, in der sich der Cursor aktuell befindet, ausgeführt wird. Sollen mehrere Zeilen gleichzeitig ausgeführt werden, müssen alle Zeilen vorher markiert werden. Alternativ kann das gesamte Skript auch mit der Tastenkombination CMD+Shift+Enter (Mac) bzw. Ctrl+Shift+Enter (Windows) ausgeführt werden.</p>
 <p>Für jeden Befehl, der ausgeführt wird, wird der Output in der <strong>Konsole</strong> im Fenster unten links ausgegeben. Werden Daten eingelesen oder Objekte erstellt, so werden diese im <strong>Environment</strong> im Fenster oben rechts angezeigt. Unter “Data” befinden sich dann dataframes, Listen und Matrizen; unter “Values” sehen wir alle Vektoren.</p>
 <p>Beim Ausführen des “Hilfe”-Befehls <code>?Funktionsname</code> bzw. <code>??Funktionsname</code> werden im Fenster unten rechts Informationen zur gesuchten Funktion aus den R-Dokumentationsseiten geladen.</p>
 <p>Wichtig ist auch der Tab “Files” im Fenster unten rechts. Hier wird das aktuelle Arbeitsverzeichnis angezeigt. Das Arbeitsverzeichnis ist der Ordner auf eurem Computer, in dem beim Ausführen des Skripts beispielsweise Dateien gespeichert werden und aus dem Dateien eingelesen werden. Es macht oft Sinn, das Arbeitsverzeichnis zunächst auf den Ordner zu setzen, in dem sich das R Skript befindet. Die Dateien, mit denen gearbeitet wird, können dann in Unterordnern abgelegt werden. Beim Einlesen der Dateien muss dann der Unterordner mit angegeben werden. Aber dazu gleich mehr.</p>
 </div>
-<div id="daten-einlesen-und-schreiben" class="section level1" number="4">
-<h1 number="4"><span class="header-section-number">4</span> Daten einlesen und schreiben</h1>
-<div id="was-sind-eigentlich-daten" class="section level2" number="4.1">
-<h2 number="4.1"><span class="header-section-number">4.1</span> Was sind eigentlich Daten?</h2>
+<div id="daten-einlesen-und-schreiben" class="section level2">
+<h2>4. Daten einlesen und schreiben</h2>
+<div id="was-sind-eigentlich-daten" class="section level3">
+<h3>4.1 Was sind eigentlich Daten?</h3>
 <blockquote>
 <p>Information scientist Luciano Floridi defines data at its most basic level as the absence of uniformity, whether in the real world or in some symbolic system.[4] Only once such data have some recognizable structure and are given some meaning, can they be considered information. […] On a higher level, digital data are usually represented and processed in data structures that can be linear (for example arrays and matrices, like lists and tables in a data sheet), hierarchical (with a tree-like structure in which items have parent-child or sibling relations with each other, as in an XML file) or multi-relational (with each data item being a node in an interconnected network of nodes, as in graph-based databases).</p>
 </blockquote>
@@ -406,37 +413,43 @@ div.tocify {
 </blockquote>
 <p>Christoph Schöch (2013). <a href="http://journalofdigitalhumanities.org/2-3/big-smart-clean-messy-data-in-the-humanities/">Clean? Smart? Messy? Data in the Humanities, in: Journal of Digital Humanities 2, no. 3</a></p>
 </div>
-<div id="und-dateien" class="section level2" number="4.2">
-<h2 number="4.2"><span class="header-section-number">4.2</span> … und Dateien?</h2>
+<div id="und-dateien" class="section level3">
+<h3>4.2 … und Dateien?</h3>
 <blockquote>
 <p>Eine Datei (englisch file) ist ein Bestand meist inhaltlich zusammengehöriger Daten, der auf einem Datenträger oder Speichermedium gespeichert ist und hauptsächlich anhand eines Dateinamens identifiziert wird.</p>
 </blockquote>
 <p>Definition aus der deutschsprachigen <a href="https://de.wikipedia.org/wiki/Datei">Wikipedia</a></p>
 </div>
-<div id="daten-einlesen" class="section level2" number="4.3">
-<h2 number="4.3"><span class="header-section-number">4.3</span> Daten einlesen</h2>
+<div id="daten-einlesen" class="section level3">
+<h3>4.3 Daten einlesen</h3>
 <p>Zum Einlesen verschiedener Datenformate werden in R unterschiedliche Funktionen verwendet. Funktionen für gängige Dateiformate wie CSV (comma separated values) und für Textdateien sind R “base” Funktionen, sie sind also mit R vorinstalliert. Darüber hinaus gibt es Pakete, die zur Arbeit mit bestimmten Datenformaten optimiert sind, beispielsweise <a href="https://cran.r-project.org/web/packages/xml2/xml2.pdf">xml2</a> zur Arbeit mit XML-Dateien, <a href="https://cran.r-project.org/web/packages/rjson/rjson.pdf">rjson</a> für JSON-Dateien, oder <a href="https://cran.r-project.org/web/packages/readtext/readtext.pdf">readtext</a>, ein Paket das speziell zum Einlesen von Textdateien und ganzen Korpora entwickelt wurde. Zahlreiche Pakete sind darüber hinaus für bestimmte Anwendungsfällt optimiert, beispielsweise <a href="https://cran.r-project.org/web/packages/pdftools/pdftools.pdf">pdftools</a> zur Konvertierung und Extraktion von Text und Metadaten aus PDF-Dateien.</p>
-<p>→ <strong>Übung: tutorium2_02052022_uebung.R</strong></p>
+<p>Siehe <a href="https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/02_daten-dateien/skripte/tutorium2_02052022_uebung.R">Skript zur Übung</a></p>
 </div>
-<div id="daten-schreiben" class="section level2" number="4.4">
-<h2 number="4.4"><span class="header-section-number">4.4</span> Daten schreiben</h2>
+<div id="daten-schreiben" class="section level3">
+<h3>4.4 Daten schreiben</h3>
 <p>Sollen die Daten nach der Bearbeitung wieder in R geöffnet werden, empfiehlt es sich, die Daten in einem R-eigenen Datenformat zu speichern; die Dateien haben dann die Endung .rds, .rda oder .RData.</p>
 <p>Der Export in ein externes Datenformat wie beispielsweise XML, JSON, CSV oder als Textdatei ist aber ebenso möglich.</p>
-<p>→ <strong>Übung: tutorium2_02052022_uebung.R</strong></p>
+<p>Siehe <a href="https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/02_daten-dateien/skripte/tutorium2_02052022_uebung.R">Skript zur Übung</a></p>
 </div>
-<div id="daten-aufbereiten-und-parsen" class="section level2" number="4.5">
-<h2 number="4.5"><span class="header-section-number">4.5</span> Daten aufbereiten und parsen</h2>
+<div id="daten-aufbereiten-und-parsen" class="section level3">
+<h3>4.5 Daten aufbereiten und parsen</h3>
 <p>Bevor die Daten geschrieben werden sollen, sollen sie aber meist irgendwie aufbereitet werden: beispielsweise sollen Textdateien für eine spätere quantitative Textanalyse vorbereitet werden (“Preprocessing”) oder es sollen Informationen extrahiert und in einem anderen Dateiformat, beispielsweise als csv-Tabelle, gespeichert werden. Die Daten können anhand ihrer formellen Struktur untersucht bzw. “geparst” werden und mithilfe einer query-Sprache wie xquery oder regex (Reguläre Ausdrücke) nach bestimmten Mustern durchsucht werden. Beispielsweise können so aus einer XML-Datei bestimmte “tags” extrahiert werden, die eine bestimmte Information enthalten, die uns interessiert, oder wir können in einer Textdatei nach allen Wortkombinationen, die den Namen einer bestimmten Figur enthalten, suchen.</p>
-<p>→ <strong>Dazu bald mehr</strong>.</p>
+<p>Dazu bald mehr.</p>
 </div>
 </div>
-<div id="nächstes-treffen" class="section level1" number="5">
-<h1 number="5"><span class="header-section-number">5</span> Nächstes Treffen</h1>
+<div id="nächstes-treffen" class="section level2">
+<h2>5. Nächstes Treffen</h2>
 <ol start="9" style="list-style-type: decimal">
 <li>Mai, 14-16 Uhr hier im Raum oder online in meinem Webexraum (nach Anmeldung).</li>
 </ol>
 <p>Falls ihr noch nicht im Blackboardkurs angemeldet seid, schreibt euch dort bitte ein - Ankündigungen für das nächste Treffen werde ich darüber versenden. Kurs-ID: PHILGEIST_T_16340_22S. Im Laufe des Kurses werden wir zu GitHub wechseln; bis dahin ist aber das Blackboard der Hauptkommunikationskanal.</p>
 <p>Natürlich könnt ihr mir auch immer eine Mail schreiben an: <a href="mailto:l.poggel@fu-berlin.de" class="email">l.poggel@fu-berlin.de</a> :)</p>
+</div>
+<div id="skript-zur-übung" class="section level2">
+<h2><a href="https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/02_daten-dateien/skripte/tutorium2_02052022_uebung.R">Skript zur Übung</a></h2>
+</div>
+<div id="hausaufgabe" class="section level2">
+<h2><a href="https://github.com/lipogg/r-tutorium/tree/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/02_uebung">Hausaufgabe</a></h2>
 </div>
 
 

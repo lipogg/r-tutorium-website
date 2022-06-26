@@ -35,6 +35,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -349,7 +351,12 @@ div.tocify {
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/lipogg/r-tutorial">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -364,8 +371,8 @@ div.tocify {
 </div>
 
 
-<div id="plan-für-heute" class="section level1" number="1">
-<h1 number="1"><span class="header-section-number">1</span> Plan für heute</h1>
+<div id="plan-für-heute" class="section level2">
+<h2>1. Plan für heute</h2>
 <ol style="list-style-type: decimal">
 <li>Besprechung Lösung zu Aufgabe 3?</li>
 <li>FAIR-Prinzipien und Reproduzierbarkeit von Forschung</li>
@@ -374,8 +381,8 @@ div.tocify {
 <li>Virtuelle Umgebungen in R</li>
 </ol>
 </div>
-<div id="fair-prinzipien-und-reproduzierbarkeit-von-forschung" class="section level1" number="2">
-<h1 number="2"><span class="header-section-number">2</span> FAIR-Prinzipien und Reproduzierbarkeit von Forschung</h1>
+<div id="fair-prinzipien-und-reproduzierbarkeit-von-forschung" class="section level2">
+<h2>2. FAIR-Prinzipien und Reproduzierbarkeit von Forschung</h2>
 <p>2016 haben sich Wissenschaftler:innen und Forschungsinstitute zu einem Konsortium zusammengeschlossen und <a href="https://www.nature.com/articles/sdata201618">in der Zeitschrift Scientific Data</a> eine Reihe <a href="https://www.go-fair.org/fair-principles/">Prinzipien</a> definiert, die sicherstellen sollen, dass die großen Mengen digitaler Forschungsdaten, die in den letzten Jahren produziert werden, auch für die Zukunft zugänglich und nachnutzbar sind. Diese Prinzipien werden mit dem Akronym FAIR abgekürzt, das für <strong>F</strong>indable, <strong>A</strong>ccessible, <strong>I</strong>nteroperable und <strong>R</strong>eusable steht.</p>
 <p>Das Prinzip der Reusability umfasst auch die Möglichkeit zur “Reproducibility”, also die Möglichkeit, eine Forschung anhand der bereitgestellten Daten “nachzubauen”. “Reproducibility” wird von der US-amerikanischen National Science Foundation definiert als:</p>
 <blockquote>
@@ -384,14 +391,14 @@ div.tocify {
 <p>National Science Foundation (2015), zitiert in <a href="https://researchdatamanagement.harvard.edu/best-practices-reproducibility-reusability">Harvard University, Reproducibility and Reusability</a>.</p>
 <p>Die FAIR-Prinzipien haben sich seither weltweit in Forschungsinstituten und Universitäten durchgesetzt. Für uns als “digital humanists in training” bedeutet das, dass wir wissen sollten, welche Fähigkeiten und Methoden wir brauchen, um unsere Daten FAIR zu machen. Heute geht es um einen kleinen Aspekt davon, nämlich um die Frage, wie wir unsere Daten reproduzierbar machen können.</p>
 </div>
-<div id="was-sind-virtuelle-umgebungen-wozu-brauchen-wir-sie" class="section level1" number="3">
-<h1 number="3"><span class="header-section-number">3</span> Was sind virtuelle Umgebungen? Wozu brauchen wir sie?</h1>
+<div id="was-sind-virtuelle-umgebungen-wozu-brauchen-wir-sie" class="section level2">
+<h2>3. Was sind virtuelle Umgebungen? Wozu brauchen wir sie?</h2>
 <p>Zwar haben wir mit GitHub schon eine wichtige Plattform kennengelernt, um Daten über einen langen Zeitraum öffentlich bereitzustellen, verschiedene Versionen zu verwalten und zu dokumentieren und daran kollaborativ zu arbeiten. Allerdings könnte es ja sein, dass jemand in fünf Jahren auf unser GitHub repository stößt und versucht, die Skripte auszuführen. Vielleicht hat in der Zwischenzeit das Paket <code>stylo</code> mehrere Updates durchlaufen und der Name einer Funktion wurde geändert. Wir haben das repository aber nicht mehr geupdated und in unseren Srkipten steht noch die alte Funktion. Jetzt würde ein:e Nachnutzer:in unserer Daten beim Ausführen des stylo-Skripts eine Fehlermeldung bekommen. Die kann natürlich ergoogelt werden und das Skript kann an die neue Stylo-Version angepasst werden. Aber wenn ein Skript komplizierter ist und sehr viele Pakete nutzt, die jeweils auf Funktionen aus anderen Paketen (“dependencies”) aufbauen, dann kann es schnell sein, dass der Fehler gar nicht mehr so leicht zu finden ist. Manchmal wird ein R Paket auch gar nicht mehr geupdated, sodass es mit einer neueren Version von R gar nicht mehr verwendbar ist.</p>
 <p>Aber auch ohne, dass erst fünf Jahre vergehen müssen, kann es zu Problemen kommen, zum Beispiel, wenn die Person andere Pakete als wir für ein anderes Projekt installiert hat und es zu Konflikten zwischen den installierten Paketen kommt. Vielleicht verwendet die Person zudem noch ein anderes Betriebssystem.</p>
 <p>All diese Fälle können die Reproduzierbarkeit unserer Daten einschränken. Das Problem kann man lösen, indem man eine spezielle Datei bereitstellt, in dem nicht nur alle Pakete, die in unserem RProject genutzt werden, sondern auch die installierte R Version oder gegebenenfalls sogar noch das Betriebssystem und systemspezifische Bibliotheken dokumentiert sind. Ein:e Nachnutzer:in kann dann diese Datei nutzen, um auf dem eigenen Computer ein allen bereits installierten Bibliotheken isolierten Raum zu erstellen, in dem sauber alle für unser Tutoriumsrepository benötigten Pakete und die passende R-Version installiert werden können.</p>
 </div>
-<div id="methoden-und-anwendungsfälle" class="section level1" number="4">
-<h1 number="4"><span class="header-section-number">4</span> Methoden und Anwendungsfälle</h1>
+<div id="methoden-und-anwendungsfälle" class="section level2">
+<h2>4. Methoden und Anwendungsfälle</h2>
 <p>Zum Erstellen dieser Datei und des “virtuellen Raums” oder “virtual environments” gibt es verschiedene Möglichkeiten und Methoden, je nach Anwendungsfall:</p>
 <ol style="list-style-type: decimal">
 <li><p>Wenn wir lediglich für jedes unserer R-Projekte reproduzierbare, übertragbare und isolierte Umgebungen erstellen wollen, brauchen wir nur die jeweils verwendete R Version und Pakete zu dokumentieren. Für diesen Anwendungsfall eignet sich das Paket <code>renv</code>. In diesem Fall ist mit “virtuelle Umgebung” letztlich nichts anderes als ein Verzeichnis gemeint.</p>
@@ -412,8 +419,8 @@ div.tocify {
 </ol>
 <p>Bei der Verwendung des Begriffs “virtuelle Umgebung” ist also Vorsicht geboten, denn damit werden oft verschiedene Dinge beschrieben. Es gilt außerdem zu beachten, dass die Arbeit mit virtuellen Umgebungen nicht für alle Programmiersprachen sinnvoll ist, sondern nur für solche, bei denen Pakete per Default “global”, also im selben Hauptverzeichnis installiert werden. Dies betrifft neben R vor allem Python.</p>
 </div>
-<div id="virtuelle-umgebungen-in-r-paket-renv" class="section level1" number="5">
-<h1 number="5"><span class="header-section-number">5</span> Virtuelle Umgebungen in R: Paket renv</h1>
+<div id="virtuelle-umgebungen-in-r-paket-renv" class="section level2">
+<h2>5. Virtuelle Umgebungen in R: Paket renv</h2>
 <p>Für unsere Zwecke reicht es erst einmal, wenn wir eine virtuelle Umgebung für unser Projekt “r-tutorium” mithilfe des <code>renv</code> Pakets erstellen. Mithilfe der Funktion <code>snapshot()</code> kann der aktuelle Stand der Projektbibliothek in einer <code>renv.lock</code> Datei gespeichert werden.</p>
 <p>Ziel der heutigen Stunde ist es, dass wir gemeinsam so eine Datei erzeugen und in unser r-tutorium repository auf GitHub pushen.</p>
 <p>Als Leitfaden dient dazu:</p>

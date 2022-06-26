@@ -35,6 +35,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -349,7 +351,12 @@ div.tocify {
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/lipogg/r-tutorial">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -364,8 +371,8 @@ div.tocify {
 </div>
 
 
-<div id="plan-für-heute" class="section level1" number="1">
-<h1 number="1"><span class="header-section-number">1</span> Plan für heute</h1>
+<div id="plan-für-heute" class="section level2">
+<h2>1. Plan für heute</h2>
 <ol style="list-style-type: decimal">
 <li>Nachtrag XML</li>
 <li>Was ist Stilometrie?</li>
@@ -374,20 +381,20 @@ div.tocify {
 <li>Übung: Stilometrie mit Stylo</li>
 </ol>
 </div>
-<div id="nachtrag-zu-xml" class="section level1" number="2">
-<h1 number="2"><span class="header-section-number">2</span> Nachtrag zu XML</h1>
+<div id="nachtrag-zu-xml" class="section level2">
+<h2>2. Nachtrag zu XML</h2>
 <p>Eine Lösung zur Aufgabe 3 aus der letzten Stunde findet ihr jetzt <a href="https://github.com/lipogg/r-tutorium/tree/master/05_github-uebung/skripte/aufgabe3_loesung.R">hier</a>.</p>
 <p>In den nächsten Tagen werde ich ein R-Markdown Dokument mit Ressourcen und Literatur zum Thema XML im GitHub Repository unter <code>/04_xml</code> hochladen.</p>
 </div>
-<div id="was-ist-stilometrie" class="section level1" number="3">
-<h1 number="3"><span class="header-section-number">3</span> Was ist Stilometrie?</h1>
+<div id="was-ist-stilometrie" class="section level2">
+<h2>3. Was ist Stilometrie?</h2>
 <p>Folien von Frank Fischer: <a href="https://dh-minor.org/dd/2022-06-01">https://dh-minor.org/dd/2022-06-01</a> </br></p>
 <p>Einführung forText: <a href="https://fortext.net/routinen/methoden/stilometrie">https://fortext.net/routinen/methoden/stilometrie</a></p>
 <p>Digitale Stilometrie mit Stylo: <a href="https://fortext.net/routinen/lerneinheiten/stilometrie-mit-stylo">https://fortext.net/routinen/lerneinheiten/stilometrie-mit-stylo</a></p>
 </div>
-<div id="übung-einstieg" class="section level1" number="4">
-<h1 number="4"><span class="header-section-number">4</span> Übung: Einstieg</h1>
-<p>Die Texte zur heutigen Stunde orientieren sich an einer <a href="https://github.com/lipogg/r-tutorium/blob/master/06_stilometrie/Jannidis-Lauer_2014_Burrows_Delta.pdf">Forschungsarbeit von Fotis Jannidis und Gerhard Lauer</a>, in der sie sogenannte “Burrow’s Delta” als Maß für die stilistische Ähnlichkeit von Texten untersucht haben. Ihre Analyse konzentriert sich dabei auf Texte, die im deutschsprachigen Raum um 1800 publiziert wurden. Als Korpus nutzen sie plain text Dateien aus der Digitalen Bibliothek <a href="https://textgridrep.org/">https://textgridrep.org/</a>. Zunächst haben die Autoren untersucht, wie gut das Maß die Autorschaft, Gattungs- und Epochenzugehörigkeit der Texte klassifiziert. Danach haben sie sich einer speziellen literaturgeschichtlichen Fragestellung gewidmet, nämlich der Position Heinrich von Kleists im literarischen Kanon. Laut Jannidis und Lauer wird Kleist in der Forschung meist uneindeutig zwischen Klassik und Romantik eingeordnet.</p>
+<div id="übung-einstieg" class="section level2">
+<h2>4. Übung: Einstieg</h2>
+<p>Die Texte zur heutigen Stunde orientieren sich an einer <a href="https://doi.org/10.5281/zenodo.6188868">Forschungsarbeit von Fotis Jannidis und Gerhard Lauer</a>, in der sie sogenannte “Burrow’s Delta” als Maß für die stilistische Ähnlichkeit von Texten untersucht haben. Ihre Analyse konzentriert sich dabei auf Texte, die im deutschsprachigen Raum um 1800 publiziert wurden. Als Korpus nutzen sie plain text Dateien aus der Digitalen Bibliothek <a href="https://textgridrep.org/">https://textgridrep.org/</a>. Zunächst haben die Autoren untersucht, wie gut das Maß die Autorschaft, Gattungs- und Epochenzugehörigkeit der Texte klassifiziert. Danach haben sie sich einer speziellen literaturgeschichtlichen Fragestellung gewidmet, nämlich der Position Heinrich von Kleists im literarischen Kanon. Laut Jannidis und Lauer wird Kleist in der Forschung meist uneindeutig zwischen Klassik und Romantik eingeordnet.</p>
 <p>Für die heutige Stunde werden wir beispielhaft die Analyse von Jannidis und Lauer anhand zweier reduzierter Textkorpora nachvollziehen, die ihr im Verzeichnis “daten” zur heutigen Stunde findet:</p>
 <ul>
 <li><code>/lauer-jannidis-genres</code> enthält nach Gattungen unterteilte Stücke von Goethe.</li>
@@ -395,13 +402,13 @@ div.tocify {
 </ul>
 <p>Die Analyse werden wir mithilfe des R Pakets <code>stylo</code> durchführen.</p>
 </div>
-<div id="installation-von-stylo" class="section level1" number="5">
-<h1 number="5"><span class="header-section-number">5</span> Installation von Stylo</h1>
+<div id="installation-von-stylo" class="section level2">
+<h2>5. Installation von Stylo</h2>
 <p>Bevor Stylo über das R Studio installiert werden kann, müssen Mac-User:innen XQuartz installieren: <a href="https://www.xquartz.org/">https://www.xquartz.org/</a></p>
 <p>Video-Tutorial: <a href="https://www.youtube.com/watch?v=hp3MTGA_W8o">https://www.youtube.com/watch?v=hp3MTGA_W8o</a></p>
 </div>
-<div id="übung-stilometrie-mit-stylo" class="section level1" number="6">
-<h1 number="6"><span class="header-section-number">6</span> Übung: Stilometrie mit Stylo</h1>
+<div id="übung-stilometrie-mit-stylo" class="section level2">
+<h2>6. Übung: Stilometrie mit Stylo</h2>
 <p>Jetzt können wir unsere Beispielkorpora analysieren. Bei den Einstellungen orientieren wir uns wie folgt an Jannidis und Lauer.</p>
 <p>Für die Autorschaftsanalyse wählen wir das autorschaft-Korpus und die folgenden Parameter (Jannidis/Lauer, S. 44 f.):</p>
 <ul>
@@ -421,6 +428,9 @@ div.tocify {
 <li>Wie interpretiert ihr den Consensus Tree/das Dendrogramm?</li>
 <li>Was passiert, wenn wir anstelle der txt-Dateien die xml-Dateien zur Genreklassifikation verwenden?</li>
 </ul>
+</div>
+<div id="skript-zur-übung" class="section level2">
+<h2><a href="https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/06_stilometrie/skripte/tutorium6_130622_uebung.R">Skript zur Übung</a></h2>
 </div>
 
 

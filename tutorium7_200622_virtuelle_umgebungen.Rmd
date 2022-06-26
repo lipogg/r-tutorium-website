@@ -6,7 +6,7 @@ output:
     toc_float: true
     toc_collapsed: true
     toc_depth: 3
-    number_sections: true
+    number_sections: false
 ---
 
 ```{r setup, include=FALSE}
@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
  
-# Plan für heute
+## 1. Plan für heute
 
  1. Besprechung Lösung zu Aufgabe 3? 
  2. FAIR-Prinzipien und Reproduzierbarkeit von Forschung 
@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE)
  5. Virtuelle Umgebungen in R 
  
 
-# FAIR-Prinzipien und Reproduzierbarkeit von Forschung
+## 2. FAIR-Prinzipien und Reproduzierbarkeit von Forschung
 
 2016 haben sich Wissenschaftler:innen und Forschungsinstitute zu einem Konsortium zusammengeschlossen und [in der Zeitschrift Scientific Data](https://www.nature.com/articles/sdata201618) eine Reihe [Prinzipien](https://www.go-fair.org/fair-principles/) definiert, die sicherstellen sollen, dass die großen Mengen digitaler Forschungsdaten, die in den letzten Jahren produziert werden, auch für die Zukunft zugänglich und nachnutzbar sind. Diese Prinzipien werden mit dem Akronym FAIR abgekürzt, das für **F**indable, **A**ccessible, **I**nteroperable und **R**eusable steht. 
 
@@ -35,7 +35,7 @@ National Science Foundation (2015), zitiert in [Harvard University, Reproducibil
 
 Die FAIR-Prinzipien haben sich seither weltweit in Forschungsinstituten und Universitäten durchgesetzt. Für uns als "digital humanists in training" bedeutet das, dass wir wissen sollten, welche Fähigkeiten und Methoden wir brauchen, um unsere Daten FAIR zu machen. Heute geht es um einen kleinen Aspekt davon, nämlich um die Frage, wie wir unsere Daten reproduzierbar machen können.
 
-# Was sind virtuelle Umgebungen? Wozu brauchen wir sie? 
+## 3. Was sind virtuelle Umgebungen? Wozu brauchen wir sie? 
 
 Zwar haben wir mit GitHub schon eine wichtige Plattform kennengelernt, um Daten über einen langen Zeitraum öffentlich bereitzustellen, verschiedene Versionen zu verwalten und zu dokumentieren und daran kollaborativ zu arbeiten. Allerdings könnte es ja sein, dass jemand in fünf Jahren auf unser GitHub repository stößt und versucht, die Skripte auszuführen. Vielleicht hat in der Zwischenzeit das Paket ``stylo`` mehrere Updates durchlaufen und der Name einer Funktion wurde geändert. Wir haben das repository aber nicht mehr geupdated und in unseren Srkipten steht noch die alte Funktion. Jetzt würde ein:e Nachnutzer:in unserer Daten beim Ausführen des stylo-Skripts eine Fehlermeldung bekommen. Die kann natürlich ergoogelt werden und das Skript kann an die neue Stylo-Version angepasst werden. Aber wenn ein Skript komplizierter ist und sehr viele Pakete nutzt, die jeweils auf Funktionen aus anderen Paketen ("dependencies") aufbauen, dann kann es schnell sein, dass der Fehler gar nicht mehr so leicht zu finden ist. Manchmal wird ein R Paket auch gar nicht mehr geupdated, sodass es mit einer neueren Version von R gar nicht mehr verwendbar ist. 
 
@@ -43,7 +43,7 @@ Aber auch ohne, dass erst fünf Jahre vergehen müssen, kann es zu Problemen kom
 
 All diese Fälle können die Reproduzierbarkeit unserer Daten einschränken. Das Problem kann man lösen, indem man eine spezielle Datei bereitstellt, in dem nicht nur alle Pakete, die in unserem RProject genutzt werden, sondern auch die installierte R Version oder gegebenenfalls sogar noch das Betriebssystem und systemspezifische Bibliotheken dokumentiert sind. Ein:e Nachnutzer:in kann dann diese Datei nutzen, um auf dem eigenen Computer ein allen bereits installierten Bibliotheken isolierten Raum zu erstellen, in dem sauber alle für unser Tutoriumsrepository benötigten Pakete und die passende R-Version installiert werden können. 
 
-# Methoden und Anwendungsfälle
+## 4. Methoden und Anwendungsfälle
 
 Zum Erstellen dieser Datei und des "virtuellen Raums" oder "virtual environments" gibt es verschiedene Möglichkeiten und Methoden, je nach Anwendungsfall: 
 
@@ -66,7 +66,7 @@ Zum Erstellen dieser Datei und des "virtuellen Raums" oder "virtual environments
 Bei der Verwendung des Begriffs "virtuelle Umgebung" ist also Vorsicht geboten, denn damit werden oft verschiedene Dinge beschrieben. Es gilt außerdem zu beachten, dass die Arbeit mit virtuellen Umgebungen nicht für alle Programmiersprachen sinnvoll ist, sondern nur für solche, bei denen Pakete per Default "global", also im selben Hauptverzeichnis installiert werden. Dies betrifft neben R vor allem Python. 
 
 
-# Virtuelle Umgebungen in R: Paket renv
+## 5. Virtuelle Umgebungen in R: Paket renv
 
 Für unsere Zwecke reicht es erst einmal, wenn wir eine virtuelle Umgebung für unser Projekt "r-tutorium" mithilfe des ``renv`` Pakets erstellen. Mithilfe der Funktion ``snapshot()`` kann der aktuelle Stand der Projektbibliothek in einer ``renv.lock`` Datei gespeichert werden. 
 

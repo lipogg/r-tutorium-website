@@ -6,7 +6,7 @@ output:
     toc_float: true
     toc_collapsed: true
     toc_depth: 3
-    number_sections: true
+    number_sections: false
 ---
 
 ```{r setup, include=FALSE}
@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
  
-# Plan für heute
+## 1. Plan für heute
 
  1. Vorstellungsrunde: Fach, Vorerfahrung, Interessen 
  2. Themen und Semesterplan
@@ -29,7 +29,7 @@ knitr::opts_chunk$set(echo = TRUE)
  4. Nächstes Treffen 
 
 
-# Themen und Semesterplan 
+## 2. Themen und Semesterplan 
 
 Der Semesterplan ist zum Teil abgestimmt mit dem Seminar ["Digitale Dramenanalyse"](https://www.fu-berlin.de/vv/de/lv/734022?query=digitale+dramenanalyse&sm=682080) von Frank Fischer. Es gibt aber genug Raum für eure eigenen Wünsche, Erwartungen und Interessen. 
 
@@ -48,9 +48,9 @@ Der Semesterplan ist zum Teil abgestimmt mit dem Seminar ["Digitale Dramenanalys
 Vorschläge, Ideen, Interessen?
  
  
-# R Basics
+## 3. R Basics
 
-## R und R Studio installieren
+### 3.1 R und R Studio installieren
 
 Bevor wir loslegen können, sollten alle R sowie die Entwicklungsumgebung RStudio installieren.
 
@@ -59,7 +59,7 @@ R installieren: https://cran.r-project.org/
 R Studio installieren: https://www.rstudio.com/products/rstudio/download/
 
  
-## Variablen 
+### 3.2 Variablen 
 
 Variablen werden verwendet, um Werte zu speichern, die wiederholt verwendet werden. 
 Werte können mithilfe der Zuweisungsoperatoren -> und = einer Variable "zugewiesen" werden, das 
@@ -90,7 +90,7 @@ print(satz)
 Verständnisfrage: 
 Warum wird für die Variable satz das zweite Mal ein anderer Wert ausgegeben? 
 
-## Datentypen
+### 3.3 Datentypen
 
 Die Werte der Variablen im Beispiel oben haben denselben Datentyp: character. Character ist 
 kurz für "character string"; in anderen Programmiersprachen heißt dieser Datentyp daher oft "string".
@@ -130,7 +130,7 @@ Verständnisfrage:
 Enthalten die Variablen x und y den gleichen Wert? 
 
 
-## Operatoren
+### 3.4 Operatoren
 
 In den bisherigen Beispielen haben wir bereits einen Operator kennengelernt, den 
 sogenannten Zuweisungsoperator <- bzw. =. Daneben gibt es arithmetische Operatoren 
@@ -181,7 +181,7 @@ Verständnisfragen:
 - Was passiert im letzten Beispiel? 
 
 
-## Datenstrukturen
+### 3.5 Datenstrukturen
 
 Bisher haben wir Variablen genutzt, um einzelne Werte vom Typ character, integer, numeric oder logical
 darin zu speichern. Variablen können aber auch strukturierte Sammlungen von Werten enthalten. Solche Datenstrukturen können entweder nur Elemente vom selben Typ aufnehmen (wie z.B. sog. "atomare" Vektoren und Matrizen), oder Elemente unterschiedlichen Typs (wie z.B. Listen und Dataframes). Listen sind genauer gesagt eine spezielle Art Vektor mit der Eigenschaft, dass sie Elemente unterschiedlichen Typs enthalten können; genauso sind Dataframes spezielle Matrizen, die Elemente unterschiedlichen Typs beinhalten können. Im Unterschied zu Matrizen sind Vektoren eindimensional. Zwischen den beiden besteht aber ein Zusammenhang: Jede Zeile und jede Spalte in einer Matrix kann auch als Vektor aufgefasst werden.   
@@ -255,7 +255,7 @@ Verständnisfragen:
 - Interpretiert die Ausgaben der Funktionen im letzten Abschnitt des Beispielcodes. Was für ein Wert wird ausgegeben, wenn length() auf einen Dataframe angewendet wird? Wie hängen ncol(), nrow() und dim() zusammen?
 - Was passiert, wenn Werte beim Erstellen eines Dataframes fehlen? Löscht einen Wert und probiert es aus. 
 
-## Funktionen
+### 3.6 Funktionen
 
 Einige Funktionen haben wir bereits kennengelernt, beispielsweise print(), length(), typeof(). 
 Beachtet, dass Funktionen meist nur auf bestimmten Datenstrukturen oder für konkrete Datentypen definiert sind, das heißt, dass eine Funktion nur korrekt ausgeführt wird, wenn ihr Argument beispielsweise ein character-Vektor oder ein Boolescher Wahrheitswert ist. Funktionen nehmen meist mindestens ein Argument an. Durch das Hinzufügen verschiedener Parameter kann das Verhalten von vielen Funktionen verändert werden. 
@@ -267,7 +267,7 @@ Informationen zu einzelnen Funktionen und ihren Argumenten können direkt im R S
 ?print
 ```
 
-## Pakete 
+### 3.7 Pakete 
 
 Funktionen wie print(), length() und typeof() sind bereits in R "vorinstalliert", es handelt sich dabei 
 um sogenannte R base Funktionen. Viele Anwendungen sind allerdings mithilfe von R base Funktionen umständlich 
@@ -293,7 +293,7 @@ library(DramaAnalysis)
 
 ```
 
-## Kommentare 
+### 3.8 Kommentare 
 
 Um den eigenen Code für andere verständlicher zu gestalten und sich selbst an seinen Code zu erinnern, 
 sollte man diesen immer gut kommentieren. 
@@ -304,7 +304,7 @@ sollte man diesen immer gut kommentieren.
 
 ```
 
-## Hilfe!!
+### 3.9 Hilfe!!
 
 Oft kommt es beim Coden zu komischen Fehlermeldungen, die mehr verwirren als helfen. Häufig steckt aber 
 ein ganz simpler Flüchtigkeitsfehler dahinter. In diesem Fall gilt: 
@@ -317,7 +317,7 @@ Manchmal macht das Skript aber auch einfach nicht das, was es soll, ohne, dass e
 3. Rubber Ducking oder Quietscheentschen-Debugging. Wenn nichts mehr hilft, hilft nur eins: Den Code einer Person, die nichts davon versteht - oder eben einem Quietscheentchen, Zeile für Zeile erklären. Dabei fallen oft logische Fehler auf, die das Problem verursachen.  
 4. Hilfe holen. Falls ihr im Laufe des Tutoriums ein Problem habt, das ihr selbst nicht lösen könnt, könnt ihr einen Screenshot oder ein Codesnippet in das Diskussionsforum in unserer R-Tutoriumsgruppe hochstellen oder mir eine E-Mail an l.poggel@fu-berlin.de schreiben. 
 
-# Nächstes Treffen 
+## 4. Nächstes Treffen 
 
 2. Mai, 14-16 Uhr hier im Raum.
 
@@ -325,7 +325,7 @@ Falls ihr noch nicht im Blackboardkurs angemeldet seid, schreibt euch dort bitte
 
 Natürlich könnt ihr mir auch immer eine Mail schreiben an: l.poggel@fu-berlin.de :) 
 
-# Ressourcen
+## 5. Ressourcen
 
 * Mehr zu Datentypen und Datenstrukturen: https://swcarpentry.github.io/r-novice-inflammation/13-supp-data-structures/
 * Datacamp Intro 2 R Kurs: https://campus.datacamp.com/courses/abc-intro-2-r/introduction-1?ex=1
