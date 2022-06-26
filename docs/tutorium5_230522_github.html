@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>5. Sitzung: Git und GitHub</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">R-Tutorium</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Sitzungen
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="tutorium1_250422_basics.html">Sitzung 1 - Basics</a>
+    </li>
+    <li>
+      <a href="tutorium2_020522_dateien.html">Sitzung 2 - Daten und Dateien</a>
+    </li>
+    <li>
+      <a href="tutorium3_09052022_regex.html">Sitzung 3 - Reguläre Ausdrücke</a>
+    </li>
+    <li>
+      <a href="tutorium4_16052022_xml.html">Sitzung 4 - XML und TEI</a>
+    </li>
+    <li>
+      <a href="tutorium6_130622_stilometrie.html">Sitzung 6 - Stilometrie</a>
+    </li>
+    <li>
+      <a href="tutorium7_200622_virtuelle_umgebungen.html">Sitzung 7 - Virtuelle Umgebungen</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/lipogg/r-tutorial">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">5. Sitzung: Git und GitHub</h1>
+
+</div>
+
+
+<div id="plan-für-heute" class="section level2">
+<h2>1. Plan für heute</h2>
+<p>Als Ergebnis der heutigen Stunde solltet ihr alle Git und GitHub über euer RStudio nutzen können, das GitHub Repository zu unserem Tutorium auf euren Rechner kopiert haben und zumindest eine Datei von eurem Rechner in das Repository hochgeladen haben. Ihr solltet außerdem ein Grundverständnis von der Versionsverwaltung mit Git und GitHub entwickelt haben und könnt mit den Begriffen “Repository”, “RProject”, “Commit”, “Push” und “Pull” etwas anfangen.</p>
+</div>
+<div id="einstieg-git-und-github" class="section level2">
+<h2>2. Einstieg Git und GitHub</h2>
+<p>In der <a href="https://de.wikipedia.org/wiki/Git">deutschsprachigen Wikipedia</a> wird Git als eine “freie Software zur verteilten Versionsverwaltung von Dateien” definiert. Aber was bedeutet das konkret? Wenn ihr git auf eurem Rechner installiert habt, könnt ihr die Kommandozeile bzw. das Terminal oder wie in unserem Fall auch das RStudio dazu verwenden, um verschiedene Versionen einer Datei oder eines gesamten Directories (=Ordners) zu verwalten. Solche verwalteten Directories nennt man Repository.</p>
+<p>Repositories können lokal oder auch online verwaltet werden, zum Beispiel über die Website <a href="https://github.com">github.com</a>. Wenn ihr im Team zusammen an einem Projekt arbeiten wollt, lohnt es sich, das Projekt als GitHub Repository anzulegen. Alle Gruppenmitglieder können sich dann eine lokale Kopie des Projekts herunterladen und von ihrem eigenen Rechner aus Änderungen vornehmen und in das GitHub Repository hochladen. Daraus ergeben sich zwei Vorteile: Alle Teammitglieder sind immer auf dem aktuellen Stand und ihr könnt unkompliziert auf ältere Versionen des Projekts zugreifen, ohne, dass ihr für jede Version eine neue Datei anlegen müsst.</p>
+<p>GitHub könntet ihr aber beispielsweise auch dazu nutzen, die (R-)Skripte, die ihr für ein Forschungsprojekt geschrieben habt, öffentlich zu teilen und Forschungsergebnisse zu präsentieren, zum Beispiel in Form einer über GitHub gehosteten Rmarkdown-Website wie dieser hier. Und nicht zuletzt könnt ihr über GitHub direkt an Open Source Softwareprojekten mitarbeiten, Probleme melden und Änderungsvorschläge machen und so in der Digital Humanities community aktiv werden.</p>
+</div>
+<div id="aufgaben-zum-selbststudium" class="section level2">
+<h2>3. Aufgaben zum Selbststudium</h2>
+<div id="git-herunterladen" class="section level3">
+<h3>3.1 Git herunterladen</h3>
+<p>Ladet zunächst git herunter: <a href="https://git-scm.com/downloads"><strong>https://git-scm.com/downloads</strong></a>. Wenn ihr das noch nicht gemacht habt, erstellt außerdem einen Account auf <a href="https://github.com/"><strong>https://github.com/</strong></a>. Teilt mir euren GitHub-Nutzer:innennamen mit, damit ich euch als Collaborator zum Tutoriums-GitHub-Repository hinzufügen kann. Bevor ihr das Repository in eurem GitHub Account sehen könnt, müsst ihr die Einladung noch bestätigen. Die Einladung seht ihr, wenn ihr auf eurer GitHub-Startseite oben rechts auf das kleine Glocken-Icon klickt.</p>
+</div>
+<div id="git-und-github-über-das-rstudio-nutzen" class="section level3">
+<h3>3.2 Git und GitHub über das RStudio nutzen</h3>
+<p>Folgt <a href="https://www.youtube.com/watch?v=kL6L2MNqPHg"><strong>diesem Video-Tutorial</strong></a> (ca. 15 min.) zur Verwendung von Git und GitHub im RStudio. Klappt etwas nicht? <a href="https://cfss.uchicago.edu/setup/git-with-rstudio/"><strong>Hier</strong></a> findet ihr einige Vorschläge zum Troubleshooting. Ihr könnt natürlich auch immer mich fragen. Bei Minute 11:41 wird im Video die Funktion use_github() verwendet. Hier müsst ihr allerdings anders als im Video das Argument protocol=‘https’ weglassen, sonst bekommt ihr eine Fehlermeldung.</p>
+</div>
+<div id="begriffsklärung-repository-directory-rproject" class="section level3">
+<h3>3.3 Begriffsklärung: Repository, Directory, RProject</h3>
+<p>In Aufgabe 2 habt ihr gleichzeitig ein neues Repository, ein Directory und ein RProject erstellt. Das sind viele neue Begriffe! Was ein Directory ist, wissen wir schon aus den letzten Stunden: Ein Directory ist ein lokales Verzeichnis auf eurem Computer, im Prinzip einfach ein Ordner mit ggf. Unterordnern, die dann Subdirectories heißen. Ein Repository ist letztlich nur ein <a href="https://de.wikipedia.org/wiki/Repository"><strong>verwaltetes Verzeichnis</strong></a>, das in unserem Fall der Versionsverwaltung dient. Und was ist ein RProject? Lest euch <a href="https://www.r-bloggers.com/2020/01/rstudio-projects-and-working-directories-a-beginners-guide/"><strong>diesen Beitrag</strong></a> durch und beschreibt in euren eigenen Worten, was ein RProject ist.</p>
+</div>
+<div id="übung-wiederholung-und-rstudio-github-workflow" class="section level3">
+<h3>3.4 Übung: Wiederholung und RStudio-GitHub Workflow</h3>
+<p>Über das RStudio kann man nicht nur ein neues Repository erstellen, sondern auch Repositories aus GitHub “klonen”, also als lokales verwaltetes Verzeichnis auf den eigenen Computer downloaden. <a href="https://resources.github.com/github-and-rstudio/"><strong>Hier</strong></a> findet ihr eine Anleitung. Wenn man Zugangsrechte hat, kann man dann lokal Änderungen vornehmen und diese wieder auf GitHub “pushen”, also hochladen. Wenn mehrere Entwickler:innen an einem Projekt arbeiten, kann es so natürlich sein, dass jemand in unserer Abwesenheit eine Änderung vorgenommen hat, und somit die Version auf GitHub unserer lokalen Version eine Änderung voraus ist. Wenn wir lokal weiterarbeiten wollen, müssen wir diese Änderungen zuerst mit unserer lokalen Version synchronisieren. Dieser Vorgang wird “pull” genannt. Bevor man eine Änderung “pushen” kann, muss man sie “commiten”, also sozusagen zum pushen vormerken. Zu jedem Commit schreibt man eine kurze Nachricht, um sich später daran erinnern zu können, was für eine Änderung man vorgenommen hat. “Update README.md” heißt zum Beispiel, dass eine Änderung an der Datei “README.md” vorgenommen wurde.</p>
+<p>Im RStudio sieht ein <strong>Git-GitHub-Workflow im Rahmen unseres Tutoriums</strong> wie folgt aus: Nachdem ihr das Repository zum Tutorium geklont habt, findet ihr in eurem Arbeitsverzeichnis einen Ordner r-tutorium. Öffnet die Datei <code>r-tutorium.Rproj</code>. Im RStudio seht ihr im Fenster unten rechts alle Dateien, die sich in eurem Verzeichnis r-tutorium befinden. Das Verzeichnis, in dem die RProject-Datei (.RProj) liegt, ist immer automatisch das Arbeitsverzeichnis für dieses Projekt. In unserem Fall ist das Arbeitsverzeichnis also das lokale Repository r-tutorium. Ihr könnt aus dem RStudio heraus jetzt zum Beispiel einen neuen Ordner anlegen (Fenster unten rechts “New Folder”), eine neue Datei anlegen (wie gehabt in der Menüleiste oben unter “File”) oder Änderungen an bestehenden Dateien im Repository vornehmen und die Änderungen anschließend “commiten” und in das “remote Repository” auf GitHub pushen. Zuerst solltet ihr aber eure lokale Version auf den neuesten Stand bringen und mögliche Änderungen aus dem GitHub-Repository pullen. Also:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>“Pull”</strong>: Fenster oben rechts -&gt; Reiter “Git” -&gt; blauer Pfeil, der nach unten zeigt</p></li>
+<li><p>Ordner oder Dateien anlegen oder Änderungen an bestehenden Dateien vornehmen</p></li>
+<li><p><strong>“Commit”</strong>: Fenster oben rechts -&gt; Reiter “Git” -&gt; Dateien auswählen, die gepusht werden sollen -&gt; Commit -&gt; Commit-Nachricht eingeben -&gt; Commit-Button</p></li>
+<li><p><strong>“Push”</strong>: Fenster oben rechts -&gt; Reiter "Git -&gt; gründer Pfeil, der nach oben zeigt</p></li>
+</ol>
+<p>Wir wollen jetzt diesen Workflow mal ausprobieren. Klont das <a href="https://github.com/lipogg/r-tutorium">Repository “r-tutorium”</a> von meiner GitHub-Seite und öffnet die Datei <code>tutorium5_230522_uebung.R</code>. Bearbeitet eine der beiden Übungsaufgaben und “pusht” zuletzt eure Änderungen in das GitHub repository.</p>
+</div>
+</div>
+<div id="skript-zur-übung" class="section level2">
+<h2><a href="https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/05_github-uebung/skripte/tutorium5_230522_uebung.R">Skript zur Übung</a></h2>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
