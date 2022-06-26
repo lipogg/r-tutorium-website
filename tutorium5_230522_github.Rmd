@@ -1,0 +1,54 @@
+---
+title: "5. Sitzung: Git und GitHub"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    toc_depth: 3
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+ 
+## 1. Plan für heute
+
+Als Ergebnis der heutigen Stunde solltet ihr alle Git und GitHub über euer RStudio nutzen können, das GitHub Repository zu unserem Tutorium auf euren Rechner kopiert haben und zumindest eine Datei von eurem Rechner in das Repository hochgeladen haben. Ihr solltet außerdem ein Grundverständnis von der Versionsverwaltung mit Git und GitHub entwickelt haben und könnt mit den Begriffen "Repository", "RProject", "Commit", "Push" und "Pull" etwas anfangen.
+
+## 2. Einstieg Git und GitHub 
+
+In der [deutschsprachigen Wikipedia](https://de.wikipedia.org/wiki/Git) wird Git als eine "freie Software zur verteilten Versionsverwaltung von Dateien" definiert. Aber was bedeutet das konkret? Wenn ihr git auf eurem Rechner installiert habt, könnt ihr die Kommandozeile bzw. das Terminal oder wie in unserem Fall auch das RStudio dazu verwenden, um verschiedene Versionen einer Datei oder eines gesamten Directories (=Ordners) zu verwalten. Solche verwalteten Directories nennt man Repository. 
+
+Repositories können lokal oder auch online verwaltet werden, zum Beispiel über die Website [github.com](https://github.com). Wenn ihr im Team zusammen an einem Projekt arbeiten wollt, lohnt es sich, das Projekt als GitHub Repository anzulegen. Alle Gruppenmitglieder können sich dann eine lokale Kopie des Projekts herunterladen und von ihrem eigenen Rechner aus Änderungen vornehmen und in das GitHub Repository hochladen. Daraus ergeben sich zwei Vorteile: Alle Teammitglieder sind immer auf dem aktuellen Stand und ihr könnt unkompliziert auf ältere Versionen des Projekts zugreifen, ohne, dass ihr für jede Version eine neue Datei anlegen müsst. 
+
+GitHub könntet ihr aber beispielsweise auch dazu nutzen, die (R-)Skripte, die ihr für ein Forschungsprojekt geschrieben habt, öffentlich zu teilen und Forschungsergebnisse zu präsentieren, zum Beispiel in Form einer über GitHub gehosteten Rmarkdown-Website wie dieser hier. Und nicht zuletzt könnt ihr über GitHub direkt an Open Source Softwareprojekten mitarbeiten, Probleme melden und Änderungsvorschläge machen und so in der Digital Humanities community aktiv werden. 
+
+## 3. Aufgaben zum Selbststudium
+
+### 3.1 Git herunterladen
+
+Ladet zunächst git herunter: [**https://git-scm.com/downloads**](https://git-scm.com/downloads). Wenn ihr das noch nicht gemacht habt, erstellt außerdem einen Account auf [**https://github.com/**](https://github.com/). Teilt mir euren GitHub-Nutzer:innennamen mit, damit ich euch als Collaborator zum Tutoriums-GitHub-Repository hinzufügen kann. Bevor ihr das Repository in eurem GitHub Account sehen könnt, müsst ihr die Einladung noch bestätigen. Die Einladung seht ihr, wenn ihr auf eurer GitHub-Startseite oben rechts auf das kleine Glocken-Icon klickt. 
+
+### 3.2 Git und GitHub über das RStudio nutzen
+
+Folgt [**diesem Video-Tutorial**](https://www.youtube.com/watch?v=kL6L2MNqPHg) (ca. 15 min.) zur Verwendung von Git und GitHub im RStudio. Klappt etwas nicht? [**Hier**](https://cfss.uchicago.edu/setup/git-with-rstudio/) findet ihr einige Vorschläge zum Troubleshooting. Ihr könnt natürlich auch immer mich fragen. 
+Bei Minute 11:41 wird im Video die Funktion use_github() verwendet. Hier müsst ihr allerdings anders als im Video das Argument protocol='https' weglassen, sonst bekommt ihr eine Fehlermeldung.
+
+### 3.3 Begriffsklärung: Repository, Directory, RProject
+
+In Aufgabe 2 habt ihr gleichzeitig ein neues Repository, ein Directory und ein RProject erstellt. Das sind viele neue Begriffe! Was ein Directory ist, wissen wir schon aus den letzten Stunden: Ein Directory ist ein lokales Verzeichnis auf eurem Computer, im Prinzip einfach ein Ordner mit ggf. Unterordnern, die dann Subdirectories heißen. Ein Repository ist letztlich nur ein [**verwaltetes Verzeichnis**](https://de.wikipedia.org/wiki/Repository), das in unserem Fall der Versionsverwaltung dient. Und was ist ein RProject? Lest euch [**diesen Beitrag**](https://www.r-bloggers.com/2020/01/rstudio-projects-and-working-directories-a-beginners-guide/) durch und beschreibt in euren eigenen Worten, was ein RProject ist. 
+
+### 3.4 Übung: Wiederholung und RStudio-GitHub Workflow
+
+Über das RStudio kann man nicht nur ein neues Repository erstellen, sondern auch Repositories aus GitHub "klonen", also als lokales verwaltetes Verzeichnis auf den eigenen Computer downloaden. [**Hier**](https://resources.github.com/github-and-rstudio/) findet ihr eine Anleitung.  Wenn man Zugangsrechte hat, kann man dann lokal Änderungen vornehmen und diese wieder auf GitHub "pushen", also hochladen. Wenn mehrere Entwickler:innen an einem Projekt arbeiten, kann es so natürlich sein, dass jemand in unserer Abwesenheit eine Änderung vorgenommen hat, und somit die Version auf GitHub unserer lokalen Version eine Änderung voraus ist. Wenn wir lokal weiterarbeiten wollen, müssen wir diese Änderungen zuerst mit unserer lokalen Version synchronisieren. Dieser Vorgang wird "pull" genannt. 
+
+Im RStudio sieht ein Git-GitHub-Workflow im Rahmen unseres Tutoriums wie folgt aus: 
+Nachdem ihr das Repository zum Tutorium geklont habt, findet ihr in eurem Arbeitsverzeichnis einen Ordner r-tutorium. Dieser ist bereits ein 
+
+
+Wir wollen jetzt diesen Workflow mal ausprobieren. Klont das [Repository "r-tutorium"](https://github.com/lipogg/r-tutorium) von meiner GitHub-Seite und öffnet die Datei ``tutorium5_230522_uebung.R``. Bearbeitet eine der beiden Übungsaufgaben und "pusht" zuletzt eure Änderungen in das GitHub repository. 
+
+## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/05_github-uebung/skripte/tutorium5_230522_uebung.R)
