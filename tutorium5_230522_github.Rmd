@@ -43,10 +43,18 @@ In Aufgabe 2 habt ihr gleichzeitig ein neues Repository, ein Directory und ein R
 
 ### 3.4 Übung: Wiederholung und RStudio-GitHub Workflow
 
-Über das RStudio kann man nicht nur ein neues Repository erstellen, sondern auch Repositories aus GitHub "klonen", also als lokales verwaltetes Verzeichnis auf den eigenen Computer downloaden. [**Hier**](https://resources.github.com/github-and-rstudio/) findet ihr eine Anleitung.  Wenn man Zugangsrechte hat, kann man dann lokal Änderungen vornehmen und diese wieder auf GitHub "pushen", also hochladen. Wenn mehrere Entwickler:innen an einem Projekt arbeiten, kann es so natürlich sein, dass jemand in unserer Abwesenheit eine Änderung vorgenommen hat, und somit die Version auf GitHub unserer lokalen Version eine Änderung voraus ist. Wenn wir lokal weiterarbeiten wollen, müssen wir diese Änderungen zuerst mit unserer lokalen Version synchronisieren. Dieser Vorgang wird "pull" genannt. 
+Über das RStudio kann man nicht nur ein neues Repository erstellen, sondern auch Repositories aus GitHub "klonen", also als lokales verwaltetes Verzeichnis auf den eigenen Computer downloaden. [**Hier**](https://resources.github.com/github-and-rstudio/) findet ihr eine Anleitung.  Wenn man Zugangsrechte hat, kann man dann lokal Änderungen vornehmen und diese wieder auf GitHub "pushen", also hochladen. Wenn mehrere Entwickler:innen an einem Projekt arbeiten, kann es so natürlich sein, dass jemand in unserer Abwesenheit eine Änderung vorgenommen hat, und somit die Version auf GitHub unserer lokalen Version eine Änderung voraus ist. Wenn wir lokal weiterarbeiten wollen, müssen wir diese Änderungen zuerst mit unserer lokalen Version synchronisieren. Dieser Vorgang wird "pull" genannt. Bevor man eine Änderung "pushen" kann, muss man sie "commiten", also sozusagen zum pushen vormerken. Zu jedem Commit schreibt man eine kurze Nachricht, um sich später daran erinnern zu können, was für eine Änderung man vorgenommen hat. "Update README.md" heißt zum Beispiel, dass eine Änderung an der Datei "README.md" vorgenommen wurde. 
 
-Im RStudio sieht ein Git-GitHub-Workflow im Rahmen unseres Tutoriums wie folgt aus: 
-Nachdem ihr das Repository zum Tutorium geklont habt, findet ihr in eurem Arbeitsverzeichnis einen Ordner r-tutorium. Dieser ist bereits ein 
+Im RStudio sieht ein **Git-GitHub-Workflow im Rahmen unseres Tutoriums** wie folgt aus: 
+Nachdem ihr das Repository zum Tutorium geklont habt, findet ihr in eurem Arbeitsverzeichnis einen Ordner r-tutorium. Öffnet die Datei ``r-tutorium.Rproj``. Im RStudio seht ihr im Fenster unten rechts alle Dateien, die sich in eurem Verzeichnis r-tutorium befinden. Das Verzeichnis, in dem die RProject-Datei (.RProj) liegt, ist immer automatisch das Arbeitsverzeichnis für dieses Projekt. In unserem Fall ist das Arbeitsverzeichnis also das lokale Repository r-tutorium. Ihr könnt aus dem RStudio heraus jetzt zum Beispiel einen neuen Ordner anlegen (Fenster unten rechts "New Folder"), eine neue Datei anlegen (wie gehabt in der Menüleiste oben unter "File") oder Änderungen an bestehenden Dateien im Repository vornehmen und die Änderungen anschließend "commiten" und in das "remote Repository" auf GitHub pushen. Zuerst solltet ihr aber eure lokale Version auf den neuesten Stand bringen und mögliche Änderungen aus dem GitHub-Repository pullen. Also: 
+
+1. **"Pull"**: Fenster oben rechts -> Reiter "Git" -> blauer Pfeil, der nach unten zeigt 
+
+2. Ordner oder Dateien anlegen oder Änderungen an bestehenden Dateien vornehmen
+
+3. **"Commit"**: Fenster oben rechts -> Reiter "Git" -> Dateien auswählen, die gepusht werden sollen -> Commit -> Commit-Nachricht eingeben -> Commit-Button
+
+4. **"Push"**: Fenster oben rechts -> Reiter "Git -> gründer Pfeil, der nach oben zeigt
 
 
 Wir wollen jetzt diesen Workflow mal ausprobieren. Klont das [Repository "r-tutorium"](https://github.com/lipogg/r-tutorium) von meiner GitHub-Seite und öffnet die Datei ``tutorium5_230522_uebung.R``. Bearbeitet eine der beiden Übungsaufgaben und "pusht" zuletzt eure Änderungen in das GitHub repository. 
