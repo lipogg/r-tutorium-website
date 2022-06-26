@@ -16,9 +16,9 @@ Diese Website dokumentiert die Inhalte des Tutoriums **["Einführung in R — Pr
 
 **[Sitzung 3 - Reguläre Ausdrücke](tutorium3_09052022_regex.html)**
 
-**[Sitzung 3 - Git und GitHub](tutorium5_230522_github.html)**
-
 **[Sitzung 4 - XML und TEI](tutorium4_16052022_xml.html)**
+
+**[Sitzung 5 - Git und GitHub](tutorium5_230522_github.html)**
 
 **[Sitzung 6 - Stilometrie](tutorium6_130622_stilometrie.html)**
 
