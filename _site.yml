@@ -13,6 +13,8 @@ navbar:
       href: tutorium3_09052022_regex.html
     - text: Sitzung 4 - XML und TEI
       href: tutorium4_16052022_xml.html 
+    - text: Sitzung 5 - Git und GitHub
+      href: tutorium5_230522_github.html
     - text: Sitzung 6 - Stilometrie
       href: tutorium6_130622_stilometrie.html
     - text: Sitzung 7 - Virtuelle Umgebungen 
