@@ -19,6 +19,8 @@ navbar:
       href: tutorium6_130622_stilometrie.html
     - text: Sitzung 7 - Virtuelle Umgebungen 
       href: tutorium7_200622_virtuelle_umgebungen.html
+    - text: Sitzung 8 - Web Scraping und APIs 
+      href: tutorium8_27062022_webscraping.html
   right: 
     - icon: fab fa-github fa-lg
       href: https://github.com/lipogg/r-tutorial

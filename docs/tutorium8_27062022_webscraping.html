@@ -11,7 +11,7 @@
 
 
 
-<title>6. Sitzung: Stilometrie</title>
+<title>8. Sitzung: APIs und Web Scraping</title>
 
 <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -372,71 +372,52 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">6. Sitzung: Stilometrie</h1>
+<h1 class="title toc-ignore">8. Sitzung: APIs und Web Scraping</h1>
 
 </div>
 
 
-<div id="plan-für-heute" class="section level2">
-<h2>1. Plan für heute</h2>
+<div id="was-ist-web-scraping" class="section level2">
+<h2>1. Was ist Web Scraping?</h2>
+<p>Wenn ihr für ein Forschungsprojekt ein großes Korpus von Texten zusammenstellen müsst, kann das ohne die richtigen Werkzeuge sehr lange dauern. Wenn ihr beispielsweise 200 plain text Dateien von <a href="https://de.wikisource.org">wikisource.org</a> manuell herunterladen wollt, müsstet ihr jeden Text erst suchen, dann jedes Mal auf den “Herunterladen”-Button klicken und hier die Parameter für den Download jedes Mal erneut auswählen. Es gibt jedoch verschiedene Methoden, um diese Arbeit zu erleichtern:</p>
 <ol style="list-style-type: decimal">
-<li>Nachtrag XML</li>
-<li>Was ist Stilometrie?</li>
-<li>Übung: Einstieg</li>
-<li>Installation von Stylo</li>
-<li>Übung: Stilometrie mit Stylo</li>
+<li>API der Website abrufen: Vielleicht verfügt die Website über eine Schnittstelle, eine sogenannte API, die ihr anzapfen könnt, um direkt die Dateien herunterzuladen. API steht für <strong>A</strong>pplication <strong>P</strong>rogramming <strong>I</strong>nterface und wird verwendet, um anderen den Zugriff auf Daten oder Funktionalitäten einer Anwendung zu ermöglichen, ohne dabei den Quellcode der Anwendung zu offenbaren. Die Inhalte können mit einer simplen Abfrage (“GET-Request”) über das Internet-Protokoll HTTP angezapft werden.
+<ul>
+<li>Beispiele: <a href="https://dracor.org/doc/api">dracor.org</a>, <a href="https://chroniclingamerica.loc.gov/about/api/">Chronicling America Archive</a></li>
+</ul></li>
+<li>Web Scraping: Wenn es keine API gibt, gibt es mehrere mögliche Strategien. Um euch für eine Strategie zu entscheiden, müsst ihr euch zunächst den Quelltext der Website ansehen.
+<ul>
+<li>Ist die Website sehr einfach strukturiert, seht ihr den Inhalt der Seite meist direkt zwischen verschiedenen HTML-Tags. In diesem Fall könnt ihr den HTML-Baum parsen und den Inhalt der Elemente extrahieren, ähnlich wie wir das bereits für XML-Dateien gelernt haben. Beispiele: <a href="https://www.projekt-gutenberg.org/buechner/briefe1/titlepage.html">projekt-gutenberg.org</a>, <a href="https://de.wikisource.org/wiki/Der_Zauberstein">wikisource.org</a></li>
+<li>Wenn es auf der Website einen “Herunterladen”-Button gibt, besteht die zusätzliche Möglichkeit, den Mausklick auf den Button zu simulieren und so das “Event”, das beim Mausklick getriggert wird, in diesem Fall das Herunterladen des Websiteinhalts, künstlich zu veranlassen. Beispiel: <a href="https://de.wikisource.org/wiki/Der_Zauberstein">wikisource.org</a></li>
+</ul></li>
 </ol>
+<p>Je nach Definition kann argumentiert werden, dass Datenextraktion mithilfe von API-Requests auch eine Form des Web Scraping ist, genauso wie das manuelle Kopieren von Websiteinhalten.</p>
+<p>Zum Web Scraping gibt es auch verschiedene Softwarelösungen. Im Rahmen dieses Tutoriums konzentrieren wir uns aber auf die Umsetzung in R.</p>
+<p>Verständnisfrage: * Welche Vor- und Nachteile haben die verschiedenen Methoden?</p>
 </div>
-<div id="nachtrag-zu-xml" class="section level2">
-<h2>2. Nachtrag zu XML</h2>
-<p>Eine Lösung zur Aufgabe 3 aus der letzten Stunde findet ihr jetzt <a href="https://github.com/lipogg/r-tutorium/tree/master/05_github-uebung/skripte/aufgabe3_loesung.R">hier</a>.</p>
-<p>In den nächsten Tagen werde ich ein R-Markdown Dokument mit Ressourcen und Literatur zum Thema XML im GitHub Repository unter <code>/04_xml</code> hochladen.</p>
-</div>
-<div id="was-ist-stilometrie" class="section level2">
-<h2>3. Was ist Stilometrie?</h2>
-<p>Folien von Frank Fischer: <a href="https://dh-minor.org/dd/2022-06-01">https://dh-minor.org/dd/2022-06-01</a> </br></p>
-<p>Einführung forText: <a href="https://fortext.net/routinen/methoden/stilometrie">https://fortext.net/routinen/methoden/stilometrie</a></p>
-<p>Digitale Stilometrie mit Stylo: <a href="https://fortext.net/routinen/lerneinheiten/stilometrie-mit-stylo">https://fortext.net/routinen/lerneinheiten/stilometrie-mit-stylo</a></p>
-</div>
-<div id="übung-einstieg" class="section level2">
-<h2>4. Übung: Einstieg</h2>
-<p>Die Texte zur heutigen Stunde orientieren sich an einer <a href="https://doi.org/10.5281/zenodo.6188868">Forschungsarbeit von Fotis Jannidis und Gerhard Lauer</a>, in der sie sogenannte “Burrow’s Delta” als Maß für die stilistische Ähnlichkeit von Texten untersucht haben. Ihre Analyse konzentriert sich dabei auf Texte, die im deutschsprachigen Raum um 1800 publiziert wurden. Als Korpus nutzen sie plain text Dateien aus der Digitalen Bibliothek <a href="https://textgridrep.org/">https://textgridrep.org/</a>. Zunächst haben die Autoren untersucht, wie gut das Maß die Autorschaft, Gattungs- und Epochenzugehörigkeit der Texte klassifiziert. Danach haben sie sich einer speziellen literaturgeschichtlichen Fragestellung gewidmet, nämlich der Position Heinrich von Kleists im literarischen Kanon. Laut Jannidis und Lauer wird Kleist in der Forschung meist uneindeutig zwischen Klassik und Romantik eingeordnet.</p>
-<p>Für die heutige Stunde werden wir beispielhaft die Analyse von Jannidis und Lauer anhand zweier reduzierter Textkorpora nachvollziehen, die ihr im Verzeichnis “daten” zur heutigen Stunde findet:</p>
-<ul>
-<li><code>/lauer-jannidis-genres</code> enthält nach Gattungen unterteilte Stücke von Goethe.</li>
-<li><code>/lauer-jannidis-autorschaft</code> enthält Werke von Kleist, sowie ausgewählte Stücke aus Klassik und Romantik</li>
-</ul>
-<p>Die Analyse werden wir mithilfe des R Pakets <code>stylo</code> durchführen.</p>
-</div>
-<div id="installation-von-stylo" class="section level2">
-<h2>5. Installation von Stylo</h2>
-<p>Bevor Stylo über das R Studio installiert werden kann, müssen Mac-User:innen XQuartz installieren: <a href="https://www.xquartz.org/">https://www.xquartz.org/</a></p>
-<p>Video-Tutorial: <a href="https://www.youtube.com/watch?v=hp3MTGA_W8o">https://www.youtube.com/watch?v=hp3MTGA_W8o</a></p>
-</div>
-<div id="übung-stilometrie-mit-stylo" class="section level2">
-<h2>6. Übung: Stilometrie mit Stylo</h2>
-<p>Jetzt können wir unsere Beispielkorpora analysieren. Bei den Einstellungen orientieren wir uns wie folgt an Jannidis und Lauer.</p>
-<p>Für die Autorschaftsanalyse wählen wir das autorschaft-Korpus und die folgenden Parameter (Jannidis/Lauer, S. 44 f.):</p>
-<ul>
-<li>INPUT &amp; LANGUAGE: plain text, German</li>
-<li>FEATURES: 200-2000 MFW (most frequent words), culling 0; zweiter Durchlauf: culling 50, delete pronouns</li>
-<li>STATISTICS: consensus tree, classic delta</li>
-</ul>
-<p>Für die Genreklassifikation wählen wir das genre-Korpus, zunächst die txt-Dateien, und die folgenden Parameter (Jannidis/Lauer, S. 38):</p>
-<ul>
-<li>INPUT &amp; LANGUAGE: plain text bzw. xml, German</li>
-<li>FEATURES: 1490-1490 MFW, culling 50</li>
-<li>STATISTICS: Cluster Analysis (=Dendrogramm), classic delta</li>
-</ul>
-<p>Die Epochenklassifikation behandeln wir nur theoretisch (Jannidis/Lauer, S. 40)</p>
-<p>Fragen:</p>
-<ul>
-<li>Wie interpretiert ihr den Consensus Tree/das Dendrogramm?</li>
-<li>Was passiert, wenn wir anstelle der txt-Dateien die xml-Dateien zur Genreklassifikation verwenden?</li>
-</ul>
+<div id="dracor-datenextraktion-mithilfe-der-api" class="section level2">
+<h2>2. Dracor: Datenextraktion mithilfe der API</h2>
+<p>Die Dramen-Datenbank Dracor verfügt über eine <a href="https://dracor.org/doc/api">gut dokumentierte API</a>, welche den Zugriff auf verschiedene Inhalte ermöglicht, beispielsweise auf Metadaten zu Stücken oder ganzen Korpora, auf den Sprechtext der Figuren im Plaintext-Format und auch auf ganze, in XML-TEI ausgezeichnete Stücke. Die Abfrage dieser Daten für einzelne Stücke ist direkt über das Webinterface möglich. Um Daten zu mehreren Stücken zu bekommen, müssen wir ein Skript schreiben, das die API anzapft und die URL für die API-Abfrage iterativ (also in mehreren Durchläufen) für jedes der uns interessierenden Stücke anpasst.</p>
+<p>Für eine Abfrage aller Sprechtexte in Stücken von Goethe könnte ein Skript beispielsweise so aussehen:</p>
 </div>
 <div id="skript-zur-übung" class="section level2">
-<h2><a href="https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/06_stilometrie/skripte/tutorium6_130622_uebung.R">Skript zur Übung</a></h2>
+<h2><a href="https://github.com/lipogg/r-tutorium/blob/e3b5acfb7004daa4daf5a16432980f47fe51d08f/08_webscraping_und_apis/skripte/tutorium8_270622_dracor_api.R">Skript zur Übung</a></h2>
+</div>
+<div id="projekt-gutenberg-html-baum-parsen" class="section level2">
+<h2>3. Projekt Gutenberg: HTML-Baum parsen</h2>
+<p>Die Open Source - Volltextdatenbank <a href="https://www.projekt-gutenberg.org">Projekt Gutenberg</a> (nicht zu verwechseln mit dem englischsprachigen project-gutenberg.org!) verfügt über keine API. Dafür ist der Aufbau der Seite unkompliziert und auch mit nur rudimentärem Verständnis von HTML und CSS intuitiv verständlich.</p>
+<p>Wir machen uns zunächst über die Nutzeroberfläche mit der Funktionalität der Website vertraut. Für uns sind zwei Seiten wichtig: Zum einen die Übersichtsseite über alle Texte. Diese könnten wir verwenden, um eine Liste aller Texte eine:r bestimmten Autor:in zu erstellen. Zum anderen die Seite für ein einzelnes Stück aus unserem gewünschten Korpus. Hier fällt auf, dass die Texte über mehrere Seiten verteilt sind, zwischen denen durch Klicken auf “Weiter” navigiert werden kann.</p>
+<p>Anschließend wollen wir uns den Quelltext der beiden relevanten Seiten ansehen. Dazu öffnen wir die Seiten entweder in Firefox oder Chrome und öffnen die Entwicklertools:</p>
+<p>Chrome: Anzeigen -&gt; Entwickler -&gt; Elemente untersuchen</p>
+<p>Firefox: ein Seitenelement markieren -&gt; Rechtsklick -&gt; Element untersuchen</p>
+<p>Verständnisfragen: * Welche HTML-Elemente seht ihr? Wo befindet sich der Text, den wir brauchen? * Wie würdet ihr vorgehen, um den gesamten Text zu etrahieren? Wie würdet ihr dabei mit dem “Weiter”-Button umgehen?</p>
+</div>
+<div id="skript-zur-übung-1" class="section level2">
+<h2><a href="https://github.com/lipogg/r-tutorium/blob/e3b5acfb7004daa4daf5a16432980f47fe51d08f/08_webscraping_und_apis/skripte/tutorium8_270622_scraper.R">Skript zur Übung</a></h2>
+</div>
+<div id="wikisource-on-click-event-simulieren" class="section level2">
+<h2>4. Wikisource: On-Click Event simulieren</h2>
+<p>Mit diesem Thema können wir uns nächste Woche beschäftigen.</p>
 </div>
 
 

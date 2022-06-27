@@ -24,5 +24,7 @@ Diese Website dokumentiert die Inhalte des Tutoriums **["Einführung in R — Pr
 
 **[Sitzung 7 - Virtuelle Umgebungen](tutorium7_200622_virtuelle_umgebungen.html)**
 
+**[Sitzung 8 - Web Scraping und APIs](tutorium8_27062022_webscraping.html)**
+
 
 

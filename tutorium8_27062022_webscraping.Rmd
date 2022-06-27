@@ -1,0 +1,68 @@
+---
+title: "8. Sitzung: APIs und Web Scraping"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    toc_depth: 3
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## 1. Was ist Web Scraping? 
+
+Wenn ihr für ein Forschungsprojekt ein großes Korpus von Texten zusammenstellen müsst, kann das ohne die richtigen Werkzeuge sehr lange dauern. Wenn ihr beispielsweise 200 plain text Dateien von [wikisource.org](https://de.wikisource.org) manuell herunterladen wollt, müsstet ihr jeden Text erst suchen, dann jedes Mal auf den "Herunterladen"-Button klicken und hier die Parameter für den Download jedes Mal erneut auswählen. Es gibt jedoch verschiedene Methoden, um diese Arbeit zu erleichtern: 
+
+1. API der Website abrufen: Vielleicht verfügt die Website über eine Schnittstelle, eine sogenannte API, die ihr anzapfen könnt, um direkt die Dateien herunterzuladen. API steht für **A**pplication **P**rogramming **I**nterface und wird verwendet, um anderen den Zugriff auf Daten oder Funktionalitäten einer Anwendung zu ermöglichen, ohne dabei den Quellcode der Anwendung zu offenbaren. Die Inhalte können mit einer simplen Abfrage ("GET-Request") über das Internet-Protokoll HTTP angezapft werden. 
+     + Beispiele: [dracor.org](https://dracor.org/doc/api), [Chronicling America Archive](https://chroniclingamerica.loc.gov/about/api/) 
+
+2. Web Scraping: Wenn es keine API gibt, gibt es mehrere mögliche Strategien. Um euch für eine Strategie zu entscheiden, müsst ihr euch zunächst den Quelltext der Website ansehen. 
+     + Ist die Website sehr einfach strukturiert, seht ihr den Inhalt der Seite meist direkt zwischen verschiedenen HTML-Tags. In diesem Fall könnt ihr den HTML-Baum parsen und den Inhalt der Elemente extrahieren, ähnlich wie wir das bereits für XML-Dateien gelernt haben. 
+Beispiele: [projekt-gutenberg.org](https://www.projekt-gutenberg.org/buechner/briefe1/titlepage.html), [wikisource.org](https://de.wikisource.org/wiki/Der_Zauberstein)
+     + Wenn es auf der Website einen "Herunterladen"-Button gibt, besteht die zusätzliche Möglichkeit, den Mausklick auf den Button zu simulieren und so das "Event", das beim Mausklick getriggert wird, in diesem Fall das Herunterladen des Websiteinhalts, künstlich zu veranlassen. 
+Beispiel: [wikisource.org](https://de.wikisource.org/wiki/Der_Zauberstein)
+     
+Je nach Definition kann argumentiert werden, dass Datenextraktion mithilfe von  API-Requests auch eine Form des Web Scraping ist, genauso wie das manuelle Kopieren von Websiteinhalten. 
+
+Zum Web Scraping gibt es auch verschiedene Softwarelösungen. Im Rahmen dieses Tutoriums konzentrieren wir uns aber auf die Umsetzung in R.
+
+Verständnisfrage: 
+* Welche Vor- und Nachteile haben die verschiedenen Methoden?  
+
+## 2. Dracor: Datenextraktion mithilfe der API
+
+Die Dramen-Datenbank Dracor verfügt über eine [gut dokumentierte API](https://dracor.org/doc/api), welche den Zugriff auf verschiedene Inhalte ermöglicht, beispielsweise auf Metadaten zu Stücken oder ganzen Korpora, auf den Sprechtext der Figuren im Plaintext-Format und auch auf ganze, in XML-TEI ausgezeichnete Stücke. Die Abfrage dieser Daten für einzelne Stücke ist direkt über das Webinterface möglich. Um Daten zu mehreren Stücken zu bekommen, müssen wir ein Skript schreiben, das die API anzapft und die URL für die API-Abfrage iterativ (also in mehreren Durchläufen) für jedes der uns interessierenden Stücke anpasst.
+
+Für eine Abfrage aller Sprechtexte in Stücken von Goethe könnte ein Skript beispielsweise so aussehen: 
+
+## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/e3b5acfb7004daa4daf5a16432980f47fe51d08f/08_webscraping_und_apis/skripte/tutorium8_270622_dracor_api.R) 
+
+
+## 3. Projekt Gutenberg: HTML-Baum parsen 
+
+Die Open Source - Volltextdatenbank [Projekt Gutenberg](https://www.projekt-gutenberg.org) (nicht zu verwechseln mit dem englischsprachigen project-gutenberg.org!) verfügt über keine API. Dafür ist der Aufbau der Seite unkompliziert und auch mit nur rudimentärem Verständnis von HTML und CSS intuitiv verständlich. 
+
+Wir machen uns zunächst über die Nutzeroberfläche mit der Funktionalität der Website vertraut. Für uns sind zwei Seiten wichtig: Zum einen die Übersichtsseite über alle Texte. Diese könnten wir verwenden, um eine Liste aller Texte eine:r bestimmten Autor:in zu erstellen. Zum anderen die Seite für ein einzelnes Stück aus unserem gewünschten Korpus. Hier fällt auf, dass die Texte über mehrere Seiten verteilt sind, zwischen denen durch Klicken auf "Weiter" navigiert werden kann. 
+
+Anschließend wollen wir uns den Quelltext der beiden relevanten Seiten ansehen. Dazu öffnen wir die Seiten entweder in Firefox oder Chrome und öffnen die Entwicklertools: 
+
+Chrome: Anzeigen -> Entwickler -> Elemente untersuchen  
+
+Firefox: ein Seitenelement markieren -> Rechtsklick -> Element untersuchen
+
+Verständnisfragen: 
+* Welche HTML-Elemente seht ihr? Wo befindet sich der Text, den wir brauchen? 
+* Wie würdet ihr vorgehen, um den gesamten Text zu etrahieren? Wie würdet ihr dabei mit dem "Weiter"-Button umgehen? 
+
+
+## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/e3b5acfb7004daa4daf5a16432980f47fe51d08f/08_webscraping_und_apis/skripte/tutorium8_270622_scraper.R)
+
+
+## 4. Wikisource: On-Click Event simulieren
+
+Mit diesem Thema können wir uns nächste Woche beschäftigen. 
