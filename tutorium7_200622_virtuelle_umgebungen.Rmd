@@ -70,7 +70,7 @@ Bei der Verwendung des Begriffs "virtuelle Umgebung" ist also Vorsicht geboten, 
 
 Für unsere Zwecke reicht es erst einmal aus, wenn wir eine virtuelle Umgebung für unser Projekt "r-tutorium" mithilfe des ``renv`` Pakets erstellen. Mithilfe der Funktion ``snapshot()`` kann der aktuelle Stand der Projektbibliothek in einer ``renv.lock`` Datei gespeichert werden. 
 
-Ziel der heutigen Stunde ist es, dass wir gemeinsam so eine Datei erzeugen und in unser r-tutorium Repository auf GitHub pushen. Zur Übung könnt ihr für ein neues Repository eine virtuelle Umgebung aktivieren.
+Ziel der heutigen Stunde ist es, dass wir gemeinsam so eine Datei erzeugen und in unser r-tutorium Repository auf GitHub pushen. Zur Übung könnt ihr für ein neues Repository eine virtuelle Umgebung anlegen und aktivieren.
 
 Als Leitfaden dient dazu: 
 
