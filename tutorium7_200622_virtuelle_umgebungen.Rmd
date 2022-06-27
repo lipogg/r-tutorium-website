@@ -25,7 +25,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## 2. FAIR-Prinzipien und Reproduzierbarkeit von Forschung
 
-2016 haben sich Wissenschaftler:innen und Forschungsinstitute zu einem Konsortium zusammengeschlossen und [in der Zeitschrift Scientific Data](https://www.nature.com/articles/sdata201618) eine Reihe [Prinzipien](https://www.go-fair.org/fair-principles/) definiert, die sicherstellen sollen, dass die großen Mengen digitaler Forschungsdaten, die in den letzten Jahren produziert werden, auch für die Zukunft zugänglich und nachnutzbar sind. Diese Prinzipien werden mit dem Akronym FAIR abgekürzt, das für **F**indable, **A**ccessible, **I**nteroperable und **R**eusable steht. 
+2016 haben sich Wissenschaftler:innen und Forschungsinstitute zu einem Konsortium zusammengeschlossen und [in der Zeitschrift Scientific Data](https://www.nature.com/articles/sdata201618) eine Reihe [Prinzipien](https://www.go-fair.org/fair-principles/) definiert, die sicherstellen sollen, dass die großen Mengen digitaler Forschungsdaten, die in den letzten Jahren produziert wurden, auch für die Zukunft zugänglich und nachnutzbar sind. Diese Prinzipien werden mit dem Akronym FAIR abgekürzt, das für **F**indable, **A**ccessible, **I**nteroperable und **R**eusable steht. 
 
 Das Prinzip der Reusability umfasst auch die Möglichkeit zur "Reproducibility", also die Möglichkeit, eine Forschung anhand der bereitgestellten Daten "nachzubauen". "Reproducibility" wird von der US-amerikanischen National Science Foundation definiert als: 
 
@@ -37,40 +37,40 @@ Die FAIR-Prinzipien haben sich seither weltweit in Forschungsinstituten und Univ
 
 ## 3. Was sind virtuelle Umgebungen? Wozu brauchen wir sie? 
 
-Zwar haben wir mit GitHub schon eine wichtige Plattform kennengelernt, um Daten über einen langen Zeitraum öffentlich bereitzustellen, verschiedene Versionen zu verwalten und zu dokumentieren und daran kollaborativ zu arbeiten. Allerdings könnte es ja sein, dass jemand in fünf Jahren auf unser GitHub repository stößt und versucht, die Skripte auszuführen. Vielleicht hat in der Zwischenzeit das Paket ``stylo`` mehrere Updates durchlaufen und der Name einer Funktion wurde geändert. Wir haben das repository aber nicht mehr geupdated und in unseren Srkipten steht noch die alte Funktion. Jetzt würde ein:e Nachnutzer:in unserer Daten beim Ausführen des stylo-Skripts eine Fehlermeldung bekommen. Die kann natürlich ergoogelt werden und das Skript kann an die neue Stylo-Version angepasst werden. Aber wenn ein Skript komplizierter ist und sehr viele Pakete nutzt, die jeweils auf Funktionen aus anderen Paketen ("dependencies") aufbauen, dann kann es schnell sein, dass der Fehler gar nicht mehr so leicht zu finden ist. Manchmal wird ein R Paket auch gar nicht mehr geupdated, sodass es mit einer neueren Version von R gar nicht mehr verwendbar ist. 
+Zwar haben wir mit GitHub schon eine wichtige Plattform kennengelernt, um Daten über einen langen Zeitraum öffentlich bereitzustellen, verschiedene Versionen zu verwalten und zu dokumentieren und daran kollaborativ zu arbeiten. Allerdings könnte es ja sein, dass jemand in fünf Jahren auf unser GitHub Repository stößt und versucht, die Skripte auszuführen. Vielleicht hat in der Zwischenzeit das Paket ``stylo`` mehrere Updates durchlaufen und der Name einer Funktion wurde geändert. Wir haben das Repository aber nicht mehr geupdated und in unseren Srkipten steht noch die alte Funktion. Jetzt würde ein:e Nachnutzer:in unserer Daten beim Ausführen des stylo-Skripts eine Fehlermeldung bekommen. Die kann natürlich ergoogelt werden und das Skript kann an die neue Stylo-Version angepasst werden. Aber wenn ein Skript komplizierter ist und sehr viele Pakete nutzt, die jeweils auf Funktionen aus anderen Paketen aufbauen ("dependencies"), dann kann es schnell sein, dass der Fehler gar nicht mehr so leicht zu finden ist. Manchmal wird ein R Paket auch gar nicht mehr geupdated, sodass es mit einer neueren Version von R gar nicht mehr kompatibel ist. 
 
-Aber auch ohne, dass erst fünf Jahre vergehen müssen, kann es zu Problemen kommen, zum Beispiel, wenn die Person andere Pakete als wir für ein anderes Projekt installiert hat und es zu Konflikten zwischen den installierten Paketen kommt. Vielleicht verwendet die Person zudem noch ein anderes Betriebssystem.
+Aber auch ohne, dass erst fünf Jahre vergehen müssen, kann es zu Problemen kommen, zum Beispiel, wenn die Person auf ihrem Rechner bereits andere Pakete als wir vorinstalliert hat und es zu Konflikten zwischen den installierten Paketen kommt. Vielleicht verwendet die Person zudem noch ein anderes Betriebssystem.
 
-All diese Fälle können die Reproduzierbarkeit unserer Daten einschränken. Das Problem kann man lösen, indem man eine spezielle Datei bereitstellt, in dem nicht nur alle Pakete, die in unserem RProject genutzt werden, sondern auch die installierte R Version oder gegebenenfalls sogar noch das Betriebssystem und systemspezifische Bibliotheken dokumentiert sind. Ein:e Nachnutzer:in kann dann diese Datei nutzen, um auf dem eigenen Computer ein allen bereits installierten Bibliotheken isolierten Raum zu erstellen, in dem sauber alle für unser Tutoriumsrepository benötigten Pakete und die passende R-Version installiert werden können. 
+All diese Fälle können die Reproduzierbarkeit unserer Daten einschränken. Das Problem kann gelöst werden, indem ein:e Forscher:in zusammen mit den Skripten zu ihrem Forschungsprojekt eine spezielle Datei bereitstellt, in der nicht nur alle Pakete, die in ihrem Projekt genutzt werden, sondern auch die installierte R Version oder gegebenenfalls sogar noch das Betriebssystem und systemspezifische Bibliotheken dokumentiert sind. Ein:e Nachnutzer:in kann dann diese Datei nutzen, um auf dem eigenen Computer einen von allen bereits installierten Bibliotheken isolierten Raum zu erstellen, in dem sauber alle für unser Tutoriumsrepository benötigten Pakete und die passende R-Version installiert werden können. 
 
 ## 4. Methoden und Anwendungsfälle
 
 Zum Erstellen dieser Datei und des "virtuellen Raums" oder "virtual environments" gibt es verschiedene Möglichkeiten und Methoden, je nach Anwendungsfall: 
 
-1. Wenn wir lediglich für jedes unserer R-Projekte reproduzierbare, übertragbare und  isolierte Umgebungen erstellen wollen, brauchen wir nur die jeweils verwendete R Version und Pakete zu dokumentieren. Für diesen Anwendungsfall eignet sich das Paket ``renv``. In diesem Fall ist mit "virtuelle Umgebung" letztlich nichts anderes als ein Verzeichnis gemeint.
+1. Wenn wir lediglich für jedes unserer R-Projekte reproduzierbare, übertragbare und  isolierte Umgebungen erstellen wollen, brauchen wir nur die jeweils verwendete R Version und die Pakete zu dokumentieren. Für diesen Anwendungsfall können wir mithilfe des Pakets ``renv`` eine solche Datei generieren und einen virtuellen Raum erstellen. In diesem Fall ist mit "virtuelle Umgebung" letztlich nichts anderes als ein Verzeichnis gemeint.
 
    - renv-Überblick : https://rstudio.github.io/renv/ 
    - renv-Dokumentation: https://rstudio.github.io/renv/articles/renv.html
    - Leitfaden: "Collaborating with renv": https://rstudio.github.io/renv/articles/collaborating.html
    - User-Beispiel: https://devinteske.com/wp/r-virtual-environments/
 
-2. Wenn wir nicht nur unsere Projektumgebung reproduzieren wollen, sondern den gesamten Zustand unseres Betriebssystems (allgemein: "state of the machine") zum Zeitpunkt der Erstellung des R Projekts, müssen wir auch Informationen zum Betriebssystem und den Bibliotheken dokumentiert. Hierzu können wir die Freie Software [Docker](https://www.docker.com/) verwenden, welche auf die Methode der [Containervirtualisierung](https://de.wikipedia.org/wiki/Docker_(Software)) zurückgreift, um verschiedene Anwendungen zu isolieren. 
+2. Wenn wir nicht nur unsere Projektumgebung reproduzieren wollen, sondern den gesamten Zustand unseres Betriebssystems zum Zeitpunkt der Erstellung des R Projekts, müssen wir auch Informationen zum Betriebssystem und den Bibliotheken dokumentiert. Hierzu können wir die Freie Software [Docker](https://www.docker.com/) verwenden, welche auf die Methode der [Containervirtualisierung](https://de.wikipedia.org/wiki/Docker_(Software)) zurückgreift, um verschiedene Anwendungen zu isolieren. 
 
    - Docker-Dokumentation: https://docs.docker.com/
    - Leitfaden "Using renv with Docker": https://rstudio.github.io/renv/articles/docker.html
    - Leitfaden "R Environment Management with Docker": https://environments.rstudio.com/docker
    - User-Beispiel: "Setting up a transparent reproducible R environment with Docker + renv": https://www.r-bloggers.com/2021/08/setting-up-a-transparent-reproducible-r-environment-with-docker-renv/
 
-3. Wenn wir nicht nur den Zustand des Betriebssystems, sondern ein komplett anderes Betriebssystem auf unserem auf demselben Rechner installieren wollen, bräuchten wir dazu eine ["virtuelle Maschine"](https://de.wikipedia.org/wiki/Virtuelle_Maschine), die auch manchmal als eine bestimmte Art von virtueller Umgebung genannt wird. Das ist in unserem Fall aber nicht gemeint. 
+3. Wenn wir nicht nur den Zustand des Betriebssystems reproduzieren wollen, sondern ein komplett anderes Betriebssystem parallel zu dem verwendeten Betriebssystem auf unserem Rechner installieren wollen, bräuchten wir dazu eine ["virtuelle Maschine"](https://de.wikipedia.org/wiki/Virtuelle_Maschine), die auch manchmal als eine bestimmte Art von virtueller Umgebung bezeichnet wird. Das ist in unserem Fall aber nicht gemeint. 
 
 Bei der Verwendung des Begriffs "virtuelle Umgebung" ist also Vorsicht geboten, denn damit werden oft verschiedene Dinge beschrieben. Es gilt außerdem zu beachten, dass die Arbeit mit virtuellen Umgebungen nicht für alle Programmiersprachen sinnvoll ist, sondern nur für solche, bei denen Pakete per Default "global", also im selben Hauptverzeichnis installiert werden. Dies betrifft neben R vor allem Python. 
 
 
 ## 5. Virtuelle Umgebungen in R: Paket renv
 
-Für unsere Zwecke reicht es erst einmal, wenn wir eine virtuelle Umgebung für unser Projekt "r-tutorium" mithilfe des ``renv`` Pakets erstellen. Mithilfe der Funktion ``snapshot()`` kann der aktuelle Stand der Projektbibliothek in einer ``renv.lock`` Datei gespeichert werden. 
+Für unsere Zwecke reicht es erst einmal aus, wenn wir eine virtuelle Umgebung für unser Projekt "r-tutorium" mithilfe des ``renv`` Pakets erstellen. Mithilfe der Funktion ``snapshot()`` kann der aktuelle Stand der Projektbibliothek in einer ``renv.lock`` Datei gespeichert werden. 
 
-Ziel der heutigen Stunde ist es, dass wir gemeinsam so eine Datei erzeugen und in unser r-tutorium repository auf GitHub pushen. 
+Ziel der heutigen Stunde ist es, dass wir gemeinsam so eine Datei erzeugen und in unser r-tutorium Repository auf GitHub pushen. Zur Übung könnt ihr für ein neues Repository eine virtuelle Umgebung aktivieren.
 
 Als Leitfaden dient dazu: 
 
