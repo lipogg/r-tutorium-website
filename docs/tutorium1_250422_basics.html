@@ -519,9 +519,9 @@ print(x)</code></pre>
 <pre><code>## [1] FALSE</code></pre>
 <pre class="r"><code>5 &gt;= 5</code></pre>
 <pre><code>## [1] TRUE</code></pre>
-<pre class="r"><code>satz == Satz #hier sind werden die Variablen satz und Satz aus dem Beispiel oben verglichen</code></pre>
+<pre class="r"><code>satz == Satz # hier sind werden die Variablen satz und Satz aus dem Beispiel oben verglichen</code></pre>
 <pre><code>## [1] FALSE</code></pre>
-<pre class="r"><code>x == y #wir können jetzt auch unsere beiden Variablen x und y vergleichen</code></pre>
+<pre class="r"><code>x == y # wir können jetzt auch unsere beiden Variablen x und y vergleichen</code></pre>
 <pre><code>## [1] TRUE</code></pre>
 <pre class="r"><code>3 != 5 </code></pre>
 <pre><code>## [1] TRUE</code></pre>
@@ -547,33 +547,33 @@ aussage_1 == !aussage_2</code></pre>
 <p>Bisher haben wir Variablen genutzt, um einzelne Werte vom Typ character, integer, numeric oder logical darin zu speichern. Variablen können aber auch strukturierte Sammlungen von Werten enthalten. Solche Datenstrukturen können entweder nur Elemente vom selben Typ aufnehmen (wie z.B. sog. “atomare” Vektoren und Matrizen), oder Elemente unterschiedlichen Typs (wie z.B. Listen und Dataframes). Listen sind genauer gesagt eine spezielle Art Vektor mit der Eigenschaft, dass sie Elemente unterschiedlichen Typs enthalten können; genauso sind Dataframes spezielle Matrizen, die Elemente unterschiedlichen Typs beinhalten können. Im Unterschied zu Matrizen sind Vektoren eindimensional. Zwischen den beiden besteht aber ein Zusammenhang: Jede Zeile und jede Spalte in einer Matrix kann auch als Vektor aufgefasst werden.</p>
 <p>Jedes Element in einem Vektor hat eine Position (auch “Index” genannt). Über diesen Index kann auf jedes Element einzeln zugegriffen werden. In R erfolgt der Zugriff mithilfe von eckigen Klammern (s.u.).</p>
 <p>Datenstrukturen können mithilfe bestimmter Funktionen untersucht werden, beispielsweise gibt die length() Funktion die Anzahl der Elemente eines Vektors oder einer Liste aus.</p>
-<pre class="r"><code>#Vektoren erstellen
-character() #erstellt einen leeren character-Vektor</code></pre>
+<pre class="r"><code># Vektoren erstellen
+character() # erstellt einen leeren character-Vektor</code></pre>
 <pre><code>## character(0)</code></pre>
-<pre class="r"><code>character(4) #erstellt einen character-Vektor mit vier Elementen</code></pre>
+<pre class="r"><code>character(4) # erstellt einen character-Vektor mit vier Elementen</code></pre>
 <pre><code>## [1] &quot;&quot; &quot;&quot; &quot;&quot; &quot;&quot;</code></pre>
-<pre class="r"><code>numeric(3) #erstellt einen numeric-Vektor mit drei Elementen</code></pre>
+<pre class="r"><code>numeric(3) # erstellt einen numeric-Vektor mit drei Elementen</code></pre>
 <pre><code>## [1] 0 0 0</code></pre>
 <pre class="r"><code>leckere_fruechte = c(&quot;Apfel&quot;,&quot;Banane&quot;,&quot;Erdbeere&quot;)
 coole_zahlen = c(45,90,7)
 
-#Vektoren kombinieren
+# Vektoren kombinieren
 fruechte_und_zahlen = c(leckere_fruechte, coole_zahlen) #zwei Vektoren kombinieren
 print(fruechte_und_zahlen)</code></pre>
 <pre><code>## [1] &quot;Apfel&quot;    &quot;Banane&quot;   &quot;Erdbeere&quot; &quot;45&quot;       &quot;90&quot;       &quot;7&quot;</code></pre>
-<pre class="r"><code>#Auf Elemente zugreifen 
-erste_frucht = leckere_fruechte[1] #Zugriff auf das erste Element des Vektors leckere_fruechte
-leckere_fruechte[1:3] #Zugriff auf Elemente 1-3</code></pre>
+<pre class="r"><code># Auf Elemente zugreifen 
+erste_frucht = leckere_fruechte[1] # Zugriff auf das erste Element des Vektors leckere_fruechte
+leckere_fruechte[1:3] # Zugriff auf Elemente 1-3</code></pre>
 <pre><code>## [1] &quot;Apfel&quot;    &quot;Banane&quot;   &quot;Erdbeere&quot;</code></pre>
-<pre class="r"><code>leckere_fruechte[c(1,3)] #Zugriff auf Elemente 1 und 3</code></pre>
+<pre class="r"><code>leckere_fruechte[c(1,3)] # Zugriff auf Elemente 1 und 3</code></pre>
 <pre><code>## [1] &quot;Apfel&quot;    &quot;Erdbeere&quot;</code></pre>
-<pre class="r"><code>#Matrizen erstellen
+<pre class="r"><code># Matrizen erstellen
 autos = matrix(c(&quot;Fiat&quot;, &quot;Mercedes&quot;, &quot;BMW&quot;, &quot;Ford&quot;, &quot;Volvo&quot;, &quot;Audi&quot;), ncol = 3)
 print(autos)</code></pre>
 <pre><code>##      [,1]       [,2]   [,3]   
 ## [1,] &quot;Fiat&quot;     &quot;BMW&quot;  &quot;Volvo&quot;
 ## [2,] &quot;Mercedes&quot; &quot;Ford&quot; &quot;Audi&quot;</code></pre>
-<pre class="r"><code>#Dataframe erstellen: Variante 1 
+<pre class="r"><code># Dataframe erstellen: Variante 1 
 Marke = c(&quot;Fiat&quot;, &quot;Mercedes&quot;, &quot;BMW&quot;, &quot;Ford&quot;, &quot;Volvo&quot;, &quot;Audi&quot;)
 Farbe = c(&quot;rot&quot;, &quot;rot&quot;, &quot;blau&quot;, &quot;silber&quot;, &quot;schwarz&quot;, &quot;silber&quot;)
 Jahr = c(1993, 2007, 1999, 2010, 2020, 2021)
@@ -586,22 +586,22 @@ print(df)</code></pre>
 ## 4     Ford  silber 2010
 ## 5    Volvo schwarz 2020
 ## 6     Audi  silber 2021</code></pre>
-<pre class="r"><code>#Dataframe erstellen: Variante 2
+<pre class="r"><code># Dataframe erstellen: Variante 2
 df = data.frame(Marke = c(&quot;Fiat&quot;, &quot;Mercedes&quot;, &quot;BMW&quot;, &quot;Ford&quot;, &quot;Volvo&quot;, &quot;Audi&quot;),
                 Farbe = c(&quot;rot&quot;, &quot;rot&quot;, &quot;blau&quot;, &quot;silber&quot;, &quot;schwarz&quot;, &quot;silber&quot;),
                 Jahr = c(1993, 2007, 1999, 2010, 2020, 2021)
                  )
 
-#Zugriff auf eine Spalte 
+# Zugriff auf eine Spalte 
 df$Farbe</code></pre>
 <pre><code>## [1] &quot;rot&quot;     &quot;rot&quot;     &quot;blau&quot;    &quot;silber&quot;  &quot;schwarz&quot; &quot;silber&quot;</code></pre>
-<pre class="r"><code>#Zugriff auf einzelne Elemente mithilfe des Indexes einer bestimmten Spalte
+<pre class="r"><code># Zugriff auf einzelne Elemente mithilfe des Indexes einer bestimmten Spalte
 df$Farbe[3]</code></pre>
 <pre><code>## [1] &quot;blau&quot;</code></pre>
-<pre class="r"><code>#Zugriff auf einzelne Elemente abhängig von einem bestimmtem Wert in einer anderen Spalte
+<pre class="r"><code># Zugriff auf einzelne Elemente abhängig von einem bestimmtem Wert in einer anderen Spalte
 df$Marke[Farbe==&quot;rot&quot;]</code></pre>
 <pre><code>## [1] &quot;Fiat&quot;     &quot;Mercedes&quot;</code></pre>
-<pre class="r"><code>#Eigenschaften untersuchen
+<pre class="r"><code># Eigenschaften untersuchen
 length(leckere_fruechte)</code></pre>
 <pre><code>## [1] 3</code></pre>
 <pre class="r"><code>nchar(erste_frucht) </code></pre>
@@ -634,17 +634,17 @@ length(leckere_fruechte)</code></pre>
 <h3>3.7 Pakete</h3>
 <p>Funktionen wie print(), length() und typeof() sind bereits in R “vorinstalliert”, es handelt sich dabei um sogenannte R base Funktionen. Viele Anwendungen sind allerdings mithilfe von R base Funktionen umständlich oder sogar unmöglich. Deswegen gibt es viele verschiedene Pakete (engl. packages), die installiert und bei Bedarf geladen werden können. Im Rahmen dieses Tutoriums und des Seminars zur Digitalen Dramenanalyse werdet ihr verschiedene Pakete kennenlernen, zum Beispiel <a href="https://github.com/quadrama/DramaAnalysis">DramaAnalysis</a> und <a href="https://cran.r-project.org/web/packages/stylo/index.html">stylo</a>.</p>
 <p>Für die meisten Pakete findet sich eine Dokumentation auf der Website <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></p>
-<pre class="r"><code>#Paket installieren
+<pre class="r"><code># Paket installieren
 install.packages(&quot;DramaAnalysis&quot;, repos = &quot;http://cran.us.r-project.org&quot;) </code></pre>
 <pre><code>## Installing package into &#39;/Users/gast/Library/R/4.0/library&#39;
 ## (as &#39;lib&#39; is unspecified)</code></pre>
 <pre><code>## 
 ## The downloaded binary packages are in
-##  /var/folders/p5/dcxp7px17hz9llmv8y2j73yc0000gq/T//RtmpRloeia/downloaded_packages</code></pre>
-<pre class="r"><code>#Mehrere Pakete auf einmal installieren
-#install.packages(c(&quot;quanteda&quot;, &quot;DramaAnalysis&quot;)) 
+##  /var/folders/p5/dcxp7px17hz9llmv8y2j73yc0000gq/T//RtmpkNmz2N/downloaded_packages</code></pre>
+<pre class="r"><code># Mehrere Pakete auf einmal installieren
+# install.packages(c(&quot;quanteda&quot;, &quot;DramaAnalysis&quot;)) 
 
-#Paket nur installieren, wenn es nicht vorhanden ist
+# Paket nur installieren, wenn es nicht vorhanden ist
 if (!require(&quot;quanteda&quot;)) install.packages(&quot;quanteda&quot;)</code></pre>
 <pre><code>## Loading required package: quanteda</code></pre>
 <pre><code>## Package version: 3.2.1
@@ -652,7 +652,7 @@ if (!require(&quot;quanteda&quot;)) install.packages(&quot;quanteda&quot;)</code
 ## ICU version: 69.1</code></pre>
 <pre><code>## Parallel computing: 8 of 8 threads used.</code></pre>
 <pre><code>## See https://quanteda.io for tutorials and examples.</code></pre>
-<pre class="r"><code>#Paket laden
+<pre class="r"><code># Paket laden
 library(quanteda) 
 library(DramaAnalysis)</code></pre>
 <pre><code>## DramaAnalysis 3.0.2</code></pre>
@@ -660,7 +660,7 @@ library(DramaAnalysis)</code></pre>
 <div id="kommentare" class="section level3">
 <h3>3.8 Kommentare</h3>
 <p>Um den eigenen Code für andere verständlicher zu gestalten und sich selbst an seinen Code zu erinnern, sollte man diesen immer gut kommentieren.</p>
-<pre class="r"><code>#Das ist ein Kommentar </code></pre>
+<pre class="r"><code># Das ist ein Kommentar </code></pre>
 </div>
 <div id="hilfe" class="section level3">
 <h3>3.9 Hilfe!!</h3>
