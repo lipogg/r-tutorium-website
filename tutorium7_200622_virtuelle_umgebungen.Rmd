@@ -25,7 +25,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## 2. FAIR-Prinzipien und Reproduzierbarkeit von Forschung
 
-2016 haben sich Wissenschaftler:innen und Forschungsinstitute zu einem Konsortium zusammengeschlossen und [in der Zeitschrift Scientific Data](https://www.nature.com/articles/sdata201618) eine Reihe [Prinzipien](https://www.go-fair.org/fair-principles/) definiert, die sicherstellen sollen, dass die großen Mengen digitaler Forschungsdaten, die in den letzten Jahren produziert wurden, auch für die Zukunft zugänglich und nachnutzbar sind. Diese Prinzipien werden mit dem Akronym FAIR abgekürzt, das für **F**indable, **A**ccessible, **I**nteroperable und **R**eusable steht. 
+2016 haben sich einige Wissenschaftler:innen und Forschungsinstitute zu einem Konsortium zusammengeschlossen und [in der Zeitschrift Scientific Data](https://www.nature.com/articles/sdata201618) eine Reihe [Prinzipien](https://www.go-fair.org/fair-principles/) definiert, die sicherstellen sollen, dass die großen Mengen digitaler Forschungsdaten, die in den letzten Jahren produziert wurden, auch für die Zukunft zugänglich und nachnutzbar sind. Diese Prinzipien werden mit dem Akronym FAIR abgekürzt, das für **F**indable, **A**ccessible, **I**nteroperable und **R**eusable steht. 
 
 Das Prinzip der Reusability umfasst auch die Möglichkeit zur "Reproducibility", also die Möglichkeit, eine Forschung anhand der bereitgestellten Daten "nachzubauen". "Reproducibility" wird von der US-amerikanischen National Science Foundation definiert als: 
 
