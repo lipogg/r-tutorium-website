@@ -1,5 +1,5 @@
 ---
-title: "4. Sitzung: XML"
+title: "4. Sitzung: XML und TEI"
 output: 
   html_document:
     toc: true
@@ -145,11 +145,7 @@ Zur Suche in Zeichenketten (character strings) haben wir bereits Reguläre Ausdr
 
 ## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/04_xml/skripte/tutorium4_160522_uebung.R)
 
-download_link(
-  link = "https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/04_xml/skripte/tutorium4_160522_uebung.R",
-  button_label = "Skript zur Übung",
-  button_type = "danger",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  self_contained = FALSE
-)
+Das Skript kann auch direkt heruntergeladen werden: 
+```{r echo=FALSE}
+xfun::embed_file('files/Rapunzel_(1850).txt', text="Skript zur Übung")
+```
