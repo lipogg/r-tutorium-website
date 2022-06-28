@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://textgrid.info/namespaces/metadata/core/2010" xmlns:tgl="http://textgrid.info/namespaces/metadata/language/2010" xmlns:tgs="http://textgrid.info/namespaces/metadata/script/2010" xmlns:tgr="http://textgrid.info/namespaces/metadata/agent/2010" xml:id="tg142" n="/Literatur/M/Goethe, Johann Wolfgang/Gedichte/Gedichte (Ausgabe letzter Hand. 1827)/Elegien 2/Der neue Pausias und sein Blumenmädchen">
+   <teiHeader xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:a="http://www.textgrid.info/namespace/digibib/authors">
+      <fileDesc>
+         <titleStmt>
+            <title>Der neue Pausias und sein Blumenmädchen</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="handle">hdl:11858/00-1734-0000-0006-65DE-B</idno><idno type="TextGridUri">textgrid:11g73.0</idno><availability>
+               
+               <p> Der annotierte Datenbestand der Digitalen Bibliothek inklusive Metadaten sowie
+                                   davon einzeln zugängliche Teile sind eine Abwandlung des Datenbestandes von
+                                   www.editura.de durch TextGrid und werden unter der Lizenz Creative Commons
+                                   Namensnennung 3.0 Deutschland Lizenz (by-Nennung TextGrid) veröffentlicht. Die
+                                   Lizenz bezieht sich nicht auf die der Annotation zu Grunde liegenden
+                                   allgemeinfreien Texte (Siehe auch Punkt 2 der Lizenzbestimmungen). </p>
+               <p>
+                  <ref target="http://creativecommons.org/licenses/by/3.0/de/legalcode">Lizenzvertrag</ref>
+               </p>
+               <p>
+                  <ref target="http://creativecommons.org/licenses/by/3.0/de/"> Eine vereinfachte
+                                   Zusammenfassung des rechtsverbindlichen Lizenzvertrages in
+                                   allgemeinverständlicher Sprache </ref>
+               </p>
+               <p>
+                  <ref target="http://www.textgrid.de/Digitale-Bibliothek">Hinweise zur Lizenz und zur Digitalen Bibliothek</ref>
+               </p>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note>
+                                    Entstanden 1797, Erstdruck 1797.
+                                 </note>
+         </notesStmt>
+         <sourceDesc>
+            <biblFull>
+               <titleStmt>
+                  <title>Johann Wolfgang von Goethe: Berliner Ausgabe. Herausgegeben von Siegfried Seidel: Poetische Werke [Band 1–16]; Kunsttheoretische Schriften und Übersetzungen [Band 17–22], Berlin: Aufbau, 1960 ff.</title>
+                  <author>Goethe, Johann Wolfgang</author>
+               </titleStmt>
+               <extent>192-</extent>
+               <publicationStmt>
+                  <date when="1960"/>
+                  <pubPlace>Berlin</pubPlace>
+               </publicationStmt>
+            </biblFull>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <date when="1797"/>
+         </creation>
+         <textClass>
+            <keywords scheme="http://textgrid.info/namespaces/metadata/core/2010#genre">
+               <term>verse</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+                  <text>
+                     <body>
+                           
+                              
+                           
+                           
+                           
+                           <div type="text" xml:id="tg142.3">
+
+                              <div type="h4">
+                                 <head type="h4" xml:id="tg142.3.1">Der neue Pausias</head>
+                                 <head type="h4" xml:id="tg142.3.2">und sein Blumenmädchen</head>
+                                 <milestone unit="head_start"/>
+                                    <p rend="zenoPC" xml:id="tg142.3.3">Pausias von Sicyon, der Maler, war als Jüngling in Glyceren, seine Mitbürgerin, verliebt, welche Blumenkränze zu winden einen, sehr erfinderischen Geist hatte. Sie wetteiferten miteinander, und er brachte die Nachahmung der Blumen zur größten Mannigfaltigkeit. Endlich malte er seine Geliebte, sitzend, mit einem Kranze beschäftigt. Dieses Bild wurde für eins seiner besten gehalten und die Kranzwinderin oder Kranzhändlerin genannt, weil Glycere sich auf diese Weise als ein armes Mädchen ernährt hatte. Lucius Lucullus kaufte eine Kopie in Athen für zwei Talente. (Plinius. B. XXXV. K. XL)</p>
+                                 <milestone unit="head_end"/>
+                                 <sp>
+                                    <lb xml:id="tg142.3.4"/>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.5">
+                                       <hi rend="italic" xml:id="tg142.3.5.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.6"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.7">Schütte die Blumen nur her, zu meinen Füßen und deinen!</l>
+                                       <l xml:id="tg142.3.8">Welch ein chaotisches Bild holder Verwirrung du streust!</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.9"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.10">
+                                       <hi rend="italic" xml:id="tg142.3.10.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.11"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.12">Du erscheinest als Liebe, die Elemente zu knüpfen;</l>
+                                       <l xml:id="tg142.3.13">Wie du sie bindest, so wird nun erst ein Leben daraus.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.14"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.15">
+                                       <hi rend="italic" xml:id="tg142.3.15.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.16"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.17">Sanft berühre die Rose, sie bleib im Körbchen verborgen;</l>
+                                       <l xml:id="tg142.3.18">Wo ich dich finde, mein Freund, öffentlich reich ich sie dir.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.19"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.20">
+                                       <hi rend="italic" xml:id="tg142.3.20.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.21"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.22">Und ich tu, als kennt ich dich nicht, und danke dir freundlich;</l>
+                                       <l xml:id="tg142.3.23">Aber dem Gegengeschenk weichet die Geberin aus.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.24"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.25">
+                                       <hi rend="italic" xml:id="tg142.3.25.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.26"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.27">Reiche die Hyazinthe mir nun und reiche die Nelke,</l>
+                                       <l xml:id="tg142.3.28">Daß die frühe zugleich neben der späteren sei.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.29"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.30">
+                                       <hi rend="italic" xml:id="tg142.3.30.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.31"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.32">Laß im blumigen Kreise zu deinen Füßen mich sitzen,</l>
+                                       <l xml:id="tg142.3.33">Und ich fülle den Schoß dir mit der lieblichen Schar.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.34"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.35">
+                                       <hi rend="italic" xml:id="tg142.3.35.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.36"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.37">Reiche den Faden mir erst; dann sollen die Gartenverwandten</l>
+                                       <l xml:id="tg142.3.38">Die sich von ferne nur sahn, nebeneinander sich freun.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.39"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.40">
+                                       <hi rend="italic" xml:id="tg142.3.40.1">
+                                          <pb n="192" xml:id="tg142.3.40.1.1"/>
+Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.41"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.42">Was bewundr' ich zuerst? was zuletzt? die herrlichen Blumen?</l>
+                                       <l xml:id="tg142.3.43">Oder der Finger Geschick? oder der Wählerin Geist?</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.44"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.45">
+                                       <hi rend="italic" xml:id="tg142.3.45.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.46"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.47">Gib auch Blätter, den Glanz der blendenden Blumen zu mildern;</l>
+                                       <l xml:id="tg142.3.48">Auch das Leben verlangt ruhige Blätter im Kranz.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.49"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.50">
+                                       <hi rend="italic" xml:id="tg142.3.50.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.51"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.52">Sage, was wählst du so lange bei diesem Strauße? Gewiß ist</l>
+                                       <l xml:id="tg142.3.53">Dieser jemand geweiht, den du besonders bedenkst.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.54"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.55">
+                                       <hi rend="italic" xml:id="tg142.3.55.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.56"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.57">Hundert Sträuße verteil ich des Tags und Kränze die Menge;</l>
+                                       <l xml:id="tg142.3.58">Aber den schönsten doch bring ich am Abende dir.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.59"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.60">
+                                       <hi rend="italic" xml:id="tg142.3.60.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.61"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.62">Ach! wie wäre der Maler beglückt, der diese Gewinde</l>
+                                       <l xml:id="tg142.3.63">Malte, das blumige Feld, ach! und die Göttin zuerst!</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.64"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.65">
+                                       <hi rend="italic" xml:id="tg142.3.65.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.66"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.67">Aber doch mäßig beglückt ist der, mich dünkt, der am Boden</l>
+                                       <l xml:id="tg142.3.68">Hier sitzt, dem ich den Kuß reichend noch glücklicher bin.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.69"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.70">
+                                       <hi rend="italic" xml:id="tg142.3.70.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.71"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.72">Ach, Geliebte, noch <hi rend="italic" xml:id="tg142.3.72.1">einen</hi>! Die neidischen Lüfte des Morgens</l>
+                                       <l xml:id="tg142.3.73">Nahmen den ersten sogleich mir von den Lippen hinweg.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.74"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.75">
+                                       <hi rend="italic" xml:id="tg142.3.75.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.76"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.77">Wie der Frühling die Blumen mir gibt, so geb ich die Küsse</l>
+                                       <l xml:id="tg142.3.78">Gern dem Geliebten; und hier sei mit dem Kusse der Kranz!</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.79"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.80">
+                                       <hi rend="italic" xml:id="tg142.3.80.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.81"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.82">Hätt ich das hohe Talent des Pausias glücklich empfangen:</l>
+                                       <l xml:id="tg142.3.83">Nachzubilden den Kranz wär ein Geschäfte des Tags!</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.84"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.85">
+                                       <hi rend="italic" xml:id="tg142.3.85.1">
+                                          <pb n="193" xml:id="tg142.3.85.1.1"/>
+Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.86"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.87">Schön ist er wirklich. Sieh ihn nur an! Es wechseln die schönster</l>
+                                       <l xml:id="tg142.3.88">Kinder Florens um ihn, bunt und gefällig, den Tanz.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.89"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.90">
+                                       <hi rend="italic" xml:id="tg142.3.90.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.91"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.92">In die Kelche versenkt ich mich dann und erschöpfte den süßen</l>
+                                       <l xml:id="tg142.3.93">Zauber, den die Natur über die Kronen ergoß.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.94"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.95">
+                                       <hi rend="italic" xml:id="tg142.3.95.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.96"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.97">Und so fänd ich am Abend noch frisch den gebundenen Kranz hier;</l>
+                                       <l xml:id="tg142.3.98">Unverwelklich spräch uns von der Tafel er an.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.99"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.100">
+                                       <hi rend="italic" xml:id="tg142.3.100.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.101"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.102">Ach, wie fühl ich mich arm und unvermögend! wie wünscht ich</l>
+                                       <l xml:id="tg142.3.103">Festzuhalten das Glück, das mir die Augen versengt!</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.104"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.105">
+                                       <hi rend="italic" xml:id="tg142.3.105.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.106"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.107">Unzufriedener Mann! Du bist ein Dichter und neidest</l>
+                                       <l xml:id="tg142.3.108">Jenes Alten Talent? Brauche das deinige doch!</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.109"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.110">
+                                       <hi rend="italic" xml:id="tg142.3.110.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.111"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.112">Und erreicht wohl der Dichter den Schmelz der farbigen Blumen?</l>
+                                       <l xml:id="tg142.3.113">Neben deiner Gestalt bleibt nur ein Schatten sein Wort!</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.114"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.115">
+                                       <hi rend="italic" xml:id="tg142.3.115.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.116"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.117">Aber vermag der Maler wohl auszudrücken: ich liebe!</l>
+                                       <l xml:id="tg142.3.118">Nur dich lieb ich, mein Freund! lebe für dich nur allein!</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.119"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.120">
+                                       <hi rend="italic" xml:id="tg142.3.120.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.121"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.122">Ach, und der Dichter selbst vermag nicht zu sagen: ich liebe!</l>
+                                       <l xml:id="tg142.3.123">Wie du, himmlisches Kind, süß mir es schmeichelst ins Ohr.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.124"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.125">
+                                       <hi rend="italic" xml:id="tg142.3.125.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.126"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.127">Viel vermögen sie beide; doch bleibt die Sprache des Kusses,</l>
+                                       <l xml:id="tg142.3.128">Mit der Sprache des Blicks, nur den Verliebten geschenkt.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.129"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.130">
+                                       <hi rend="italic" xml:id="tg142.3.130.1">
+                                          <pb n="194" xml:id="tg142.3.130.1.1"/>
+Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.131"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.132">Du vereinigest alles; du dichtest und malest mit Blumen:</l>
+                                       <l xml:id="tg142.3.133">Florens Kinder sind dir Farben und Worte zugleich.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.134"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.135">
+                                       <hi rend="italic" xml:id="tg142.3.135.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.136"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.137">Nur ein vergängliches Werk entwindet der Hand sich des Mädchens</l>
+                                       <l xml:id="tg142.3.138">Jeden Morgen; die Pracht welkt vor dem Abende schon.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.139"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.140">
+                                       <hi rend="italic" xml:id="tg142.3.140.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.141"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.142">Auch so geben die Götter vergängliche Gaben und locken</l>
+                                       <l xml:id="tg142.3.143">Mit erneutem Geschenk immer die Sterblichen an.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.144"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.145">
+                                       <hi rend="italic" xml:id="tg142.3.145.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.146"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.147">Hat dir doch kein Strauß, kein Kranz des Tages gefehlet</l>
+                                       <l xml:id="tg142.3.148">Seit dem ersten, der dich mir so von Herzen verband.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.149"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.150">
+                                       <hi rend="italic" xml:id="tg142.3.150.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.151"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.152">Ja, noch hängt er zu Hause, der erste Kranz, in der Kammer,</l>
+                                       <l xml:id="tg142.3.153">Welchen du mir, den Schmaus lieblich umwandelnd, gereicht.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.154"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.155">
+                                       <hi rend="italic" xml:id="tg142.3.155.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.156"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.157">Da ich den Becher dir kränzte, die Rosenknospe hineinfiel,</l>
+                                       <l xml:id="tg142.3.158">Und du trankest und riefst: »Mädchen, die Blumen sind Gift!«</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.159"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.160">
+                                       <hi rend="italic" xml:id="tg142.3.160.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.161"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.162">Und dagegen du sagtest: »Sie sind voll Honig, die Blumen;</l>
+                                       <l xml:id="tg142.3.163">Aber die Biene nur findet die Süßigkeit aus.«</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.164"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.165">
+                                       <hi rend="italic" xml:id="tg142.3.165.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.166"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.167">Und der rohe Timanth ergriff mich und sagte: »Die Hummeln</l>
+                                       <l xml:id="tg142.3.168">Forschen des herrlichen Kelchs süße Geheimnisse wohl?«</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.169"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.170">
+                                       <hi rend="italic" xml:id="tg142.3.170.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.171"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.172">Und du wandtest dich weg und wolltest fliehen; es stürzten</l>
+                                       <l xml:id="tg142.3.173">Vor dem täppischen Mann Körbchen und Blumen hinab.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.174"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.175">
+                                       <hi rend="italic" xml:id="tg142.3.175.1">
+                                          <pb n="195" xml:id="tg142.3.175.1.1"/>
+Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.176"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.177">Und du riefst ihm gebietend: »Das Mädchen laß nur! die Sträuße,</l>
+                                       <l xml:id="tg142.3.178">So wie das Mädchen selbst, sind für den feineren Sinn.«</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.179"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.180">
+                                       <hi rend="italic" xml:id="tg142.3.180.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.181"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.182">Aber fester hielt er dich nur; es grinste der Lacher,</l>
+                                       <l xml:id="tg142.3.183">Und dein Kleid zerriß oben vom Nacken herab.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.184"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.185">
+                                       <hi rend="italic" xml:id="tg142.3.185.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.186"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.187">Und du warfst in begeisterter Wut den Becher hinüber,</l>
+                                       <l xml:id="tg142.3.188">Daß er am Schädel ihm, häßlich vergossen, erklang.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.189"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.190">
+                                       <hi rend="italic" xml:id="tg142.3.190.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.191"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.192">Wein und Zorn verblendeten mich; doch sah ich den weißen</l>
+                                       <l xml:id="tg142.3.193">Nacken, die herrliche Brust, die du bedecktest, im Blick.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.194"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.195">
+                                       <hi rend="italic" xml:id="tg142.3.195.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.196"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.197">Welch ein Getümmel ward und ein Aufstand! Purpurn das Blut lief,</l>
+                                       <l xml:id="tg142.3.198">Mit dem Weine vermischt, greulich dem Gegner vom Haupt.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.199"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.200">
+                                       <hi rend="italic" xml:id="tg142.3.200.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.201"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.202">Dich nur sah ich, nur dich am Boden kniend, verdrießlich;</l>
+                                       <l xml:id="tg142.3.203">Mit der einen Hand hieltst das Gewand du hinauf.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.204"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.205">
+                                       <hi rend="italic" xml:id="tg142.3.205.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.206"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.207">Ach, da flogen die Teller nach dir! Ich sorgte, den edeln</l>
+                                       <l xml:id="tg142.3.208">Fremdling träfe der Wurf kreisend geschwungnen Metalls.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.209"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.210">
+                                       <hi rend="italic" xml:id="tg142.3.210.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.211"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.212">Und doch sah ich nur dich, wie rasch mit der anderen Hand du</l>
+                                       <l xml:id="tg142.3.213">Körbchen, Blumen und Kranz sammeltest unter dem Stuhl.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.214"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.215">
+                                       <hi rend="italic" xml:id="tg142.3.215.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.216"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.217">Schützend tratest du vor, daß nicht mich verletzte der Zufall,</l>
+                                       <l xml:id="tg142.3.218">Oder der zornige Wirt, weil ich das Mahl ihm gestört.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.219"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.220">
+                                       <hi rend="italic" xml:id="tg142.3.220.1">
+                                          <pb n="196" xml:id="tg142.3.220.1.1"/>
+Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.221"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.222">Ja, ich erinnre mich noch; ich nahm den Teppich wie einer,</l>
+                                       <l xml:id="tg142.3.223">Der auf dem linken Arm gegen den Stier ihn bewegt.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.224"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.225">
+                                       <hi rend="italic" xml:id="tg142.3.225.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.226"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.227">Ruhe gebot der Wirt und sinnige Freunde. Da schlüpft ich</l>
+                                       <l xml:id="tg142.3.228">Sachte hinaus; nach dir wendet ich immer den Blick.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.229"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.230">
+                                       <hi rend="italic" xml:id="tg142.3.230.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.231"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.232">Ach, du warst mir verschwunden ! Vergebens sucht ich in allen</l>
+                                       <l xml:id="tg142.3.233">Winkeln des Hauses herum, so wie auf Straßen und Markt.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.234"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.235">
+                                       <hi rend="italic" xml:id="tg142.3.235.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.236"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.237">Schamhaft blieb ich verborgen. Das unbescholtene Mädchen,</l>
+                                       <l xml:id="tg142.3.238">Sonst von den Bürgern geliebt, war nun das Märchen des Tags.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.239"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.240">
+                                       <hi rend="italic" xml:id="tg142.3.240.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.241"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.242">Blumen sah ich genug und Sträuße, Kränze die Menge;</l>
+                                       <l xml:id="tg142.3.243">Aber du fehltest mir, aber du fehltest der Stadt.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.244"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.245">
+                                       <hi rend="italic" xml:id="tg142.3.245.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.246"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.247">Stille saß ich zu Hause. Da blätterte los sich vom Zweige</l>
+                                       <l xml:id="tg142.3.248">Manche Rose, so auch dorrte die Nelke dahin.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.249"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.250">
+                                       <hi rend="italic" xml:id="tg142.3.250.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.251"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.252">Mancher Jüngling sprach auf dem Platz: »Da liegen die Blumen!</l>
+                                       <l xml:id="tg142.3.253">Aber die Liebliche fehlt, die sie verbände zum Kranz.«</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.254"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.255">
+                                       <hi rend="italic" xml:id="tg142.3.255.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.256"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.257">Kränze band ich indessen zu Haus, und ließ sie verwelken.</l>
+                                       <l xml:id="tg142.3.258">Siehst du? da hangen sie noch, neben dem Herde, für dich.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.259"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.260">
+                                       <hi rend="italic" xml:id="tg142.3.260.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.261"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.262">Auch so welkte der Kranz, dein erstes Geschenk! Ich vergaß nicht</l>
+                                       <l xml:id="tg142.3.263">Ihn im Getümmel, ich hing neben dem Bett mir ihn auf.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.264"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.265">
+                                       <hi rend="italic" xml:id="tg142.3.265.1">
+                                          <pb n="197" xml:id="tg142.3.265.1.1"/>
+Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.266"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.267">Abends betrachtet ich mir die welkenden, saß noch und weinte,</l>
+                                       <l xml:id="tg142.3.268">Bis in der dunkelen Nacht Farbe nach Farbe verlosch.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.269"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.270">
+                                       <hi rend="italic" xml:id="tg142.3.270.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.271"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.272">Irrend ging ich umher und fragte nach deiner Behausung;</l>
+                                       <l xml:id="tg142.3.273">Keiner der Eitelsten selbst konnte mir geben Bescheid.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.274"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.275">
+                                       <hi rend="italic" xml:id="tg142.3.275.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.276"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.277">Keiner hat je mich besucht, und keiner weiß die entlegne</l>
+                                       <l xml:id="tg142.3.278">Wohnung; die Größe der Stadt birget die Ärmere leicht.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.279"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.280">
+                                       <hi rend="italic" xml:id="tg142.3.280.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.281"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.282">Irrend lief ich umher und flehte zur spähenden Sonne:</l>
+                                       <l xml:id="tg142.3.283">Zeige mir, mächtiger Gott, wo du im Winkel ihr scheinst!</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.284"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.285">
+                                       <hi rend="italic" xml:id="tg142.3.285.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.286"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.287">Große Götter hörten dich nicht; doch Penia hört' es.</l>
+                                       <l xml:id="tg142.3.288">Endlich trieb die Not nach dem Gewerbe mich aus.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.289"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.290">
+                                       <hi rend="italic" xml:id="tg142.3.290.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.291"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.292">Trieb nicht noch dich ein anderer Gott, den Beschützer zu suchen?</l>
+                                       <l xml:id="tg142.3.293">Hatte nicht Amor für uns wechselnde Pfeile getauscht?</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.294"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.295">
+                                       <hi rend="italic" xml:id="tg142.3.295.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.296"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.297">Spähend sucht ich dich auf bei vollem Markt, und ich sah dich!</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.298"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.299">
+                                       <hi rend="italic" xml:id="tg142.3.299.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.300"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.301">Und es hielt das Gedräng keines der Liebenden auf.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.302"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.303">
+                                       <hi rend="italic" xml:id="tg142.3.303.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.304"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.305">Schnell wir teilten das Volk, wir kamen zusammen, du standest,</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.306"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.307">
+                                       <hi rend="italic" xml:id="tg142.3.307.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.308"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.309">Und du standest vor mir, ja ! und wir waren allein.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.310"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.311">
+                                       <hi rend="italic" xml:id="tg142.3.311.1">
+                                          <pb n="198" xml:id="tg142.3.311.1.1"/>
+Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.312"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.313">Mitten unter den Menschen! sie schienen nur Sträucher und Bäume,</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.314"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.315">
+                                       <hi rend="italic" xml:id="tg142.3.315.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.316"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.317">Und mir schien ihr Getös nur ein Geriesel des Quells.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.318"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.319">
+                                       <hi rend="italic" xml:id="tg142.3.319.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.320"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.321">Immer allein sind Liebende sich in der größten Versammlung;</l>
+                                       <l xml:id="tg142.3.322">Aber sind sie zu zwein, stellt auch der dritte sich ein.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.323"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.324">
+                                       <hi rend="italic" xml:id="tg142.3.324.1">Er</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.325"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.326">Amor, ja! er schmückt sich mit diesen herrlichen Kränzen.</l>
+                                       <l xml:id="tg142.3.327">Schütte die Blumen nun doch fort, aus dem Schoße den Rest!</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.328"/>
+                                 </sp>
+                                 <sp>
+                                    <speaker rend="zenoPC" xml:id="tg142.3.329">
+                                       <hi rend="italic" xml:id="tg142.3.329.1">Sie</hi>
+                                    </speaker>
+                                    <lb xml:id="tg142.3.330"/>
+                                    <lg>
+                                       <l xml:id="tg142.3.331">Nun, ich schüttle sie weg, die schönen. In deiner Umarmung,</l>
+                                       <l xml:id="tg142.3.332">Lieber, geht mir auch heut wieder die Sonne nur auf.</l>
+                                    </lg>
+                                    <lb xml:id="tg142.3.333"/>
+                                 </sp>
+                              </div>
+                           </div>
+                        </body>
+                  </text>
+               </TEI>

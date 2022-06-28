@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://textgrid.info/namespaces/metadata/core/2010" xmlns:tgl="http://textgrid.info/namespaces/metadata/language/2010" xmlns:tgs="http://textgrid.info/namespaces/metadata/script/2010" xmlns:tgr="http://textgrid.info/namespaces/metadata/agent/2010" xml:id="tg143" n="/Literatur/M/Goethe, Johann Wolfgang/Gedichte/Gedichte (Ausgabe letzter Hand. 1827)/Elegien 2/Euphrosyne">
+   <teiHeader xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:a="http://www.textgrid.info/namespace/digibib/authors">
+      <fileDesc>
+         <titleStmt>
+            <title>Euphrosyne</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="handle">hdl:11858/00-1734-0000-0006-647E-9</idno><idno type="TextGridUri">textgrid:11ft0.0</idno><availability>
+               
+               <p> Der annotierte Datenbestand der Digitalen Bibliothek inklusive Metadaten sowie
+                                   davon einzeln zugängliche Teile sind eine Abwandlung des Datenbestandes von
+                                   www.editura.de durch TextGrid und werden unter der Lizenz Creative Commons
+                                   Namensnennung 3.0 Deutschland Lizenz (by-Nennung TextGrid) veröffentlicht. Die
+                                   Lizenz bezieht sich nicht auf die der Annotation zu Grunde liegenden
+                                   allgemeinfreien Texte (Siehe auch Punkt 2 der Lizenzbestimmungen). </p>
+               <p>
+                  <ref target="http://creativecommons.org/licenses/by/3.0/de/legalcode">Lizenzvertrag</ref>
+               </p>
+               <p>
+                  <ref target="http://creativecommons.org/licenses/by/3.0/de/"> Eine vereinfachte
+                                   Zusammenfassung des rechtsverbindlichen Lizenzvertrages in
+                                   allgemeinverständlicher Sprache </ref>
+               </p>
+               <p>
+                  <ref target="http://www.textgrid.de/Digitale-Bibliothek">Hinweise zur Lizenz und zur Digitalen Bibliothek</ref>
+               </p>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note>
+                                    Entstanden 1797/98, Erstdruck 1798.
+                                 </note>
+         </notesStmt>
+         <sourceDesc>
+            <biblFull>
+               <titleStmt>
+                  <title>Johann Wolfgang von Goethe: Berliner Ausgabe. Herausgegeben von Siegfried Seidel: Poetische Werke [Band 1–16]; Kunsttheoretische Schriften und Übersetzungen [Band 17–22], Berlin: Aufbau, 1960 ff.</title>
+                  <author>Goethe, Johann Wolfgang</author>
+               </titleStmt>
+               <extent>199-</extent>
+               <publicationStmt>
+                  <date when="1960"/>
+                  <pubPlace>Berlin</pubPlace>
+               </publicationStmt>
+            </biblFull>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <date notBefore="1797" notAfter="1798"/>
+         </creation>
+         <textClass>
+            <keywords scheme="http://textgrid.info/namespaces/metadata/core/2010#genre">
+               <term>verse</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+                  <text>
+                     <body>
+                           
+                              
+                           
+                           
+                           
+                           <div type="text" xml:id="tg143.3">
+
+                              <div type="h4">
+                                 <head type="h4" xml:id="tg143.3.1">Euphrosyne</head>
+
+                                 <lg>
+                                    <l xml:id="tg143.3.2">Auch von des höchsten Gebirgs beeisten, zackigen Gipfeln</l>
+                                    <l xml:id="tg143.3.3">Schwindet Purpur und Glanz scheidender Sonne hinweg.</l>
+                                    <l xml:id="tg143.3.4">Lange verhüllt schon Nacht das Tal und die Pfade des Wandrers</l>
+                                    <l xml:id="tg143.3.5">Der am tosenden Strom auf zu der Hütte sich sehnt,</l>
+                                    <l xml:id="tg143.3.6">Zu dem Ziele des Tags, der stillen hirtlichen Wohnung;</l>
+                                    <l xml:id="tg143.3.7">Und der göttliche Schlaf eilet gefällig voraus,</l>
+                                    <l xml:id="tg143.3.8">Dieser holde Geselle des Reisenden. Daß er auch heute</l>
+                                    <l xml:id="tg143.3.9">Segnend kränze das Haupt mir mit dem heiligen Mohn!</l>
+                                    <l xml:id="tg143.3.10">Aber was leuchtet mir dort vom Felsen glänzend herüber</l>
+                                    <l xml:id="tg143.3.11">Und erhellet den Duft schäumender Ströme so hold?</l>
+                                    <l xml:id="tg143.3.12">Strahlt die Sonne vielleicht durch heimliche Spalten und Klüfte.</l>
+                                    <l xml:id="tg143.3.13">Denn kein irdischer Glanz ist es, der wandelnde, dort.</l>
+                                    <l xml:id="tg143.3.14">Näher wälzt sich die Wolke, sie glüht. Ich staune dem Wunder!</l>
+                                    <l xml:id="tg143.3.15">Wird der rosige Strahl nicht ein bewegtes Gebild?</l>
+                                    <pb n="199" xml:id="tg143.3.16"/>
+                                    <l xml:id="tg143.3.17">Welche Göttin nahet sich mir? und welche der Musen</l>
+                                    <l xml:id="tg143.3.18">Suchet den treuen Freund selbst in dem grausen Geklüft?</l>
+                                    <l xml:id="tg143.3.19">Schöne Göttin, enthülle dich mir, und täusche, verschwindend,</l>
+                                    <l xml:id="tg143.3.20">Nicht den begeisterten Sinn, nicht das gerührte Gemüt.</l>
+                                    <l xml:id="tg143.3.21">Nenne, wenn du es darfst vor einem Sterblichen, deinen</l>
+                                    <l xml:id="tg143.3.22">Göttlichen Namen, wo nicht: rege bedeutend mich auf,</l>
+                                    <l xml:id="tg143.3.23">Daß ich fühle, welche du seist von den ewigen Töchtern</l>
+                                    <l xml:id="tg143.3.24">Zeus', und der Dichter sogleich preise dich würdig im Lied.</l>
+                                    <l xml:id="tg143.3.25">»Kennst du mich, Guter, nicht mehr? und käme diese Gestalt dir,</l>
+                                    <l xml:id="tg143.3.26">Die du doch sonst geliebt, schon als ein fremdes Gebild?</l>
+                                    <l xml:id="tg143.3.27">Zwar der Erde gehör ich nicht mehr, und trauernd entschwang sich</l>
+                                    <l xml:id="tg143.3.28">Schon der schaudernde Geist jugendlich frohem Genuß;</l>
+                                    <l xml:id="tg143.3.29">Aber ich hoffte mein Bild noch fest in des Freundes Erinnrung</l>
+                                    <l xml:id="tg143.3.30">Eingeschrieben und noch schön durch die Liebe verklärt.</l>
+                                    <l xml:id="tg143.3.31">Ja, schon sagt mir gerührt dein Blick, mir sagt es die Träne:</l>
+                                    <l xml:id="tg143.3.32">Euphrosyne, sie ist noch von dem Freunde gekannt.</l>
+                                    <l xml:id="tg143.3.33">Sieh, die Scheidende zieht durch Wald und grauses Gebirge,</l>
+                                    <l xml:id="tg143.3.34">Sucht den wandernden Mann, ach! in der Ferne noch auf;</l>
+                                    <l xml:id="tg143.3.35">Sucht den Lehrer, den Freund, den Vater, blicket noch einmal</l>
+                                    <l xml:id="tg143.3.36">Nach dem leichten Gerüst irdischer Freuden zurück.</l>
+                                    <l xml:id="tg143.3.37">Laß mich der Tage gedenken, da mich, das Kind, du dem Spiele</l>
+                                    <l xml:id="tg143.3.38">Jener täuschenden Kunst reizender Musen geweiht.</l>
+                                    <l xml:id="tg143.3.39">Laß mich der Stunde gedenken und jedes kleineren Umstands.</l>
+                                    <l xml:id="tg143.3.40">Ach, wer ruft nicht so gern Unwiederbringliches an!</l>
+                                    <l xml:id="tg143.3.41">Jenes süße Gedränge der leichtesten irdischen Tage,</l>
+                                    <l xml:id="tg143.3.42">Ach, wer schätzt ihn genug, diesen vereilenden Wert!</l>
+                                    <l xml:id="tg143.3.43">Klein erscheinet es nun, doch ach! nicht kleinlich dem Herzen;</l>
+                                    <l xml:id="tg143.3.44">Macht die Liebe, die Kunst jegliches Kleine doch groß.</l>
+                                    <l xml:id="tg143.3.45">Denkst du der Stunde noch wohl, wie auf dem Brettergerüste</l>
+                                    <l xml:id="tg143.3.46">Du mich der höheren Kunst ernstere Stufen geführt?</l>
+                                    <l xml:id="tg143.3.47">Knabe schien ich, ein rührendes Kind, du nanntest mich Arthur</l>
+                                    <l xml:id="tg143.3.48">Und belebtest in mir britisches Dichtergebild,</l>
+                                    <l xml:id="tg143.3.49">Drohtest mit grimmiger Glut den armen Augen und wandtest</l>
+                                    <l xml:id="tg143.3.50">Selbst den tränenden Blick, innig getäuschet, hinweg.</l>
+                                    <l xml:id="tg143.3.51">Ach! da warst du so hold und schütztest ein trauriges Leben,</l>
+                                    <l xml:id="tg143.3.52">Das die verwegene Flucht endlich dem Knaben entriß.</l>
+                                    <pb n="200" xml:id="tg143.3.53"/>
+                                    <l xml:id="tg143.3.54">Freundlich faßtest du mich, den Zerschmetterten, trugst mich von dannen,</l>
+                                    <l xml:id="tg143.3.55">Und ich heuchelte lang, dir an dem Busen, den Tod.</l>
+                                    <l xml:id="tg143.3.56">Endlich schlug die Augen ich auf und sah dich, in ernste,</l>
+                                    <l xml:id="tg143.3.57">Stille Betrachtung versenkt, über den Liebling geneigt.</l>
+                                    <l xml:id="tg143.3.58">Kindlich strebt ich empor und küßte die Hände dir dankbar,</l>
+                                    <l xml:id="tg143.3.59">Reichte zum reinen Kuß dir den gefälligen Mund.</l>
+                                    <l xml:id="tg143.3.60">Fragte: ›Warum, mein Vater, so ernst? Und hab ich gefehlet,</l>
+                                    <l xml:id="tg143.3.61">Oh! so zeige mir an, wie mir das Beßre gelingt.</l>
+                                    <l xml:id="tg143.3.62">Keine Mühe verdrießt mich bei dir, und alles und jedes</l>
+                                    <l xml:id="tg143.3.63">Wiederhol ich so gern, wenn du mich leitest und lehrst.‹</l>
+                                    <l xml:id="tg143.3.64">Aber du faßtest mich stark und drücktest mich fester im Arme,</l>
+                                    <l xml:id="tg143.3.65">Und es schauderte mir tief in dem Busen das Herz.</l>
+                                    <l xml:id="tg143.3.66">›Nein! mein liebliches Kind‹, so riefst du, ›alles und jedes,</l>
+                                    <l xml:id="tg143.3.67">Wie du es heute gezeigt, zeig es auch morgen der Stadt.</l>
+                                    <l xml:id="tg143.3.68">Rühre sie alle, wie mich du gerührt, und es fließen zum Beifall</l>
+                                    <l xml:id="tg143.3.69">Dir von dem trockensten Aug herrliche Tränen herab.</l>
+                                    <l xml:id="tg143.3.70">Aber am tiefsten trafst du doch mich, den Freund, der im Arm dich</l>
+                                    <l xml:id="tg143.3.71">Hält, den selber der Schein früherer Leiche geschreckt.</l>
+                                    <l xml:id="tg143.3.72">Ach, Natur, wie sicher und groß in allem erscheinst du!</l>
+                                    <l xml:id="tg143.3.73">Himmel und Erde befolgt ewiges, festes Gesetz,</l>
+                                    <l xml:id="tg143.3.74">Jahre folgen auf Jahre, dem Frühlinge reichet der Sommer,</l>
+                                    <l xml:id="tg143.3.75">Und dem reichlichen Herbst traulich der Winter die Hand.</l>
+                                    <l xml:id="tg143.3.76">Felsen stehen gegründet, es stürzt sich das ewige Wasser</l>
+                                    <l xml:id="tg143.3.77">Aus der bewölkten Kluft schäumend und brausend hinab.</l>
+                                    <l xml:id="tg143.3.78">Fichten grünen so fort, und selbst die entlaubten Gebüsche</l>
+                                    <l xml:id="tg143.3.79">Hegen, im Winter schon, heimliche Knospen am Zweig.</l>
+                                    <l xml:id="tg143.3.80">Alles entsteht und vergeht nach Gesetz; doch über des Menschen</l>
+                                    <l xml:id="tg143.3.81">Leben, dem köstlichen Schatz, herrschet ein schwankendes Los.</l>
+                                    <l xml:id="tg143.3.82">Nicht dem blühenden nickt der willig scheidende Vater,</l>
+                                    <l xml:id="tg143.3.83">Seinem trefflichen Sohn, freundlich vom Rande der Gruft;</l>
+                                    <l xml:id="tg143.3.84">Nicht der Jüngere schließt dem Älteren immer das Auge,</l>
+                                    <l xml:id="tg143.3.85">Das sich willig gesenkt, kräftig dem Schwächeren zu.</l>
+                                    <l xml:id="tg143.3.86">Öfter, ach verkehrt das Geschick die Ordnung der Tage;</l>
+                                    <l xml:id="tg143.3.87">Hülflos klaget ein Greis Kinder und Enkel umsonst,</l>
+                                    <pb n="201" xml:id="tg143.3.88"/>
+                                    <l xml:id="tg143.3.89">Steht, ein beschädigter Stamm, dem rings zerschmetterte Zweige</l>
+                                    <l xml:id="tg143.3.90">Um die Seiten umher strömende Schloßen gestreckt.</l>
+                                    <l xml:id="tg143.3.91">Und so, liebliches Kind, durchdrang mich die tiefe Betrachtung,</l>
+                                    <l xml:id="tg143.3.92">Als du, zur Leiche verstellt, über die Arme mir hingst;</l>
+                                    <l xml:id="tg143.3.93">Aber freudig seh ich dich mir in dem Glanze der Jugend,</l>
+                                    <l xml:id="tg143.3.94">Vielgeliebtes Geschöpf, wieder am Herzen belebt.</l>
+                                    <l xml:id="tg143.3.95">Springe fröhlich dahin, verstellter Knabe! Das Mädchen</l>
+                                    <l xml:id="tg143.3.96">Wächst zur Freude der Welt, mir zum Entzücken heran.</l>
+                                    <l xml:id="tg143.3.97">Immer strebe so fort, und deine natürlichen Gaben</l>
+                                    <l xml:id="tg143.3.98">Bilde, bei jeglichem Schritt steigenden Lebens, die Kunst.</l>
+                                    <l xml:id="tg143.3.99">Sei mir lange zur Lust, und eh mein Auge sich schließet,</l>
+                                    <l xml:id="tg143.3.100">Wünsch ich dein schönes Talent glücklich vollendet zu sehn.‹ –</l>
+                                    <l xml:id="tg143.3.101">Also sprachst du, und nie vergaß ich der wichtigen Stunde!</l>
+                                    <l xml:id="tg143.3.102">Deutend entwickelt ich mich an dem erhabenen Wort.</l>
+                                    <l xml:id="tg143.3.103">O wie sprach ich so gerne zum Volk die rührenden Reden,</l>
+                                    <l xml:id="tg143.3.104">Die du, voller Gehalt, kindlichen Lippen vertraut!</l>
+                                    <l xml:id="tg143.3.105">O wie bildet ich mich an deinen Augen und suchte</l>
+                                    <l xml:id="tg143.3.106">Dich im tiefen Gedräng staunender Hörer heraus!</l>
+                                    <l xml:id="tg143.3.107">Doch dort wirst du nun sein und stehn, und nimmer bewegt sich</l>
+                                    <l xml:id="tg143.3.108">Euphrosyne hervor, dir zu erheitern den Blick.</l>
+                                    <l xml:id="tg143.3.109">Du vernimmst sie nicht mehr, die Töne des wachsenden Zöglings,</l>
+                                    <l xml:id="tg143.3.110">Die du zu liebendem Schmerz frühe, so frühe! gestimmt.</l>
+                                    <l xml:id="tg143.3.111">Andere kommen und gehn; es werden dir andre gefallen,</l>
+                                    <l xml:id="tg143.3.112">Selbst dem großen Talent drängt sich ein größeres nach.</l>
+                                    <l xml:id="tg143.3.113">Aber du, vergesse mich nicht! Wenn eine dir jemals</l>
+                                    <l xml:id="tg143.3.114">Sich im verworrnen Geschäft heiter entgegenbewegt,</l>
+                                    <l xml:id="tg143.3.115">Deinem Winke sich fügt, an deinem Lächeln sich freuet</l>
+                                    <l xml:id="tg143.3.116">Und am Platze sich nur, den du bestimmtest, gefällt,</l>
+                                    <l xml:id="tg143.3.117">Wenn sie Mühe nicht spart noch Fleiß, wenn tätig der Kräfte,</l>
+                                    <l xml:id="tg143.3.118">Selbst bis zur Pforte des Grabs, freudiges Opfer sie bringt –</l>
+                                    <l xml:id="tg143.3.119">Guter! dann gedenkest du mein und rufest auch spät noch:</l>
+                                    <l xml:id="tg143.3.120">›Euphrosyne, sie ist wieder erstanden vor mir!‹</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg143.3.121"/>
+                                    <l xml:id="tg143.3.122">Vieles sagt ich noch gern; doch ach! die Scheidende weilt nicht,</l>
+                                    <l xml:id="tg143.3.123">Wie sie wollte; mich führt streng ein gebietender Gott.</l>
+                                    <l xml:id="tg143.3.124">Lebe wohl schon zieht mich's dahin in schwankendem Eilen.</l>
+                                    <l xml:id="tg143.3.125">Einen Wunsch nur vernimm, freundlich gewähre mir ihn:</l>
+                                    <pb n="202" xml:id="tg143.3.126"/>
+                                    <l xml:id="tg143.3.127">Laß nicht ungerühmt mich zu den Schatten hinabgehn!</l>
+                                    <l xml:id="tg143.3.128">Nur die Muse gewährt einiges Leben dem Tod.</l>
+                                    <l xml:id="tg143.3.129">Denn gestaltlos schweben umher in Persephoneias</l>
+                                    <l xml:id="tg143.3.130">Reiche, massenweis, Schatten, vom Namen getrennt;</l>
+                                    <l xml:id="tg143.3.131">Wen der Dichter aber gerühmt, der wandelt, gestaltet,</l>
+                                    <l xml:id="tg143.3.132">Einzeln, gesellet dem Chor aller Heroen sich zu.</l>
+                                    <l xml:id="tg143.3.133">Freudig tret ich einher, von deinem Liede verkündet,</l>
+                                    <l xml:id="tg143.3.134">Und der Göttin Blick weilet gefällig auf mir.</l>
+                                    <l xml:id="tg143.3.135">Mild empfängt sie mich dann und nennt mich; es winken die hohen</l>
+                                    <l xml:id="tg143.3.136">Göttlichen Frauen mich an, immer die nächsten am Thron.</l>
+                                    <l xml:id="tg143.3.137">Penelopeia redet zu mir, die treuste der Weiber,</l>
+                                    <l xml:id="tg143.3.138">Auch Euadne, gelehnt auf den geliebten Gemahl.</l>
+                                    <l xml:id="tg143.3.139">Jüngere nahen sich dann, zu früh Heruntergesandte,</l>
+                                    <l xml:id="tg143.3.140">Und beklagen mit mir unser gemeines Geschick.</l>
+                                    <l xml:id="tg143.3.141">Wenn Antigone kommt, die schwesterlichste der Seelen,</l>
+                                    <l xml:id="tg143.3.142">Und Polyxena, trüb noch von dem bräutlichen Tod,</l>
+                                    <l xml:id="tg143.3.143">Seh ich als Schwestern sie an und trete würdig zu ihnen;</l>
+                                    <l xml:id="tg143.3.144">Denn der tragischen Kunst holde Geschöpfe sind sie.</l>
+                                    <l xml:id="tg143.3.145">Bildete doch ein Dichter auch mich; und seine Gesänge,</l>
+                                    <l xml:id="tg143.3.146">Ja, sie vollenden an mir, was mir das Leben versagt.«</l>
+                                    <l xml:id="tg143.3.147">Also sprach sie, und noch bewegte der liebliche Mund sich,</l>
+                                    <l xml:id="tg143.3.148">Weiter zu reden; allein schwirrend versagte der Ton.</l>
+                                    <l xml:id="tg143.3.149">Denn aus dem Purpurgewölk, dem schwebenden, immer bewegten,</l>
+                                    <l xml:id="tg143.3.150">Trat der herrliche Gott Hermes gelassen hervor,</l>
+                                    <l xml:id="tg143.3.151">Mild erhob er den Stab und deutete; wallend verschlangen</l>
+                                    <l xml:id="tg143.3.152">Wachsende Wolken im Zug beide Gestalten vor mir.</l>
+                                    <l xml:id="tg143.3.153">Tiefer liegt die Nacht um mich her; die stürzenden Wasser</l>
+                                    <l xml:id="tg143.3.154">Brausen gewaltiger nun neben dem schlüpfrigen Pfad.</l>
+                                    <l xml:id="tg143.3.155">Unbezwingliche Trauer befällt mich, entkräftender Jammer,</l>
+                                    <l xml:id="tg143.3.156">Und ein moosiger Fels stützet den Sinkenden nur.</l>
+                                    <l xml:id="tg143.3.157">Wehmut reißt durch die Saiten der Brust; die nächtlichen Tränen</l>
+                                    <l xml:id="tg143.3.158">Fließen, und über dem Wald kündet der Morgen sich an.</l>
+                                 </lg>
+                                 <lb xml:id="tg143.3.159"/>
+                                 <pb n="203" xml:id="tg143.3.160"/>
+                              </div>
+                           </div>
+                        </body>
+                  </text>
+               </TEI>

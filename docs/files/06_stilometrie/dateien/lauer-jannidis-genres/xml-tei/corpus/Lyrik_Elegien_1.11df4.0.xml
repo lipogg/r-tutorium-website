@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://textgrid.info/namespaces/metadata/core/2010" xmlns:tgl="http://textgrid.info/namespaces/metadata/language/2010" xmlns:tgs="http://textgrid.info/namespaces/metadata/script/2010" xmlns:tgr="http://textgrid.info/namespaces/metadata/agent/2010" xml:id="tg139" n="/Literatur/M/Goethe, Johann Wolfgang/Gedichte/Gedichte (Ausgabe letzter Hand. 1827)/Elegien 1">
+   <teiHeader xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:a="http://www.textgrid.info/namespace/digibib/authors">
+      <fileDesc>
+         <titleStmt>
+            <title>Elegien 1</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="handle">hdl:11858/00-1734-0000-0006-5FFB-6</idno><idno type="TextGridUri">textgrid:11df4.0</idno><availability>
+               
+               <p> Der annotierte Datenbestand der Digitalen Bibliothek inklusive Metadaten sowie
+                                   davon einzeln zugängliche Teile sind eine Abwandlung des Datenbestandes von
+                                   www.editura.de durch TextGrid und werden unter der Lizenz Creative Commons
+                                   Namensnennung 3.0 Deutschland Lizenz (by-Nennung TextGrid) veröffentlicht. Die
+                                   Lizenz bezieht sich nicht auf die der Annotation zu Grunde liegenden
+                                   allgemeinfreien Texte (Siehe auch Punkt 2 der Lizenzbestimmungen). </p>
+               <p>
+                  <ref target="http://creativecommons.org/licenses/by/3.0/de/legalcode">Lizenzvertrag</ref>
+               </p>
+               <p>
+                  <ref target="http://creativecommons.org/licenses/by/3.0/de/"> Eine vereinfachte
+                                   Zusammenfassung des rechtsverbindlichen Lizenzvertrages in
+                                   allgemeinverständlicher Sprache </ref>
+               </p>
+               <p>
+                  <ref target="http://www.textgrid.de/Digitale-Bibliothek">Hinweise zur Lizenz und zur Digitalen Bibliothek</ref>
+               </p>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note>
+                                 Entstanden 1788/90, Erstdruck 1791 (XIII. Elegie), 1795 unter dem Titel »Elegien. Rom 1788«.
+                              </note>
+         </notesStmt>
+         <sourceDesc>
+            <biblFull>
+               <titleStmt>
+                  <title>Johann Wolfgang von Goethe: Berliner Ausgabe. Herausgegeben von Siegfried Seidel: Poetische Werke [Band 1–16]; Kunsttheoretische Schriften und Übersetzungen [Band 17–22], Berlin: Aufbau, 1960 ff.</title>
+                  <author>Goethe, Johann Wolfgang</author>
+               </titleStmt>
+               <extent>165-</extent>
+               <publicationStmt>
+                  <date when="1960"/>
+                  <pubPlace>Berlin</pubPlace>
+               </publicationStmt>
+            </biblFull>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <date notBefore="1788" notAfter="1790"/>
+         </creation>
+         <textClass>
+            <keywords scheme="http://textgrid.info/namespaces/metadata/core/2010#genre">
+               <term>verse</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+               <text>
+                  <body>
+                        
+                           
+                        
+                        
+                        
+                        <div type="text" xml:id="tg139.3">
+
+
+
+                           <div type="h3">
+                              <milestone unit="head_start"/>
+                                 <head type="h3" xml:id="tg139.3.1">Elegien 1</head>
+
+
+                                 <p rend="zenoPC" xml:id="tg139.3.2">
+                                    <hi rend="italic" xml:id="tg139.3.2.1">Römische Elegien</hi>
+                                 </p>
+                              <milestone unit="head_end"/>
+                              <lb xml:id="tg139.3.3"/>
+                              <milestone unit="head_start"/>
+                                 <p xml:id="tg139.3.4">
+                                    <seg rend="zenoTXFontsize80" xml:id="tg139.3.4.1"> Wie wir einst so glücklich waren!</seg>
+                                 </p>
+                                 <p xml:id="tg139.3.5">
+                                    <seg rend="zenoTXFontsize80" xml:id="tg139.3.5.1"> Müssen's jetzt durch euch erfahren.</seg>
+                                 </p>
+                              <milestone unit="head_end"/>
+                              <lb xml:id="tg139.3.6"/>
+                              <pb n="165" xml:id="tg139.3.7"/>
+                              <pb type="start" n="167" xml:id="tg139.3.8"/>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.9">1</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.10">Saget, Steine, mir an, o sprecht, ihr hohen Paläste!</l>
+                                    <l xml:id="tg139.3.11">Straßen, redet ein Wort! Genius, regst du dich nicht?</l>
+                                    <l xml:id="tg139.3.12">Ja, es ist alles beseelt in deinen heiligen Mauern,</l>
+                                    <l xml:id="tg139.3.13">Ewige Roma; nur mir schweiget noch alles so still.</l>
+                                    <l xml:id="tg139.3.14">O wer flüstert mir zu, an welchem Fenster erblick ich</l>
+                                    <l xml:id="tg139.3.15">Einst das holde Geschöpf, das mich versengend erquickt?</l>
+                                    <l xml:id="tg139.3.16">Ahn ich die Wege noch nicht, durch die ich immer und immer,</l>
+                                    <l xml:id="tg139.3.17">Zu ihr und von ihr zu gehn, opfre die köstliche Zeit?</l>
+                                    <l xml:id="tg139.3.18">Noch betracht ich Kirch und Palast, Ruinen und Säulen,</l>
+                                    <l xml:id="tg139.3.19">Wie ein bedächtiger Mann schicklich die Reise benutzt.</l>
+                                    <l xml:id="tg139.3.20">Doch bald ist es vorbei; dann wird ein einziger Tempel,</l>
+                                    <l xml:id="tg139.3.21">Amors Tempel, nur sein, der den Geweihten empfängt.</l>
+                                    <l xml:id="tg139.3.22">Eine Welt zwar bist du, o Rom; doch ohne die Liebe</l>
+                                    <l xml:id="tg139.3.23">Wäre die Welt nicht die Welt, wäre denn Rom auch nicht Rom.</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.24"/>
+                              </lg>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.25">2</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.26">Ehret, wen ihr auch wollt! Nun bin ich endlich geborgen!</l>
+                                    <l xml:id="tg139.3.27">Schöne Damen und ihr, Herren der feineren Welt,</l>
+                                    <l xml:id="tg139.3.28">Fraget nach Oheim und Vetter und alten Muhmen und Tanten;</l>
+                                    <l xml:id="tg139.3.29">Und dem gebundnen Gespräch folge das traurige Spiel.</l>
+                                    <l xml:id="tg139.3.30">Auch ihr übrigen fahret mir wohl, in großen und kleinen</l>
+                                    <l xml:id="tg139.3.31">Zirkeln, die ihr mich oft nah der Verzweiflung gebracht.</l>
+                                    <l xml:id="tg139.3.32">Wiederholet, politisch und zwecklos, jegliche Meinung,</l>
+                                    <l xml:id="tg139.3.33">Die den Wandrer mit Wut über Europa verfolgt.</l>
+                                    <l xml:id="tg139.3.34">So verfolgte das Liedchen »Malbrough« den reisenden Briten</l>
+                                    <l xml:id="tg139.3.35">Einst von Paris nach Livorn, dann von Livorno nach Rom,</l>
+                                    <pb n="167" xml:id="tg139.3.36"/>
+                                    <l xml:id="tg139.3.37">Weiter nach Napel hinunter; und wär er nach Smyrna gesegelt,</l>
+                                    <l xml:id="tg139.3.38">»Malbrough!« empfing ihn auch dort, »Malbrough!« im Hafen das Lied.</l>
+                                    <l xml:id="tg139.3.39">Und so mußt ich bis jetzt auf allen Tritten und Schritten</l>
+                                    <l xml:id="tg139.3.40">Schelten hören das Volk, schelten der Könige Rat.</l>
+                                    <l xml:id="tg139.3.41">Nun entdeckt ihr mich nicht so bald in meinem Asyle,</l>
+                                    <l xml:id="tg139.3.42">Das mir Amor, der Fürst, königlich schützend, verlieh.</l>
+                                    <l xml:id="tg139.3.43">Hier bedecket er mich mit seinem Fittich; die Liebste</l>
+                                    <l xml:id="tg139.3.44">Fürchtet, römisch gesinnt, wütende Gallier nicht;</l>
+                                    <l xml:id="tg139.3.45">Sie erkundigt sich nie nach neuer Märe, sie spähet</l>
+                                    <l xml:id="tg139.3.46">Sorglich den Wünschen des Manns, dem sie sich eignete, nach.</l>
+                                    <l xml:id="tg139.3.47">Sie ergetzt sich an ihm, dem freien, rüstigen Fremden,</l>
+                                    <l xml:id="tg139.3.48">Der von Bergen und Schnee, hölzernen Häusern erzählt;</l>
+                                    <l xml:id="tg139.3.49">Teilt die Flammen, die sie in seinem Busen entzündet,</l>
+                                    <l xml:id="tg139.3.50">Freut sich, daß er das Gold nicht wie der Römer bedenkt.</l>
+                                    <l xml:id="tg139.3.51">Besser ist ihr Tisch nun bestellt; es fehlet an Kleidern,</l>
+                                    <l xml:id="tg139.3.52">Fehlet am Wagen ihr nicht, der nach der Oper sie bringt.</l>
+                                    <l xml:id="tg139.3.53">Mutter und Tochter erfreun sich ihres nordischen Gastes,</l>
+                                    <l xml:id="tg139.3.54">Und der Barbare beherrscht römischen Busen und Leib.</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.55"/>
+                              </lg>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.56">3</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.57">Laß dich, Geliebte, nicht reun, daß du mir so schnell dich ergeben!</l>
+                                    <l xml:id="tg139.3.58">Glaub es, ich denke nicht frech, denke nicht niedrig von dir.</l>
+                                    <l xml:id="tg139.3.59">Vielfach wirken die Pfeile des Amor: einige ritzen,</l>
+                                    <l xml:id="tg139.3.60">Und vom schleichenden Gift kranket auf Jahre das Herz.</l>
+                                    <l xml:id="tg139.3.61">Aber mächtig befiedert, mit frisch geschliffener Schärfe,</l>
+                                    <l xml:id="tg139.3.62">Dringen die andern ins Mark, zünden behende das Blut.</l>
+                                    <l xml:id="tg139.3.63">In der heroischen Zeit, da Götter und Göttinnen liebten,</l>
+                                    <l xml:id="tg139.3.64">Folgte Begierde dem Blick, folgte Genuß der Begier.</l>
+                                    <l xml:id="tg139.3.65">Glaubst du, es habe sich lange die Göttin der Liebe besonnen,</l>
+                                    <l xml:id="tg139.3.66">Als im Idäischen Hain einst ihr Anchises gefiel?</l>
+                                    <l xml:id="tg139.3.67">Hätte Luna gesäumt, den schönen Schläfer zu küssen,</l>
+                                    <l xml:id="tg139.3.68">O so hätt ihn geschwind, neidend, Aurora geweckt.</l>
+                                    <pb n="168" xml:id="tg139.3.69"/>
+                                    <l xml:id="tg139.3.70">Hero erblickte Leandern am lauten Fest, und behende</l>
+                                    <l xml:id="tg139.3.71">Stürzte der Liebende sich heiß in die nächtliche Flut.</l>
+                                    <l xml:id="tg139.3.72">Rhea Silvia wandelt, die fürstliche Jungfrau, der Tiber</l>
+                                    <l xml:id="tg139.3.73">Wasser zu schöpfen, hinab, und sie ergreifet der Gott.</l>
+                                    <l xml:id="tg139.3.74">So erzeugte die Söhne sich Mars! – Die Zwillinge tränket</l>
+                                    <l xml:id="tg139.3.75">Eine Wölfin, und Rom nennt sich die Fürstin der Welt.</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.76"/>
+                              </lg>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.77">4</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.78">Fromm sind wir Liebende, still verehren wir alle Dämonen,</l>
+                                    <l xml:id="tg139.3.79">Wünschen uns jeglichen Gott, jegliche Göttin geneigt.</l>
+                                    <l xml:id="tg139.3.80">Und so gleichen wir euch, o römische Sieger! Den Göttern</l>
+                                    <l xml:id="tg139.3.81">Aller Völker der Welt bietet ihr Wohnungen an,</l>
+                                    <l xml:id="tg139.3.82">Habe sie schwarz und streng aus altem Basalt der Ägypter</l>
+                                    <l xml:id="tg139.3.83">Oder ein Grieche sie weiß, reizend, aus Marmor geformt.</l>
+                                    <l xml:id="tg139.3.84">Doch verdrießet es nicht die Ewigen, wenn wir besonders</l>
+                                    <l xml:id="tg139.3.85">Weihrauch köstlicher Art <hi rend="italic" xml:id="tg139.3.85.1">einer</hi> der Göttlichen streun.</l>
+                                    <l xml:id="tg139.3.86">Ja, wir bekennen euch gern, es bleiben unsre Gebete,</l>
+                                    <l xml:id="tg139.3.87">Unser täglicher Dienst <hi rend="italic" xml:id="tg139.3.87.1">einer</hi> besonders geweiht.</l>
+                                    <l xml:id="tg139.3.88">Schalkhaft munter und ernst begehen wir heimliche Feste,</l>
+                                    <l xml:id="tg139.3.89">Und das Schweigen geziemt allen Geweihten genau.</l>
+                                    <l xml:id="tg139.3.90">Eh' an die Ferse lockten wir selbst, durch gräßliche Taten,</l>
+                                    <l xml:id="tg139.3.91">Uns die Erinnyen her, wagten es eher, des Zeus</l>
+                                    <l xml:id="tg139.3.92">Hartes Gericht am rollenden Rad und am Felsen zu dulden,</l>
+                                    <l xml:id="tg139.3.93">Als dem reizenden Dienst unser Gemüt zu entziehn.</l>
+                                    <l xml:id="tg139.3.94">Diese Göttin, sie heißt <hi rend="italic" xml:id="tg139.3.94.1">Gelegenheit</hi>; lernet sie kennen!</l>
+                                    <l xml:id="tg139.3.95">Sie erscheinet euch oft, immer in andrer Gestalt.</l>
+                                    <l xml:id="tg139.3.96">Tochter des Proteus möchte sie sein, mit Thetis gezeuget,</l>
+                                    <l xml:id="tg139.3.97">Deren verwandelte List manchen Heroen betrog.</l>
+                                    <l xml:id="tg139.3.98">So betriegt nun die Tochter den Unerfahrnen, den Blöden;</l>
+                                    <l xml:id="tg139.3.99">Schlummernde necket sie stets, Wachende fliegt sie vorbei;</l>
+                                    <l xml:id="tg139.3.100">Gern ergibt sie sich nur dem raschen, tätigen Manne;</l>
+                                    <l xml:id="tg139.3.101">Dieser findet sie zahm, spielend und zärtlich und hold.</l>
+                                    <l xml:id="tg139.3.102">Einst erschien sie auch mir, ein bräunliches Mädchen, die Haare</l>
+                                    <l xml:id="tg139.3.103">Fielen ihr dunkel und reich über die Stirne herab,</l>
+                                    <pb n="169" xml:id="tg139.3.104"/>
+                                    <l xml:id="tg139.3.105">Kurze Locken ringelten sich ums zierliche Hälschen,</l>
+                                    <l xml:id="tg139.3.106">Ungeflochtenes Haar krauste vom Scheitel sich auf.</l>
+                                    <l xml:id="tg139.3.107">Und ich verkannte sie nicht, ergriff die Eilende, lieblich</l>
+                                    <l xml:id="tg139.3.108">Gab sie Umarmung und Kuß bald mir gelehrig zurück.</l>
+                                    <l xml:id="tg139.3.109">O wie war ich beglückt! – Doch stille, die Zeit ist vorüber,</l>
+                                    <l xml:id="tg139.3.110">Und umwunden bin ich, römische Flechten, von euch.</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.111"/>
+                              </lg>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.112">5</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.113">Froh empfind ich mich nun auf klassischem Boden begeistert;</l>
+                                    <l xml:id="tg139.3.114">Vor- und Mitwelt spricht lauter und reizender mir.</l>
+                                    <l xml:id="tg139.3.115">Hier befolg ich den Rat, durchblättre die Werke der Alten</l>
+                                    <l xml:id="tg139.3.116">Mit geschäftiger Hand, täglich mit neuem Genuß.</l>
+                                    <l xml:id="tg139.3.117">Aber die Nächte hindurch hält Amor mich anders beschäftigt;</l>
+                                    <l xml:id="tg139.3.118">Werd ich auch halb nur gelehrt, bin ich doch doppelt beglückt.</l>
+                                    <l xml:id="tg139.3.119">Und belehr ich mich nicht, indem ich des lieblichen Busens</l>
+                                    <l xml:id="tg139.3.120">Formen spähe, die Hand leite die Hüften hinab?</l>
+                                    <l xml:id="tg139.3.121">Dann versteh ich den Marmor erst recht; ich denk und vergleiche,</l>
+                                    <l xml:id="tg139.3.122">Sehe mit fühlendem Aug, fühle mit sehender Hand.</l>
+                                    <l xml:id="tg139.3.123">Raubt die Liebste denn gleich mir einige Stunden des Tages,</l>
+                                    <l xml:id="tg139.3.124">Gibt sie Stunden der Nacht mir zur Entschädigung hin.</l>
+                                    <l xml:id="tg139.3.125">Wird doch nicht immer geküßt, es wird vernünftig gesprochen;</l>
+                                    <l xml:id="tg139.3.126">Überfällt sie der Schlaf, lieg ich und denke mir viel.</l>
+                                    <l xml:id="tg139.3.127">Oftmals hab ich auch schon in ihren Armen gedichtet</l>
+                                    <l xml:id="tg139.3.128">Und des Hexameters Maß leise mit fingernder Hand</l>
+                                    <l xml:id="tg139.3.129">Ihr auf den Rücken gezählt. Sie atmet in lieblichem Schlummer,</l>
+                                    <l xml:id="tg139.3.130">Und es durchglühet ihr Hauch mir bis ins Tiefste die Brust.</l>
+                                    <l xml:id="tg139.3.131">Amor schüret die Lamp indes und denket der Zeiten,</l>
+                                    <l xml:id="tg139.3.132">Da er den nämlichen Dienst seinen Triumvirn getan.</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.133"/>
+                              </lg>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.134">6</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.135">»Kannst du, o Grausamer! mich in solchen Worten betrüben?</l>
+                                    <l xml:id="tg139.3.136">Reden so bitter und hart liebende Männer bei euch?</l>
+                                    <pb n="170" xml:id="tg139.3.137"/>
+                                    <l xml:id="tg139.3.138">Wenn das Volk mich verklagt, ich muß es dulden! und bin ich</l>
+                                    <l xml:id="tg139.3.139">Etwa nicht schuldig? Doch, ach! schuldig nur bin ich mit dir!</l>
+                                    <l xml:id="tg139.3.140">Diese Kleider, sie sind der neidischen Nachbarin Zeugen,</l>
+                                    <l xml:id="tg139.3.141">Daß die Witwe nicht mehr einsam den Gatten beweint.</l>
+                                    <l xml:id="tg139.3.142">Bist du ohne Bedacht nicht oft bei Mondschein gekommen,</l>
+                                    <l xml:id="tg139.3.143">Grau, im dunkeln Surtout, hinten gerundet das Haar?</l>
+                                    <l xml:id="tg139.3.144">Hast du dir scherzend nicht selbst die geistliche Maske gewählet?</l>
+                                    <l xml:id="tg139.3.145">Soll's ein Prälate denn sein: gut, der Prälate bist du.</l>
+                                    <l xml:id="tg139.3.146">In dem geistlichen Rom, kaum scheint es zu glauben, doch schwör ich:</l>
+                                    <l xml:id="tg139.3.147">Nie hat ein Geistlicher sich meiner Umarmung gefreut.</l>
+                                    <l xml:id="tg139.3.148">Arm war ich leider! und jung, und wohl bekannt den Verführern.</l>
+                                    <l xml:id="tg139.3.149">Falconieri hat mir oft in die Augen gegafft</l>
+                                    <l xml:id="tg139.3.150">Und ein Kuppler Albanis mich mit gewichtigen Zetteln</l>
+                                    <l xml:id="tg139.3.151">Bald nach Ostia, bald nach den Vier Brunnen gelockt.</l>
+                                    <l xml:id="tg139.3.152">Aber wer nicht kam, war das Mädchen. So hab ich von Herzen</l>
+                                    <l xml:id="tg139.3.153">Rotstrumpf immer gehaßt und Violettstrumpf dazu.</l>
+                                    <l xml:id="tg139.3.154">Denn: ›Ihr Mädchen bleibt am Ende doch die Betrognen‹,</l>
+                                    <l xml:id="tg139.3.155">Sagte der Vater, wenn auch leichter die Mutter es nahm.</l>
+                                    <l xml:id="tg139.3.156">Und so bin ich denn auch am Ende betrogen! Du zürnest</l>
+                                    <l xml:id="tg139.3.157">Nur zum Scheine mit mir, weil du zu fliehen gedenkst.</l>
+                                    <l xml:id="tg139.3.158">Geh! Ihr seid der Frauen nicht wert! Wir tragen die Kinder</l>
+                                    <l xml:id="tg139.3.159">Unter dem Herzen, und so tragen die Treue wir auch;</l>
+                                    <l xml:id="tg139.3.160">Aber ihr Männer, ihr schüttet mit eurer Kraft und Begierde</l>
+                                    <l xml:id="tg139.3.161">Auch die Liebe zugleich in den Umarmungen aus!«</l>
+                                    <l xml:id="tg139.3.162">Also sprach die Geliebte und nahm den Kleinen vom Stuhle,</l>
+                                    <l xml:id="tg139.3.163">Drückt' ihn küssend ans Herz, Tränen entquollen dem Blick.</l>
+                                    <l xml:id="tg139.3.164">Und wie saß ich beschämt, daß Reden feindlicher Menschen</l>
+                                    <l xml:id="tg139.3.165">Dieses liebliche Bild mir zu beflecken vermocht!</l>
+                                    <l xml:id="tg139.3.166">Dunkel brennt das Feuer nur augenblicklich und dampfet,</l>
+                                    <l xml:id="tg139.3.167">Wenn das Wasser die Glut stürzend und jählings verhüllt;</l>
+                                    <l xml:id="tg139.3.168">Aber sie reinigt sich schnell, verjagt die trübenden Dämpfe,</l>
+                                    <l xml:id="tg139.3.169">Neuer und mächtiger dringt leuchtende Flamme hinauf.</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.170"/>
+                              </lg>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.171">
+                                    <pb n="171" xml:id="tg139.3.171.1"/>
+7</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.172">O wie fühl ich in Rom mich so froh! gedenk ich der Zeiten,</l>
+                                    <l xml:id="tg139.3.173">Da mich ein graulicher Tag hinten im Norden umfing,</l>
+                                    <l xml:id="tg139.3.174">Trübe der Himmel und schwer auf meine Scheitel sich senkte,</l>
+                                    <l xml:id="tg139.3.175">Farb- und gestaltlos die Welt um den Ermatteten lag</l>
+                                    <l xml:id="tg139.3.176">Und ich über mein Ich, des unbefriedigten Geistes</l>
+                                    <l xml:id="tg139.3.177">Düstre Wege zu spähn, still in Betrachtung versank.</l>
+                                    <l xml:id="tg139.3.178">Nun umleuchtet der Glanz des helleren Äthers die Stirne;</l>
+                                    <l xml:id="tg139.3.179">Phöbus rufet, der Gott, Formen und Farben hervor.</l>
+                                    <l xml:id="tg139.3.180">Sternhell glänzet die Nacht, sie klingt von weichen Gesängen,</l>
+                                    <l xml:id="tg139.3.181">Und mir leuchtet der Mond heller als nordischer Tag.</l>
+                                    <l xml:id="tg139.3.182">Welche Seligkeit ward mir Sterblichem! Träum ich? Empfänget</l>
+                                    <l xml:id="tg139.3.183">Dein ambrosisches Haus, Jupiter Vater, den Gast?</l>
+                                    <l xml:id="tg139.3.184">Ach! hier lieg ich und strecke nach deinen Knien die Hände</l>
+                                    <l xml:id="tg139.3.185">Flehend aus. O vernimm, Jupiter Xenius, mich</l>
+                                    <l xml:id="tg139.3.186">Wie ich hereingekommen, ich kann's nicht sagen; es faßte</l>
+                                    <l xml:id="tg139.3.187">Hebe den Wandrer und zog mich in die Hallen heran.</l>
+                                    <l xml:id="tg139.3.188">Hast du ihr einen Heroen herauf zu führen geboten?</l>
+                                    <l xml:id="tg139.3.189">Irrte die Schöne? Vergib! Laß mir des Irrtums Gewinn!</l>
+                                    <l xml:id="tg139.3.190">Deine Tochter Fortuna, sie auch! die herrlichsten Gaben</l>
+                                    <l xml:id="tg139.3.191">Teilt als ein Mädchen sie aus, wie es die Laune gebeut.</l>
+                                    <l xml:id="tg139.3.192">Bist du der wirtliche Gott? O dann so verstoße den Gastfreund</l>
+                                    <l xml:id="tg139.3.193">Nicht von deinem Olymp wieder zur Erde hinab! –</l>
+                                    <l xml:id="tg139.3.194">»Dichter! wohin versteigest du dich?« – Vergib mir; der hohe</l>
+                                    <l xml:id="tg139.3.195">Kapitolinische Berg ist dir ein zweiter Olymp.</l>
+                                    <l xml:id="tg139.3.196">Dulde mich, Jupiter, hier, und Hermes führe mich später,</l>
+                                    <l xml:id="tg139.3.197">Cestius' Mal vorbei, leise zum Orkus hinab.</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.198"/>
+                              </lg>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.199">8</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.200">Wenn du mir sagst, du habest als Kind, Geliebte, den Menschen</l>
+                                    <l xml:id="tg139.3.201">Nicht gefallen und dich habe die Mutter verschmäht,</l>
+                                    <l xml:id="tg139.3.202">Bis du größer geworden und still dich entwickelt – ich glaub es:</l>
+                                    <l xml:id="tg139.3.203">Gerne denk ich mir dich als ein besonderes Kind.</l>
+                                    <pb n="172" xml:id="tg139.3.204"/>
+                                    <l xml:id="tg139.3.205">Fehlet Bildung und Farbe doch auch der Blüte des Weinstocks,</l>
+                                    <l xml:id="tg139.3.206">Wenn die Beere, gereift, Menschen und Götter entzückt.</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.207"/>
+                              </lg>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.208">9</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.209">Herbstlich leuchtet die Flamme vom ländlich geselligen Herde,</l>
+                                    <l xml:id="tg139.3.210">Knistert und glänzet, wie rasch! sausend vom Reisig empor.</l>
+                                    <l xml:id="tg139.3.211">Diesen Abend erfreut sie mich mehr; denn eh noch zur Kohle</l>
+                                    <l xml:id="tg139.3.212">Sich das Bündel verzehrt, unter die Asche sich neigt,</l>
+                                    <l xml:id="tg139.3.213">Kommt mein liebliches Mädchen. Dann flammen Reisig und Scheite,</l>
+                                    <l xml:id="tg139.3.214">Und die erwärmete Nacht wird uns ein glänzendes Fest.</l>
+                                    <l xml:id="tg139.3.215">Morgen frühe geschäftig verläßt sie das Lager der Liebe,</l>
+                                    <l xml:id="tg139.3.216">Weckt aus der Asche behend Flammen aufs neue hervor.</l>
+                                    <l xml:id="tg139.3.217">Denn vor andern verlieh der Schmeichlerin Amor die Gabe,</l>
+                                    <l xml:id="tg139.3.218">Freude zu wecken, die kaum still wie zu Asche versank.</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.219"/>
+                              </lg>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.220">10</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.221">Alexander und Cäsar und Heinrich und Friedrich, die Großen,</l>
+                                    <l xml:id="tg139.3.222">Gäben die Hälfte mir gern ihres erworbenen Ruhms,</l>
+                                    <l xml:id="tg139.3.223">Könnt ich auf <hi rend="italic" xml:id="tg139.3.223.1">eine</hi> Nacht dies Lager jedem vergönnen;</l>
+                                    <l xml:id="tg139.3.224">Aber die Armen, sie hält strenge des Orkus Gewalt.</l>
+                                    <l xml:id="tg139.3.225">Freue dich also, Lebend'ger, der lieberwärmeten Stätte,</l>
+                                    <l xml:id="tg139.3.226">Ehe den fliehenden Fuß schauerlich Lethe dir netzt.</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.227"/>
+                              </lg>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.228">11</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.229">Euch, o Grazien, legt die wenigen Blätter ein Dichter</l>
+                                    <l xml:id="tg139.3.230">Auf den reinen Altar, Knospen der Rose dazu,</l>
+                                    <l xml:id="tg139.3.231">Und er tut es getrost. Der Künstler freuet sich seiner</l>
+                                    <l xml:id="tg139.3.232">Werkstatt, wenn sie um ihn immer ein Pantheon scheint.</l>
+                                    <pb n="173" xml:id="tg139.3.233"/>
+                                    <l xml:id="tg139.3.234">Jupiter senket die göttliche Stirn, und Juno erhebt sie;</l>
+                                    <l xml:id="tg139.3.235">Phöbus schreitet hervor, schüttelt das lockige Haupt;</l>
+                                    <l xml:id="tg139.3.236">Trocken schauet Minerva herab, und Hermes, der leichte,</l>
+                                    <l xml:id="tg139.3.237">Wendet zur Seite den Blick, schalkisch und zärtlich zugleich</l>
+                                    <l xml:id="tg139.3.238">Aber nach Bacchus, dem weichen, dem träumenden, hebet Cythere</l>
+                                    <l xml:id="tg139.3.239">Blicke der süßen Begier, selbst in dem Marmor noch feucht.</l>
+                                    <l xml:id="tg139.3.240">Seiner Umarmung gedenket sie gern und scheinet zu fragen:</l>
+                                    <l xml:id="tg139.3.241">Sollte der herrliche Sohn uns an der Seite nicht stehn?</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.242"/>
+                              </lg>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.243">12</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.244">Hörest du, Liebchen, das muntre Geschrei den Flaminischen Weg her?</l>
+                                    <l xml:id="tg139.3.245">Schnitter sind es; sie ziehn wieder nach Hause zurück,</l>
+                                    <l xml:id="tg139.3.246">Weit hinweg. Sie haben des Römers Ernte vollendet,</l>
+                                    <l xml:id="tg139.3.247">Der für Ceres den Kranz selber zu flechten verschmäht.</l>
+                                    <l xml:id="tg139.3.248">Keine Feste sind mehr der großen Göttin gewidmet,</l>
+                                    <l xml:id="tg139.3.249">Die, statt Eicheln, zur Kost goldenen Weizen verlieh.</l>
+                                    <l xml:id="tg139.3.250">Laß uns beide das Fest im stillen freudig begehen!</l>
+                                    <l xml:id="tg139.3.251">Sind zwei Liebende doch sich ein versammeltes Volk.</l>
+                                    <l xml:id="tg139.3.252">Hast du wohl je gehört von jener mystischen Feier,</l>
+                                    <l xml:id="tg139.3.253">Die von Eleusis hieher frühe dem Sieger gefolgt?</l>
+                                    <l xml:id="tg139.3.254">Griechen stifteten sie, und immer riefen nur Griechen,</l>
+                                    <l xml:id="tg139.3.255">Selbst in den Mauern Roms: »Kommt zur geheiligten Nacht!«</l>
+                                    <l xml:id="tg139.3.256">Fern entwich der Profane; da bebte der wartende Neuling,</l>
+                                    <l xml:id="tg139.3.257">Den ein weißes Gewand, Zeichen der Reinheit, umgab.</l>
+                                    <l xml:id="tg139.3.258">Wunderlich irrte darauf der Eingeführte durch Kreise</l>
+                                    <l xml:id="tg139.3.259">Seltner Gestalten; im Traum schien er zu wallen: denn hier</l>
+                                    <l xml:id="tg139.3.260">Wanden sich Schlangen am Boden umher, verschlossene Kästchen,</l>
+                                    <l xml:id="tg139.3.261">Reich mit Ähren umkränzt, trugen hier Mädchen vorbei,</l>
+                                    <l xml:id="tg139.3.262">Vielbedeutend gebärdeten sich die Priester und summten;</l>
+                                    <l xml:id="tg139.3.263">Ungeduldig und bang harrte der Lehrling auf Licht.</l>
+                                    <l xml:id="tg139.3.264">Erst nach mancherlei Proben und Prüfungen ward ihm enthüllt</l>
+                                    <l xml:id="tg139.3.265">Was der geheiligte Kreis seltsam in Bildern verbarg.</l>
+                                    <pb n="174" xml:id="tg139.3.266"/>
+                                    <l xml:id="tg139.3.267">Und was war das Geheimnis! als daß; Demeter, die große,</l>
+                                    <l xml:id="tg139.3.268">Sich gefällig einmal auch einem Helden bequemt,</l>
+                                    <l xml:id="tg139.3.269">Als sie Jasion einst, dem rüstigen König der Kreter,</l>
+                                    <l xml:id="tg139.3.270">Ihres unsterblichen Leibs holdes Verborgne gegönnt.</l>
+                                    <l xml:id="tg139.3.271">Da war Kreta beglückt! das Hochzeitbette der Göttin</l>
+                                    <l xml:id="tg139.3.272">Schwoll von Ähren, und reich drückte den Acker die Saat.</l>
+                                    <l xml:id="tg139.3.273">Aber die übrige Welt verschmachtete; denn es versäumte</l>
+                                    <l xml:id="tg139.3.274">Über der Liebe Genuß Ceres den schönen Beruf.</l>
+                                    <l xml:id="tg139.3.275">Voll Erstaunen vernahm der Eingeweihte das Märchen,</l>
+                                    <l xml:id="tg139.3.276">Winkte der Liebsten – Verstehst du nun, Geliebte, den Wink?</l>
+                                    <l xml:id="tg139.3.277">Jene buschige Myrte beschattet ein heiliges Plätzchen!</l>
+                                    <l xml:id="tg139.3.278">Unsre Zufriedenheit bringt keine Gefährde der Welt.</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.279"/>
+                              </lg>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.280">13</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.281">Amor bleibet ein Schalk, und wer ihm vertraut, ist betrogen!</l>
+                                    <l xml:id="tg139.3.282">Heuchelnd kam er zu mir: »Diesmal nur traue mir noch.</l>
+                                    <l xml:id="tg139.3.283">Redlich mein ich's mit dir, du hast dein Leben und Dichten,</l>
+                                    <l xml:id="tg139.3.284">Dankbar erkenn ich es wohl, meiner Verehrung geweiht.</l>
+                                    <l xml:id="tg139.3.285">Siehe, dir bin ich nun gar nach Rom gefolget; ich möchte</l>
+                                    <l xml:id="tg139.3.286">Dir im fremden Gebiet gern was Gefälliges tun.</l>
+                                    <l xml:id="tg139.3.287">Jeder Reisende klagt, er finde schlechte Bewirtung;</l>
+                                    <l xml:id="tg139.3.288">Welchen Amor empfiehlt, köstlich bewirtet ist er.</l>
+                                    <l xml:id="tg139.3.289">Du betrachtest mit Staunen die Trümmern alter Gebäude</l>
+                                    <l xml:id="tg139.3.290">Und durchwandelst mit Sinn diesen geheiligten Raum.</l>
+                                    <l xml:id="tg139.3.291">Du verehrest noch mehr die werten Reste des Bildens</l>
+                                    <l xml:id="tg139.3.292">Einziger Künstler, die stets ich in der Werkstatt besucht.</l>
+                                    <l xml:id="tg139.3.293">Diese Gestalten, ich formte sie selbst! Verzeih mir, ich prahle</l>
+                                    <l xml:id="tg139.3.294">Diesmal nicht; du gestehst, was ich dir sage, sei wahr.</l>
+                                    <l xml:id="tg139.3.295">Nun du mir lässiger dienst, wo sind die schönen Gestalten,</l>
+                                    <l xml:id="tg139.3.296">Wo die Farben, der Glanz deiner Erfindungen hin?</l>
+                                    <l xml:id="tg139.3.297">Denkst du nun wieder zu bilden, o Freund? Die Schule der Griechen</l>
+                                    <l xml:id="tg139.3.298">Blieb noch offen, das Tor schlossen die Jahre nicht zu.</l>
+                                    <pb n="175" xml:id="tg139.3.299"/>
+                                    <l xml:id="tg139.3.300">Ich, der Lehrer, bin ewig jung und liebe die Jungen.</l>
+                                    <l xml:id="tg139.3.301">Altklug lieb ich dich nicht! Munter! Begreife mich wohl!</l>
+                                    <l xml:id="tg139.3.302">War das Antike doch neu, da jene Glücklichen lebten!</l>
+                                    <l xml:id="tg139.3.303">Lebe glücklich, und so lebe die Vorzeit in dir!</l>
+                                    <l xml:id="tg139.3.304">Stoff zum Liede, wo nimmst du ihn her? Ich muß dir ihn geben,</l>
+                                    <l xml:id="tg139.3.305">Und den höheren Stil lehret die Liebe dich nur.«</l>
+                                    <l xml:id="tg139.3.306">Also sprach der Sophist. Wer widerspräch ihm? und leider</l>
+                                    <l xml:id="tg139.3.307">Bin ich zu folgen gewöhnt, wenn der Gebieter befiehlt.</l>
+                                    <l xml:id="tg139.3.308">Nun, verräterisch hält er sein Wort, gibt Stoff zu Gesängen,</l>
+                                    <l xml:id="tg139.3.309">Ach und raubt mir die Zeit, Kraft und Besinnung zugleich;</l>
+                                    <l xml:id="tg139.3.310">Blick und Händedruck und Küsse, gemütliche Worte,</l>
+                                    <l xml:id="tg139.3.311">Silben köstlichen Sinns wechselt ein liebendes Paar.</l>
+                                    <l xml:id="tg139.3.312">Da wird Lispeln Geschwätz, wird Stottern liebliche Rede:</l>
+                                    <l xml:id="tg139.3.313">Solch ein Hymnus verhallt ohne prosodisches Maß.</l>
+                                    <l xml:id="tg139.3.314">Dich, Aurora, wie kannt ich dich sonst als Freundin der Musen!</l>
+                                    <l xml:id="tg139.3.315">Hat, Aurora, dich auch Amor, der lose, verführt?</l>
+                                    <l xml:id="tg139.3.316">Du erscheinest mir nun als seine Freundin und weckest</l>
+                                    <l xml:id="tg139.3.317">Mich an seinem Altar wieder zum festlichen Tag.</l>
+                                    <l xml:id="tg139.3.318">Find ich die Fülle der Locken an meinem Busen! das Köpfchen</l>
+                                    <l xml:id="tg139.3.319">Ruhet und drücket den Arm, der sich dem Halse bequemt.</l>
+                                    <l xml:id="tg139.3.320">Welch ein freudig Erwachen, erhieltet ihr, ruhige Stunden,</l>
+                                    <l xml:id="tg139.3.321">Mir das Denkmal der Lust, die in den Schlaf uns gewiegt!</l>
+                                    <l xml:id="tg139.3.322">Sie bewegt sich im Schlummer und sinkt auf die Breite des Lagers</l>
+                                    <l xml:id="tg139.3.323">Weggewendet; und doch läßt sie mir Hand noch in Hand.</l>
+                                    <l xml:id="tg139.3.324">Herzliche Liebe verbindet uns stets und treues Verlangen,</l>
+                                    <l xml:id="tg139.3.325">Und den Wechsel behielt nur die Begierde sich vor.</l>
+                                    <l xml:id="tg139.3.326">Einen Druck der Hand, ich sehe die himmlischen Augen</l>
+                                    <l xml:id="tg139.3.327">Wieder offen. – O nein! laßt auf der Bildung mich ruhn!</l>
+                                    <l xml:id="tg139.3.328">Bleibt geschlossen! Ihr macht mich verwirrt und trunken, ihr raubet</l>
+                                    <l xml:id="tg139.3.329">Mir den stillen Genuß reiner Betrachtung zu früh.</l>
+                                    <l xml:id="tg139.3.330">Diese Formen, wie groß! wie edel gewendet die Glieder!</l>
+                                    <l xml:id="tg139.3.331">Schlief Ariadne so schön: Theseus, du konntest entfliehn?</l>
+                                    <l xml:id="tg139.3.332">Diesen Lippen ein einziger Kuß! O Theseus, nun scheide!</l>
+                                    <l xml:id="tg139.3.333">Blick ihr ins Auge! Sie wacht! – Ewig nun hält sie dich fest.</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.334"/>
+                              </lg>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.335">
+                                    <pb n="176" xml:id="tg139.3.335.1"/>
+14</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.336">Zünde mir Licht an, Knabe! – »Noch ist es hell. Ihr verzehret</l>
+                                    <l xml:id="tg139.3.337">Öl und Docht nur umsonst. Schließet die Läden doch nicht!</l>
+                                    <l xml:id="tg139.3.338">Hinter die Häuser entwich, nicht hinter den Berg, uns die Sonne!</l>
+                                    <l xml:id="tg139.3.339">Ein halb Stündchen noch währt's bis zum Geläute der Nacht.«</l>
+                                    <l xml:id="tg139.3.340">Unglückseliger! geh und gehorch! Mein Mädchen erwart ich;</l>
+                                    <l xml:id="tg139.3.341">Tröste mich, Lämpchen, indes, lieblicher Bote der Nacht!</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.342"/>
+                              </lg>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.343">15</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.344">Cäsarn wär ich wohl nie zu fernen Britannen gefolget,</l>
+                                    <l xml:id="tg139.3.345">Florus hätte mich leicht in die Popine geschleppt!</l>
+                                    <l xml:id="tg139.3.346">Denn mir bleiben weit mehr die Nebel des traurigen Nordens</l>
+                                    <l xml:id="tg139.3.347">Als ein geschäftiges Volk südlicher Flöhe verhaßt.</l>
+                                    <l xml:id="tg139.3.348">Und noch schöner von heut an seid mir gegrüßet, ihr Schenken,</l>
+                                    <l xml:id="tg139.3.349">Osterien, wie euch schicklich der Römer benennt;</l>
+                                    <l xml:id="tg139.3.350">Denn ihr zeigtet mir heute die Liebste, begleitet vom Oheim,</l>
+                                    <l xml:id="tg139.3.351">Den die Gute so oft, mich zu besitzen, betriegt.</l>
+                                    <l xml:id="tg139.3.352">Hier stand unser Tisch, den Deutsche vertraulich umgaben;</l>
+                                    <l xml:id="tg139.3.353">Drüben suchte das Kind neben der Mutter den Platz,</l>
+                                    <l xml:id="tg139.3.354">Rückte vielmals die Bank und wußt es artig zu machen,</l>
+                                    <l xml:id="tg139.3.355">Daß ich halb ihr Gesicht, völlig den Nacken gewann.</l>
+                                    <l xml:id="tg139.3.356">Lauter sprach sie, als hier die Römerin pfleget, kredenzte,</l>
+                                    <l xml:id="tg139.3.357">Blickte gewendet nach mir, goß und verfehlte das Glas.</l>
+                                    <l xml:id="tg139.3.358">Wein floß über den Tisch, und sie, mit zierlichem Finger,</l>
+                                    <l xml:id="tg139.3.359">Zog auf dem hölzernen Blatt Kreise der Feuchtigkeit hin.</l>
+                                    <l xml:id="tg139.3.360">Meinen Namen verschlang sie dem ihrigen; immer begierig</l>
+                                    <l xml:id="tg139.3.361">Schaut ich dem Fingerchen nach, und sie bemerkte mich wohl.</l>
+                                    <l xml:id="tg139.3.362">Endlich zog sie behende das Zeichen der römischen Fünfe</l>
+                                    <l xml:id="tg139.3.363">Und ein Strichlein davor. Schnell, und sobald ich's gesehn,</l>
+                                    <l xml:id="tg139.3.364">Schlang sie Kreise durch Kreise, die Lettern und Ziffern zu löschen;</l>
+                                    <l xml:id="tg139.3.365">Aber die köstliche Vier blieb mir ins Auge geprägt.</l>
+                                    <l xml:id="tg139.3.366">Stumm war ich sitzen geblieben und biß die glühende Lippe,</l>
+                                    <l xml:id="tg139.3.367">Halb aus Schalkheit und Lust, halb aus Begierde, mir wund.</l>
+                                    <pb n="177" xml:id="tg139.3.368"/>
+                                    <l xml:id="tg139.3.369">Erst noch so lange bis Nacht! dann noch vier Stunden zu warten!</l>
+                                    <l xml:id="tg139.3.370">Hohe Sonne, du weilst, und du beschauest dein Rom!</l>
+                                    <l xml:id="tg139.3.371">Größeres sahest du nichts und wirst nichts Größeres sehen,</l>
+                                    <l xml:id="tg139.3.372">Wie es dein Priester Horaz in der Entzückung versprach.</l>
+                                    <l xml:id="tg139.3.373">Aber heute verweile mir nicht, und wende die Blicke</l>
+                                    <l xml:id="tg139.3.374">Von dem Siebengebirg früher und williger ab!</l>
+                                    <l xml:id="tg139.3.375">Einem Dichter zuliebe verkürze die herrlichen Stunden,</l>
+                                    <l xml:id="tg139.3.376">Die mit begierigem Blick selig der Maler genießt;</l>
+                                    <l xml:id="tg139.3.377">Glühend blicke noch schnell zu diesen hohen Fassaden,</l>
+                                    <l xml:id="tg139.3.378">Kuppeln und Säulen zuletzt und Obelisken herauf;</l>
+                                    <l xml:id="tg139.3.379">Stürze dich eilig ins Meer, um morgen früher zu sehen,</l>
+                                    <l xml:id="tg139.3.380">Was Jahrhunderte schon göttliche Lust dir gewährt:</l>
+                                    <l xml:id="tg139.3.381">Diese feuchten, mit Rohr so lange bewachsenen Gestade,</l>
+                                    <l xml:id="tg139.3.382">Diese mit Bäumen und Busch düster beschatteten Höhn.</l>
+                                    <l xml:id="tg139.3.383">Wenig Hütten zeigten sie erst; dann sahst du auf einmal</l>
+                                    <l xml:id="tg139.3.384">Sie vom wimmelnden Volk glücklicher Räuber belebt.</l>
+                                    <l xml:id="tg139.3.385">Alles schleppten sie drauf an diese Stätte zusammen;</l>
+                                    <l xml:id="tg139.3.386">Kaum war das Übrige Rund deiner Betrachtung noch wert.</l>
+                                    <l xml:id="tg139.3.387">Sahst eine Welt hier entstehn, sahst dann eine Welt hier in Trümmern,</l>
+                                    <l xml:id="tg139.3.388">Aus den Trümmern aufs neu fast eine größere Welt!</l>
+                                    <l xml:id="tg139.3.389">Daß ich diese noch lange von dir beleuchtet erblicke,</l>
+                                    <l xml:id="tg139.3.390">Spinne die Parze mir klug langsam den Faden herab;</l>
+                                    <l xml:id="tg139.3.391">Aber sie eile herbei, die schön bezeichnete Stunde!</l>
+                                    <l xml:id="tg139.3.392">Glücklich! Hör ich sie schon? Nein; doch ich höre schon Drei.</l>
+                                    <l xml:id="tg139.3.393">So, ihr lieben Musen, betrogt ihr wieder die Länge</l>
+                                    <l xml:id="tg139.3.394">Dieser Weile, die mich von der Geliebten getrennt.</l>
+                                    <l xml:id="tg139.3.395">Lebet wohl ! Nun eil ich und fürcht euch nicht zu beleid'gen;</l>
+                                    <l xml:id="tg139.3.396">Denn ihr Stolzen, ihr gebt Amorn doch immer den Rang.</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.397"/>
+                              </lg>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.398">16</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.399">»Warum bist du, Geliebter, nicht heute zur Vigne gekommen?</l>
+                                    <l xml:id="tg139.3.400">Einsam, wie ich versprach, wartet ich oben auf dich.« –</l>
+                                    <pb n="178" xml:id="tg139.3.401"/>
+                                    <l xml:id="tg139.3.402">Beste, schon war ich hinein; da sah ich zum Glücke den Oheim</l>
+                                    <l xml:id="tg139.3.403">Neben den Stöcken, bemüht, hin sich und her sich zu drehn.</l>
+                                    <l xml:id="tg139.3.404">Schleichend eilt ich hinaus! – »Oh, welch ein Irrtum ergriff dich!</l>
+                                    <l xml:id="tg139.3.405">Eine Scheuche nur war's, was dich vertrieb! Die Gestalt</l>
+                                    <l xml:id="tg139.3.406">Flickten wir emsig zusammen aus alten Kleidern und Rohren;</l>
+                                    <l xml:id="tg139.3.407">Emsig half ich daran, selbst mir zu schaden bemüht.«</l>
+                                    <l xml:id="tg139.3.408">Nun, des Alten Wunsch ist erfüllt; den losesten Vogel</l>
+                                    <l xml:id="tg139.3.409">Scheucht' er heute, der ihm Gärtchen und Nichte bestiehlt.</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.410"/>
+                              </lg>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.411">17</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.412">Manche Töne sind mir Verdruß, doch bleibet am meisten</l>
+                                    <l xml:id="tg139.3.413">Hundegebell mir verhaßt; kläffend zerreißt es mein Ohr.</l>
+                                    <l xml:id="tg139.3.414">Einen Hund nur hör ich sehr oft mit frohem Behagen</l>
+                                    <l xml:id="tg139.3.415">Bellend kläffen, den Hund, den sich der Nachbar erzog.</l>
+                                    <l xml:id="tg139.3.416">Denn er bellte mir einst mein Mädchen an, da sie sich heimlich</l>
+                                    <l xml:id="tg139.3.417">Zu mir stahl, und verriet unser Geheimnis beinah.</l>
+                                    <l xml:id="tg139.3.418">Jetzo, hör ich ihn bellen, so denk ich nur immer: sie kommt wohl!</l>
+                                    <l xml:id="tg139.3.419">Oder ich denke der Zeit, da die Erwartete kam.</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.420"/>
+                              </lg>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.421">18</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.422">Eines ist mir verdrießlich vor allen Dingen, ein andres</l>
+                                    <l xml:id="tg139.3.423">Bleibt mir abscheulich, empört jegliche Faser in mir,</l>
+                                    <l xml:id="tg139.3.424">Nur der bloße Gedanke. Ich will es euch, Freunde, gestehen:</l>
+                                    <l xml:id="tg139.3.425">Gar verdrießlich ist mir einsam das Lager zu Nacht.</l>
+                                    <l xml:id="tg139.3.426">Aber ganz abscheulich ist's, auf dem Wege der Liebe</l>
+                                    <l xml:id="tg139.3.427">Schlangen zu fürchten und Gift unter den Rosen der Lust,</l>
+                                    <l xml:id="tg139.3.428">Wenn im schönsten Moment der hin sich gebenden Freude</l>
+                                    <l xml:id="tg139.3.429">Deinem sinkenden Haupt lispelnde Sorge sich naht.</l>
+                                    <l xml:id="tg139.3.430">Darum macht Faustine mein Glück; sie teilet das Lager</l>
+                                    <l xml:id="tg139.3.431">Gerne mit mir und bewahrt Treue dem Treuen genau.</l>
+                                    <l xml:id="tg139.3.432">Reizendes Hindernis will die rasche Jugend; ich liebe,</l>
+                                    <l xml:id="tg139.3.433">Mich des versicherten Guts lange bequem zu erfreun.</l>
+                                    <pb n="179" xml:id="tg139.3.434"/>
+                                    <l xml:id="tg139.3.435">Welche Seligkeit ist's! wir wechseln sichere Küsse,</l>
+                                    <l xml:id="tg139.3.436">Atem und Leben getrost saugen und flößen wir ein.</l>
+                                    <l xml:id="tg139.3.437">So erfreuen wir uns der langen Nächte, wir lauschen,</l>
+                                    <l xml:id="tg139.3.438">Busen an Busen gedrängt, Stürmen und Regen und Guß.</l>
+                                    <l xml:id="tg139.3.439">Und so dämmert der Morgen heran; es bringen die Stunden</l>
+                                    <l xml:id="tg139.3.440">Neue Blumen herbei, schmücken uns festlich den Tag.</l>
+                                    <l xml:id="tg139.3.441">Gönnet mir, o Quiriten! das Glück, und jedem gewähre</l>
+                                    <l xml:id="tg139.3.442">Aller Güter der Welt erstes und letztes der Gott!</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.443"/>
+                              </lg>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.444">19</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.445">Schwer erhalten wir uns den guten Namen, denn Fama</l>
+                                    <l xml:id="tg139.3.446">Steht mit Amorn, ich weiß, meinem Gebieter, in Streit.</l>
+                                    <l xml:id="tg139.3.447">Wißt auch ihr, woher es entsprang, daß beide sich hassen?</l>
+                                    <l xml:id="tg139.3.448">Alte Geschichten sind das, und ich erzähle sie wohl.</l>
+                                    <l xml:id="tg139.3.449">Immer die mächtige Göttin, doch war sie für die Gesellschaft</l>
+                                    <l xml:id="tg139.3.450">Unerträglich, denn gern führt sie das herrschende Wort;</l>
+                                    <l xml:id="tg139.3.451">Und so war sie von je bei allen Göttergelagen</l>
+                                    <l xml:id="tg139.3.452">Mit der Stimme von Erz Großen und Kleinen verhaßt.</l>
+                                    <l xml:id="tg139.3.453">So berühmte sie einst sich übermütig, sie habe</l>
+                                    <l xml:id="tg139.3.454">Jovis herrlichen Sohn ganz sich zum Sklaven gemacht</l>
+                                    <l xml:id="tg139.3.455">»Meinen Herkules führ ich dereinst, o Vater der Götter«,</l>
+                                    <l xml:id="tg139.3.456">Rief triumphierend sie aus , »wiedergeboren dir zu.</l>
+                                    <l xml:id="tg139.3.457">Herkules ist es nicht mehr, den dir Alkmene geboren;</l>
+                                    <l xml:id="tg139.3.458">Seine Verehrung für mich macht ihn auf Erden zum Gott.</l>
+                                    <l xml:id="tg139.3.459">Schaut er nach dem Olymp, so glaubst du, er schaue nach deinen</l>
+                                    <l xml:id="tg139.3.460">Mächtigen Knien; vergib! nur in den Äther nach mir</l>
+                                    <l xml:id="tg139.3.461">Blickt der würdigste Mann; nur mich zu verdienen, durchschreitet</l>
+                                    <l xml:id="tg139.3.462">Leicht sein mächtiger Fuß Bahnen, die keiner betrat;</l>
+                                    <l xml:id="tg139.3.463">Aber auch ich begegn' ihm auf seinen Wegen und preise</l>
+                                    <l xml:id="tg139.3.464">Seinen Namen voraus, eh er die Tat noch beginnt.</l>
+                                    <l xml:id="tg139.3.465">Mich vermählst du ihm einst; der Amazonen Besieger</l>
+                                    <l xml:id="tg139.3.466">Werd auch meiner, und ihn nenn ich mit Freuden Gemahl!«</l>
+                                    <l xml:id="tg139.3.467">Alles schwieg; sie mochten nicht gern die Prahlerin reizen:</l>
+                                    <l xml:id="tg139.3.468">Denn sie denkt sich, erzürnt, leicht was Gehässiges aus.</l>
+                                    <pb n="180" xml:id="tg139.3.469"/>
+                                    <l xml:id="tg139.3.470">Amorn bemerkte sie nicht: er schlich beiseite; den Helden</l>
+                                    <l xml:id="tg139.3.471">Bracht er mit weniger Kunst unter der Schönsten Gewalt.</l>
+                                    <l xml:id="tg139.3.472">Nun vermummt er sein Paar; ihr hängt er die Bürde des Löwen</l>
+                                    <l xml:id="tg139.3.473">Über die Schultern und lehnt mühsam die Keule dazu.</l>
+                                    <l xml:id="tg139.3.474">Drauf bespickt er mit Blumen des Helden sträubende Haare,</l>
+                                    <l xml:id="tg139.3.475">Reichet den Rocken der Faust, die sich dem Scherze bequemt.</l>
+                                    <l xml:id="tg139.3.476">So vollendet er bald die neckische Gruppe; dann läuft er,</l>
+                                    <l xml:id="tg139.3.477">Ruft durch den ganzen Olymp: »Herrliche Taten geschehn!</l>
+                                    <l xml:id="tg139.3.478">Nie hat Erd und Himmel, die unermüdete Sonne</l>
+                                    <l xml:id="tg139.3.479">Hat auf der ewigen Bahn keines der Wunder erblickt.«</l>
+                                    <l xml:id="tg139.3.480">Alles eilte; sie glaubten dem losen Knaben, denn ernstlich</l>
+                                    <l xml:id="tg139.3.481">Hatt er gesprochen; und auch Fama, sie blieb nicht zurück.</l>
+                                    <l xml:id="tg139.3.482">Wer sich freute, den Mann so tief erniedrigt zu sehen,</l>
+                                    <l xml:id="tg139.3.483">Denkt ihr! Juno. Es galt Amorn ein freundlich Gesicht.</l>
+                                    <l xml:id="tg139.3.484">Fama daneben, wie stand sie beschämt, verlegen, verzweifelnd!</l>
+                                    <l xml:id="tg139.3.485">Anfangs lachte sie nur: »Masken, ihr Götter, sind das!</l>
+                                    <l xml:id="tg139.3.486">Meinen Helden, ich kenn ihn zu gut! Es haben Tragöden</l>
+                                    <l xml:id="tg139.3.487">Uns zum besten!« Doch bald sah sie mit Schmerzen, er war's!</l>
+                                    <l xml:id="tg139.3.488">Nicht den tausendsten Teil verdroß es Vulkanen, sein Weibchen</l>
+                                    <l xml:id="tg139.3.489">Mit dem rüstigen Freund unter den Maschen zu sehn,</l>
+                                    <l xml:id="tg139.3.490">Als das verständige Netz im rechten Moment sie umfaßte,</l>
+                                    <l xml:id="tg139.3.491">Rasch die Verschlungnen umschlang, fest die Genießenden hielt.</l>
+                                    <l xml:id="tg139.3.492">Wie sich die Jünglinge freuten! Merkur und Bacchus! sie beide</l>
+                                    <l xml:id="tg139.3.493">Mußten gestehn: es sei, über dem Busen zu ruhn</l>
+                                    <l xml:id="tg139.3.494">Dieses herrlichen Weibes, ein schöner Gedanke. Sie baten:</l>
+                                    <l xml:id="tg139.3.495">»Löse, Vulkan, sie noch nicht! Laß sie noch einmal besehn.«</l>
+                                    <l xml:id="tg139.3.496">Und der Alte war so Hahnrei und hielt sie nur fester.</l>
+                                    <l xml:id="tg139.3.497">Aber Fama, sie floh rasch und voll Grimmes davon.</l>
+                                    <l xml:id="tg139.3.498">Seit der Zeit ist zwischen den zweien der Fehde nicht Stillstand;</l>
+                                    <l xml:id="tg139.3.499">Wie sie sich Helden erwählt, gleich ist der Knabe darnach.</l>
+                                    <l xml:id="tg139.3.500">Wer sie am höchsten verehrt, den weiß er am besten zu fassen,</l>
+                                    <l xml:id="tg139.3.501">Und den Sittlichsten greift er am gefährlichsten an.</l>
+                                    <l xml:id="tg139.3.502">Will ihm einer entgehn, den bringt er vom Schlimmen ins Schlimmste.</l>
+                                    <l xml:id="tg139.3.503">Mädchen bietet er an; wer sie ihm töricht verschmäht,</l>
+                                    <pb n="181" xml:id="tg139.3.504"/>
+                                    <l xml:id="tg139.3.505">Muß erst grimmige Pfeile von seinem Bogen erdulden;</l>
+                                    <l xml:id="tg139.3.506">Mann erhitzt er auf Mann, treibt die Begierden aufs Tier.</l>
+                                    <l xml:id="tg139.3.507">Wer sich seiner schämt, der muß erst leiden; dem Heuchler</l>
+                                    <l xml:id="tg139.3.508">Streut er bittern Genuß unter Verbrechen und Not.</l>
+                                    <l xml:id="tg139.3.509">Aber auch sie, die Göttin, verfolgt ihn mit Augen und Ohren;</l>
+                                    <l xml:id="tg139.3.510">Sieht sie ihn einmal bei dir, gleich ist sie feindlich gesinnt,</l>
+                                    <l xml:id="tg139.3.511">Schreckt dich mit ernstem Blick, verachtenden Mienen, und heftig</l>
+                                    <l xml:id="tg139.3.512">Strenge verruft sie das Haus, das er gewöhnlich besucht.</l>
+                                    <l xml:id="tg139.3.513">Und so geht es auch mir: schon leid ich ein wenig; die Göttin,</l>
+                                    <l xml:id="tg139.3.514">Eifersüchtig, sie forscht meinem Geheimnisse nach.</l>
+                                    <l xml:id="tg139.3.515">Doch es ist ein altes Gesetz: ich schweig und verehre;</l>
+                                    <l xml:id="tg139.3.516">Denn der Könige Zwist büßten die Griechen, wie ich.</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.517"/>
+                              </lg>
+                              <lg type="complex">
+                                 <head rend="zenoPC" xml:id="tg139.3.518">20</head>
+                                 <lg>
+                                    <l xml:id="tg139.3.519">Zieret Stärke den Mann und freies, mutiges Wesen,</l>
+                                    <l xml:id="tg139.3.520">Oh! so ziemet ihm fast tiefes Geheimnis noch mehr.</l>
+                                    <l xml:id="tg139.3.521">Städtebezwingerin du, Verschwiegenheit! Fürstin der Völker!</l>
+                                    <l xml:id="tg139.3.522">Teure Göttin, die mich sicher durchs Leben geführt,</l>
+                                    <l xml:id="tg139.3.523">Welches Schicksal erfahr ich! Es löset scherzend die Muse,</l>
+                                    <l xml:id="tg139.3.524">Amor löset, der Schalk, mir den verschlossenen Mund.</l>
+                                    <l xml:id="tg139.3.525">Ach, schon wird es so schwer, der Könige Schande verbergen!</l>
+                                    <l xml:id="tg139.3.526">Weder die Krone bedeckt, weder ein phrygischer Bund</l>
+                                    <l xml:id="tg139.3.527">Midas' verlängertes Ohr; der nächste Diener entdeckt es,</l>
+                                    <l xml:id="tg139.3.528">Und ihm ängstet und drückt gleich das Geheimnis die Brust.</l>
+                                    <l xml:id="tg139.3.529">In die Erde vergrüb er es gern, um sich zu erleichtern:</l>
+                                    <l xml:id="tg139.3.530">Doch die Erde verwahrt solche Geheimnisse nicht;</l>
+                                    <l xml:id="tg139.3.531">Rohre sprießen hervor und rauschen und lispeln im Winde:</l>
+                                    <l xml:id="tg139.3.532">»Midas! Midas, der Fürst, trägt ein verlängertes Ohr!«</l>
+                                    <l xml:id="tg139.3.533">Schwerer wird es nun mir, ein schönes Geheimnis zu wahren;</l>
+                                    <l xml:id="tg139.3.534">Ach, den Lippen entquillt Fülle des Herzens so leicht!</l>
+                                    <l xml:id="tg139.3.535">Keiner Freundin darf ich's vertraun: sie möchte mich schelten;</l>
+                                    <l xml:id="tg139.3.536">Keinem Freunde: vielleicht brächte der Freund mir Gefahr.</l>
+                                    <l xml:id="tg139.3.537">Mein Entzücken dem Hain, dem schallenden Felsen zu sagen,</l>
+                                    <l xml:id="tg139.3.538">Bin ich endlich nicht jung, bin ich nicht einsam genug.</l>
+                                    <pb n="182" xml:id="tg139.3.539"/>
+                                    <l xml:id="tg139.3.540">Dir, Hexameter, dir, Pentameter, sei es vertrauet,</l>
+                                    <l xml:id="tg139.3.541">Wie sie des Tags mich erfreut, wie sie des Nachts mich beglückt.</l>
+                                    <l xml:id="tg139.3.542">Sie, von vielen Männern gesucht, vermeidet die Schlingen,</l>
+                                    <l xml:id="tg139.3.543">Die ihr der Kühnere frech, heimlich der Listige legt;</l>
+                                    <l xml:id="tg139.3.544">Klug und zierlich schlüpft sie vorbei und kennet die Wege,</l>
+                                    <l xml:id="tg139.3.545">Wo sie der Liebste gewiß lauschend begierig empfängt.</l>
+                                    <l xml:id="tg139.3.546">Zaudre, Luna, sie kommt! damit sie der Nachbar nicht sehe;</l>
+                                    <l xml:id="tg139.3.547">Rausche, Lüftchen, im Laub! niemand vernehme den Tritt.</l>
+                                    <l xml:id="tg139.3.548">Und ihr, wachset und blüht, geliebte Lieder, und wieget</l>
+                                    <l xml:id="tg139.3.549">Euch im leisesten Hauch lauer und liebender Luft,</l>
+                                    <l xml:id="tg139.3.550">Und entdeckt den Quiriten, wie jene Rohre geschwätzig,</l>
+                                    <l xml:id="tg139.3.551">Eines glücklichen Paars schönes Geheimnis zuletzt.</l>
+                                 </lg>
+                                 <lb xml:id="tg139.3.552"/>
+                                 <pb n="183" xml:id="tg139.3.553"/>
+                                 <pb type="start" n="185" xml:id="tg139.3.554"/>
+                              </lg>
+                           </div>
+                        </div>
+                     </body>
+               </text>
+            </TEI>

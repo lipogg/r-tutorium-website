@@ -1,0 +1,32 @@
+---
+title: "Übungsaufgabe 1"
+author: "R Tutorium - Lisa Poggel"
+date: "Zum 2.5.2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+1. Erstellt ein neues R Skript und speichert es an einem geeigneten Ort. Setzt den gewählten Ordner im RStudio als  Arbeitsverzeichnis. Legt die Textdateien in einem Unterordner "Maerchen" ab. 
+
+2. Lest alle Textdateien mithilfe der Funktion `readtext()` ein und weist die eingelesenen Daten der  Variable "maerchen" zu. Hinweis: Hierzu müsst ihr erst das Paket `readtext` installieren und laden.
+
+3. Lasst euch den Wert der Variable "maerchen" in der Konsole ausgeben. Was für ein Datentyp hat das erstellte Objekt "maerchen"? Ruft die Hilfeseiten zur Funktion `readtext()` auf und überprüft, ob eure Vermutung stimmt (Abschnitt "Value").  
+
+4. Speichert alle Dateinamen in einer neuen Variable "maerchen_dateinamen" und lasst euch das neue Objekt in der Konsole anzeigen. Hinweis: In der ersten Sitzung haben wir gelernt, wie man auf Spalten und Elemente in einem Dataframe zugreifen kann. 
+
+5. Speichert jetzt nur den Text des Märchens "Aschenputtel" in einer Variable "aschenputtel", ohne die Datei neu einzulesen, und lasst euch den Wert der neuen Variable in der Konsole ausgeben. Hinweis: Auch hier kann das Skript zur ersten Sitzung behilflich sein. 
+
+6. Der Name der Spalte "doc_id" gefällt euch nicht. Lasst euch erst alle Spaltennamen anzeigen und benennt anschließend die Spalte "doc_id" um, in dem ihr die folgenden beiden Befehl ausführt: `colnames(maerchen)` und `colnames(maerchen)[1] <- "dateiname"`. Lasst euch den Dataframe erneut in der Konsole ausgeben. Wurde die Spalte erfolgreich umbenannt? 
+
+7. Speichert das Objekt "maerchen" mit dem geänderten Spaltennamen als csv-Datei in eurem Arbeitsverzeichnis. 
+
+8. Lest zuletzt die gespeicherte Datei ein und lasst euch den Inhalt anzeigen. Stimmt alles? 
+
+
+
+

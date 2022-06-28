@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://textgrid.info/namespaces/metadata/core/2010" xmlns:tgl="http://textgrid.info/namespaces/metadata/language/2010" xmlns:tgs="http://textgrid.info/namespaces/metadata/script/2010" xmlns:tgr="http://textgrid.info/namespaces/metadata/agent/2010" xml:id="tg511" n="/Literatur/M/Goethe, Johann Wolfgang/Gedichte/Gedichte (Ausgabe letzter Hand. 1827)/Zahme Xenien/Zahme Xenien 4">
+   <teiHeader xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:a="http://www.textgrid.info/namespace/digibib/authors">
+      <fileDesc>
+         <titleStmt>
+            <title>Zahme Xenien 4</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="handle">hdl:11858/00-1734-0000-0006-5F09-6</idno><idno type="TextGridUri">textgrid:11d4r.0</idno><availability>
+               
+               <p> Der annotierte Datenbestand der Digitalen Bibliothek inklusive Metadaten sowie
+                                   davon einzeln zugängliche Teile sind eine Abwandlung des Datenbestandes von
+                                   www.editura.de durch TextGrid und werden unter der Lizenz Creative Commons
+                                   Namensnennung 3.0 Deutschland Lizenz (by-Nennung TextGrid) veröffentlicht. Die
+                                   Lizenz bezieht sich nicht auf die der Annotation zu Grunde liegenden
+                                   allgemeinfreien Texte (Siehe auch Punkt 2 der Lizenzbestimmungen). </p>
+               <p>
+                  <ref target="http://creativecommons.org/licenses/by/3.0/de/legalcode">Lizenzvertrag</ref>
+               </p>
+               <p>
+                  <ref target="http://creativecommons.org/licenses/by/3.0/de/"> Eine vereinfachte
+                                   Zusammenfassung des rechtsverbindlichen Lizenzvertrages in
+                                   allgemeinverständlicher Sprache </ref>
+               </p>
+               <p>
+                  <ref target="http://www.textgrid.de/Digitale-Bibliothek">Hinweise zur Lizenz und zur Digitalen Bibliothek</ref>
+               </p>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note>
+                                    Entstanden überwiegend von 1824 bis 1827, zum Teil aber auch schon früher. Erstdruck 1827.
+                                 </note>
+         </notesStmt>
+         <sourceDesc>
+            <biblFull>
+               <titleStmt>
+                  <title>Johann Wolfgang von Goethe: Berliner Ausgabe. Herausgegeben von Siegfried Seidel: Poetische Werke [Band 1–16]; Kunsttheoretische Schriften und Übersetzungen [Band 17–22], Berlin: Aufbau, 1960 ff.</title>
+                  <author>Goethe, Johann Wolfgang</author>
+               </titleStmt>
+               <extent>671-</extent>
+               <publicationStmt>
+                  <date when="1960"/>
+                  <pubPlace>Berlin</pubPlace>
+               </publicationStmt>
+            </biblFull>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <date notBefore="1824" notAfter="1827"/>
+         </creation>
+         <textClass>
+            <keywords scheme="http://textgrid.info/namespaces/metadata/core/2010#genre">
+               <term>verse</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+                  <text>
+                     <body>
+                           
+                              
+                           
+                           
+                           
+                           <div type="text" xml:id="tg511.3">
+
+                              <div type="h4">
+                                 <head type="h4" xml:id="tg511.3.1">Zahme Xenien</head>
+
+                                 <head type="h4" xml:id="tg511.3.2">4</head>
+
+                                 <lg>
+                                    <l xml:id="tg511.3.3">Laßt zahme Xenien immer walten,</l>
+                                    <l xml:id="tg511.3.4">Der Dichter nimmer gebückt ist.</l>
+                                    <l xml:id="tg511.3.5">Ihr ließt verrückten Werther schalten,</l>
+                                    <l xml:id="tg511.3.6">So lernt nun, wie das Alter verrückt ist.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.7"/>
+
+                                    <l xml:id="tg511.3.8">Den Vorteil hat der Dichter:</l>
+                                    <l xml:id="tg511.3.9">Wie die Gemeinde prüft und probt,</l>
+                                    <l xml:id="tg511.3.10">So ist sie auch sein Richter;</l>
+                                    <l xml:id="tg511.3.11">Da wird er nun gescholten, gelobt,</l>
+                                    <l xml:id="tg511.3.12">Und bleibt immer ein Dichter.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.13"/>
+
+                                    <l xml:id="tg511.3.14">Es schnurrt mein Tagebuch</l>
+                                    <l xml:id="tg511.3.15">Am Bratenwender:</l>
+                                    <l xml:id="tg511.3.16">Nichts schreibt sich leichter voll</l>
+                                    <l xml:id="tg511.3.17">Als ein Kalender.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.18"/>
+
+                                    <l xml:id="tg511.3.19">»Ruf ich, da will mir keiner horchen;</l>
+                                    <l xml:id="tg511.3.20">Hab ich das um die Leute verdient?«</l>
+                                    <l xml:id="tg511.3.21">Es möchte niemand mehr gehorchen,</l>
+                                    <l xml:id="tg511.3.22">Wären aber alle gern gut bedient.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.23"/>
+
+                                    <l xml:id="tg511.3.24">»Wann wird der Herr seine Freude sehn?«</l>
+                                    <l xml:id="tg511.3.25">Wenn er befiehlt mit Sinnen Ehrlichen</l>
+                                    <l xml:id="tg511.3.26">Leuten, die's recht verstehn,</l>
+                                    <l xml:id="tg511.3.27">Und läßt sie was gewinnen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.28"/>
+
+                                    <pb n="671" xml:id="tg511.3.29"/>
+                                    <l xml:id="tg511.3.30">»Wer ist ein unbrauchbarer Mann?«</l>
+                                    <l xml:id="tg511.3.31">Der nicht befehlen und auch nicht gehorchen kann.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.32"/>
+
+                                    <l xml:id="tg511.3.33">»Sage, warum dich die Menschen verlassen?«</l>
+                                    <l xml:id="tg511.3.34">Glaubet nicht, daß sie mich deshalb hassen;</l>
+                                    <l xml:id="tg511.3.35">Auch bei mir will sich die Lust verlieren,</l>
+                                    <l xml:id="tg511.3.36">Mit irgend jemand zu konversieren.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.37"/>
+
+                                    <l xml:id="tg511.3.38">So hoch die Nase reicht, da mag's wohl gehn,</l>
+                                    <l xml:id="tg511.3.39">Was aber drüber ist, können sie nicht sehn.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.40"/>
+
+                                    <l xml:id="tg511.3.41">Wie einer ist, so ist sein Gott,</l>
+                                    <l xml:id="tg511.3.42">Darum ward Gott so oft zu Spott.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.43"/>
+
+                                    <l xml:id="tg511.3.44">Geh ich, so wird der Schade größer!</l>
+                                    <l xml:id="tg511.3.45">Bleib ich, so wird es auch nicht besser.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.46"/>
+
+                                    <l xml:id="tg511.3.47">»Sei einmal ehrlich nur:</l>
+                                    <l xml:id="tg511.3.48">Wo findest du in deutscher Literatur</l>
+                                    <l xml:id="tg511.3.49">Die größte Verfänglichkeit?«</l>
+                                    <l xml:id="tg511.3.50">Wir sind von vielen Seiten groß,</l>
+                                    <l xml:id="tg511.3.51">Doch hie und da gibt sich bloß</l>
+                                    <l xml:id="tg511.3.52">Bedauerlichste Unzulänglichkeit.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.53"/>
+
+                                    <l xml:id="tg511.3.54">»Verzeihe mir, du gefällst mir nicht,</l>
+                                    <l xml:id="tg511.3.55">Und schiltst du nicht, so schneidst ein Gesicht,</l>
+                                    <l xml:id="tg511.3.56">Wo sämtliche loben und preisen!«</l>
+                                    <l xml:id="tg511.3.57">Daß, wenn man das eine von vornen bedeckt,</l>
+                                    <l xml:id="tg511.3.58">Das andre bleibt hinten hinausgestreckt,</l>
+                                    <l xml:id="tg511.3.59">Das soll ein Anstand heißen!</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.60"/>
+
+                                    <pb n="672" xml:id="tg511.3.61"/>
+                                    <l xml:id="tg511.3.62">»Sage, wie es dir nur gefällt,</l>
+                                    <l xml:id="tg511.3.63">Solch zerstückeltes Zeug zu treiben?«</l>
+                                    <l xml:id="tg511.3.64">Seht nur hin: für gebildete Welt</l>
+                                    <l xml:id="tg511.3.65">Darf man nichts anders beginnen und schreiben.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.66"/>
+
+                                    <l xml:id="tg511.3.67">»Warum willst du das junge Blut</l>
+                                    <l xml:id="tg511.3.68">So schnöde von dir entfernen?«</l>
+                                    <l xml:id="tg511.3.69">Sie machen's alle hübsch und gut,</l>
+                                    <l xml:id="tg511.3.70">Aber sie wollen nichts lernen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.71"/>
+
+                                    <l xml:id="tg511.3.72">Die holden jungen Geister</l>
+                                    <l xml:id="tg511.3.73">Sind alle von einem Schlag,</l>
+                                    <l xml:id="tg511.3.74">Sie nennen mich ihren Meister</l>
+                                    <l xml:id="tg511.3.75">Und gehn der Nase nach.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.76"/>
+
+                                    <l xml:id="tg511.3.77">Mit seltsamen Gebärden</l>
+                                    <l xml:id="tg511.3.78">Gibt man sich viele Pein,</l>
+                                    <l xml:id="tg511.3.79">Kein Mensch will etwas werden,</l>
+                                    <l xml:id="tg511.3.80">Ein jeder will schon was sein.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.81"/>
+
+                                    <l xml:id="tg511.3.82">»Willst dich nicht gern vom Alten entfernen?</l>
+                                    <l xml:id="tg511.3.83">Hat denn das Neue so gar kein Gewicht?«</l>
+                                    <l xml:id="tg511.3.84">Umlernen müßte man immer, umlernen!</l>
+                                    <l xml:id="tg511.3.85">Und wenn man umlernt, da lebt man nicht.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.86"/>
+
+                                    <l xml:id="tg511.3.87">»Sag uns Jungen doch auch was zuliebe.«</l>
+                                    <l xml:id="tg511.3.88">Nun, daß ich euch Jungen gar herzlichen liebe!</l>
+                                    <l xml:id="tg511.3.89">Denn als ich war als Junge gesetzt,</l>
+                                    <l xml:id="tg511.3.90">Hatt ich mich auch viel lieber als jetzt.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.91"/>
+
+                                    <pb n="673" xml:id="tg511.3.92"/>
+                                    <l xml:id="tg511.3.93">Ich neide nichts, ich laß es gehn</l>
+                                    <l xml:id="tg511.3.94">Und kann mich immer manchem gleich erhalten;</l>
+                                    <l xml:id="tg511.3.95">Zahnreihen aber, junge, neidlos anzusehn,</l>
+                                    <l xml:id="tg511.3.96">Das ist die größte Prüfung mein, des Alten.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.97"/>
+
+                                    <l xml:id="tg511.3.98">Künstler! dich selbst zu adeln,</l>
+                                    <l xml:id="tg511.3.99">Mußt du bescheiden prahlen;</l>
+                                    <l xml:id="tg511.3.100">Laß dich heute loben, morgen tadeln</l>
+                                    <l xml:id="tg511.3.101">Und immer bezahlen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.102"/>
+
+                                    <l xml:id="tg511.3.103">Als Knabe nahm ich mir's zur Lehre,</l>
+                                    <l xml:id="tg511.3.104">Welt sei ein allerliebster Spaß,</l>
+                                    <l xml:id="tg511.3.105">Als wenn es Vater und Mutter wäre;</l>
+                                    <l xml:id="tg511.3.106">Dann – etwas anders fand ich das.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.107"/>
+
+                                    <l xml:id="tg511.3.108">Die klugen Leute gefallen mir nicht</l>
+                                    <l xml:id="tg511.3.109">(Ich tadle mich selbst auch wohl zuweilen):</l>
+                                    <l xml:id="tg511.3.110">Sie heißen das Vorsicht,</l>
+                                    <l xml:id="tg511.3.111">Wenn sie sich übereilen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.112"/>
+
+                                    <l xml:id="tg511.3.113">»Anders lesen Knaben den Terenz,</l>
+                                    <l xml:id="tg511.3.114">Anders Grotius.«</l>
+                                    <l xml:id="tg511.3.115">Mich Knaben ärgerte die Sentenz,</l>
+                                    <l xml:id="tg511.3.116">Die ich nun gelten lassen muß.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.117"/>
+
+                                    <l xml:id="tg511.3.118">»So widerstrebe! Das wird dich adeln;</l>
+                                    <l xml:id="tg511.3.119">Willst vor der Feierstunde schon ruhn?«</l>
+                                    <l xml:id="tg511.3.120">Ich bin zu alt, um etwas zu tadeln,</l>
+                                    <l xml:id="tg511.3.121">Doch immer jung genug, etwas zu tun.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.122"/>
+
+                                    <pb n="674" xml:id="tg511.3.123"/>
+                                    <l xml:id="tg511.3.124">»Du bist ein wunderlicher Mann,</l>
+                                    <l xml:id="tg511.3.125">Warum verstummst du vor diesem Gesicht?«</l>
+                                    <l xml:id="tg511.3.126">Was ich nicht loben kann,</l>
+                                    <l xml:id="tg511.3.127">Davon sprech ich nicht.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.128"/>
+
+                                    <l xml:id="tg511.3.129">»Bei mancherlei Geschäftigkeit</l>
+                                    <l xml:id="tg511.3.130">Hast dich ungeschickt benommen.«</l>
+                                    <l xml:id="tg511.3.131">Ohne jene Verrücktheit</l>
+                                    <l xml:id="tg511.3.132">Wär ich nicht so weit gekommen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.133"/>
+
+                                    <l xml:id="tg511.3.134">»Laß doch, was du halb vollbracht,</l>
+                                    <l xml:id="tg511.3.135">Mich und andre kennen!«</l>
+                                    <l xml:id="tg511.3.136">Weil es uns nur irremacht,</l>
+                                    <l xml:id="tg511.3.137">Wollen wir's verbrennen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.138"/>
+
+                                    <l xml:id="tg511.3.139">»Willst du uns denn nicht auch was gönnen:</l>
+                                    <l xml:id="tg511.3.140">Kannst ja, was mancher andre kann.«</l>
+                                    <l xml:id="tg511.3.141">Wenn sie mich heute verbrauchen können,</l>
+                                    <l xml:id="tg511.3.142">Dann bin ich ihnen ein rechter Mann.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.143"/>
+
+                                    <l xml:id="tg511.3.144">Das alles ist nicht mein Bereich –</l>
+                                    <l xml:id="tg511.3.145">Was soll ich mir viel Sorge machen?</l>
+                                    <l xml:id="tg511.3.146">Die Fische schwimmen glatt im Teich</l>
+                                    <l xml:id="tg511.3.147">Und kümmern sich nicht um den Nachen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.148"/>
+
+                                    <l xml:id="tg511.3.149">Mit der Welt muß niemand leben,</l>
+                                    <l xml:id="tg511.3.150">Als wer sie brauchen will;</l>
+                                    <l xml:id="tg511.3.151">Ist er brauchbar und still,</l>
+                                    <l xml:id="tg511.3.152">Sollt er sich lieber dem Teufel ergeben</l>
+                                    <l xml:id="tg511.3.153">Als zu tun, was sie will.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.154"/>
+
+                                    <pb n="675" xml:id="tg511.3.155"/>
+                                    <l xml:id="tg511.3.156">»Was lehr ich dich vor allen Dingen?«</l>
+                                    <l xml:id="tg511.3.157">Möchte über meinen eignen Schatten springen!</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.158"/>
+
+                                    <l xml:id="tg511.3.159">Sie möchten gerne frei sein,</l>
+                                    <l xml:id="tg511.3.160">Lange kann das einerlei sein;</l>
+                                    <l xml:id="tg511.3.161">Wo es aber drunter und drüber geht,</l>
+                                    <l xml:id="tg511.3.162">Ein Heiliger wird angefleht,</l>
+                                    <l xml:id="tg511.3.163">Und wollen die alten uns nicht befreien,</l>
+                                    <l xml:id="tg511.3.164">So macht man sich behend einen neuen;</l>
+                                    <l xml:id="tg511.3.165">Im Schiffbruch jammert jedermann,</l>
+                                    <l xml:id="tg511.3.166">Daß keiner mehr als der andre kann.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.167"/>
+
+                                    <l xml:id="tg511.3.168">Grenzlose Lebenspein,</l>
+                                    <l xml:id="tg511.3.169">Fast, fast erdrückt sie mich!</l>
+                                    <l xml:id="tg511.3.170">Das wollen alle Herren sein,</l>
+                                    <l xml:id="tg511.3.171">Und keiner ist Herr von sich.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.172"/>
+
+                                    <l xml:id="tg511.3.173">Und wenn man auch den Tyrannen ersticht,</l>
+                                    <l xml:id="tg511.3.174">Ist immer noch viel zu verlieren.</l>
+                                    <l xml:id="tg511.3.175">Sie gönnten Cäsarn das Reich nicht</l>
+                                    <l xml:id="tg511.3.176">Und wußten's nicht zu regieren.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.177"/>
+
+                                    <l xml:id="tg511.3.178">Warum mir aber in neuster Welt</l>
+                                    <l xml:id="tg511.3.179">Anarchie gar so wohl gefällt?</l>
+                                    <l xml:id="tg511.3.180">Ein jeder lebt nach seinem Sinn,</l>
+                                    <l xml:id="tg511.3.181">Das ist nun also auch mein Gewinn.</l>
+                                    <l xml:id="tg511.3.182">Ich laß einem jeden sein Bestreben,</l>
+                                    <l xml:id="tg511.3.183">Um auch nach meinem Sinne zu leben.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.184"/>
+
+                                    <pb n="676" xml:id="tg511.3.185"/>
+                                    <l xml:id="tg511.3.186">Da kann man frank und fröhlich leben,</l>
+                                    <l xml:id="tg511.3.187">Niemanden wird recht gegeben,</l>
+                                    <l xml:id="tg511.3.188">Dafür gibt man wieder niemand recht,</l>
+                                    <l xml:id="tg511.3.189">Macht's eben gut, macht's eben schlecht;</l>
+                                    <l xml:id="tg511.3.190">Im ganzen aber, wie man sieht,</l>
+                                    <l xml:id="tg511.3.191">Im Weltlauf immer doch etwas geschieht.</l>
+                                    <l xml:id="tg511.3.192">Was Kluges, Dummes auch je geschah,</l>
+                                    <l xml:id="tg511.3.193">Das nennt man Welthistoria;</l>
+                                    <l xml:id="tg511.3.194">Und die Herrn Bredows künft'ger Zeiten</l>
+                                    <l xml:id="tg511.3.195">Werden daraus Tabellen bereiten,</l>
+                                    <l xml:id="tg511.3.196">Darin studiert die Jugend mit Fleiß,</l>
+                                    <l xml:id="tg511.3.197">Was sie nie zu begreifen weiß.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.198"/>
+
+                                    <l xml:id="tg511.3.199">Wie es in der Welt so geht –</l>
+                                    <l xml:id="tg511.3.200">Weiß man, was geschah?</l>
+                                    <l xml:id="tg511.3.201">Und was auf dem Papiere steht,</l>
+                                    <l xml:id="tg511.3.202">Das steht eben da.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.203"/>
+
+                                    <l xml:id="tg511.3.204">Das Weltregiment – über Nacht</l>
+                                    <l xml:id="tg511.3.205">Seine Formen hab ich durchgedacht:</l>
+                                    <l xml:id="tg511.3.206">Den hehren Despoten lieb ich im Krieg,</l>
+                                    <l xml:id="tg511.3.207">Verständigen Monarchen gleich hinter dem Sieg;</l>
+                                    <l xml:id="tg511.3.208">Dann wünscht ich jedoch, daß alle die Trauten</l>
+                                    <l xml:id="tg511.3.209">Sich nicht gleich neben und mit ihm erbauten.</l>
+                                    <l xml:id="tg511.3.210">Und wie ich das hoffe, so kommt mir die Menge,</l>
+                                    <l xml:id="tg511.3.211">Nimmt hüben und drüben mich derb ins Gedränge;</l>
+                                    <l xml:id="tg511.3.212">Von da verlier ich alle Spur. –</l>
+                                    <l xml:id="tg511.3.213">Was will mir Gott für Lehre daraus gönnen?</l>
+                                    <l xml:id="tg511.3.214">Daß wir uns eben alle nur</l>
+                                    <l xml:id="tg511.3.215">Auf kurze Zeit regieren können.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.216"/>
+
+                                    <pb n="677" xml:id="tg511.3.217"/>
+                                    <l xml:id="tg511.3.218">Ich tadl' euch nicht,</l>
+                                    <l xml:id="tg511.3.219">Ich lob euch nicht,</l>
+                                    <l xml:id="tg511.3.220">Aber ich spaße;</l>
+                                    <l xml:id="tg511.3.221">Dem klugen Wicht</l>
+                                    <l xml:id="tg511.3.222">Fährt's ins Gesicht</l>
+                                    <l xml:id="tg511.3.223">Und in die Nase.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.224"/>
+
+                                    <l xml:id="tg511.3.225">Und wenn er ganz gewaltig niest,</l>
+                                    <l xml:id="tg511.3.226">Wer weiß, was dann daher entsprießt</l>
+                                    <l xml:id="tg511.3.227">Und was er alles mache:</l>
+                                    <l xml:id="tg511.3.228">Besinnung aber hinterdrein,</l>
+                                    <l xml:id="tg511.3.229">Verstand, Vernunft, wo möglich rein,</l>
+                                    <l xml:id="tg511.3.230">Das ist die rechte Sache.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.231"/>
+
+                                    <l xml:id="tg511.3.232">Soll man euch immer und immer beplappern?</l>
+                                    <l xml:id="tg511.3.233">Gewinnt ihr nie einen freien Blick?</l>
+                                    <l xml:id="tg511.3.234">Sie frieren, daß ihnen die Zähne klappern,</l>
+                                    <l xml:id="tg511.3.235">Das heißen sie nachher Kritik.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.236"/>
+
+                                    <l xml:id="tg511.3.237">»Du sagst gar wunderliche Dinge!«</l>
+                                    <l xml:id="tg511.3.238">Beschaut sie nur, sie sind geringe;</l>
+                                    <l xml:id="tg511.3.239">Wird Vers und Reim denn angeklagt,</l>
+                                    <l xml:id="tg511.3.240">Wenn Leben und Prosa das Tollste sagt?</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.241"/>
+
+                                    <l xml:id="tg511.3.242">»Du gehst so freien Angesichts,</l>
+                                    <l xml:id="tg511.3.243">Mit muntern, offnen Augen!«</l>
+                                    <l xml:id="tg511.3.244">Ihr tauget eben alle nichts,</l>
+                                    <l xml:id="tg511.3.245">Warum sollt ich was taugen?</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.246"/>
+
+                                    <l xml:id="tg511.3.247">»Warum bist du so hochmütig?</l>
+                                    <l xml:id="tg511.3.248">Hast sonst nicht so die Leute gescholten!«</l>
+                                    <pb n="678" xml:id="tg511.3.249"/>
+                                    <l xml:id="tg511.3.250">Wäre sehr gerne demütig,</l>
+                                    <l xml:id="tg511.3.251">Wenn sie mich nur so lassen wollten.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.252"/>
+
+                                    <l xml:id="tg511.3.253">Wenn ich dumm bin, lassen sie mich gelten;</l>
+                                    <l xml:id="tg511.3.254">Wenn ich recht hab, wollen sie mich schelten.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.255"/>
+
+                                    <l xml:id="tg511.3.256">Überzeugung soll mir niemand rauben,</l>
+                                    <l xml:id="tg511.3.257">Wer's besser weiß, der mag es glauben.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.258"/>
+
+                                    <l xml:id="tg511.3.259">Dem ist es schlecht in seiner Haut,</l>
+                                    <l xml:id="tg511.3.260">Der in seinen eignen Busen schaut.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.261"/>
+
+                                    <l xml:id="tg511.3.262">»Wohin wir bei unsern Gebresten</l>
+                                    <l xml:id="tg511.3.263">Uns im Augenblick richten sollen?«</l>
+                                    <l xml:id="tg511.3.264">Denke nur immer an die Besten,</l>
+                                    <l xml:id="tg511.3.265">Sie mögen stecken, wo sie wollen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.266"/>
+
+                                    <l xml:id="tg511.3.267">Den Reichtum muß der Neid beteuern:</l>
+                                    <l xml:id="tg511.3.268">Denn er kreucht nie in leere Scheuern.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.269"/>
+
+                                    <l xml:id="tg511.3.270">Soll der Neider zerplatzen,</l>
+                                    <l xml:id="tg511.3.271">Begib dich deiner Fratzen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.272"/>
+
+                                    <l xml:id="tg511.3.273">Soll es reichlich zu dir fließen,</l>
+                                    <l xml:id="tg511.3.274">Reichlich andre laß genießen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.275"/>
+
+                                    <l xml:id="tg511.3.276">»Ist dein Geschenk wohl angekommen?«</l>
+                                    <l xml:id="tg511.3.277">Sie haben es eben nicht übelgenommen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.278"/>
+
+                                    <pb n="679" xml:id="tg511.3.279"/>
+                                    <l xml:id="tg511.3.280">Der Teufel! sie ist nicht gering,</l>
+                                    <l xml:id="tg511.3.281">Wie ich von weitem spüre;</l>
+                                    <l xml:id="tg511.3.282">Nun schelten sie das arme Ding,</l>
+                                    <l xml:id="tg511.3.283">Daß sie euch so verführe.</l>
+                                    <l xml:id="tg511.3.284">Erinnert euch, verfluchtes Pack,</l>
+                                    <l xml:id="tg511.3.285">Des paradiesischen Falles!</l>
+                                    <l xml:id="tg511.3.286">Hat euch die Schöne nur im Sack,</l>
+                                    <l xml:id="tg511.3.287">So gilt sie euch für alles.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.288"/>
+
+                                    <l xml:id="tg511.3.289">Wenn dir's bei uns nun nicht gefällt,</l>
+                                    <l xml:id="tg511.3.290">So geh in deine östliche Welt.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.291"/>
+
+                                    <l xml:id="tg511.3.292">Ich wünsche mir eine hübsche Frau,</l>
+                                    <l xml:id="tg511.3.293">Die nicht alles nähme gar zu genau,</l>
+                                    <l xml:id="tg511.3.294">Doch aber zugleich am besten verstände,</l>
+                                    <l xml:id="tg511.3.295">Wie ich mich selbst am besten befände.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.296"/>
+
+                                    <l xml:id="tg511.3.297">Wäre Gott und <hi rend="italic" xml:id="tg511.3.297.1">eine</hi>,</l>
+                                    <l xml:id="tg511.3.298">So wäre mein Lied nicht kleine.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.299"/>
+
+                                    <l xml:id="tg511.3.300">Gott hab ich und die Kleine</l>
+                                    <l xml:id="tg511.3.301">Im Lied erhalten reine.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.302"/>
+
+                                    <l xml:id="tg511.3.303">So laßt mir das Gedächtnis</l>
+                                    <l xml:id="tg511.3.304">Als fröhliches Vermächtnis.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.305"/>
+
+                                    <l xml:id="tg511.3.306">»Sie betrog dich geraume Zeit,</l>
+                                    <l xml:id="tg511.3.307">Nun siehst du wohl, sie war ein Schein.«</l>
+                                    <l xml:id="tg511.3.308">Was weißt du denn von Wirklichkeit;</l>
+                                    <l xml:id="tg511.3.309">War sie drum weniger mein?</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.310"/>
+
+                                    <pb n="680" xml:id="tg511.3.311"/>
+                                    <l xml:id="tg511.3.312">»Betrogen bist du zum Erbarmen,</l>
+                                    <l xml:id="tg511.3.313">Nun läßt sie dich allein!«</l>
+                                    <l xml:id="tg511.3.314">Und war es nur ein Schein:</l>
+                                    <l xml:id="tg511.3.315">Sie lag in meinen Armen,</l>
+                                    <l xml:id="tg511.3.316">War sie drum weniger mein?</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.317"/>
+
+                                    <l xml:id="tg511.3.318">Gern hören wir allerlei gute Lehr,</l>
+                                    <l xml:id="tg511.3.319">Doch Schmähen und Schimpfen noch viel mehr.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.320"/>
+
+                                    <l xml:id="tg511.3.321">Glaube dich nicht allzu gut gebettet;</l>
+                                    <l xml:id="tg511.3.322">Ein gewarnter Mann ist halb gerettet.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.323"/>
+
+                                    <l xml:id="tg511.3.324">Wein macht munter geistreichen Mann,</l>
+                                    <l xml:id="tg511.3.325">Weihrauch ohne Feuer man nicht riechen kann.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.326"/>
+
+                                    <l xml:id="tg511.3.327">Willst du Weihrauchs Geruch erregen,</l>
+                                    <l xml:id="tg511.3.328">Feurige Kohlen mußt unterlegen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.329"/>
+
+                                    <l xml:id="tg511.3.330">Wem ich ein besser Schicksal gönnte?</l>
+                                    <l xml:id="tg511.3.331">Es sind die erkünstelten Talente:</l>
+                                    <l xml:id="tg511.3.332">An diesem, an jenem, am Besten gebricht's,</l>
+                                    <l xml:id="tg511.3.333">Sie mühen und zwängen und kommen zu nichts.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.334"/>
+
+                                    <l xml:id="tg511.3.335">»Sage deutlicher, wie und wenn;</l>
+                                    <l xml:id="tg511.3.336">Du bist uns nicht immer klar.«</l>
+                                    <l xml:id="tg511.3.337">Gute Leute, wißt ihr denn,</l>
+                                    <l xml:id="tg511.3.338">Ob ich mir's selber war?</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.339"/>
+
+                                    <pb n="681" xml:id="tg511.3.340"/>
+                                    <l xml:id="tg511.3.341">»Wir quälen uns immerfort</l>
+                                    <l xml:id="tg511.3.342">In des Irrtums Banden.«</l>
+                                    <l xml:id="tg511.3.343">Wie manches verständliche Wort</l>
+                                    <l xml:id="tg511.3.344">Habt ihr mißverstanden.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.345"/>
+
+                                    <l xml:id="tg511.3.346">Einem unverständigen Wort</l>
+                                    <l xml:id="tg511.3.347">Habt ihr Sinn geliehen;</l>
+                                    <l xml:id="tg511.3.348">Und so geht's immer fort;</l>
+                                    <l xml:id="tg511.3.349">Verzeiht, euch wird verziehen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.350"/>
+
+                                    <l xml:id="tg511.3.351">Nehmt nur mein Leben hin, in Bausch</l>
+                                    <l xml:id="tg511.3.352">Und Bogen, wie ich's führe;</l>
+                                    <l xml:id="tg511.3.353">Andre verschlafen ihren Rausch,</l>
+                                    <l xml:id="tg511.3.354">Meiner steht auf dem Papiere.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.355"/>
+
+                                    <l xml:id="tg511.3.356">Besser betteln als borgen!</l>
+                                    <l xml:id="tg511.3.357">Warum sollen zwei denn sorgen?</l>
+                                    <l xml:id="tg511.3.358">Wenn einer sorgt und redlich denkt,</l>
+                                    <l xml:id="tg511.3.359">Kommt andrer wohl und heiter und schenkt.</l>
+                                    <l xml:id="tg511.3.360">Das sind die besten Intressen,</l>
+                                    <l xml:id="tg511.3.361">Die Schuldner und Gläubiger vergessen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.362"/>
+
+                                    <l xml:id="tg511.3.363">»Ich bin ein armer Mann,</l>
+                                    <l xml:id="tg511.3.364">Schätze mich aber nicht gering:</l>
+                                    <l xml:id="tg511.3.365">Die Armut ist ein ehrlich Ding,</l>
+                                    <l xml:id="tg511.3.366">Wer mit umgehn kann.«</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.367"/>
+
+                                    <l xml:id="tg511.3.368">Erlauchte Bettler hab ich gekannt,</l>
+                                    <l xml:id="tg511.3.369">Künstler und Philosophen genannt;</l>
+                                    <l xml:id="tg511.3.370">Doch wüßt ich niemand, ungeprahlt,</l>
+                                    <l xml:id="tg511.3.371">Der seine Zeche besser bezahlt.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.372"/>
+
+                                    <pb n="682" xml:id="tg511.3.373"/>
+                                    <l xml:id="tg511.3.374">»Was hat dich nur von uns entfernt?«</l>
+                                    <l xml:id="tg511.3.375">Hab immer den Plutarch gelesen.</l>
+                                    <l xml:id="tg511.3.376">»Was hast du denn dabei gelernt?«</l>
+                                    <l xml:id="tg511.3.377">Sind eben alles Menschen gewesen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.378"/>
+
+                                    <l xml:id="tg511.3.379">Cato wollte wohl andre strafen;</l>
+                                    <l xml:id="tg511.3.380">Selbander mocht er gerne schlafen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.381"/>
+
+                                    <l xml:id="tg511.3.382">Deshalb er sich zur Unzeit</l>
+                                    <l xml:id="tg511.3.383">Mit Schwiegertochter und Sohn entzweit,</l>
+                                    <l xml:id="tg511.3.384">Auch eine junge Frau genommen,</l>
+                                    <l xml:id="tg511.3.385">Welches ihm gar nicht wohl bekommen;</l>
+                                    <l xml:id="tg511.3.386">Wie Kaiser Friedrich der Letzte</l>
+                                    <l xml:id="tg511.3.387">Väterlich auseinandersetzte.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.388"/>
+
+                                    <l xml:id="tg511.3.389">»Was willst du, redend zur Menge,</l>
+                                    <l xml:id="tg511.3.390">Dich selbst fürtrefflich preisen?«</l>
+                                    <l xml:id="tg511.3.391">Cato selbst war ruhmredig, der Strenge,</l>
+                                    <l xml:id="tg511.3.392">Plutarch will's ihm gar ernst verweisen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.393"/>
+
+                                    <l xml:id="tg511.3.394">Man könnt erzogene Kinder gebären,</l>
+                                    <l xml:id="tg511.3.395">Wenn die Eltern erzogen wären.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.396"/>
+
+                                    <l xml:id="tg511.3.397">Was ich in meinem Haus ertrag,</l>
+                                    <l xml:id="tg511.3.398">Das sieht ein Fremder am ersten Tag;</l>
+                                    <l xml:id="tg511.3.399">Doch ändert er sich's nicht zuliebe,</l>
+                                    <l xml:id="tg511.3.400">Und wenn er hundert Jahre bliebe.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.401"/>
+
+                                    <l xml:id="tg511.3.402">Wie auch die Welt sich stellen mag,</l>
+                                    <l xml:id="tg511.3.403">Der Tag immer belügt den Tag.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.404"/>
+
+                                    <pb n="683" xml:id="tg511.3.405"/>
+                                    <l xml:id="tg511.3.406">Dagegen man auch nicht gerne hört,</l>
+                                    <l xml:id="tg511.3.407">Wenn der Tag den Tag zerstört.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.408"/>
+
+                                    <l xml:id="tg511.3.409">Ich bin euch sämtlichen zur Last,</l>
+                                    <l xml:id="tg511.3.410">Einigen auch sogar verhaßt;</l>
+                                    <l xml:id="tg511.3.411">Das hat aber gar nichts zu sagen:</l>
+                                    <l xml:id="tg511.3.412">Denn mir behagt's in alten Tagen,</l>
+                                    <l xml:id="tg511.3.413">So wie es mir in jungen behagte,</l>
+                                    <l xml:id="tg511.3.414">Daß ich nach alt und jung nicht fragte.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.415"/>
+
+                                    <l xml:id="tg511.3.416">Mit sich selbst zu Rate gehn,</l>
+                                    <l xml:id="tg511.3.417">Immer wird's am besten stehn:</l>
+                                    <l xml:id="tg511.3.418">Gern im Freien, gern zu Haus,</l>
+                                    <l xml:id="tg511.3.419">Lausche da und dort hinaus,</l>
+                                    <l xml:id="tg511.3.420">Und kontrolliere dich für und für,</l>
+                                    <l xml:id="tg511.3.421">Da horchen alt und jung nach dir.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.422"/>
+
+                                    <l xml:id="tg511.3.423">Die Xenien, sie wandeln zahm,</l>
+                                    <l xml:id="tg511.3.424">Der Dichter hält sich nicht für lahm;</l>
+                                    <l xml:id="tg511.3.425">Belieben euch aber geschärftere Sachen,</l>
+                                    <l xml:id="tg511.3.426">So wartet, bis die wilden erwachen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.427"/>
+
+                                    <l xml:id="tg511.3.428">Sibyllinisch mit meinem Gesicht</l>
+                                    <l xml:id="tg511.3.429">Soll ich im Alter prahlen!</l>
+                                    <l xml:id="tg511.3.430">Je mehr es ihm an Fülle gebricht,</l>
+                                    <l xml:id="tg511.3.431">Desto öfter wollen sie's malen!</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.432"/>
+
+                                    <l xml:id="tg511.3.433">»Ist's in der Näh? Kam's aus der Ferne?</l>
+                                    <l xml:id="tg511.3.434">Was beugt dich Heute so schwer?«</l>
+                                    <l xml:id="tg511.3.435">Ich spaßte wohl am Abend gerne,</l>
+                                    <l xml:id="tg511.3.436">Wenn nur der Tag nicht so ernsthaft wär.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.437"/>
+
+                                    <pb n="684" xml:id="tg511.3.438"/>
+                                    <l xml:id="tg511.3.439">Spricht man mit jedermann,</l>
+                                    <l xml:id="tg511.3.440">Da hört man keinen;</l>
+                                    <l xml:id="tg511.3.441">Stets wird ein andrer Mann</l>
+                                    <l xml:id="tg511.3.442">Auch anders meinen;</l>
+                                    <l xml:id="tg511.3.443">Was wäre Rat sodann,</l>
+                                    <l xml:id="tg511.3.444">Sie zu verstehen?</l>
+                                    <l xml:id="tg511.3.445">Kennst du nicht Mann für Mann,</l>
+                                    <l xml:id="tg511.3.446">Es wird nicht gehen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.447"/>
+
+                                    <l xml:id="tg511.3.448">Gott hat die Gradheit selbst ans Herz genommen,</l>
+                                    <l xml:id="tg511.3.449">Auf gradem Weg ist niemand umgekommen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.450"/>
+
+                                    <l xml:id="tg511.3.451">Wirst du die frommen Wahrheitswege gehen,</l>
+                                    <l xml:id="tg511.3.452">Dich selbst und andere triegst du nie.</l>
+                                    <l xml:id="tg511.3.453">Die Frömmelei läßt Falsches auch bestehen,</l>
+                                    <l xml:id="tg511.3.454">Derwegen haß ich sie.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.455"/>
+
+                                    <l xml:id="tg511.3.456">Du sehnst dich, weit hinaus zu wandern,</l>
+                                    <l xml:id="tg511.3.457">Bereitest dich zu raschem Flug;</l>
+                                    <l xml:id="tg511.3.458">Dir selbst sei treu und treu den andern,</l>
+                                    <l xml:id="tg511.3.459">Dann ist die Enge weit genug.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.460"/>
+
+                                    <l xml:id="tg511.3.461">Halte dich nur im stillen rein,</l>
+                                    <l xml:id="tg511.3.462">Und laß es um dich wettern;</l>
+                                    <l xml:id="tg511.3.463">Je mehr du fühlst, ein Mensch zu sein,</l>
+                                    <l xml:id="tg511.3.464">Desto ähnlicher bist du den Göttern.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.465"/>
+
+                                    <l xml:id="tg511.3.466">Was hätte man vom Zeitungstraum,</l>
+                                    <l xml:id="tg511.3.467">Der leidigen Ephemere,</l>
+                                    <l xml:id="tg511.3.468">Wenn es uns nicht im stillen Raum</l>
+                                    <l xml:id="tg511.3.469">Noch ganz behaglich wäre!</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.470"/>
+
+                                    <pb n="685" xml:id="tg511.3.471"/>
+                                    <l xml:id="tg511.3.472">Das Schlimmste, was uns widerfährt,</l>
+                                    <l xml:id="tg511.3.473">Das werden wir vom Tag gelehrt.</l>
+                                    <l xml:id="tg511.3.474">Wer in dem Gestern Heute sah,</l>
+                                    <l xml:id="tg511.3.475">Dem geht das Heute nicht allzu nah,</l>
+                                    <l xml:id="tg511.3.476">Und wer im Heute sieht das Morgen,</l>
+                                    <l xml:id="tg511.3.477">Der wird sich rühren, wird nicht sorgen.</l>
+                                 </lg>
+                                 <lg>
+                                    <lb xml:id="tg511.3.478"/>
+
+                                    <l xml:id="tg511.3.479">Liegt dir Gestern klar und offen,</l>
+                                    <l xml:id="tg511.3.480">Wirkst du heute kräftig frei;</l>
+                                    <l xml:id="tg511.3.481">Kannst auch auf ein Morgen hoffen,</l>
+                                    <l xml:id="tg511.3.482">Das nicht minder glücklich sei.</l>
+                                 </lg>
+                                 <lb xml:id="tg511.3.483"/>
+                                 <pb n="686" xml:id="tg511.3.484"/>
+                              </div>
+                           </div>
+                        </body>
+                  </text>
+               </TEI>
