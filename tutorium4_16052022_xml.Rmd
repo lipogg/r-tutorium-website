@@ -22,7 +22,7 @@ Formale Definition ([Wikipedia](https://de.wikipedia.org/wiki/Extensible_Markup_
 TEI = Text Encoding Initiative </br> 
 Formale Definition ([Wikipedia](https://de.wikipedia.org/wiki/Text_Encoding_Initiative)): eine 1987 gegründete Organisation (seit 2000 als TEI-Konsortium organisiert) und ein gleichnamiges Dokumentenformat zur Kodierung und zum Austausch von Texten, das diese entwickelt hat und weiterentwickelt. [...] TEI hat sich zu einem De-facto-Standard innerhalb der Geisteswissenschaften entwickelt, wo es zum Beispiel zur Kodierung von gedruckten Werken (Editionswissenschaft) oder zur Auszeichnung von sprachlichen Informationen (Linguistik) in Texten verwendet wird.
 
-## 2. Wie sind XML-TEI Dokumente aufgebaut? 
+## 2. Aufbau von XML-TEI Dokumenten
 
 XML-Dokumente sind streng hierarchisch aufgebaut und bestehen aus verschiedenen, in einer Baumstruktur ineinander verschachtelten Elementen. Diese Baumstruktur bedeutet, dass jedes Element, das "geöffnet" wird, auch "geschlossen" werden muss, es besteht also aus einem Öffnungstag (oder "opening tag") und einem Schließtag (oder "closing tag"). Elemente können Fließtext, Attribute oder auch weitere Elemente enthalten; sie können aber auch leer sein. Attribute werden direkt in den Öffnungstag hineingeschrieben und definieren Eigenschaften des entsprechenden Elements.
 
@@ -122,7 +122,7 @@ Um zu überprüfen, ob ein XML-Dokument valide ist ("Validierung"), kann das Dok
   + Alexander von Humboldt digitale Edition: https://edition-humboldt.de/
 
 
-## 5. Wie kann man XML-Dateien bearbeiten, durchsuchen und einlesen?
+## 5. XML-Dateien bearbeiten, durchsuchen und einlesen
 
 Zur Auszeichnung von Texten in XML-TEI, sowie zur Erstellung und Bearbeitung von XML-Dateien können spezialisierte Editoren wie der [oXygen XML Editor](https://www.zedat.fu-berlin.de/Benutzerservice/OXygenXMLEditor) verwendet werden. Daneben gibt es für die meisten Programmiersprachen Pakete wie beispielsweise das R [xml2](https://cran.r-project.org/web/packages/xml2/xml2.pdf) Paket, die Funktionen speziell zum Einlesen, Erstellen, Bearbeiten und Schreiben von XML-Dateien enthalten. 
 
@@ -144,3 +144,12 @@ Zur Suche in Zeichenketten (character strings) haben wir bereits Reguläre Ausdr
 * Folien zum Vortrag "Einführung in die Textauszeichnung mit TEI" von Agnes Brauer, Universitätsbibliothek Frankfurt: https://moodle.studiumdigitale.uni-frankfurt.de/moodle/pluginfile.php/77425/mod_resource/content/1/DH%40ubffmTEI_Brauer.pdf
 
 ## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/04_xml/skripte/tutorium4_160522_uebung.R)
+
+download_link(
+  link = "https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/04_xml/skripte/tutorium4_160522_uebung.R",
+  button_label = "Skript zur Übung",
+  button_type = "danger",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)
