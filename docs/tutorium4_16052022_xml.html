@@ -386,8 +386,8 @@ div.tocify {
 <p>XML = Extensible Markup Language </br> Formale Definition (<a href="https://de.wikipedia.org/wiki/Extensible_Markup_Language">Wikipedia</a>): Auszeichnungssprache zur Darstellung hierarchisch strukturierter Daten im Format einer Textdatei, die sowohl von Menschen als auch von Maschinen lesbar ist.</p>
 <p>TEI = Text Encoding Initiative </br> Formale Definition (<a href="https://de.wikipedia.org/wiki/Text_Encoding_Initiative">Wikipedia</a>): eine 1987 gegründete Organisation (seit 2000 als TEI-Konsortium organisiert) und ein gleichnamiges Dokumentenformat zur Kodierung und zum Austausch von Texten, das diese entwickelt hat und weiterentwickelt. […] TEI hat sich zu einem De-facto-Standard innerhalb der Geisteswissenschaften entwickelt, wo es zum Beispiel zur Kodierung von gedruckten Werken (Editionswissenschaft) oder zur Auszeichnung von sprachlichen Informationen (Linguistik) in Texten verwendet wird.</p>
 </div>
-<div id="wie-sind-xml-tei-dokumente-aufgebaut" class="section level2">
-<h2>2. Wie sind XML-TEI Dokumente aufgebaut?</h2>
+<div id="aufbau-von-xml-tei-dokumenten" class="section level2">
+<h2>2. Aufbau von XML-TEI Dokumenten</h2>
 <p>XML-Dokumente sind streng hierarchisch aufgebaut und bestehen aus verschiedenen, in einer Baumstruktur ineinander verschachtelten Elementen. Diese Baumstruktur bedeutet, dass jedes Element, das “geöffnet” wird, auch “geschlossen” werden muss, es besteht also aus einem Öffnungstag (oder “opening tag”) und einem Schließtag (oder “closing tag”). Elemente können Fließtext, Attribute oder auch weitere Elemente enthalten; sie können aber auch leer sein. Attribute werden direkt in den Öffnungstag hineingeschrieben und definieren Eigenschaften des entsprechenden Elements.</p>
 <p>Aufbau eines XML-Dokuments:</p>
 <pre class="xml"><code>&lt;!-- Prolog: optional; definiert die verwendete XML-Version --&gt;
@@ -472,8 +472,8 @@ div.tocify {
 </ul></li>
 </ul>
 </div>
-<div id="wie-kann-man-xml-dateien-bearbeiten-durchsuchen-und-einlesen" class="section level2">
-<h2>5. Wie kann man XML-Dateien bearbeiten, durchsuchen und einlesen?</h2>
+<div id="xml-dateien-bearbeiten-durchsuchen-und-einlesen" class="section level2">
+<h2>5. XML-Dateien bearbeiten, durchsuchen und einlesen</h2>
 <p>Zur Auszeichnung von Texten in XML-TEI, sowie zur Erstellung und Bearbeitung von XML-Dateien können spezialisierte Editoren wie der <a href="https://www.zedat.fu-berlin.de/Benutzerservice/OXygenXMLEditor">oXygen XML Editor</a> verwendet werden. Daneben gibt es für die meisten Programmiersprachen Pakete wie beispielsweise das R <a href="https://cran.r-project.org/web/packages/xml2/xml2.pdf">xml2</a> Paket, die Funktionen speziell zum Einlesen, Erstellen, Bearbeiten und Schreiben von XML-Dateien enthalten.</p>
 <p>Zur Suche in Zeichenketten (character strings) haben wir bereits Reguläre Ausdrücke kennengelernt. Um bestimmte Elemente eines XML-Dokuments oder deren Attribute zu adressieren oder um Informationen zu finden, kann dagegen die Abfragesprache <a href="https://de.wikipedia.org/wiki/XPath">XPath</a> (=XML Path Language) verwendet werden. Sowohl oXygen als auch xml2 unterstützen solche XPath Abfragen.</p>
 </div>
@@ -496,6 +496,7 @@ div.tocify {
 </div>
 <div id="skript-zur-übung" class="section level2">
 <h2><a href="https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/04_xml/skripte/tutorium4_160522_uebung.R">Skript zur Übung</a></h2>
+<p>download_link( link = “<a href="https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/04_xml/skripte/tutorium4_160522_uebung.R" class="uri">https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/04_xml/skripte/tutorium4_160522_uebung.R</a>”, button_label = “Skript zur Übung”, button_type = “danger”, has_icon = TRUE, icon = “fa fa-save”, self_contained = FALSE )</p>
 </div>
 
 
