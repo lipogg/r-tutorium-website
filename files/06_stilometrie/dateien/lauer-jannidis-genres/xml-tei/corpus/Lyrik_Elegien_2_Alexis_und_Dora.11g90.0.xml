@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://textgrid.info/namespaces/metadata/core/2010" xmlns:tgl="http://textgrid.info/namespaces/metadata/language/2010" xmlns:tgs="http://textgrid.info/namespaces/metadata/script/2010" xmlns:tgr="http://textgrid.info/namespaces/metadata/agent/2010" xml:id="tg141" n="/Literatur/M/Goethe, Johann Wolfgang/Gedichte/Gedichte (Ausgabe letzter Hand. 1827)/Elegien 2/Alexis und Dora">
+                  <teiHeader xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:a="http://www.textgrid.info/namespace/digibib/authors">
+      <fileDesc>
+         <titleStmt>
+            <title>Alexis und Dora</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="handle">hdl:11858/00-1734-0000-0006-6613-7</idno><idno type="TextGridUri">textgrid:11g90.0</idno><availability>
+               
+               <p> Der annotierte Datenbestand der Digitalen Bibliothek inklusive Metadaten sowie
+                                   davon einzeln zugängliche Teile sind eine Abwandlung des Datenbestandes von
+                                   www.editura.de durch TextGrid und werden unter der Lizenz Creative Commons
+                                   Namensnennung 3.0 Deutschland Lizenz (by-Nennung TextGrid) veröffentlicht. Die
+                                   Lizenz bezieht sich nicht auf die der Annotation zu Grunde liegenden
+                                   allgemeinfreien Texte (Siehe auch Punkt 2 der Lizenzbestimmungen). </p>
+               <p>
+                  <ref target="http://creativecommons.org/licenses/by/3.0/de/legalcode">Lizenzvertrag</ref>
+               </p>
+               <p>
+                  <ref target="http://creativecommons.org/licenses/by/3.0/de/"> Eine vereinfachte
+                                   Zusammenfassung des rechtsverbindlichen Lizenzvertrages in
+                                   allgemeinverständlicher Sprache </ref>
+               </p>
+               <p>
+                  <ref target="http://www.textgrid.de/Digitale-Bibliothek">Hinweise zur Lizenz und zur Digitalen Bibliothek</ref>
+               </p>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note>
+                                    Entstanden 1796, Erstdruck 1797 mit dem Untertitel »Idylle«. Hier in der Fassung von 1800.
+                                 </note>
+         </notesStmt>
+         <sourceDesc>
+            <biblFull>
+               <titleStmt>
+                  <title>Johann Wolfgang von Goethe: Berliner Ausgabe. Herausgegeben von Siegfried Seidel: Poetische Werke [Band 1–16]; Kunsttheoretische Schriften und Übersetzungen [Band 17–22], Berlin: Aufbau, 1960 ff.</title>
+                  <author>Goethe, Johann Wolfgang</author>
+               </titleStmt>
+               <extent>187-</extent>
+               <publicationStmt>
+                  <date when="1960"/>
+                  <pubPlace>Berlin</pubPlace>
+               </publicationStmt>
+            </biblFull>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <date when="1796"/>
+         </creation>
+         <textClass>
+            <keywords scheme="http://textgrid.info/namespaces/metadata/core/2010#genre">
+               <term>verse</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+                  <text>
+                     <front>
+                        <div type="front">
+
+
+
+                           <div type="h3">
+                              <milestone unit="hi_start"/>
+                                 <head type="h3" xml:id="tg140.2.1">Elegien 2</head>
+
+
+                                 <p xml:id="tg140.2.2">
+                                    <seg rend="zenoTXFontsize80" xml:id="tg140.2.2.1"> Bilder so wie Leidenschaften</seg>
+                                 </p>
+                                 <p xml:id="tg140.2.3">
+                                    <seg rend="zenoTXFontsize80" xml:id="tg140.2.3.1"> Mögen gern am Liede haften.</seg>
+                                 </p>
+                                 <pb n="185" xml:id="tg140.2.4"/>
+                                 <pb type="start" n="187" xml:id="tg140.2.5"/>
+                              <milestone unit="hi_end"/>
+                           </div>
+                        </div>
+                     </front>
+                     <body>
+                           
+                              
+                           
+                           
+                           
+                           <div type="text" xml:id="tg141.3">
+
+                              <div type="h4">
+                                 <head type="h4" xml:id="tg141.3.1">Alexis und Dora</head>
+
+                                 <lg>
+                                    <l xml:id="tg141.3.2">Ach! unaufhaltsam strebet das Schiff mit jedem Momente</l>
+                                    <l xml:id="tg141.3.3">Durch die schäumende Flut weiter und weiter hinaus!</l>
+                                    <l xml:id="tg141.3.4">Langhin furcht sich die Geleise des Kiels, worin die Delphine</l>
+                                    <l xml:id="tg141.3.5">Springend folgen, als flöh ihnen die Beute davon.</l>
+                                    <l xml:id="tg141.3.6">Alles deutet auf glückliche Fahrt: der ruhige Bootsmann</l>
+                                    <l xml:id="tg141.3.7">Ruckt am Segel gelind, das sich für alle bemüht;</l>
+                                    <l xml:id="tg141.3.8">Vorwärts dringt der Schiffenden Geist, wie Flaggen und Wimpel;</l>
+                                    <l xml:id="tg141.3.9">Einer nur steht rückwärts traurig gewendet am Mast,</l>
+                                    <l xml:id="tg141.3.10">Sieht die Berge schon blau, die scheidenden, sieht in das Meer sie</l>
+                                    <l xml:id="tg141.3.11">Niedersinken, es sinkt jegliche Freude vor ihm.</l>
+                                    <l xml:id="tg141.3.12">Auch dir ist es verschwunden, das Schiff, das deinen Alexis,</l>
+                                    <l xml:id="tg141.3.13">Dir, o Dora, den Freund, ach! dir den Bräutigam raubt.</l>
+                                    <l xml:id="tg141.3.14">Auch du blickest vergebens nach mir. Noch schlagen die Herzen</l>
+                                    <l xml:id="tg141.3.15">Für einander, doch ach! nun an einander nicht mehr.</l>
+                                    <l xml:id="tg141.3.16">Einziger Augenblick, in welchem ich lebte! du wiegest</l>
+                                    <l xml:id="tg141.3.17">Alle Tage, die sonst kalt mir verschwindenden, auf.</l>
+                                    <l xml:id="tg141.3.18">Ach, nur im Augenblick, im letzten, stieg mir ein Leben</l>
+                                    <l xml:id="tg141.3.19">Unvermutet in dir, wie von den Göttern, herab.</l>
+                                    <l xml:id="tg141.3.20">Nur umsonst verklärst du mit deinem Lichte den Äther;</l>
+                                    <l xml:id="tg141.3.21">Dein alleuchtender Tag, Phöbus, mir ist er verhaßt.</l>
+                                    <l xml:id="tg141.3.22">In mich selber kehr ich zurück; da will ich im stillen</l>
+                                    <l xml:id="tg141.3.23">Wiederholen die Zeit, als sie mir täglich erschien.</l>
+                                    <l xml:id="tg141.3.24">War es möglich, die Schönheit zu sehn und nicht zu empfinden?</l>
+                                    <l xml:id="tg141.3.25">Wirkte der himmlische Reiz nicht auf dein stumpfes Gemüt?</l>
+                                    <l xml:id="tg141.3.26">Klage dich, Armer, nicht an! – So legt der Dichter ein Rätsel,</l>
+                                    <l xml:id="tg141.3.27">Künstlich mit Worten verschränkt, oft der Versammlung ins Ohr.</l>
+                                    <pb n="187" xml:id="tg141.3.28"/>
+                                    <l xml:id="tg141.3.29">Jeden freuet die seltne, der zierlichen Bilder Verknüpfung,</l>
+                                    <l xml:id="tg141.3.30">Aber noch fehlet das Wort, das die Bedeutung verwahrt.</l>
+                                    <l xml:id="tg141.3.31">Ist es endlich entdeckt, dann heitert sich jedes Gemüt auf</l>
+                                    <l xml:id="tg141.3.32">Und erblickt im Gedicht doppelt erfreulichen Sinn.</l>
+                                    <l xml:id="tg141.3.33">Ach, warum so spät, o Amor, nahmst du die Binde,</l>
+                                    <l xml:id="tg141.3.34">Die du ums Aug mir geknüpft, nahmst sie zu spät mir hinweg!</l>
+                                    <l xml:id="tg141.3.35">Lange schon harrte befrachtet das Schiff auf günstige Lüfte;</l>
+                                    <l xml:id="tg141.3.36">Endlich strebte der Wind glücklich vom Ufer ins Meer.</l>
+                                    <l xml:id="tg141.3.37">Leere Zeiten der Jugend! und leere Träume der Zukunft!</l>
+                                    <l xml:id="tg141.3.38">Ihr verschwindet, es bleibt einzig die Stunde mir nur.</l>
+                                    <l xml:id="tg141.3.39">Ja, sie bleibt, es bleibt mir das Glück! ich halte dich, Dora!</l>
+                                    <l xml:id="tg141.3.40">Und die Hoffnung zeigt, Dora, dein Bild mir allein.</l>
+                                    <l xml:id="tg141.3.41">Öfter sah ich zum Tempel dich gehn, geschmückt und gesittet,</l>
+                                    <l xml:id="tg141.3.42">Und das Mütterchen ging feierlich neben dir her.</l>
+                                    <l xml:id="tg141.3.43">Eilig warst du und frisch, zu Markte die Früchte zu tragen;</l>
+                                    <l xml:id="tg141.3.44">Und vom Brunnen, wie kühn! wiegte dein Haupt das Gefäß.</l>
+                                    <l xml:id="tg141.3.45">Da erschien dein Hals, erschien dein Nacken vor allen,</l>
+                                    <l xml:id="tg141.3.46">Und vor allen erschien deiner Bewegungen Maß.</l>
+                                    <l xml:id="tg141.3.47">Oftmals hab ich gesorgt, es möchte der Krug dir entstürzen;</l>
+                                    <l xml:id="tg141.3.48">Doch er hielt sich stet auf dem geringelten Tuch.</l>
+                                    <l xml:id="tg141.3.49">Schöne Nachbarin, ja, so war ich gewohnt, dich zu sehen,</l>
+                                    <l xml:id="tg141.3.50">Wie man die Sterne sieht, wie man den Mond sich beschaut,</l>
+                                    <l xml:id="tg141.3.51">Sich an ihnen erfreut und innen im ruhigen Busen</l>
+                                    <l xml:id="tg141.3.52">Nicht der entfernteste Wunsch, sie zu besitzen, sich regt.</l>
+                                    <l xml:id="tg141.3.53">Jahre, so gingt ihr dahin! Nur zwanzig Schritte getrennet</l>
+                                    <l xml:id="tg141.3.54">Waren die Häuser, und nie hab ich die Schwelle berührt.</l>
+                                    <l xml:id="tg141.3.55">Und nun trennt uns die gräßliche Flut! Du lügst nur den Himmel,</l>
+                                    <l xml:id="tg141.3.56">Welle! dein herrliches Blau ist mir die Farbe der Nacht.</l>
+                                    <l xml:id="tg141.3.57">Alles rührte sich schon; da kam ein Knabe gelaufen</l>
+                                    <l xml:id="tg141.3.58">An mein väterlich Haus, rief mich zum Strande hinab.</l>
+                                    <l xml:id="tg141.3.59">»Schon erhebt sich das Segel, es flattert im Winde«, so sprach er;</l>
+                                    <l xml:id="tg141.3.60">»Und gelichtet mit Kraft, trennt sich der Anker vom Sand.</l>
+                                    <l xml:id="tg141.3.61">Komm, Alexis, o komm !« Da drückte der wackere Vater</l>
+                                    <l xml:id="tg141.3.62">Würdig die segnende Hand mir auf das lockige Haupt;</l>
+                                    <l xml:id="tg141.3.63">Sorglich reichte die Mutter ein nachbereitetes Bündel:</l>
+                                    <l xml:id="tg141.3.64">»Glücklich kehre zurück!« riefen sie, »glücklich und reich!«</l>
+                                    <pb n="188" xml:id="tg141.3.65"/>
+                                    <l xml:id="tg141.3.66">Und so sprang ich hinweg, das Bündelchen unter dem Arme,</l>
+                                    <l xml:id="tg141.3.67">An der Mauer hinab, fand an der Türe dich stehn</l>
+                                    <l xml:id="tg141.3.68">Deines Gartens. Du lächeltest mir und sagtest: »Alexis!</l>
+                                    <l xml:id="tg141.3.69">Sind die Lärmenden dort deine Gesellen der Fahrt?</l>
+                                    <l xml:id="tg141.3.70">Fremde Küsten besuchest du nun, und köstliche Waren</l>
+                                    <l xml:id="tg141.3.71">Handelst du ein, und Schmuck reichen Matronen der Stadt.</l>
+                                    <l xml:id="tg141.3.72">Aber bringe mir auch ein leichtes Kettchen; ich will es</l>
+                                    <l xml:id="tg141.3.73">Dankbar zahlen: so oft hab ich die Zierde gewünscht!«</l>
+                                    <l xml:id="tg141.3.74">Stehen war ich geblieben und fragte, nach Weise des Kaufmanns,</l>
+                                    <l xml:id="tg141.3.75">Erst nach Form und Gewicht deiner Bestellung genau.</l>
+                                    <l xml:id="tg141.3.76">Gar bescheiden erwogst du den Preis! da blickt ich indessen</l>
+                                    <l xml:id="tg141.3.77">Nach dem Halse, des Schmucks unserer Königin wert.</l>
+                                    <l xml:id="tg141.3.78">Heftiger tönte vom Schiff das Geschrei; da sagtest du freundlich:</l>
+                                    <l xml:id="tg141.3.79">»Nimm aus dem Garten noch einige Früchte mit dir!</l>
+                                    <l xml:id="tg141.3.80">Nimm die reifsten Orangen, die weißen Feigen; das Meer bringt</l>
+                                    <l xml:id="tg141.3.81">Keine Früchte, sie bringt jegliches Land nicht hervor.«</l>
+                                    <l xml:id="tg141.3.82">Und so trat ich herein. Du brachst nun die Früchte geschäftig,</l>
+                                    <l xml:id="tg141.3.83">Und die goldene Last zog das geschürzte Gewand.</l>
+                                    <l xml:id="tg141.3.84">Öfters bat ich: es sei nun genug! und immer noch eine</l>
+                                    <l xml:id="tg141.3.85">Schönere Frucht fiel dir, leise berührt, in die Hand.</l>
+                                    <l xml:id="tg141.3.86">Endlich kamst du zur Laube hinan; da fand sich ein Körbchen,</l>
+                                    <l xml:id="tg141.3.87">Und die Myrte bog blühend sich über uns hin.</l>
+                                    <l xml:id="tg141.3.88">Schweigend begannest du nun geschickt die Früchte zu ordnen:</l>
+                                    <l xml:id="tg141.3.89">Erst die Orange, die schwer ruht als ein goldener Ball,</l>
+                                    <l xml:id="tg141.3.90">Dann die weichliche Feige, die jeder Druck schon entstellet;</l>
+                                    <l xml:id="tg141.3.91">Und mit Myrte bedeckt ward und geziert das Geschenk.</l>
+                                    <l xml:id="tg141.3.92">Aber ich hob es nicht auf; ich stand. Wir sahen einander</l>
+                                    <l xml:id="tg141.3.93">In die Augen, und mir ward vor dem Auge so trüb.</l>
+                                    <l xml:id="tg141.3.94">Deinen Busen fühlt ich an meinem! Den herrlichen Nacken,</l>
+                                    <l xml:id="tg141.3.95">Ihn umschlang nun mein Arm; tausendmal küßt ich den Hals;</l>
+                                    <l xml:id="tg141.3.96">Mir sank über die Schulter dein Haupt; nun knüpften auch deine</l>
+                                    <l xml:id="tg141.3.97">Lieblichen Arme das Band um den Beglückten herum.</l>
+                                    <l xml:id="tg141.3.98">Amors Hände fühlt ich: er drückt' uns gewaltig zusammen,</l>
+                                    <l xml:id="tg141.3.99">Und aus heiterer Luft donnert' es dreimal. Da floß</l>
+                                    <l xml:id="tg141.3.100">Häufig die Träne vom Aug mir herab, du weintest, ich weinte,</l>
+                                    <l xml:id="tg141.3.101">Und vor Jammer und Glück schien uns die Welt zu vergehn.</l>
+                                    <pb n="189" xml:id="tg141.3.102"/>
+                                    <l xml:id="tg141.3.103">Immer heftiger rief es am Strand; da wollten die Füße</l>
+                                    <l xml:id="tg141.3.104">Mich nicht tragen, ich rief: »Dora! und bist du nicht mein?«</l>
+                                    <l xml:id="tg141.3.105">
+                                       <hi rend="italic" xml:id="tg141.3.105.1">»Ewig!</hi>«« sagtest du leise. Da schienen unsere Tränen,</l>
+                                    <l xml:id="tg141.3.106">Wie durch göttliche Luft, leise vom Auge gehaucht.</l>
+                                    <l xml:id="tg141.3.107">Näher rief es: »Alexis!« Da blickte der suchende Knabe</l>
+                                    <l xml:id="tg141.3.108">Durch die Türe herein. Wie er das Körbchen empfing!</l>
+                                    <l xml:id="tg141.3.109">Wie er mich trieb! Wie ich dir die Hand noch drückte! – Zu Schiffe</l>
+                                    <l xml:id="tg141.3.110">Wie ich gekommen? Ich weiß daß ich ein Trunkener schien.</l>
+                                    <l xml:id="tg141.3.111">Und so hielten mich auch die Gesellen, schonten den Kranken;</l>
+                                    <l xml:id="tg141.3.112">Und schon deckte der Hauch trüber Entfernung die Stadt.</l>
+                                    <l xml:id="tg141.3.113">»Ewig!« Dora, lispeltest du; mir schallt es im Ohre</l>
+                                    <l xml:id="tg141.3.114">Mit dem Donner des Zeus! Stand sie doch neben dem Thron,</l>
+                                    <l xml:id="tg141.3.115">Seine Tochter, die Göttin der Liebe; die Grazien standen</l>
+                                    <l xml:id="tg141.3.116">Ihr zur Seiten! Er ist götterbekräftigt, der Bund!</l>
+                                    <l xml:id="tg141.3.117">O so eile denn, Schiff, mit allen günstigen Winden!</l>
+                                    <l xml:id="tg141.3.118">Strebe, mächtiger Kiel, trenne die schäumende Flut!</l>
+                                    <l xml:id="tg141.3.119">Bringe dem fremden Hafen mich zu, damit mir der Goldschmied</l>
+                                    <l xml:id="tg141.3.120">In der Werkstatt gleich ordne das himmlische Pfand.</l>
+                                    <l xml:id="tg141.3.121">Wahrlich! zur Kette soll das Kettchen werden, o Dora!</l>
+                                    <l xml:id="tg141.3.122">Neunmal umgebe sie dir, locker gewunden, den Hals!</l>
+                                    <l xml:id="tg141.3.123">Ferner schaff ich noch Schmuck, den mannigfaltigsten; goldne</l>
+                                    <l xml:id="tg141.3.124">Spangen sollen dir auch reichlich verzieren die Hand:</l>
+                                    <l xml:id="tg141.3.125">Da wetteifre Rubin und Smaragd, der liebliche Saphir</l>
+                                    <l xml:id="tg141.3.126">Stelle dem Hyazinth sich gegenüber, und Gold</l>
+                                    <l xml:id="tg141.3.127">Halte das Edelgestein in schöner Verbindung zusammen.</l>
+                                    <l xml:id="tg141.3.128">Oh, wie den Bräutigam freut, einzig zu schmücken die Braut!</l>
+                                    <l xml:id="tg141.3.129">Seh ich Perlen, so denk ich an dich; bei jeglichem Ringe</l>
+                                    <l xml:id="tg141.3.130">Kommt mir der länglichen Hand schönes Gebild in den Sinn.</l>
+                                    <l xml:id="tg141.3.131">Tauschen will ich und kaufen; du sollst das Schönste von allem</l>
+                                    <l xml:id="tg141.3.132">Wählen; ich widmete gern alle die Ladung nur dir.</l>
+                                    <l xml:id="tg141.3.133">Doch nicht Schmuck und Juwelen allein verschafft dein Geliebter:</l>
+                                    <l xml:id="tg141.3.134">Was ein häusliches Weib freuet, das bringt er dir auch.</l>
+                                    <l xml:id="tg141.3.135">Feine wollene Decken mit Purpursäumen, ein Lager</l>
+                                    <l xml:id="tg141.3.136">Zu bereiten, das uns traulich und weichlich empfängt;</l>
+                                    <pb n="190" xml:id="tg141.3.137"/>
+                                    <l xml:id="tg141.3.138">Köstlicher Leinwand Stücke. Du sitzest und nähest und kleidest</l>
+                                    <l xml:id="tg141.3.139">Mich und dich und auch wohl noch ein Drittes darein.</l>
+                                    <l xml:id="tg141.3.140">Bilder der Hoffnung, täuschet mein Herz! O mäßiget, Götter,</l>
+                                    <l xml:id="tg141.3.141">Diesen gewaltigen Brand, der mir den Busen durchtobt!</l>
+                                    <l xml:id="tg141.3.142">Aber auch sie verlang ich zurück, die schmerzliche Freude,</l>
+                                    <l xml:id="tg141.3.143">Wenn die Sorge sich kalt, gräßlich gelassen, mir naht.</l>
+                                    <l xml:id="tg141.3.144">Nicht der Erinnyen Fackel, das Bellen der höllischen Hunde</l>
+                                    <l xml:id="tg141.3.145">Schreckt den Verbrecher so in der Verzweiflung Gefild,</l>
+                                    <l xml:id="tg141.3.146">Als das gelaßne Gespenst mich schreckt, das die Schöne von fern mir</l>
+                                    <l xml:id="tg141.3.147">Zeiget: die Türe steht wirklich des Gartens noch auf!</l>
+                                    <l xml:id="tg141.3.148">Und ein anderer kommt! Für ihn auch fallen die Früchte!</l>
+                                    <l xml:id="tg141.3.149">Und die Feige gewährt stärkenden Honig auch ihm!</l>
+                                    <l xml:id="tg141.3.150">Lockt sie auch ihn nach der Laube? und folgt er? O macht mich, ihr Götter,</l>
+                                    <l xml:id="tg141.3.151">Blind, verwischet das Bild jeder Erinnrung in mir!</l>
+                                    <l xml:id="tg141.3.152">Ja, ein Mädchen ist sie! und die sich geschwinde dem einen</l>
+                                    <l xml:id="tg141.3.153">Gibt, sie kehret sich auch schnell zu dem andern herum.</l>
+                                    <l xml:id="tg141.3.154">Lache nicht diesmal, Zeus, der frech gebrochenen Schwüre!</l>
+                                    <l xml:id="tg141.3.155">Donnere schrecklicher! Triff! – Halte die Blitze zurück!</l>
+                                    <l xml:id="tg141.3.156">Sende die schwankenden Wolken mir nach! Im nächtlichen Dunkel</l>
+                                    <l xml:id="tg141.3.157">Treffe dein leuchtender Blitz diesen unglücklichen Mast!</l>
+                                    <l xml:id="tg141.3.158">Streue die Planken umher, und gib der tobenden Welle</l>
+                                    <l xml:id="tg141.3.159">Diese Waren, und mich gib den Delphinen zum Raub! –</l>
+                                    <l xml:id="tg141.3.160">Nun, ihr Musen, genug! Vergebens strebt ihr zu schildern,</l>
+                                    <l xml:id="tg141.3.161">Wie sich Jammer und Glück wechseln in liebender Brust.</l>
+                                    <l xml:id="tg141.3.162">Heilen könnet die Wunden ihr nicht, die Amor geschlagen;</l>
+                                    <l xml:id="tg141.3.163">Aber Linderung kommt einzig, ihr Guten, von euch.</l>
+                                 </lg>
+                                 <lb xml:id="tg141.3.164"/>
+                                 <pb n="191" xml:id="tg141.3.165"/>
+                              </div>
+                           </div>
+                        </body>
+                  </text>
+               </TEI>

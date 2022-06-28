@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://textgrid.info/namespaces/metadata/core/2010" xmlns:tgl="http://textgrid.info/namespaces/metadata/language/2010" xmlns:tgs="http://textgrid.info/namespaces/metadata/script/2010" xmlns:tgr="http://textgrid.info/namespaces/metadata/agent/2010" xml:id="tg290" n="/Literatur/M/Goethe, Johann Wolfgang/Gedichte/Gedichte (Ausgabe letzter Hand. 1827)/Gott, Gemüt und Welt">
+   <teiHeader xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:a="http://www.textgrid.info/namespace/digibib/authors">
+      <fileDesc>
+         <titleStmt>
+            <title>Gott, Gemüt und Welt</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="handle">hdl:11858/00-1734-0000-0006-6A5C-B</idno><idno type="TextGridUri">textgrid:11hks.0</idno><availability>
+               
+               <p> Der annotierte Datenbestand der Digitalen Bibliothek inklusive Metadaten sowie
+                                   davon einzeln zugängliche Teile sind eine Abwandlung des Datenbestandes von
+                                   www.editura.de durch TextGrid und werden unter der Lizenz Creative Commons
+                                   Namensnennung 3.0 Deutschland Lizenz (by-Nennung TextGrid) veröffentlicht. Die
+                                   Lizenz bezieht sich nicht auf die der Annotation zu Grunde liegenden
+                                   allgemeinfreien Texte (Siehe auch Punkt 2 der Lizenzbestimmungen). </p>
+               <p>
+                  <ref target="http://creativecommons.org/licenses/by/3.0/de/legalcode">Lizenzvertrag</ref>
+               </p>
+               <p>
+                  <ref target="http://creativecommons.org/licenses/by/3.0/de/"> Eine vereinfachte
+                                   Zusammenfassung des rechtsverbindlichen Lizenzvertrages in
+                                   allgemeinverständlicher Sprache </ref>
+               </p>
+               <p>
+                  <ref target="http://www.textgrid.de/Digitale-Bibliothek">Hinweise zur Lizenz und zur Digitalen Bibliothek</ref>
+               </p>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note>
+                                 Die Gedichte dieser Gruppe entstanden größtenteils zwischen 1812 und 1814, Erstdruck 1815.
+                              </note>
+         </notesStmt>
+         <sourceDesc>
+            <biblFull>
+               <titleStmt>
+                  <title>Johann Wolfgang von Goethe: Berliner Ausgabe. Herausgegeben von Siegfried Seidel: Poetische Werke [Band 1–16]; Kunsttheoretische Schriften und Übersetzungen [Band 17–22], Berlin: Aufbau, 1960 ff.</title>
+                  <author>Goethe, Johann Wolfgang</author>
+               </titleStmt>
+               <extent>423-</extent>
+               <publicationStmt>
+                  <date when="1960"/>
+                  <pubPlace>Berlin</pubPlace>
+               </publicationStmt>
+            </biblFull>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <date notBefore="1812" notAfter="1814"/>
+         </creation>
+         <textClass>
+            <keywords scheme="http://textgrid.info/namespaces/metadata/core/2010#genre">
+               <term>verse</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+               <text>
+                  <body>
+                        
+                           
+                        
+                        
+                        
+                        <div type="text" xml:id="tg290.3">
+
+
+
+                           <div type="h3">
+                              <milestone unit="head_start"/>
+                                 <head type="h3" xml:id="tg290.3.1">Gott, Gemüt und Welt</head>
+
+
+                                 <p xml:id="tg290.3.2">
+                                    <seg rend="zenoTXFontsize80" xml:id="tg290.3.2.1"> Wird nur erst der Himmel heiter,</seg>
+                                 </p>
+                                 <p xml:id="tg290.3.3">
+                                    <seg rend="zenoTXFontsize80" xml:id="tg290.3.3.1"> Tausend zählt ihr, und noch weiter.</seg>
+                                 </p>
+                                 <pb n="423" xml:id="tg290.3.4"/>
+                                 <pb type="start" n="425" xml:id="tg290.3.5"/>
+                              <milestone unit="head_end"/>
+                              <lg>
+                                 <lb xml:id="tg290.3.6"/>
+                                 <l xml:id="tg290.3.7">In wenig Stunden</l>
+                                 <l xml:id="tg290.3.8">Hat Gott das Rechte gefunden.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.9"/>
+
+                                 <l xml:id="tg290.3.10">Wer Gott vertraut,</l>
+                                 <l xml:id="tg290.3.11">Ist schon auferbaut.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.12"/>
+
+                                 <l xml:id="tg290.3.13">Sogar dies Wort hat nicht gelogen:</l>
+                                 <l xml:id="tg290.3.14">Wen Gott betriegt, der ist wohl betrogen.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.15"/>
+
+                                 <l xml:id="tg290.3.16">Das <hi rend="italic" xml:id="tg290.3.16.1">Unser Vater,</hi> ein schön Gebet,</l>
+                                 <l xml:id="tg290.3.17">Es dient und hilft in allen Nöten;</l>
+                                 <l xml:id="tg290.3.18">Wenn einer auch <hi rend="italic" xml:id="tg290.3.18.1">Vater Unser</hi> fleht,</l>
+                                 <l xml:id="tg290.3.19">In Gottes Namen, laß ihn beten.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.20"/>
+
+                                 <l xml:id="tg290.3.21">Ich wandle auf weiter, bunter Flur,</l>
+                                 <l xml:id="tg290.3.22">Ursprünglicher Natur;</l>
+                                 <l xml:id="tg290.3.23">Ein holder Born, in welchem ich bade,</l>
+                                 <l xml:id="tg290.3.24">Ist Überlieferung, ist Gnade.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.25"/>
+
+                                 <l xml:id="tg290.3.26">Was wär ein Gott, der nur von außen stieße,</l>
+                                 <l xml:id="tg290.3.27">Im Kreis das All am Finger laufen ließe!</l>
+                                 <l xml:id="tg290.3.28">Ihm ziemt's, die Welt im Innern zu bewegen,</l>
+                                 <l xml:id="tg290.3.29">Natur in Sich, Sich in Natur zu hegen,</l>
+                                 <pb n="425" xml:id="tg290.3.30"/>
+                                 <l xml:id="tg290.3.31">So daß, was in Ihm lebt und webt und ist,</l>
+                                 <l xml:id="tg290.3.32">Nie Seine Kraft, nie Seinen Geist vermißt</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.33"/>
+
+                                 <l xml:id="tg290.3.34">Im Innern ist ein Universum auch;</l>
+                                 <l xml:id="tg290.3.35">Daher der Völker löblicher Gebrauch,</l>
+                                 <l xml:id="tg290.3.36">Daß jeglicher das Beste, was er kennt,</l>
+                                 <l xml:id="tg290.3.37">Er Gott, ja seinen Gott benennt,</l>
+                                 <l xml:id="tg290.3.38">Ihm Himmel und Erden übergibt,</l>
+                                 <l xml:id="tg290.3.39">Ihn fürchtet und wo möglich liebt.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.40"/>
+
+                                 <l xml:id="tg290.3.41">Wie? Wann? und Wo? – Die Götter bleiben stumm!</l>
+                                 <l xml:id="tg290.3.42">Du halte dich ans <hi rend="italic" xml:id="tg290.3.42.1">Weil,</hi> und frage nicht: Warum?</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.43"/>
+
+                                 <l xml:id="tg290.3.44">Willst du ins Unendliche schreiten,</l>
+                                 <l xml:id="tg290.3.45">Geh nur im Endlichen nach allen Seiten.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.46"/>
+
+                                 <l xml:id="tg290.3.47">Willst du dich am Ganzen erquicken,</l>
+                                 <l xml:id="tg290.3.48">So mußt du das Ganze im Kleinsten erblicken.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.49"/>
+
+                                 <l xml:id="tg290.3.50">Aus tiefem Gemüt, aus der Mutter Schoß</l>
+                                 <l xml:id="tg290.3.51">Will manches dem Tage entgegen;</l>
+                                 <l xml:id="tg290.3.52">Doch soll das Kleine je werden groß,</l>
+                                 <l xml:id="tg290.3.53">So muß es sich rühren und regen.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.54"/>
+
+                                 <l xml:id="tg290.3.55">Da, wo das Wasser sich entzweit</l>
+                                 <l xml:id="tg290.3.56">Wird zuerst Lebendigs befreit.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.57"/>
+
+                                 <pb n="426" xml:id="tg290.3.58"/>
+                                 <l xml:id="tg290.3.59">Und wird das Wasser sich entfalten,</l>
+                                 <l xml:id="tg290.3.60">Sogleich wird sich's lebendig gestalten;</l>
+                                 <l xml:id="tg290.3.61">Da wälzen sich Tiere, sie trocknen zum Flor,</l>
+                                 <l xml:id="tg290.3.62">Und Pflanzengezweige, sie dringen hervor.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.63"/>
+
+                                 <l xml:id="tg290.3.64">Durchsichtig erscheint die Luft so rein</l>
+                                 <l xml:id="tg290.3.65">Und trägt im Busen Stahl und Stein.</l>
+                                 <l xml:id="tg290.3.66">Entzündet werden sie sich begegnen;</l>
+                                 <l xml:id="tg290.3.67">Da wird's Metall und Steine regnen.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.68"/>
+
+                                 <l xml:id="tg290.3.69">Denn was das Feuer lebendig erfaßt,</l>
+                                 <l xml:id="tg290.3.70">Bleibt nicht mehr Unform und Erdenlast.</l>
+                                 <l xml:id="tg290.3.71">Verflüchtigt wird es und unsichtbar,</l>
+                                 <l xml:id="tg290.3.72">Eilt hinauf, wo erst sein Anfang war.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.73"/>
+
+                                 <l xml:id="tg290.3.74">Und so kommt wieder zur Erde herab,</l>
+                                 <l xml:id="tg290.3.75">Dem die Erde den Ursprung gab.</l>
+                                 <l xml:id="tg290.3.76">Gleicherweise sind wir auch gezüchtigt,</l>
+                                 <l xml:id="tg290.3.77">Einmal gefestet, einmal verflüchtigt.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.78"/>
+
+                                 <l xml:id="tg290.3.79">Und wer durch alle die Elemente</l>
+                                 <l xml:id="tg290.3.80">Feuer, Luft, Wasser und Erde rennte,</l>
+                                 <l xml:id="tg290.3.81">Der wird zuletzt sich überzeugen,</l>
+                                 <l xml:id="tg290.3.82">Er sei kein Wesen ihresgleichen.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.83"/>
+
+                                 <l xml:id="tg290.3.84">»Was will die Nadel nach Norden gekehrt?«</l>
+                                 <l xml:id="tg290.3.85">Sich selbst zu finden, es ist ihr verwehrt.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.86"/>
+
+                                 <l xml:id="tg290.3.87">Die endliche Ruhe wird nur verspürt,</l>
+                                 <l xml:id="tg290.3.88">Sobald der Pol den Pol berührt.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.89"/>
+
+                                 <pb n="427" xml:id="tg290.3.90"/>
+                                 <l xml:id="tg290.3.91">Drum danket Gott, ihr Söhne der Zeit,</l>
+                                 <l xml:id="tg290.3.92">Daß er die Pole für ewig entzweit.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.93"/>
+
+                                 <l xml:id="tg290.3.94">»Magnetes Geheimnis, erkläre mir das!«</l>
+                                 <l xml:id="tg290.3.95">Kein größer Geheimnis als Lieb und Haß.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.96"/>
+
+                                 <l xml:id="tg290.3.97">Wirst du deinesgleichen kennenlernen,</l>
+                                 <l xml:id="tg290.3.98">so wirst du dich gleich wieder entfernen.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.99"/>
+
+                                 <l xml:id="tg290.3.100">»Warum tanzen Bübchen mit Mädchen so gern?«</l>
+                                 <l xml:id="tg290.3.101">Ungleich dem Gleichen bleibet nicht fern.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.102"/>
+
+                                 <l xml:id="tg290.3.103">Dagegen die Bauern in der Schenke</l>
+                                 <l xml:id="tg290.3.104">Prügeln sich gleich mit den Beinen der Bänke.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.105"/>
+
+                                 <l xml:id="tg290.3.106">Der Amtmann schnell das Übel stillt,</l>
+                                 <l xml:id="tg290.3.107">Weil er nicht für ihresgleichen gilt.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.108"/>
+
+                                 <l xml:id="tg290.3.109">Soll dein Kompaß dich richtig leiten,</l>
+                                 <l xml:id="tg290.3.110">Hüte dich vor Magnetstein', die dich begleiten.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.111"/>
+
+                                 <l xml:id="tg290.3.112">Verdoppelte sich der Sterne Schein,</l>
+                                 <l xml:id="tg290.3.113">Das All wird ewig finster sein.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.114"/>
+
+                                 <l xml:id="tg290.3.115">»Und was sich zwischen beide stellt?«</l>
+                                 <l xml:id="tg290.3.116">Dein Auge, so wie die Körperwelt.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.117"/>
+
+                                 <pb n="428" xml:id="tg290.3.118"/>
+                                 <l xml:id="tg290.3.119">An der Finsternis zusammengeschrunden,</l>
+                                 <l xml:id="tg290.3.120">Wird dein Auge vom Licht entbunden.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.121"/>
+
+                                 <l xml:id="tg290.3.122">Schwarz und Weiß, eine Totenschau,</l>
+                                 <l xml:id="tg290.3.123">Vermischt ein niederträchtig Grau.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.124"/>
+
+                                 <l xml:id="tg290.3.125">Will Licht einem Körper sich vermählen,</l>
+                                 <l xml:id="tg290.3.126">Es wird den ganz durchsicht'gen wählen.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.127"/>
+
+                                 <l xml:id="tg290.3.128">Du aber halte dich mit Liebe</l>
+                                 <l xml:id="tg290.3.129">An das Durchscheinende, das Trübe.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.130"/>
+
+                                 <l xml:id="tg290.3.131">Denn steht das Trübste vor der Sonne,</l>
+                                 <l xml:id="tg290.3.132">Da siehst die herrlichste Purpurwonne.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.133"/>
+
+                                 <l xml:id="tg290.3.134">Und will das Licht sich dem Trübsten entwinden,</l>
+                                 <l xml:id="tg290.3.135">So wird es glühend Rot entzünden.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.136"/>
+
+                                 <l xml:id="tg290.3.137">Und wie das Trübe verdunstet und weicht,</l>
+                                 <l xml:id="tg290.3.138">Das Rote zum hellsten Gelb erbleicht.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.139"/>
+
+                                 <l xml:id="tg290.3.140">Ist endlich der Äther rein und klar,</l>
+                                 <l xml:id="tg290.3.141">Ist das Licht weiß, wie es anfangs war.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.142"/>
+
+                                 <l xml:id="tg290.3.143">Steht vor dem Finstern milchig Grau,</l>
+                                 <l xml:id="tg290.3.144">Die Sonne bescheint's, da wird es Blau.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.145"/>
+
+                                 <pb n="429" xml:id="tg290.3.146"/>
+                                 <l xml:id="tg290.3.147">Auf Bergen, in der reinsten Höhe,</l>
+                                 <l xml:id="tg290.3.148">Tief Rötlichblau ist Himmelsnähe.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.149"/>
+
+                                 <l xml:id="tg290.3.150">Du staunest über die Königspracht,</l>
+                                 <l xml:id="tg290.3.151">Und gleich ist sammetschwarz die Nacht.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.152"/>
+
+                                 <l xml:id="tg290.3.153">Und so bleibt auch, in ewigem Frieden,</l>
+                                 <l xml:id="tg290.3.154">Die Finsternis vom Licht geschieden.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.155"/>
+
+                                 <l xml:id="tg290.3.156">Daß sie miteinander streiten können,</l>
+                                 <l xml:id="tg290.3.157">Das ist eine bare Torheit zu nennen.</l>
+                              </lg>
+                              <lg>
+                                 <lb xml:id="tg290.3.158"/>
+
+                                 <l xml:id="tg290.3.159">Sie streiten mit der Körperwelt,</l>
+                                 <l xml:id="tg290.3.160">Die sie ewig auseinander hält.</l>
+                              </lg>
+                              <lb xml:id="tg290.3.161"/>
+                              <pb n="430" xml:id="tg290.3.162"/>
+                           </div>
+                        </div>
+                     </body>
+               </text>
+            </TEI>
