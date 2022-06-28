@@ -56,7 +56,7 @@ Wir verwenden zunächst die readtext() Funktion zum Einlesen unseres Märchens.
 
 ```{r }
 
-rapunzel_df <- readtext("files/Rapunzel_(1850).txt") #df ist Standard-Abkürzung für dataframe
+rapunzel_df <- readtext("files/03_regex/dateien/Rapunzel_(1850).txt") #df ist Standard-Abkürzung für dataframe
 str(rapunzel_df) #str() gibt einen die Struktur eines R Datenobjekts übersichtlich aus
 
 ```
@@ -84,7 +84,7 @@ Die Ausgabe war nicht besonders aussagekräftig. Es gibt zwei Lösungen: Wir kö
 Befehl readLines
 
 ```{r }
-rapunzel <- readLines("files/Rapunzel_(1850).txt")
+rapunzel <- readLines("files/03_regex/dateien/Rapunzel_(1850).txt")
 str(rapunzel)
 ```
 
@@ -245,4 +245,14 @@ Achtung: viele Funktionen haben ein Argument "pcre", welches per Default auf FAL
 
 ## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/03_regex/skripte/tutorium3_09052022_uebung.R)
 
+Für Nutzer:innen ohne Zugriff auf das Repository:
+```{r echo=FALSE}
+xfun::embed_dir('files/03_regex', text="Zip-Ordner downloaden")
+```
+
 ## [Hausaufgabe](https://github.com/lipogg/r-tutorium/tree/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/03_uebung)
+
+Für Nutzer:innen ohne Zugriff auf das Repository:
+```{r echo=FALSE}
+xfun::embed_dir('files/03_uebung', text="Zip-Ordner downloaden")
+```

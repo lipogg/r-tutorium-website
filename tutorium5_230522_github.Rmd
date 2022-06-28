@@ -54,9 +54,15 @@ Nachdem ihr das Repository zum Tutorium geklont habt, findet ihr in eurem Arbeit
 
 3. **"Commit"**: Fenster oben rechts -> Reiter "Git" -> Dateien auswählen, die gepusht werden sollen -> Commit -> Commit-Nachricht eingeben -> Commit-Button
 
-4. **"Push"**: Fenster oben rechts -> Reiter "Git -> gründer Pfeil, der nach oben zeigt
+4. **"Push"**: Fenster oben rechts -> Reiter "Git -> grüner Pfeil, der nach oben zeigt
 
 
 Wir wollen jetzt diesen Workflow mal ausprobieren. Klont das [Repository "r-tutorium"](https://github.com/lipogg/r-tutorium) von meiner GitHub-Seite und öffnet die Datei ``tutorium5_230522_uebung.R``. Bearbeitet eine der beiden Übungsaufgaben und "pusht" zuletzt eure Änderungen in das GitHub repository. 
 
-## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/05_github-uebung/skripte/tutorium5_230522_uebung.R)
+## [Übungsaufgabe](https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/05_github-uebung/skripte/tutorium5_230522_uebung.R)
+
+Für Nutzer:innen ohne Zugriff auf das Repository:
+```{r echo=FALSE}
+xfun::embed_dir('files/05_github', text="Zip-Ordner downloaden")
+```
+

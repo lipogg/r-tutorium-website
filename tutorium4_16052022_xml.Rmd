@@ -145,7 +145,7 @@ Zur Suche in Zeichenketten (character strings) haben wir bereits Reguläre Ausdr
 
 ## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/04_xml/skripte/tutorium4_160522_uebung.R)
 
-Das Skript kann auch direkt heruntergeladen werden: 
+Für Nutzer:innen ohne Zugriff auf das Repository:
 ```{r echo=FALSE}
-xfun::embed_file('files/Rapunzel_(1850).txt', text="Skript zur Übung")
+xfun::embed_dir('files/04_xml_und_tei', text="Zip-Ordner downloaden")
 ```

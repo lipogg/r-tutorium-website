@@ -78,3 +78,9 @@ Fragen:
 * Was passiert, wenn wir anstelle der txt-Dateien die xml-Dateien zur Genreklassifikation verwenden? 
 
 ## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/06_stilometrie/skripte/tutorium6_130622_uebung.R)
+
+Für Nutzer:innen ohne Zugriff auf das Repository:
+```{r echo=FALSE}
+xfun::embed_dir('files/06_stilometrie', text="Zip-Ordner downloaden")
+```
+

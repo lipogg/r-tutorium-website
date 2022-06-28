@@ -104,9 +104,20 @@ Dazu bald mehr.
 
 Falls ihr noch nicht im Blackboardkurs angemeldet seid, schreibt euch dort bitte ein - Ankündigungen für das nächste Treffen werde ich darüber versenden. Kurs-ID: PHILGEIST_T_16340_22S. Im Laufe des Kurses werden wir zu GitHub wechseln; bis dahin ist aber das Blackboard der Hauptkommunikationskanal.
 
-Natürlich könnt ihr mir auch immer eine Mail schreiben an: l.poggel@fu-berlin.de :)
+Natürlich könnt ihr mir auch immer eine Mail schreiben an: l.poggel@fu-berlin.de 
 
 ## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/02_daten-dateien/skripte/tutorium2_02052022_uebung.R)
 
+Für Nutzer:innen ohne Zugriff auf das Repository:
+```{r echo=FALSE}
+xfun::embed_dir('files/02_daten_und_dateien', text="Zip-Ordner downloaden")
+```
+
+
 ## [Hausaufgabe](https://github.com/lipogg/r-tutorium/tree/c3b53ce1ae61459c7079f8b96cda70425c1aebe6/02_uebung)
+
+Für Nutzer:innen ohne Zugriff auf das Repository:
+```{r echo=FALSE}
+xfun::embed_dir('files/02_uebung', text="Zip-Ordner downloaden")
+```
 
