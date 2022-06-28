@@ -147,5 +147,5 @@ Zur Suche in Zeichenketten (character strings) haben wir bereits Reguläre Ausdr
 
 Für Nutzer:innen ohne Zugriff auf das Repository:
 ```{r echo=FALSE}
-xfun::embed_dir('files/04_xml_und_tei', text="Zip-Ordner downloaden")
+xfun::embed_dir('files/04_xml', text="Zip-Ordner downloaden")
 ```
