@@ -21,6 +21,8 @@ navbar:
       href: tutorium7_200622_virtuelle_umgebungen.html
     - text: Sitzung 8 - Web Scraping und APIs 
       href: tutorium8_27062022_webscraping.html
+    - text: Sitzung 9 - Quantitative Textanalyse
+      href: tutorium9_04072022_textanalyse.html
   right: 
     - icon: fab fa-github fa-lg
       href: https://github.com/lipogg/r-tutorium-website
