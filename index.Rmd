@@ -28,5 +28,5 @@ Die Skripte und Lösungen zu den Übungen befinden sich im GitHub-Repository [li
 
 **[Sitzung 8 - Web Scraping und APIs](tutorium8_27062022_webscraping.html)**
 
-
+**[Sitzung 9 - Quantitative Textanalyse](tutorium9_04072022_textanalyse.html)**
 
