@@ -1,0 +1,37 @@
+---
+title: "9. Sitzung: Quantitative Textanalyse"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    toc_depth: 3
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## 1. Explorativer Einstieg 
+
+Bevor wir in die quantitative Textanalyse in R einsteigen, erarbeiten wir uns explorativ ein Grundverständnist der verschiedenen Möglichkeiten quantitativer Textanalyse. Dazu geht auf die Website [Voyant Tools](https://voyant-tools.org/) und ladet ein Korpus euer Wahl (Button "Öffnen"). Schaut euch die verschiedenen Visualisierungen an. Wechselt mithilfe der Navigationstabs in den verschiedenen Darstellungsfenstern zwischen Visualisierungsmethoden. Klickt in einem der Fenster auf das Symbol mit den vier Vierecken und wählt unter "Korpustools" "Kollokationen" aus. Klickt anschließend auf das kleine Fragezeichen oben rechts in demselben Fenster. Indem ihr in dem Hilfefenster auf "Mehr Hilfe" klickt, werdet ihr auf die Voyant-Tools-Dokumentationsseiten weitergeleitet. Lest euch die Dokumentation zu der Methode durch. 
+
+
+## 2. Quantitative Textanalyse in R: Paket quanteda
+
+Das Paket ``quanteda'' bietet eine Vielzahl Funktionen, mit denen sich viele der  Statistiken und Visualisierungen erzeugen lassen, die wir soeben explorativ erkundet haben. 
+
+* Quanteda-Website: [https://quanteda.io/](https://quanteda.io/)
+* Quanteda Tutorials: [https://tutorials.quanteda.io/](https://tutorials.quanteda.io/)
+* Quanteda Quick Start Guide: [https://quanteda.io/articles/quickstart.html](https://quanteda.io/articles/quickstart.html)
+* Offizielle Dokumentation als [PDF-Download](https://cran.r-project.org/web/packages/quanteda/quanteda.pdf)
+* Beispiel "Textual Data Visualization": [https://quanteda.io/articles/pkgdown/examples/plotting.html](https://quanteda.io/articles/pkgdown/examples/plotting.html)
+
+In der heutigen Stunde werden wir einige der Funktionen, insbesondere aus [Kapitel 4](https://tutorials.quanteda.io/statistical-analysis/) des offiziellen  Quanteda-Tutorials auf ein Korpus wissenschaftlicher Texte des 17.-20. Jahrhunderts aus dem Kernkorpus des [Deutschen Textarchivs](https://www.deutschestextarchiv.de/) anwenden. Alle Texte entstammen dem Korpus zur Textkategorie Wissenschaft des DTA-Kernkorpus und wurden in der Version vom 23.10.2021 als normalisierter Reintext heruntergeladen: [https://www.deutschestextarchiv.de/download](https://www.deutschestextarchiv.de/download)
+
+## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/2fd48dc339ad7fd57483f463b3dc32999070e589/09_quantitative_textanalyse/skripte/tutorium9_040722_textanalyse.R)
+
+
+
