@@ -66,10 +66,25 @@ Verständnisfragen:
 * Welche HTML-Elemente seht ihr? Wo befindet sich der Text, den wir brauchen? 
 * Wie würdet ihr vorgehen, um den gesamten Text zu etrahieren? Wie würdet ihr dabei mit dem "Weiter"-Button umgehen? 
 
+Zur Übung schreiben wir ein Skript, das den Fließtext aller Werke von Franz Kafka auf projekt-gutenberg.org extrahiert und als plain text-Datei im Arbeitsverzeichnis speichert. 
 
-## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/e3b5acfb7004daa4daf5a16432980f47fe51d08f/08_webscraping_und_apis/skripte/tutorium8_270622_scraper.R)
+## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/1d321d9e338e64c7ddb63ff137ba1fe62dd321ef/08_webscraping_und_apis/skripte/tutorium8_270622_scaper_gutenberg.R)
 
+Für Nutzer:innen ohne Zugriff auf das Repository:
+```{r echo=FALSE}
+xfun::embed_file('files/08_webscraping/skripte/tutorium8_270622_scaper_gutenberg.R', text="Skript downloaden")
+```
+
+Im letzten Semester haben wir dieselbe Strategie angewandt, um alle Märchen der Gebrüder Grimm von wikisource.org zu scrapen. Das Skript könnt ihr
+```{r echo=FALSE}
+xfun::embed_file('files/08_webscraping/skripte/tutorium8_270622_scraper_wikisource.R', text="Hier")
+```
+herunterladen. Für unsere Webscraper haben wir neben einer for-Schleife oft die Funktion ``map()`` aus dem Paket ``purrr`` verwendet. Im vergangenen Semester haben wir in diesem Zusammenhang auch besprochen, wie mithilfe von ``purrr``-Funktionen Schleifen umgeschrieben werden können. Schleifen und andere Kontrollstrukturen spielen in Programmiersprachen wie Python eine große Rolle, gelten jedoch in R als weniger elegante Lösung. Das liegt daran, dass R ursprünglich für die sogenannte [funktionale Programmierung](https://de.wikipedia.org/wiki/Funktionale_Programmierung) konzipiert ist. 
+```{r echo=FALSE}
+xfun::embed_file('files/08_webscraping/skripte/tutorium8_270622_scraper_wikisource_funktional.R', text="Hier")
+```
+findet ihr ein Skript aus dem letzten Semester, das illustriert, wie der Wikisource-Scraper aussehen könnte, der einem funktionalen Paradigma folgt. 
 
 ## 4. Wikisource: On-Click Event simulieren
 
-Mit diesem Thema können wir uns nächste Woche beschäftigen. 
+Thema für die letzte Sitzung? 
