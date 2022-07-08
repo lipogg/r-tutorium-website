@@ -77,13 +77,13 @@ xfun::embed_file('files/08_webscraping/skripte/tutorium8_270622_scaper_gutenberg
 
 Im letzten Semester haben wir dieselbe Strategie angewandt, um alle Märchen der Gebrüder Grimm von wikisource.org zu scrapen. Das Skript könnt ihr
 ```{r echo=FALSE}
-xfun::embed_file('files/08_webscraping/skripte/tutorium8_270622_scraper_wikisource.R', text="Hier")
+xfun::embed_file('files/08_webscraping/skripte/tutorium8_270622_scraper_wikisource.R', text="hier")
 ```
 herunterladen. Für unsere Webscraper haben wir neben einer for-Schleife oft die Funktion ``map()`` aus dem Paket ``purrr`` verwendet. Im vergangenen Semester haben wir in diesem Zusammenhang auch besprochen, wie mithilfe von ``purrr``-Funktionen Schleifen umgeschrieben werden können. Schleifen und andere Kontrollstrukturen spielen in Programmiersprachen wie Python eine große Rolle, gelten jedoch in R als weniger elegante Lösung. Das liegt daran, dass R ursprünglich für die sogenannte [funktionale Programmierung](https://de.wikipedia.org/wiki/Funktionale_Programmierung) konzipiert ist. 
 ```{r echo=FALSE}
 xfun::embed_file('files/08_webscraping/skripte/tutorium8_270622_scraper_wikisource_funktional.R', text="Hier")
 ```
-findet ihr ein Skript aus dem letzten Semester, das illustriert, wie der Wikisource-Scraper aussehen könnte, der einem funktionalen Paradigma folgt. 
+findet ihr ein Skript aus dem letzten Semester, das illustriert, wie ein Wikisource-Scraper aussehen könnte, der einem funktionalen Paradigma folgt. 
 
 ## 4. Wikisource: On-Click Event simulieren
 
