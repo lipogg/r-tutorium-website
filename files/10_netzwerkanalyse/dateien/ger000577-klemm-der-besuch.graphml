@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+    <key attr.name="label" attr.type="string" for="node" id="label"/>
+    <key attr.name="Edge Label" attr.type="string" for="edge" id="edgelabel"/>
+    <key attr.name="weight" attr.type="double" for="edge" id="weight"/>
+    <key attr.name="Gender" attr.type="string" for="node" id="gender"/>
+    <key attr.name="Person group" attr.type="boolean" for="node" id="person-group"/>
+    <key attr.name="Number of spoken words" attr.type="int" for="node" id="number-of-words"/>
+    <graph edgedefault="undirected">
+        <node id="celimene">
+            <data key="label">Celimene</data>
+            <data key="gender">FEMALE</data>
+            <data key="person-group">false</data>
+            <data key="number-of-words">1328</data>
+        </node>
+        <node id="finette">
+            <data key="label">Finette</data>
+            <data key="gender">FEMALE</data>
+            <data key="person-group">false</data>
+            <data key="number-of-words">198</data>
+        </node>
+        <node id="chlorinde">
+            <data key="label">Chlorinde</data>
+            <data key="gender">FEMALE</data>
+            <data key="person-group">false</data>
+            <data key="number-of-words">536</data>
+        </node>
+        <node id="cydalise">
+            <data key="label">Cydalise</data>
+            <data key="gender">FEMALE</data>
+            <data key="person-group">false</data>
+            <data key="number-of-words">515</data>
+        </node>
+        <node id="damis">
+            <data key="label">Damis</data>
+            <data key="gender">MALE</data>
+            <data key="person-group">false</data>
+            <data key="number-of-words">295</data>
+        </node>
+        <node id="erast">
+            <data key="label">Erast</data>
+            <data key="gender">MALE</data>
+            <data key="person-group">false</data>
+            <data key="number-of-words">235</data>
+        </node>
+        <node id="ein_bedienter">
+            <data key="label">Ein Bedienter</data>
+            <data key="gender">MALE</data>
+            <data key="person-group">false</data>
+            <data key="number-of-words">17</data>
+        </node>
+        <edge id="celimene|finette" source="celimene" target="finette">
+            <data key="weight">1</data>
+        </edge>
+        <edge id="celimene|chlorinde" source="celimene" target="chlorinde">
+            <data key="weight">5</data>
+        </edge>
+        <edge id="celimene|cydalise" source="celimene" target="cydalise">
+            <data key="weight">4</data>
+        </edge>
+        <edge id="celimene|damis" source="celimene" target="damis">
+            <data key="weight">3</data>
+        </edge>
+        <edge id="celimene|erast" source="celimene" target="erast">
+            <data key="weight">3</data>
+        </edge>
+        <edge id="celimene|ein_bedienter" source="celimene" target="ein_bedienter">
+            <data key="weight">1</data>
+        </edge>
+        <edge id="chlorinde|cydalise" source="chlorinde" target="cydalise">
+            <data key="weight">5</data>
+        </edge>
+        <edge id="chlorinde|damis" source="chlorinde" target="damis">
+            <data key="weight">3</data>
+        </edge>
+        <edge id="chlorinde|erast" source="chlorinde" target="erast">
+            <data key="weight">3</data>
+        </edge>
+        <edge id="cydalise|damis" source="cydalise" target="damis">
+            <data key="weight">3</data>
+        </edge>
+        <edge id="cydalise|erast" source="cydalise" target="erast">
+            <data key="weight">3</data>
+        </edge>
+        <edge id="damis|erast" source="damis" target="erast">
+            <data key="weight">3</data>
+        </edge>
+    </graph>
+</graphml>

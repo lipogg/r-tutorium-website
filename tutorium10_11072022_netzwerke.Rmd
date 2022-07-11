@@ -1,0 +1,58 @@
+---
+title: "10. Sitzung: Netzwerkanalyse"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    toc_depth: 3
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## 1. Einstieg Netzwerkanalyse 
+
+Folien von Frank Fischer: [https://dh-minor.org/dd/2022-07-06/](https://dh-minor.org/dd/2022-07-06/)
+
+Beispiele für Netzwerke und Netzwerkanalysen: 
+
+* Soziale Netzwerke:
+
+     + [persönliche Netzwerke](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6313565/) 
+     + [Social Media-Netzwerke](https://towardsdatascience.com/visualising-my-facebook-network-clusters-346bac842a63) 
+     + [politische Netzwerke](https://figshare.com/articles/figure/_Division_of_Democrat_and_Republican_Party_members_over_time_/1387568)
+     + Korrespondenznetzwerke: [Mapping the Republic of Letters Project](http://republicofletters.stanford.edu/)  
+&nbsp;  
+
+Aber auch: 
+
+* Transport-, Infrastrukturnetzwerke 
+* Waren, Handelsnetzwerke
+
+In dieser Stunde:
+
+* Kopräsenznetzwerke: [Dracor](https://dracor.org/ger/schiller-wallensteins-tod)  
+* Kookkurrenznetzwerke bzw. semantische Netzwerke: [SeNeReKo Projekt](https://senereko.ceres.rub.de/de/das-projekt/)
+
+## 2. Kopräsenznetzwerke mit rdracor und igraph analysieren
+
+In dieser Stunde werden wir die R-Pakete rdracor und igraph kennenlernen. rdracor ermöglicht es, Netzwerke zu Stücken aus dem Dracor-Korpus direkt in R abzurufen und zu visualisieren. Mithilfe des Pakets igraph können dagegen ganz beliebige Netzwerkdaten visualisiert werden. Alles, was wir dafür brauchen, ist eine Liste von Knoten und Kanten (siehe Folien zum Einstieg) oder aber Netzwerkdaten, die wir bereits in einem speziellen Dateiformat zur Repräsentation von Graphen vorliegen haben, wie beispielsweise GraphMl. Als Übung dient uns eines eurer im Rahmen des Seminars "Digitale Netzwerkanalyse" ausgezeichneten Dramen. 
+
+## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/8ee9a74448b8eb238942e36cffdf1b80d1176f6a/10_netzwerkanalyse/skripte/tutorium10_11072022_netzwerke.R)
+
+Für Nutzer:innen ohne Zugriff auf das Repository:
+```{r echo=FALSE}
+xfun::embed_file('files/10_netzwerkanalyse/skripte/tutorium10_11072022_netzwerke.R', text="Skript downloaden")
+```
+
+## 3. Kookkurrenzen visualisieren mit quanteda und igraph
+
+Weiterführend oder als Aufgabe zuhause könnt ihr euch [dieses Tutorial](https://tm4ss.github.io/docs/Tutorial_5_Co-occurrence.html) ansehen, in dem mithilfe von quanteda und igraph Kookkurenznetzwerke . Solche Kookkurenznetzwerke können entweder als semantische Netzwerke die Kookkurenz von Tokens oder bestimmter Keywords abbilden, oder aber auch manuell annotierte, latente Bedeutungsebenen, so beispielsweise das gemeinsame Auftreten bestimmter Konzepte in einem Textsegment. 
+
+Dokumentation zur quanteda-Funktion ``textplot_network()``: [https://quanteda.io/reference/textplot_network.html](https://quanteda.io/reference/textplot_network.html)
+
+
