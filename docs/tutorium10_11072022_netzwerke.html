@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>10. Sitzung: Netzwerkanalyse</title>
+
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">R-Tutorium</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Sitzungen
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="tutorium1_250422_basics.html">Sitzung 1 - Basics</a>
+    </li>
+    <li>
+      <a href="tutorium2_020522_dateien.html">Sitzung 2 - Daten und Dateien</a>
+    </li>
+    <li>
+      <a href="tutorium3_09052022_regex.html">Sitzung 3 - Reguläre Ausdrücke</a>
+    </li>
+    <li>
+      <a href="tutorium4_16052022_xml.html">Sitzung 4 - XML und TEI</a>
+    </li>
+    <li>
+      <a href="tutorium5_230522_github.html">Sitzung 5 - Git und GitHub</a>
+    </li>
+    <li>
+      <a href="tutorium6_130622_stilometrie.html">Sitzung 6 - Stilometrie</a>
+    </li>
+    <li>
+      <a href="tutorium7_200622_virtuelle_umgebungen.html">Sitzung 7 - Virtuelle Umgebungen</a>
+    </li>
+    <li>
+      <a href="tutorium8_27062022_webscraping.html">Sitzung 8 - Web Scraping und APIs</a>
+    </li>
+    <li>
+      <a href="tutorium9_04072022_textanalyse.html">Sitzung 9 - Quantitative Textanalyse</a>
+    </li>
+    <li>
+      <a href="tutorium10_11072022_netzwerke.html">Sitzung 10 - Netzwerkanalyse</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/lipogg/r-tutorium-website">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">10. Sitzung: Netzwerkanalyse</h1>
+
+</div>
+
+
+<div id="einstieg-netzwerkanalyse" class="section level2">
+<h2>1. Einstieg Netzwerkanalyse</h2>
+<p>Folien von Frank Fischer: <a href="https://dh-minor.org/dd/2022-07-06/">https://dh-minor.org/dd/2022-07-06/</a></p>
+<p>Beispiele für Netzwerke und Netzwerkanalysen:</p>
+<ul>
+<li><p>Soziale Netzwerke:</p>
+<ul>
+<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6313565/">persönliche Netzwerke</a></li>
+<li><a href="https://towardsdatascience.com/visualising-my-facebook-network-clusters-346bac842a63">Social Media-Netzwerke</a></li>
+<li><a href="https://figshare.com/articles/figure/_Division_of_Democrat_and_Republican_Party_members_over_time_/1387568">politische Netzwerke</a></li>
+<li>Korrespondenznetzwerke: <a href="http://republicofletters.stanford.edu/">Mapping the Republic of Letters Project</a><br />
+ </li>
+</ul></li>
+</ul>
+<p>Aber auch:</p>
+<ul>
+<li>Transport-, Infrastrukturnetzwerke</li>
+<li>Waren, Handelsnetzwerke</li>
+</ul>
+<p>In dieser Stunde:</p>
+<ul>
+<li>Kopräsenznetzwerke: <a href="https://dracor.org/ger/schiller-wallensteins-tod">Dracor</a><br />
+</li>
+<li>Kookkurrenznetzwerke bzw. semantische Netzwerke: <a href="https://senereko.ceres.rub.de/de/das-projekt/">SeNeReKo Projekt</a></li>
+</ul>
+</div>
+<div id="kopräsenznetzwerke-mit-rdracor-und-igraph-analysieren" class="section level2">
+<h2>2. Kopräsenznetzwerke mit rdracor und igraph analysieren</h2>
+<p>In dieser Stunde werden wir die R-Pakete rdracor und igraph kennenlernen. rdracor ermöglicht es, Netzwerke zu Stücken aus dem Dracor-Korpus direkt in R abzurufen und zu visualisieren. Mithilfe des Pakets igraph können dagegen ganz beliebige Netzwerkdaten visualisiert werden. Alles, was wir dafür brauchen, ist eine Liste von Knoten und Kanten (siehe Folien zum Einstieg) oder aber Netzwerkdaten, die wir bereits in einem speziellen Dateiformat zur Repräsentation von Graphen vorliegen haben, wie beispielsweise GraphMl. Als Übung dient uns eines eurer im Rahmen des Seminars “Digitale Netzwerkanalyse” ausgezeichneten Dramen.</p>
+</div>
+<div id="skript-zur-übung" class="section level2">
+<h2><a href="https://github.com/lipogg/r-tutorium/blob/8ee9a74448b8eb238942e36cffdf1b80d1176f6a/10_netzwerkanalyse/skripte/tutorium10_11072022_netzwerke.R">Skript zur Übung</a></h2>
+<p>Für Nutzer:innen ohne Zugriff auf das Repository: <a href="data:text/plain;base64,IyBSIFR1dG9yaXVtIFNvU2UyMDIyCiMgRWluc3RpZWcgTmV0endlcmthbmFseXNlIGluIFIKIyBMaXNhIFBvZ2dlbAojIDExLjA3LjIwMjIKCiMjIDEgRWluc3RpZWc6IHJkcmFjb3IgCgojIGh0dHBzOi8vZ2l0aHViLmNvbS9kcmFjb3Itb3JnL3JkcmFjb3IKaW5zdGFsbC5wYWNrYWdlcyhjKCJyZW1vdGVzIiwgImlncmFwaCIpKQpyZW1vdGVzOjppbnN0YWxsX2dpdGh1YigiUG96ZG5pYWtvdi9yZHJhY29yIikKbGlicmFyeShyZHJhY29yKQoKY29ycG9yYSA8LSBnZXRfZHJhY29yX21ldGEoKQpzdW1tYXJ5KGNvcnBvcmEpCnBsb3QoY29ycG9yYSkKCmdvZHVub3YgPC0gcGxheV9pZ3JhcGgoY29ycHVzID0gInJ1cyIsCiAgICAgICAgICAgICAgICAgICAgICAgcGxheSA9ICJwdXNoa2luLWJvcmlzLWdvZHVub3YiKQpsaWJyYXJ5KGlncmFwaCkKZWRnZV9kZW5zaXR5KGdvZHVub3YpCmRpYW1ldGVyKGdvZHVub3YsIHdlaWdodHMgPSBOQSkKc3VtbWFyeShnb2R1bm92KQoKcGxvdChnb2R1bm92KQoKIyMgMiBOZXR6d2Vya2UgYXVzIGltcG9ydGllcnRlbiBOZXR6d2Vya2RhdGVuIGVyc3RlbGxlbgoKc2V0d2QoIi9Vc2Vycy9nYXN0L1ItVHV0b3JpdW0vS29ycG9yYSIpCgojIE3DtmdsaWNoa2VpdCAxOiBncmFwaG1sIERhdGVpIGFscyBpZ3JhcGgtT2JqZWt0IGVpbmxlc2VuCm5ldCA8LSByZWFkX2dyYXBoKCJnZXIwMDA1Nzcta2xlbW0tZGVyLWJlc3VjaC5ncmFwaG1sIiwgZm9ybWF0PSJncmFwaG1sIikKIyBhYiBaZWlsZSA3MCB3ZWl0ZXIKCiMgTcO2Z2xpY2hrZWl0IDI6IEtub3Rlbi11bmQgS2FudGVubGlzdGUgZWlubGVzZW4gCm5vZGVzIDwtIHJlYWQuY3N2KCJnZXIwMDA1Nzcta2xlbW0tZGVyLWJlc3VjaF9ub2Rlcy5jc3YiLCBoZWFkZXI9VCwgYXMuaXM9VCkgI25vZGVsaXN0IGlzdCBjYXN0IGxpc3QgKGxpc3Qgb2YgY2hhcmFjdGVycykKZWRnZXMgPC0gcmVhZC5jc3YoImdlcjAwMDU3Ny1rbGVtbS1kZXItYmVzdWNoX2VkZ2VzLmNzdiIsIGhlYWRlcj1ULCBhcy5pcz1UKSAjZWRnZWxpc3QgaXN0IG5ldHdvcmsgZGF0YSIKCgojIFNjaGF1ZW4gd2lyIHVucyBkaWUgaW1wb3J0aWVydGVuIERhdGVuIGFuOiAKIyBXaWUgdmllbGUgS25vdGVuIGdpYnQgZXM/CiMgV2FzIHNpbmQgaWhyZSBBdHRyaWJ1dGU/CiMgV2llIHZpZWxlIEthbnRlbiBnaWJ0IGVzPwojIFdhcyBzaW5kIGlocmUgQXR0cmlidXRlPwoKIyBEYXRlbiBpbiBlaW4gaWdyYXBoLU9iamVrdCBrb252ZXJ0aWVyZW46Cm5ldCA8LSBncmFwaF9mcm9tX2RhdGFfZnJhbWUoZD1lZGdlcywgdmVydGljZXM9bm9kZXMsIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRpcmVjdGVkPUZBTFNFKSAKIyBGZWhsZXJtZWxkdW5nOiBTb21lIHZlcnRleCBuYW1lcyBpbiBlZGdlIGxpc3QgYXJlIG5vdCBsaXN0ZWQgaW4gdmVydGV4IGRhdGEgZnJhbWUKIyBXb3JhbiBsaWVndCBkYXM/IAo/Z3JhcGhfZnJvbV9kYXRhX2ZyYW1lCiMgV2lyIG3DvHNzZW4gYWxzbyBkaWUgendlaXRlIHVuZCBkcml0dGUgU3BhbHRlIGluIGRlciBFZGdlbGlzdCB0YXVzY2hlbi4gRGFzIGvDtm5uZW4gd2lyIAojIGRpcmVrdCBpbSBSU3R1ZGlvIG1hY2hlbjogCmVkZ2VzX2RmIDwtIHJlYWQuY3N2KCJnZXIwMDA1Nzcta2xlbW0tZGVyLWJlc3VjaF9lZGdlcy5jc3YiKQplZGdlc19kZgplZGdlc19kZiA8LSBlZGdlc19kZlssYygiU291cmNlIiwgIlRhcmdldCIsICJUeXBlIiwgIldlaWdodCIpXQplZGdlc19kZiAjIMO8YmVycHLDvGZlbgojIG5ldWUgS2FudGVubGlzdGUgc3BlaWNoZXJuCndyaXRlLmNzdihlZGdlc19kZiwgImdlcjAwMDU3Ny1rbGVtbS1kZXItYmVzdWNoX2VkZ2VzLmNzdiIsIHF1b3RlPUZBTFNFLCByb3cubmFtZXM9RkFMU0UpICMgYWx0ZSBLYW50ZW5saXN0ZSDDvGJlcnNjaHJlaWJlbgoKIyBLYW50ZW5saXN0ZSBuZXUgZWlubGVzZW46IAplZGdlcyA8LSByZWFkLmNzdigiZ2VyMDAwNTc3LWtsZW1tLWRlci1iZXN1Y2hfZWRnZXMuY3N2IiwgaGVhZGVyPVQsIGFzLmlzPVQpIAoKIyBJbiBlaW4gaWdyYXBoLU9iamVrdCBrb252ZXJ0aWVyZW46IApuZXQgPC0gZ3JhcGhfZnJvbV9kYXRhX2ZyYW1lKGQ9ZWRnZXMsIHZlcnRpY2VzPW5vZGVzLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkaXJlY3RlZD1GQUxTRSkgCgojIERpZXNlciBCZWZlaGwgaGF0IGF1cyBkZW4gS2FudGVuLSB1bmQgS25vdGVudGFiZWxsZW4gZWluIGlncmFwaC1PYmpla3QgZXJzdGVsbHQuIAojIERhYmVpIGhhYmVuIHdpciBkZXIgRnVua3Rpb24gZ3JhcGhfZnJvbV9kYXRhX2ZyYW1lKCkgZGFzIEFyZ3VtZW50ICJkaXJlY3RlZD1GQUxTRSIgCiMgw7xiZXJnZWJlbi4gV2FzIGJlZGV1dGV0IGRhcz8gCgojIDMuIE5ldHp3ZXJrIHplaWNobmVuIHVuZCBhbnBhc3NlbgpwbG90KG5ldCwgZWRnZS5hcnJvdy5zaXplPS40LHZlcnRleC5sYWJlbD1OQSkKCiMgw4RuZGVydW5nZW4sIHVtIGRhcyBOZXR6d2VyayBzY2jDtm5lciB6dSBtYWNoZW4gCgpuIDwtIDIwICMgZsO8ciBkaWUgS25vdGVuZ3LDtsOfZQpjb2wgPC0gInllbGxvdyIgIyBmw7xyIGRpZSBLbm90ZW5mYXJiZQojIEtub3Rlbmdyw7bDn2Ugw6RuZGVybgpwbG90KG5ldCwgZWRnZS5hcnJvdy5zaXplPS40LHZlcnRleC5sYWJlbD1OQSwgCiAgICAgdmVydGV4LnNpemU9bikKCiMgS25vdGVuZmFyYmUgw6RuZGVybgpwbG90KG5ldCwgZWRnZS5hcnJvdy5zaXplPS40LHZlcnRleC5sYWJlbD1OQSwgCiAgICAgdmVydGV4LnNpemU9biwgdmVydGV4LmNvbG9yPWNvbCkKCiMgQmVzY2hyaWZ0dW5nIChGaWd1cmVubmFtZW4pIGhpbnp1ZsO8Z2VuCnBsb3QobmV0LCBlZGdlLmFycm93LnNpemU9LjQsCiAgICAgdmVydGV4LnNpemU9biwgdmVydGV4LmNvbG9yPWNvbCwKICAgICB2ZXJ0ZXgubGFiZWw9VihuZXQpJG5hbWUpICMgRmlndXJlbm5hbWVuIGF1cyBkZXIgS25vdGVubGlzdGUgYXVzd8OkaGxlbgoKIyBTY2hyaWZ0IHZlcmtsZWluZXJuCnBsb3QobmV0LCBlZGdlLmFycm93LnNpemU9LjQsCiAgICAgdmVydGV4LnNpemU9biwgdmVydGV4LmNvbG9yPWNvbCwKICAgICB2ZXJ0ZXgubGFiZWw9VihuZXQpJG5hbWUsCiAgICAgdmVydGV4LmxhYmVsLmNleD0uNikKCiMgR2VrcsO8bW10ZSBLYW50ZW4gKGVkZ2UuY3VydmVkPS40KSA6CnBsb3QobmV0LCBlZGdlLmFycm93LnNpemU9LjQsCiAgICAgdmVydGV4LnNpemU9biwgdmVydGV4LmNvbG9yPWNvbCwKICAgICB2ZXJ0ZXgubGFiZWw9VihuZXQpJG5hbWUubGFiZWwsCiAgICAgdmVydGV4LmxhYmVsLmNleD0uNiwgZWRnZS5jdXJ2ZWQ9LjQpCgojIMOcYnVuZzogw4RuZGVydCBkaWUgS25vdGVuZ3LDtsOfZSwgRmFyYmUgdW5kIHfDpGhsdCBlaW4gYW5kZXJlcyBBdHRyaWJ1dCBhbHMgQmVzY2hyaWZ0dW5nCgojIDQuIE5ldHp3ZXJrZWlnZW5zY2hhZnRlbiBhYnJ1ZmVuCj9ncmFwaC5kZW5zaXR5ICMgcmF0aW8gb2YgbnVtYmVyIG9mIGVkZ2VzIGFuZCBudW1iZXIgb2YgYWxsIHBvc3NpYmxlIGVkZ2VzLCBtb3JlIGdlbmVyYWxseTogY29ubmVjdGVkIHRpZXMgKGNvcmRpbmFsaXR5KS90b3RhbCBwb3NzaWJsZSB0aWVzIChzaXplKTsgb3IgYWx0ZXJuYXRpdmVseTogbnVtYmVyIG9mIGVkZ2VzIChncmFwaCBzaXplKS9udW1iZXIgb2Ygbm9kZXMgKGdyYXBoIG9yZGVyKQo/bWVhbl9kaXN0YW5jZSAjIGF2ZXJhZ2UgZGlzdGFuY2UgYmV0d2VlbiB2ZXJ0aWNlczogdGhpcyBmdW5jdGlvbiBjYWxjdWxhdGVzIHRoZSBzaG9ydGVzdCBwYXRocyBiZXR3ZWVuIGFsbCBwYWlycyBvZiB2ZXJ0aWNlcwo/ZGlhbWV0ZXIgIyBsZW5ndGggb2YgdGhlIGxvbmdlc3QgZ2VvZGVzaWMgKG51bWJlciBvZiBlZGdlcyBpbiBhIHNob3J0ZXN0IHBhdGgpCj9kZWdyZWUgIyBkZWdyZWUgb2YgZWFjaCB2ZXJ0ZXg6IHRoZSBudW1iZXIgb2YgaXRzIGFkamFjZW50IGVkZ2VzCj9iZXR3ZWVubmVzcyAjIG51bWJlciBvZiBnZW9kZXNpY3MgKHNob3J0ZXN0IHBhdGhzKSBnb2luZyB0aHJvdWdoIGEgdmVydGV4IG9yIGFuIGVkZ2UKP2VpZ2VuX2NlbnRyYWxpdHkgIyBjYWxjdWxhdGVzIGVpZ2VudmVrdG9yIGNlbnRyYWxpdGllcyBvZiBwb3NpdGlvbnMgd2l0aGluIHRoZSBncmFwaDogZWlnZW52ZWt0b3IgY2VudHJhbGl0eSBzY29yZXMgY29ycmVzcG9uZCB0byB0aGUgdmFsdWVzIG9mIHRoZSBmaXJzdCBlaWdlbnZlY3RvciBvZiB0aGUgZ3JhcGggYWRqYWNlbmN5IG1hdHJpeAo/Y2xvc2VuZXNzICMgY2FsY3VsYXRlcyBjbG9zZW5lc3MgY2VudHJhbGl0eTogaG93IG1hbnkgc3RlcHMgKGVkZ2VzKSBhcmUgcmVxdWlyZWQgdG8gYWNjZXNzIGV2ZXJ5IG90aGVyIHZlcnRleCBmcm9tIGEgZ2l2ZW4gdmVydGV4CgojIERpY2h0ZSBkZXMgR3JhcGhlbiBiZXJlY2huZW4KZWRnZV9kZW5zaXR5KG5ldCwgbG9vcHM9RikgIyBsb29wcz1GIHNjaGxpZcOfdCBTY2hsZWlmZW4gYXVzIGRlciBCZXJlY2hudW5nIGF1cyAoYnJhdWNoZW4gd2lyIGhpZXIgbmljaHQhKQojIE1pdHRsZXJlIFBmYWRsw6RuZ2UgYmVyZWNobmVuIChtZWFuIGF2ZXJhZ2UgcGF0aCkgCm1lYW5fZGlzdGFuY2UobmV0KQoKIyBEcmVpIE5hbWVuIG1pdCBow7ZjaHN0ZXIgaW5kZWdyZWUgY2VudHJhbGl0eSBhdWZsaXN0ZW4KIyBJbmRlZ3JlZSBiZXJlY2huZW4gCmluZGVnIDwtIGRlZ3JlZShuZXQsIG1vZGUgPSAiaW4iLCAgIyBtb2RlID0gIm91dCIgZsO8ciBvdXRkZWdyZWUgY2VudHJhbGl0eSwgImFsbCIgZsO8ciBnZXNhbXRlIERpY2h0ZQogICAgICAgICAgICAgICAgICAgdiA9IFYobmV0KSwgIyBWKG5ldCkgb2huZSBadWdyaWZmIGF1ZiBlaW5lIHNwZXppZWxsZSBTcGFsdGUgYmVkZXV0ZXQsIGRhc3MgaWRzIHZlcndlbmRldCB3ZXJkZW4KICAgICAgICAgICAgICAgICAgIGxvb3BzID0gVFJVRSwgbm9ybWFsaXplZCA9IEZBTFNFKQoKIyBFcmdlYm5pc3NlIGluIGVpbmVtIERhdGFmcmFtZSBzcGVpY2hlcm4Kbm9kZXNbImluZGVncmVlIl0gPSBpbmRlZwpub2RlcyRuYW1lW25vZGVzJGluZGVncmVlID49IDRdICMgRmlndXJlbiBtaXQgaW5kZWdyZWUgZ3LDtsOfZXIgb2RlciBnbGVpY2ggNCAKbm9kZXMkbmFtZVttYXgobm9kZXMkaW5kZWdyZWUpXSAjIEZpZ3VyIG1pdCBkZW0gaMO2Y2hzdGVuIGluZGVncmVlIFdlcnQKCgojIEdyYXBoIG1pdCBLbm90ZW5ncsO2w59lIG5hY2ggR3JhZCBza2FsaWVydApwbG90KG5ldCwgZWRnZS5hcnJvdy5zaXplPS40LAogICAgIHZlcnRleC5zaXplPWluZGVnLCB2ZXJ0ZXguY29sb3I9Y29sLAogICAgIHZlcnRleC5sYWJlbD1WKG5ldCkkbmFtZS5sYWJlbCwKICAgICB2ZXJ0ZXgubGFiZWwuY2V4PS42KQoKIyBLYW50ZW5kaWNrZSBuYWNoIEdld2ljaHQgc2thbGllcmVuCnBsb3QobmV0LCBlZGdlLmFycm93LnNpemU9LjQsCiAgICAgdmVydGV4LmNleD0uNiwgdmVydGV4LmNvbG9yPSJ3aGl0ZSIsCiAgICAgdmVydGV4LmxhYmVsPVYobmV0KSRuYW1lLCB2ZXJ0ZXgubGFiZWwuY2V4ID0gLjYsCiAgICAgZWRnZS53ZWlnaHQ9MiwgZWRnZS53aWR0aD0oRShuZXQpJHdlaWdodC81KSkKCiMgNS4gTmV0endlcmtsYXlvdXQgw6RuZGVybgoKbGF5b3V0XzEgPC0gbGF5b3V0X2luX2NpcmNsZShuZXQsIG9yZGVyID0gVihuZXQpKQpsYXlvdXRfMiA8LSBsYXlvdXRfd2l0aF9mcihuZXQpCgpwbG90KG5ldCwgZWRnZS5hcnJvdy5zaXplPS40LAogICAgIHZlcnRleC5jZXg9LjYsIHZlcnRleC5jb2xvcj0id2hpdGUiLAogICAgIHZlcnRleC5sYWJlbD1WKG5ldCkkbWVkaWEsIHZlcnRleC5sYWJlbC5jZXggPSAuNiwKICAgICBlZGdlLndlaWdodD0yLCBlZGdlLndpZHRoPShFKG5ldCkkd2VpZ2h0LzUpLAogICAgIGxheW91dCA9IGxheW91dF8xKQoKCiMgw5xidW5nOiAKIyAxKSBMaXN0ZXQgZHJlaSBGaWd1cmVuIG1pdCBkZXIgaMO2Y2hzdGVuIGJldHdlZW5uZXNzIGNlbnRyYWxpdHkKIyAyKSDDhG5kZXJ0IGRpZSBLbm90ZW5ncsO2w59lLCBzb2Rhc3Mgc2llIG5hY2ggZGVyIGJldHdlZW5uZXNzIGNlbnRyYWxpdHkgc2thbGllcnQgaXN0CiMgMykgUmVjaGVyY2hpZXJ0IGVpbiB3ZWl0ZXJlcyBMYXlvdXQgdW5kIHNldHp0IGVzIGluIGRpZSBGdW5rdGlvbiBlaW4KCiMgNi4gQ29tbXVuaXR5IERldGVjdGlvbgojIFR1dG9yaWFsIG1pdCB2ZXJzY2hpZWRlbmVuIE1ldGhvZGVuIHp1ciBJZGVudGlmaXppZXJ1bmcgdm9uIENvbW11bml0aWVzOgojIGh0dHBzOi8vdXNlcnMuZGltaS51bml1ZC5pdC9+bWFzc2ltby5mcmFuY2VzY2hldC9SL2NvbW11bml0aWVzLmh0bWwKCmxheW91dF8zIDwtIGxheW91dF93aXRoX2ZyKG5ldCkKCiMgImdyZWVkeS1NZXRob2RlIiBhbndlbmRlbiAKYzEgPSBjbHVzdGVyX2Zhc3RfZ3JlZWR5KG5ldCkKbW9kdWxhcml0eShjMSkKIyBtb2R1bGFyaXR5IG1hdHJpeCBlcnN0ZWxsZW4KQiA9IG1vZHVsYXJpdHlfbWF0cml4KG5ldCwgbWVtYmVyc2hpcChjMSkpCnJvdW5kKEJbMSxdLDIpCiMgQW56YWhsIENvbW11bml0aWVzCmxlbmd0aChjMSkKIyBHcsO2w59lIGRlciBDb21tdW5pdGllcwpzaXplcyhjMSkKIyBDb21tdW5pdGllcyBtaXQgS25vdGVuZmFyYmUgdW50ZXJzY2hlaWRlbgpwbG90KG5ldCwgZWRnZS5hcnJvdy5zaXplPS40LAogICAgIHZlcnRleC5zaXplPW4sIHZlcnRleC5jb2xvcj1tZW1iZXJzaGlwKGMxKSwKICAgICB2ZXJ0ZXgubGFiZWw9VihuZXQpJGlkLAogICAgIHZlcnRleC5sYWJlbC5jZXg9LjYsIAogICAgIGxheW91dD1sYXlvdXRfMykKIyBDb21tdW5pdGllcyBtaXQgZmFyYmlnZW0gSGludGVyZ3J1bmQgdW1yYWhtZW4gCnBsb3QoYzEsIG5ldCwgZWRnZS5hcnJvdy5zaXplPS40LAogICAgIHZlcnRleC5zaXplPW4sIHZlcnRleC5jb2xvcj1tZW1iZXJzaGlwKGMxKSwKICAgICB2ZXJ0ZXgubGFiZWw9VihuZXQpJGlkLAogICAgIHZlcnRleC5sYWJlbC5jZXg9LjYsIAogICAgIGxheW91dD1sYXlvdXRfMykKCgo=" download="tutorium10_11072022_netzwerke.R">Skript downloaden</a></p>
+</div>
+<div id="kookkurrenzen-visualisieren-mit-quanteda-und-igraph" class="section level2">
+<h2>3. Kookkurrenzen visualisieren mit quanteda und igraph</h2>
+<p>Weiterführend oder als Aufgabe zuhause könnt ihr euch <a href="https://tm4ss.github.io/docs/Tutorial_5_Co-occurrence.html">dieses Tutorial</a> ansehen, in dem mithilfe von quanteda und igraph Kookkurenznetzwerke . Solche Kookkurenznetzwerke können entweder als semantische Netzwerke die Kookkurenz von Tokens oder bestimmter Keywords abbilden, oder aber auch manuell annotierte, latente Bedeutungsebenen, so beispielsweise das gemeinsame Auftreten bestimmter Konzepte in einem Textsegment.</p>
+<p>Dokumentation zur quanteda-Funktion <code>textplot_network()</code>: <a href="https://quanteda.io/reference/textplot_network.html">https://quanteda.io/reference/textplot_network.html</a></p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

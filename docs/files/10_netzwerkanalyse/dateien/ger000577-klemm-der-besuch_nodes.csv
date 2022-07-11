@@ -1,0 +1,8 @@
+id,name,gender,isGroup,numOfScenes,numOfSpeechActs,numOfWords,wikidataId,degree,weightedDegree,betweenness,closeness,eigenvector
+"celimene","Celimene","FEMALE","false","8","53","1328",,"6","17","0.6","1","0.477180082644994"
+"finette","Finette","FEMALE","false","1","10","198",,"1","1","0","0.5454545454545454","0.11623042877348712"
+"chlorinde","Chlorinde","FEMALE","false","6","28","536",,"4","16","0","0.75","0.43164804632396386"
+"cydalise","Cydalise","FEMALE","false","5","24","515",,"4","15","0","0.75","0.43164804632396386"
+"damis","Damis","MALE","false","4","14","295",,"4","12","0","0.75","0.43164804632396386"
+"erast","Erast","MALE","false","4","21","235",,"4","12","0","0.75","0.43164804632396386"
+"ein_bedienter","Ein Bedienter","MALE","false","1","1","17",,"1","1","0","0.5454545454545454","0.11623042877348712"

@@ -1,0 +1,13 @@
+Source,Target,Type,Weight
+celimene,finette,Undirected,1
+celimene,chlorinde,Undirected,5
+celimene,cydalise,Undirected,4
+celimene,damis,Undirected,3
+celimene,erast,Undirected,3
+celimene,ein_bedienter,Undirected,1
+chlorinde,cydalise,Undirected,5
+chlorinde,damis,Undirected,3
+chlorinde,erast,Undirected,3
+cydalise,damis,Undirected,3
+cydalise,erast,Undirected,3
+damis,erast,Undirected,3
