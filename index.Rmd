@@ -30,3 +30,5 @@ Die Skripte und Lösungen zu den Übungen befinden sich im GitHub-Repository [li
 
 **[Sitzung 9 - Quantitative Textanalyse](tutorium9_04072022_textanalyse.html)**
 
+**[Sitzung 10 - Netzwerkanalyse](tutorium10_11072022_netzwerke.html)**
+
