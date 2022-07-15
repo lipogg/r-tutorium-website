@@ -4,3 +4,4 @@ Diese Website dokumentiert die Inhalte des Tutoriums **["Einführung in R — Pr
 
 Die Skripte zu den Übungen befinden sich im Repository [lipogg/r-tutorium](https://github.com/lipogg/r-tutorium).
 
+Website-Link: [https://lipogg.github.io/r-tutorium-website/](https://lipogg.github.io/r-tutorium-website/)
