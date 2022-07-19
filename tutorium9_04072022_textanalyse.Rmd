@@ -33,5 +33,27 @@ In der heutigen Stunde werden wir einige der Funktionen, insbesondere aus [Kapit
 
 ## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/2fd48dc339ad7fd57483f463b3dc32999070e589/09_quantitative_textanalyse/skripte/tutorium9_040722_textanalyse.R)
 
+Für Nutzer:innen ohne Zugriff auf das Repository:
+```{r echo=FALSE}
+xfun::embed_dir('files/09_quantitative_textanalyse', text="Zip-Ordner downloaden")
+```
 
+## 3. Preprocessing
+
+In der Übung haben wir bereits einige Preprocessing-Schritte durchgeführt, beispielsweise haben wir Stoppwörter und Satzzeichen entfernt. Für manche Forschungsfragen kann es aber interessant sein, manche Stoppwörter beizubehalten oder zusätzliche Wörter zu entfernen. In anderen Fällen soll dagegen vielleicht mit den Grundformen der Tokens gearbeitet werden. Bevor wir das Thema quantitative Textanalyse abschließen, schauen wir uns deswegen etwas komplexere Preprocessingschritte an und beschäftigen uns mit Möglichkeiten, vorimplementierte Preprocessingmethoden an verschiedene Anwendungsfälle anzupassen. 
+
+## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/290aca075035ffc11802d578df7fe674682c7a35/09_quantitative_textanalyse/skripte/tutorium9_04072022_preprocessing.R)
+
+Für Nutzer:innen ohne Zugriff auf das Repository: Das Skript befindet sich zusammen mit den Materialien zur quantitativen Textanalyse im Zip-Ordner zu Abschnitt 2.  
+
+## Exkurs: Dramenanalyse mit dem Paket DramaAnalysis
+
+Mit dem Paket DramaAnalysis gibt es in R außerdem die Möglichkeit, gezielt Dramen zu analysieren. Die Dramen müssen dazu in XML-TEI ausgezeichnet und mithilfe der Natural Language Processing Pipeline [DramaNLP](https://github.com/quadrama/DramaNLP) verarbeitet sein. Diese Schritte haben wir in dem Seminar zur Digitalen Dramenanalyse bereits vollzogen. Das folgende Skript entstammt dem Seminar und reproduziert das [Tutorial](https://quadrama.github.io/DramaAnalysis/tutorial/3/index.html) von Nils Reiter für ein Stück aus dem Dracor-Korpus. 
+
+## [Skript zur Übung](https://github.com/lipogg/r-tutorium/blob/7ccc75978381cc70ee3618269849271b93e86389/09_quantitative_textanalyse/skripte/drama_analysis.R)
+
+Für Nutzer:innen ohne Zugriff auf das Repository:
+```{r echo=FALSE}
+xfun::embed_file('/files/09_textanalyse/skripte/drama_analysis.R', text="Skript downloaden")
+```
 
