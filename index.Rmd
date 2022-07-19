@@ -32,3 +32,5 @@ Die Skripte und Lösungen zu den Übungen befinden sich im GitHub-Repository [li
 
 **[Sitzung 10 - Netzwerkanalyse](tutorium10_11072022_netzwerke.html)**
 
+**[Sitzung 11 - Visualisierung](tutorium11_18072022_visualisierung.html)**
+
