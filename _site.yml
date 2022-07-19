@@ -25,6 +25,8 @@ navbar:
       href: tutorium9_04072022_textanalyse.html
     - text: Sitzung 10 - Netzwerkanalyse
       href: tutorium10_11072022_netzwerke.html
+    - text: Sitzung 10 - Netzwerkanalyse
+      href: tutorium11_18072022_visualisierung.html
   right: 
     - icon: fab fa-github fa-lg
       href: https://github.com/lipogg/r-tutorium-website
