@@ -46,7 +46,7 @@ In der Übung haben wir bereits einige Preprocessing-Schritte durchgeführt, bei
 
 Für Nutzer:innen ohne Zugriff auf das Repository: Das Skript befindet sich zusammen mit den Materialien zur quantitativen Textanalyse im Zip-Ordner zu Abschnitt 2.  
 
-## Exkurs: Dramenanalyse mit dem Paket DramaAnalysis
+## 4. Exkurs: Dramenanalyse mit dem Paket DramaAnalysis
 
 Mit dem Paket DramaAnalysis gibt es in R außerdem die Möglichkeit, gezielt Dramen zu analysieren. Die Dramen müssen dazu in XML-TEI ausgezeichnet und mithilfe der Natural Language Processing Pipeline [DramaNLP](https://github.com/quadrama/DramaNLP) verarbeitet sein. Diese Schritte haben wir in dem Seminar zur Digitalen Dramenanalyse bereits vollzogen. Das folgende Skript entstammt dem Seminar und reproduziert das [Tutorial](https://quadrama.github.io/DramaAnalysis/tutorial/3/index.html) von Nils Reiter für ein Stück aus dem Dracor-Korpus. 
 
@@ -54,6 +54,6 @@ Mit dem Paket DramaAnalysis gibt es in R außerdem die Möglichkeit, gezielt Dra
 
 Für Nutzer:innen ohne Zugriff auf das Repository:
 ```{r echo=FALSE}
-xfun::embed_file('/files/09_textanalyse/skripte/drama_analysis.R', text="Skript downloaden")
+xfun::embed_file('files/09_textanalyse/skripte/drama_analysis.R', text="Skript downloaden")
 ```
 
