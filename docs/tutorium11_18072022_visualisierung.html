@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>11. Sitzung: Visualisierung</title>
+
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.10.0/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">R-Tutorium</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Sitzungen
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="tutorium1_250422_basics.html">Sitzung 1 - Basics</a>
+    </li>
+    <li>
+      <a href="tutorium2_020522_dateien.html">Sitzung 2 - Daten und Dateien</a>
+    </li>
+    <li>
+      <a href="tutorium3_09052022_regex.html">Sitzung 3 - Reguläre Ausdrücke</a>
+    </li>
+    <li>
+      <a href="tutorium4_16052022_xml.html">Sitzung 4 - XML und TEI</a>
+    </li>
+    <li>
+      <a href="tutorium5_230522_github.html">Sitzung 5 - Git und GitHub</a>
+    </li>
+    <li>
+      <a href="tutorium6_130622_stilometrie.html">Sitzung 6 - Stilometrie</a>
+    </li>
+    <li>
+      <a href="tutorium7_200622_virtuelle_umgebungen.html">Sitzung 7 - Virtuelle Umgebungen</a>
+    </li>
+    <li>
+      <a href="tutorium8_27062022_webscraping.html">Sitzung 8 - Web Scraping und APIs</a>
+    </li>
+    <li>
+      <a href="tutorium9_04072022_textanalyse.html">Sitzung 9 - Quantitative Textanalyse</a>
+    </li>
+    <li>
+      <a href="tutorium10_11072022_netzwerke.html">Sitzung 10 - Netzwerkanalyse</a>
+    </li>
+    <li>
+      <a href="tutorium11_18072022_visualisierung.html">Sitzung 11 - Visualisierung</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/lipogg/r-tutorium-website">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">11. Sitzung: Visualisierung</h1>
+
+</div>
+
+
+<div id="abschluss" class="section level2">
+<h2>1. Abschluss</h2>
+<ul>
+<li>Letzte Fragen?</li>
+<li>Feedback</li>
+<li>“Afterhour” im r-tutorium-Repository</li>
+</ul>
+</div>
+<div id="grafiken-erstellen-mit-ggplot2" class="section level2">
+<h2>2. Grafiken erstellen mit ggplot2</h2>
+<div id="einstieg-ggplot2" class="section level3">
+<h3>2.1 Einstieg: ggplot2</h3>
+<p>Im Laufe des Semesters haben wir schon gelegentlich auf Funktionen aus dem dem Paket <code>ggplot2</code> zurückgegriffen. Mit diesem Paket lassen sich eine Vielzahl an Grafiken erstellen und flexibel anpassen. In der offiziellen Dokumentation wird das Paket wie folgt definiert:</p>
+<blockquote>
+<p>ggplot2 is a system for declaratively creating graphics, based on The Grammar of Graphics. You provide the data, tell ggplot2 how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details.</p>
+</blockquote>
+<p>Quelle: <a href="https://ggplot2.tidyverse.org/">https://ggplot2.tidyverse.org/</a></p>
+<ul>
+<li>Offizielle Dokumentation: <a href="https://ggplot2.tidyverse.org/">https://ggplot2.tidyverse.org/</a></li>
+<li>R Graph Gallery ggplot2: <a href="https://r-graph-gallery.com/ggplot2-package.html">https://r-graph-gallery.com/ggplot2-package.html</a></li>
+<li>Tutorial: <a href="https://methodenlehre.github.io/einfuehrung-in-R/grafiken-mit-ggplot2.html">Grafiken mit ggplot2</a></li>
+<li>Leitfaden: <a href="https://towardsdatascience.com/a-comprehensive-guide-to-the-grammar-of-graphics-for-effective-visualization-of-multi-dimensional-1f92b4ed4149">Grammar of Graphics</a></li>
+<li>Download: <a href="https://github.com/rstudio/cheatsheets/blob/main/data-visualization-2.1.pdf">ggplot2 cheatsheet</a></li>
+</ul>
+</div>
+<div id="prinzip-grammar-of-graphics" class="section level3">
+<h3>2.2 Prinzip “Grammar of Graphics”</h3>
+<p>Das Prinzip, das der deklarativen Erstellung von Grafiken zugrundeliegt, nennt sich “Grammar of Graphics”. Diese “Grammatik” legt fest, wie die einzelnen Bestandteile einer Grafik beschrieben und konstruiert werden können. Konkret bedeutet das, dass bei der deklarativen Erstellung von Grafiken mit ggplot2 die Grafik in mehreren, übereinanderliegende Ebenen erstellt wird.</p>
+<p><img src="https://github.com/lipogg/r-tutorium-website/tree/main/files/11_visualisierung/grammar.png" alt="Quelle: towardsdatascience.com" /> Quelle: <a href="https://towardsdatascience.com/a-comprehensive-guide-to-the-grammar-of-graphics-for-effective-visualization-of-multi-dimensional-1f92b4ed4149">towardsdatascience.com</a></p>
+</div>
+<div id="workflow-ggplot2-grafik-erstellen" class="section level3">
+<h3>2.3 Workflow: ggplot2-Grafik erstellen</h3>
+<p>Der Workflow zur Erstellung einer ggplot2-Grafik sieht demnach wie folgt aus:</p>
+<p>Wie immer müssen wir zunächst das Paket installieren und laden:</p>
+<pre class="r"><code>install.packages(&quot;ggplot2&quot;, repos=&quot;http://cran.us.r-project.org&quot;) 
+library(ggplot2)</code></pre>
+<p>Als Beispiel-Datensatz verwenden wir den mitgelieferten Datensatz “presidential”, der Daten zu den Amtszeiten aller US-Präsidenten von Eisenhower bis Obama enthält. Wir machen uns zuerst mit den Daten vertraut:</p>
+<pre class="r"><code>print(presidential)</code></pre>
+<pre><code>## # A tibble: 11 × 4
+##    name       start      end        party     
+##    &lt;chr&gt;      &lt;date&gt;     &lt;date&gt;     &lt;chr&gt;     
+##  1 Eisenhower 1953-01-20 1961-01-20 Republican
+##  2 Kennedy    1961-01-20 1963-11-22 Democratic
+##  3 Johnson    1963-11-22 1969-01-20 Democratic
+##  4 Nixon      1969-01-20 1974-08-09 Republican
+##  5 Ford       1974-08-09 1977-01-20 Republican
+##  6 Carter     1977-01-20 1981-01-20 Democratic
+##  7 Reagan     1981-01-20 1989-01-20 Republican
+##  8 Bush       1989-01-20 1993-01-20 Republican
+##  9 Clinton    1993-01-20 2001-01-20 Democratic
+## 10 Bush       2001-01-20 2009-01-20 Republican
+## 11 Obama      2009-01-20 2017-01-20 Democratic</code></pre>
+<p>Wir wollen später auch die Länge der Amtszeit visualisieren und fügen eine neue Spalte mit den Amtszeiten der Präsidenten hinzu. Da Bush in unserer Tabelle zweimal vorkommt, fügen wir dem Namen eine Zahl hinzu, um die Amtszeiten zu unterscheiden:</p>
+<pre class="r"><code>presi_df &lt;- presidential
+presi_df$term &lt;- presi_df$end - presi_df$start
+presi_df [8,1] &lt;- &quot;Bush_1&quot;
+presi_df [10,1] &lt;- &quot;Bush_2&quot;
+print(presi_df)</code></pre>
+<pre><code>## # A tibble: 11 × 5
+##    name       start      end        party      term     
+##    &lt;chr&gt;      &lt;date&gt;     &lt;date&gt;     &lt;chr&gt;      &lt;drtn&gt;   
+##  1 Eisenhower 1953-01-20 1961-01-20 Republican 2922 days
+##  2 Kennedy    1961-01-20 1963-11-22 Democratic 1036 days
+##  3 Johnson    1963-11-22 1969-01-20 Democratic 1886 days
+##  4 Nixon      1969-01-20 1974-08-09 Republican 2027 days
+##  5 Ford       1974-08-09 1977-01-20 Republican  895 days
+##  6 Carter     1977-01-20 1981-01-20 Democratic 1461 days
+##  7 Reagan     1981-01-20 1989-01-20 Republican 2922 days
+##  8 Bush_1     1989-01-20 1993-01-20 Republican 1461 days
+##  9 Clinton    1993-01-20 2001-01-20 Democratic 2922 days
+## 10 Bush_2     2001-01-20 2009-01-20 Republican 2922 days
+## 11 Obama      2009-01-20 2017-01-20 Democratic 2922 days</code></pre>
+<p>Zum Erstellen unserer Grafik stehen uns jetzt also die Spalten “name”, “start”, “end”, “party” und “term” zur Verfügung. Zunächst übergeben wir der Grundfunktion <code>ggplot()</code> unsere Daten als erste Ebene:</p>
+<pre class="r"><code>ggplot(data=presi_df)</code></pre>
+<p><img src="tutorium11_18072022_visualisierung_files/figure-html/unnamed-chunk-4-1.png" width="672" /> Die Funktion <code>ggplot()</code> produziert anders als die R-base-Funktion <code>plot()</code> so noch keine Grafik, weil hier die Grafikelemente wie bereits erläutert nicht vordefiniert sind und als Ebenen manuell hinzugefügt werden.</p>
+<p>Als zweites Argument werden der Funktion zunächst die “Aesthetics” übergeben, die festlegen, welche Variablen aus unseren Daten für die Visualisierung verwendet werden sollen.</p>
+<pre class="r"><code>ggplot(data=presi_df, mapping=aes(x=name, 
+                                  y=term)) </code></pre>
+<p><img src="tutorium11_18072022_visualisierung_files/figure-html/unnamed-chunk-5-1.png" width="672" /> Diese Grafik ist immer noch leer, weil es noch keine Ebene gibt, die definiert, was für eine Art Plot erstellt werden soll. Um die Datenpunkte zu plotten und die Grafik weiter anzupassen, können nun Grafikelemente mithilfe eines <code>+</code>-Operators als neue Ebenenen auf das Plot-Objekt gelegt werden. Zum Plotten der Daten stehen verschiedene Funktionen, die alle mit <code>geom</code> beginnen, zur Verfügung.</p>
+<pre class="r"><code>p &lt;- ggplot(data=presi_df, mapping=aes(x=name,
+                                   y=term)) 
+p + geom_bar(fill = &quot;lightblue&quot;, color = &quot;black&quot;, stat=&quot;identity&quot;)</code></pre>
+<p><img src="tutorium11_18072022_visualisierung_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>Die Grafik kann mithilfe zusätzlicher Ebenen und Parameter weiter angepasst werden:</p>
+<pre class="r"><code>p &lt;- ggplot(data=presi_df, mapping=aes(x=name,
+                                   y=term,
+                                   fill=party)) 
+p + geom_bar(stat=&quot;identity&quot;) +
+  labs(x=&quot;Präsident&quot;, y=&quot;Amtszeit&quot;, title=&quot;Amtszeit der US-Präsidenten&quot;, fill=&quot;Partei&quot;) +
+  scale_y_continuous(breaks = seq(0, 3000, by = 365)) +
+  scale_x_discrete(guide = guide_axis(angle = 90))</code></pre>
+<p><img src="tutorium11_18072022_visualisierung_files/figure-html/unnamed-chunk-7-1.png" width="672" /> Zur besseren Lesbarkeit wurde die Beschriftung der x-Achse mit dem Argument “guide_axis(angle=90)” rotiert. Denkbar wäre aber zum Beispiel auch, die Achsen zu vertauschen:</p>
+<pre class="r"><code>p &lt;- ggplot(data=presi_df, mapping=aes(x=name,
+                                   y=term,
+                                   fill=party)) 
+p + geom_bar(stat=&quot;identity&quot;) +
+  labs(x=&quot;Präsident&quot;, y=&quot;Amtszeit&quot;, title=&quot;Amtszeit der US-Präsidenten&quot;, fill=&quot;Partei&quot;) +
+  scale_y_continuous(breaks = seq(0, 3000, by = 365)) + 
+  coord_flip()</code></pre>
+<p><img src="tutorium11_18072022_visualisierung_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+</div>
+<div id="interaktive-visualisierungen" class="section level2">
+<h2>3. Interaktive Visualisierungen</h2>
+<div id="plotly" class="section level3">
+<h3>3.1 plotly</h3>
+<p>Zum Erstellen interaktiver Visualisierungen kann beispielsweise das Paket <a href="https://pandar.netlify.app/post/ggplotting-plotly/"><code>plotly</code></a> verwendet werden. Mit der Funktion <code>ggplotly()</code> kann ein ggplot-Objekt in einen interaktiven Plot umgewandelt werden.</p>
+<p>Zunächst installieren und laden wir wieder das Paket:</p>
+<pre class="r"><code>install.packages(&quot;plotly&quot;, repos=&quot;http://cran.us.r-project.org&quot;)
+library(plotly)</code></pre>
+<p>ggplot-Objekt mit allen Ebenen speichern und in plotly-Objekt umwandeln:</p>
+<pre class="r"><code>p &lt;- ggplot(data=presi_df, mapping=aes(x=name,
+                                   y=term,
+                                   fill=party)) +
+  geom_bar(stat=&quot;identity&quot;) +
+  labs(x=&quot;Präsident&quot;, y=&quot;Amtszeit&quot;, title=&quot;Amtszeit der US-Präsidenten&quot;, fill=&quot;Partei&quot;) +
+  scale_y_continuous(breaks = seq(0, 3000, by = 365)) + 
+  coord_flip()
+
+
+ggplotly(p)</code></pre>
+<div id="htmlwidget-d661a1ef574acbe2405a" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d661a1ef574acbe2405a">{"x":{"data":[{"orientation":"h","width":[0.899999999999999,0.9,0.9,0.9,0.899999999999999],"base":[0,0,0,0,0],"x":[1036,1886,1461,2922,2922],"y":[8,7,3,4,10],"text":["name: Kennedy<br />term: 1036<br />party: Democratic","name: Johnson<br />term: 1886<br />party: Democratic","name: Carter<br />term: 1461<br />party: Democratic","name: Clinton<br />term: 2922<br />party: Democratic","name: Obama<br />term: 2922<br />party: Democratic"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Democratic","legendgroup":"Democratic","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"h","width":[0.9,0.899999999999999,0.9,0.899999999999999,0.9,0.9],"base":[0,0,0,0,0,0],"x":[2922,2027,895,2922,1461,2922],"y":[5,9,6,11,1,2],"text":["name: Eisenhower<br />term: 2922<br />party: Republican","name: Nixon<br />term: 2027<br />party: Republican","name: Ford<br />term:  895<br />party: Republican","name: Reagan<br />term: 2922<br />party: Republican","name: Bush_1<br />term: 1461<br />party: Republican","name: Bush_2<br />term: 2922<br />party: Republican"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(0,191,196,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Republican","legendgroup":"Republican","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":84.0182648401827},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Amtszeit der US-Präsidenten","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-146.1,3068.1],"tickmode":"array","ticktext":["0","365","730","1095","1460","1825","2190","2555","2920"],"tickvals":[0,365,730,1095,1460,1825,2190,2555,2920],"categoryorder":"array","categoryarray":["0","365","730","1095","1460","1825","2190","2555","2920"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Amtszeit","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,11.6],"tickmode":"array","ticktext":["Bush_1","Bush_2","Carter","Clinton","Eisenhower","Ford","Johnson","Kennedy","Nixon","Obama","Reagan"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11],"categoryorder":"array","categoryarray":["Bush_1","Bush_2","Carter","Clinton","Eisenhower","Ford","Johnson","Kennedy","Nixon","Obama","Reagan"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Präsident","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"Partei","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"d44131b1d70b":{"x":{},"y":{},"fill":{},"type":"bar"}},"cur_data":"d44131b1d70b","visdat":{"d44131b1d70b":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="shiny" class="section level3">
+<h3>3.2 shiny</h3>
+<p>Für komplexere Visualisierungen, die User:innen erlauben, den Input und verschiedene Inputparameter anzupassen, können Visualisierungen mit dem Paket <code>shiny</code> erstellt werden und anschließend in ein R-Markdown Dokument integriert werden oder auch auf einem Server als Webseite ins Internet gestellt werden. Die <a href="https://shiny.dracor.org/">Dracor Shiny-App</a> ist ein Beispiel. Shiny ist jedoch sehr voraussetzungsreich und würde den Rahmen dieses Tutoriums sprengen - vielleicht wäre das ein Thema für einen Aufbaukurs.</p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
