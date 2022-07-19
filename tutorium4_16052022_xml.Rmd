@@ -120,7 +120,7 @@ Um zu überprüfen, ob ein XML-Dokument valide ist ("Validierung"), kann das Dok
   + Theodor Fontanes Notizbücher: https://fontane-nb.dariah.eu/index.html
   + Hannah Arendt Gesamtausgabe: https://hannah-arendt-edition.net/index.html
   + Alexander von Humboldt digitale Edition: https://edition-humboldt.de/
-
+* Katalog [Digital Scholarly Editions](https://www.digitale-edition.de/exist/apps/editions-browser/index.html)
 
 ## 5. XML-Dateien bearbeiten, durchsuchen und einlesen
 
