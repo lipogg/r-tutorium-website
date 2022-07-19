@@ -40,7 +40,7 @@ Quelle: [https://ggplot2.tidyverse.org/](https://ggplot2.tidyverse.org/)
 
 Das Prinzip, das der deklarativen Erstellung von Grafiken zugrundeliegt, nennt sich "Grammar of Graphics". Diese "Grammatik" legt fest, wie die einzelnen Bestandteile einer Grafik beschrieben und konstruiert werden können. Konkret bedeutet das, dass bei der deklarativen Erstellung von Grafiken mit ggplot2 die Grafik in mehreren, übereinanderliegende Ebenen erstellt wird.    
 
-![Quelle: towardsdatascience.com](https://github.com/lipogg/r-tutorium-website/tree/main/files/11_visualisierung/grammar.png)
+![Quelle: towardsdatascience.com](files/11_visualisierung/grammar.png)
 Quelle: [towardsdatascience.com](https://towardsdatascience.com/a-comprehensive-guide-to-the-grammar-of-graphics-for-effective-visualization-of-multi-dimensional-1f92b4ed4149)
 
 
