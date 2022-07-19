@@ -35,7 +35,7 @@ In der heutigen Stunde werden wir einige der Funktionen, insbesondere aus [Kapit
 
 Für Nutzer:innen ohne Zugriff auf das Repository:
 ```{r echo=FALSE}
-xfun::embed_dir('files/09_quantitative_textanalyse', text="Zip-Ordner downloaden")
+xfun::embed_dir('files/09_textanalyse', text="Zip-Ordner downloaden")
 ```
 
 ## 3. Preprocessing
